@@ -2,7 +2,7 @@ baseURL = "cian.notthe.cloud"
 languageCode = "en-us"
 title = "Cian Butler"
 cleandestinationdir = true
-theme = "resume"
+theme = "cv"
 [Params]
 title = "Cian Butler"
 [[menu.main]]
