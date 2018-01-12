@@ -1,0 +1,139 @@
+.markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  max-width: 758px;
+  overflow: visible !important;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  >  {
+    :first-child {
+      margin-top: 0 !important;
+    }
+
+    :last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .avatar {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    max-width: 80%;
+  }
+
+  @media screen and (max-width: $large-tablet) {
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: $small-phone) {
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 100%;
+  }
+
+  blockquote,
+  p,
+  ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  hr {
+    background-color: $grey;
+    border: 0;
+    height: 0.25em;
+    margin: 24px 0;
+    padding: 0;
+  }
+
+  blockquote {
+    border-left: 0.25em solid $dark-grey;
+    color: $heavy-grey;
+    padding: 0 1em;
+
+    >  {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h4 {
+      margin: 8;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  h1 {
+    border-bottom: 1px solid $light-grey;
+    font-size: 2em;
+    padding-bottom: 0.3em;
+  }
+
+  h2 {
+    border-bottom: 1px solid $light-grey;
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  ul {
+    padding-left: 2em;
+  }
+
+  img {
+    background-color: $black;
+    box-sizing: content-box;
+    max-width: 100%;
+  }
+
+  code {
+    background-color: $light-black;
+    border-radius: 3px;
+    color: inherit !important;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+
+    &::after,
+    &::before {
+      content: '\A0';
+      letter-spacing: -0.2em;
+    }
+  }
+}

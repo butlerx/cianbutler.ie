@@ -1,0 +1,26 @@
+baseURL = "cian.notthe.cloud"
+languageCode = "en-us"
+title = "Cian Butler"
+cleandestinationdir = true
+[Params]
+title = "Cian Butler"
+[[menu.main]]
+  name = "Experience"
+  weight = -110
+  identifier = "experience"
+  url = "#experience"
+[[menu.main]]
+  name = "Education"
+  weight = -100
+  identifier = "education"
+  url = "#education"
+[[menu.main]]
+  name = "Open Source"
+  weight = -90
+  identifier = "open-source"
+  url = "#open-source"
+[[menu.main]]
+  name = "Favorites"
+  weight = -80
+  identifier = "favorites"
+  url = "#favorites"

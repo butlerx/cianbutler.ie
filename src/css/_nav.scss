@@ -1,0 +1,89 @@
+.ui-toc-dropdown {
+  margin-right: 23px;
+  margin-top: 23px;
+  max-height: 70vh;
+  max-width: 15vw;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  text-align: inherit;
+  top: 0;
+
+  @media screen and (max-width: $small-phone) {
+    visibility: hidden;
+  }
+  @media screen and (max-width: $tablet) {
+    max-width: 80%;
+  }
+  @media screen and (max-width: $large-tablet) {
+    margin-right: 0;
+  }
+
+  > .toc {
+    max-height: calc(70vh - 100px);
+    overflow: auto;
+  }
+
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+  }
+
+  .nav {
+    > li {
+      &:first-child:last-child > ul {
+        display: block;
+      }
+
+      > a {
+        color: #767676;
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 4px 20px;
+
+        &:focus,
+        &:hover {
+          background-color: transparent;
+          border-left: 1px solid #000;
+          color: #000;
+          padding-left: 19px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .nav {
+      display: none;
+      padding-bottom: 10px;
+      > li >  {
+        a {
+          font-size: 12px;
+          font-weight: 400;
+          padding-bottom: 1px;
+          padding-left: 30px;
+          padding-top: 1px;
+
+          &:focus,
+          &:hover {
+            padding-left: 29px;
+          }
+        }
+
+        ul > li > a {
+          font-size: 12px;
+          font-weight: 400;
+          padding-bottom: 1px;
+          padding-left: 40px;
+          padding-top: 1px;
+
+          &:focus,
+          &:hover {
+            padding-left: 39px;
+          }
+        }
+      }
+    }
+  }
+}
