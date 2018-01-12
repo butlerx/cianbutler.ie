@@ -30,13 +30,14 @@ tags = "cv, CV"
 
 ### SRE for CoderDojo &emsp; <small>_July 2017 - December 2017_</small>
 
-`Node.js`, `Docker`, `Kubernetes`, `AWS`, `Linux`, `PostgreSQL`
+`Node.js`, `Python`, `Docker`, `Kubernetes`, `AWS`, `Linux`, `PostgreSQL`, `Graphite`
 
 > I worked on migrating CoderDojo's [Zen platform](https://zen.coderdojo.com) from single AWS
 > instances that were difficult to scale to a Kubernetes cluster, allowing an independent scaling
 > for each microservice as well as the ability to scale the cluster as needed. This also simplifies
 > Zen's setup and deployment. After migrating to Kubernetes I began upgrading the deployment
-> pipeline as well as the Node version and dependencies for all the microservices.
+> pipeline as well as the Node version and dependencies for all the microservices. I was also
+> responsible for monitoring all the infrastructure using new-relic and graphite.
 
 ---
 

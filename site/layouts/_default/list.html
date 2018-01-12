@@ -1,0 +1,19 @@
+<!DOCTYPE HTML5>
+<html>
+  {{ partial "head" . }}
+  <body>
+    {{ partial "nav" . }}
+    <div class="markdown-body  container-fluid">
+        <h1 id="{{ lower .Params.Title }}">
+          <img src="/images/me.png" alt="Itsa ME" class="avatar"/>
+          {{ .Site.Params.title }}
+        </h1>
+        <ul class="icons">
+          {{ range .Params.social }}
+            <li><a href="{{ .link }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+          {{ end }}
+        </ul>
+        {{ .Content }}
+    </div>
+  </body>
+</html>

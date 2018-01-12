@@ -1,0 +1,16 @@
+<div class="ui-toc-dropdown hidden-print" data-spy="affix">
+  <div class="toc">
+    <ul class="nav">
+      <li>
+        <a href="#{{ lower .Params.Title }}">{{ .Params.Title }}</a>
+        <ul class="nav">
+          {{ range .Site.Menus.main}}
+          <li>
+            <a href="{{ lower .URL }}"> {{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
