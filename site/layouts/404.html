@@ -1,13 +1,9 @@
-<!DOCTYPE HTML5>
-<html>
-  {{ partial "head" . }}
-  <body>
-    <main class="posts">
-      <article class="post">
-        <h1>404 Not Found</h1>
-        <p>Sorry, but we couldn't find the page you're looking for.</p>
-        <p>Please head back <a href="/">home</a>.</p>
-      </article>
-    </main>
-  </body>
-</html>
+{{ define "main"}}
+  <main class="posts">
+    <article class="post">
+      <h1>404 Not Found</h1>
+      <p>Sorry, but we couldn't find the page you're looking for.</p>
+      <p>Please head back <a href="/">home</a>.</p>
+    </article>
+  </main>
+{{ end }}

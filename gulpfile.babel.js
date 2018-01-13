@@ -80,5 +80,5 @@ gulp.task('server', ['hugo', 'webpack', 'svg'], () => {
   });
   gulp.watch(['./src/**/*.js', './src/**/*.sccs'], ['webpack']);
   gulp.watch('./site/static/image/icons-*.svg', ['svg']);
-  gulp.watch('./site/**/*', ['hugo']);
+  gulp.watch('./site/**/*', ['hugo', 'webpack']);
 });
