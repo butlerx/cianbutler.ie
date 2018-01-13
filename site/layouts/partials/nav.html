@@ -2,12 +2,25 @@
   <div class="toc">
     <ul class="nav">
       <li>
-        <a href="#{{ lower .Params.Title }}">{{ .Params.Title }}</a>
+        <a href="/">{{ humanize .Site.Params.title }}</a>
         <ul class="nav">
           {{ range .Site.Menus.main}}
-          <li>
-            <a href="{{ lower .URL }}"> {{ .Name }}</a>
-          </li>
+            <li>
+              <a href="/{{ lower .URL }}"> {{ .Name }}</a>
+            </li>
+          {{ end }}
+          {{ if isset .Params "menu" }}
+            <hr/>
+            <li>
+              <a href="#{{ lower .Params.Title }}">{{ humanize .Params.title }}</a>
+              <ul class="nav">
+                {{ range .Params.menu}}
+                  <li>
+                    <a href="#{{ lower . }}"> {{ humanize . }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
           {{ end }}
         </ul>
       </li>

@@ -2,25 +2,27 @@ baseURL = "cian.notthe.cloud"
 languageCode = "en-us"
 title = "Cian Butler"
 cleandestinationdir = true
+
 [Params]
 title = "Cian Butler"
+
 [[menu.main]]
-  name = "Experience"
-  weight = -110
-  identifier = "experience"
-  url = "#experience"
-[[menu.main]]
-  name = "Education"
-  weight = -100
-  identifier = "education"
-  url = "#education"
-[[menu.main]]
-  name = "Open Source"
-  weight = -90
-  identifier = "open-source"
-  url = "#open-source"
-[[menu.main]]
-  name = "Favorites"
-  weight = -80
-  identifier = "favorites"
-  url = "#favorites"
+  name = "Me"
+  url = "me"
+
+[[social]]
+  icon = "twitter"
+  link = "https://twitter.com/cianbutlerx"
+  medium = "Twitter"
+[[social]]
+  icon = "retweet"
+  link = "https://mastodon.redbrick.dcu.ie/@butlerx"
+  medium = "Mastodon"
+[[social]]
+  icon = "github-alt"
+  link = "https://github.com/butlerx/"
+  medium = "Github"
+[[social]]
+  icon = "envelope"
+  link = "mailto:butlerx@notthe.cloud"
+  medium = "Email"

@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="markdown-body  container-fluid">
+    <h1 id="{{ lower .Params.Title }}">
+      <img src="/images/me.png" alt="Itsa ME" class="avatar"/>
+      {{ humanize .Params.title }}
+    </h1>
+    {{ partial "social" }}
+    {{ .Content }}
+  </div>
+{{ end }}
