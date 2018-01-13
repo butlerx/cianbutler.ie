@@ -1,10 +1,12 @@
 baseURL = "cian.notthe.cloud"
 languageCode = "en-us"
-title = "Cian Butler"
+title = "Not the Cloud"
 cleandestinationdir = true
 
 [Params]
-title = "Cian Butler"
+  Description = "A Place to put projects info, with a meh title i like."
+  twitter = "cianbutlerx"
+  favicon = "favicon.ico"
 
 [[menu.main]]
   name = "Me"
