@@ -1,0 +1,9 @@
+<ul class="icons">
+  {{ range .Site.Social }}
+    <li>
+      <a href="{{ .link }}" class="icon fa-{{ .icon }}">
+        <span class="label">{{ .medium }}</span>
+      </a>
+    </li>
+  {{ end }}
+</ul>
