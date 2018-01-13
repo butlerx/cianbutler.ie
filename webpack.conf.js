@@ -51,7 +51,6 @@ export default {
       paths: glob.sync(path.join(__dirname, 'dist/**/*.html')),
       purifyOptions: {
         minify: true,
-        rejected: true,
       },
     }),
     new UglifyJSPlugin(),
