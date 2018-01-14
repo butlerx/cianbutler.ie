@@ -1,12 +1,13 @@
 {{ define "main" }}
-  <div class="markdown-body  container-fluid">
+  <div class="markdown-body container-fluid">
     <div>
       {{ range .Site.Params.social }}
         <a href="{{ .link }}" class="fa-stack fa-5x">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-{{ .icon }} fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-circle fa-stack-2x"aria-hidden="true" ></i>
+          <i class="fa fa-{{ .icon }} fa-stack-1x fa-inverse" aria-hidden="true"></i>
         </a>
       {{ end }}
     </div>
+    <div id="feed"></div>
   </div>
 {{ end }}

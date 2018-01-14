@@ -15,50 +15,46 @@ const buildSite = options =>
   new Promise((resolve, reject) => {
     const defaultArgs = ['-d', '../dist', '-s', 'site'];
     if (process.env.DEBUG) defaultArgs.unshift('--debug');
-    spawn(
+    const hugo = spawn(
       `./bin/hugo.${process.platform === 'win32' ? 'exe' : process.platform}`,
       options ? defaultArgs.concat(options) : defaultArgs,
-      { stdio: 'inherit' },
     ).on('close', code => {
       if (code === 0) {
         browserSync.reload('notify:false');
         resolve();
       } else {
         browserSync.notify('Hugo build failed :(');
-        reject(new Error('Hugo build failed'));
+        reject(new PluginError({ plugin: 'hugo', message: ' build failed' }));
       }
     });
+    hugo.stdout.on('data', data => log('[hugo]', data.toString()));
+    hugo.stderr.on('data', data => log('[hugo]', data.toString()));
   });
+
+function buildAssets(err, stats) {
+  if (err || stats.hasErrors()) {
+    return Promise.reject(new PluginError({
+      plugin: 'webpack',
+      message: err || stats.toJson().errors,
+    }));
+  }
+  log(
+    '[webpack]',
+    stats.toString({
+      colors: true,
+      progress: true,
+    }),
+  );
+  browserSync.reload();
+  return Promise.resolve();
+}
 
 gulp.task('hugo', () => buildSite());
 gulp.task('hugo-preview', () => buildSite(['--buildDrafts', '--buildFuture']));
 gulp.task('build', ['webpack', 'hugo']);
 gulp.task('build-preview', ['webpack', 'hugo-preview']);
 
-gulp.task(
-  'webpack',
-  () =>
-    new Promise((resolve, reject) => {
-      webpack(webpackConfig, (err, stats) => {
-        if (err) reject(new PluginError('webpack', err));
-        if (stats.hasErrors()) {
-          reject(new PluginError({
-            plugin: 'webpack',
-            message: stats.toJson().errors,
-          }));
-        }
-        log(
-          '[webpack]',
-          stats.toString({
-            colors: true,
-            progress: true,
-          }),
-        );
-        browserSync.reload();
-        resolve();
-      });
-    }),
-);
+gulp.task('webpack', () => webpack(webpackConfig, buildAssets));
 
 gulp.task('svg', () =>
   gulp
@@ -72,13 +68,17 @@ gulp.task('svg', () =>
     ))
     .pipe(gulp.dest('site/layouts/partials/')));
 
-gulp.task('server', ['hugo', 'webpack', 'svg'], () => {
+gulp.task('server', ['hugo', 'svg'], () => {
   browserSync.init({
     server: {
       baseDir: './dist',
     },
   });
-  gulp.watch(['./src/**/*.js', './src/**/*.sccs'], ['webpack']);
+  const compiler = webpack(webpackConfig);
+  compiler.watch({
+    aggregateTimeout: 360,
+    poll: true,
+  }, buildAssets);
   gulp.watch('./site/static/image/icons-*.svg', ['svg']);
   gulp.watch('./site/**/*', ['hugo']);
 });

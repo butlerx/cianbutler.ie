@@ -1,8 +1,8 @@
 import webpack from 'webpack';
 import path from 'path';
+import glob from 'glob';
 import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import glob from 'glob';
 import PurifyCSSPlugin from 'purifycss-webpack';
 
 const extractSass = new ExtractTextPlugin({
@@ -53,7 +53,13 @@ export default {
         minify: true,
       },
     }),
-    new UglifyJSPlugin(),
+    new UglifyJSPlugin({
+      cache: true,
+      parallel: true,
+      uglifyOptions: {
+        ecma: 8,
+      },
+    }),
   ],
 
   context: path.join(__dirname, 'src'),
