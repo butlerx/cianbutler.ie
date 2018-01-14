@@ -1,7 +1,7 @@
 {
-  "name": "cv",
+  "name": "cian.notthe.cloud",
   "version": "1.0.0",
-  "description": "personal site and cv",
+  "description": "personal site",
   "main": "gulpfile.babel.js",
   "scripts": {
     "hugo": "gulp hugo",

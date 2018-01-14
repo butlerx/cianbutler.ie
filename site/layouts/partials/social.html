@@ -1,7 +1,7 @@
 <ul class="icons">
-  {{ range .Site.Social }}
+  {{ range .Site.Params.social }}
     <li>
-      <a href="{{ .link }}" class="icon fa-{{ .icon }}">
+      <a href="{{ .link }}" class="icon fa fa-{{ .icon }}">
         <span class="label">{{ .medium }}</span>
       </a>
     </li>
