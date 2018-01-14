@@ -1,7 +1,6 @@
 baseURL = "cian.notthe.cloud"
 languageCode = "en-us"
 title = "Not the Cloud"
-cleandestinationdir = true
 
 [Params]
   Description = "A Place to put projects info, with a meh title i like."
@@ -12,19 +11,19 @@ cleandestinationdir = true
   name = "Me"
   url = "me"
 
-[[social]]
+[[Params.social]]
   icon = "twitter"
   link = "https://twitter.com/cianbutlerx"
   medium = "Twitter"
-[[social]]
+[[Params.social]]
   icon = "retweet"
   link = "https://mastodon.redbrick.dcu.ie/@butlerx"
   medium = "Mastodon"
-[[social]]
+[[Params.social]]
   icon = "github-alt"
   link = "https://github.com/butlerx/"
   medium = "Github"
-[[social]]
+[[Params.social]]
   icon = "envelope"
   link = "mailto:butlerx@notthe.cloud"
   medium = "Email"

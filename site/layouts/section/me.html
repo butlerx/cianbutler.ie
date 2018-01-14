@@ -4,7 +4,7 @@
       <img src="/images/me.png" alt="Itsa ME" class="avatar"/>
       {{ humanize .Params.title }}
     </h1>
-    {{ partial "social" }}
+    {{ partial "social" . }}
     {{ .Content }}
   </div>
 {{ end }}
