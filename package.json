@@ -25,7 +25,6 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.11.6",
-    "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.13.0",
     "css-loader": "^0.28.8",
     "eslint": "^4.9.0",

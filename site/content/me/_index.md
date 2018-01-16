@@ -82,17 +82,17 @@ menu:
 
 [Zen](https://zen.coderdojo.com)
 
-Zen is CoderDojo's community platform. It allows people to get involved, with the CoderDojo
-movement, find Dojos, chat to other members and keep themselves informed about their local Dojo. For
-my Final Year Project, I Implemented Zen's new development environment and implemented a scalable
-and modular setup for each mircoservice.
+> Zen is CoderDojo's community platform. It allows people to get involved, with the CoderDojo
+> movement, find Dojos, chat to other members and keep themselves informed about their local Dojo.
+> For my Final Year Project, I Implemented Zen's new development environment and implemented a
+> scalable and modular setup for each mircoservice.
 
 ---
 
 ### [ButlerBot](https://github.com/butlerx/butlerbot)
 
-An IRC game bot framework written in Node.js. It Includes game engines for Cards Against Humanity,
-Countdown, and UNO. The framework supports plugins for extra modules as required.
+> An IRC game bot framework written in Node.js. It Includes game engines for Cards Against Humanity,
+> Countdown, and UNO. The framework supports plugins for extra modules as required.
 
 ---
 
@@ -100,9 +100,9 @@ Countdown, and UNO. The framework supports plugins for extra modules as required
 
 [static-site](https://github.com/redbrick/static-site)
 
-A Statically generated website written using the Hexo site generator using plain JavaScript and
-Stylus. An API is provided by a Node.js server that parses the Markdown and YAML to generate
-content.
+> A Statically generated website written using the Hexo site generator using plain JavaScript and
+> Stylus. An API is provided by a Node.js server that parses the Markdown and YAML to generate
+> content.
 
 ---
 
@@ -110,22 +110,12 @@ content.
 
 [event-page](https://github.com/butlerx/event-page)
 
-A custom static site generator that uses JSON and Markdown to generate talk pages for a conference.
-It uses SCSS and Handlebars.js for styling.
+> A custom static site generator that uses JSON and Markdown to generate talk pages for a
+> conference. It uses SCSS and Handlebars.js for styling.
 
 ---
 
 ### [AgileGit](https://github.com/butlerx/AgileGit)
 
-A GitHub CLI interface written in Go. Allows developers quick and easy access to GitHub issues and
-pull requests for the project they are working from the command line.
-
----
-
-## Favorites
-
-> #### Editor: &emsp;<small> vim</small>
->
-> #### Operating System: &emsp;<small> Arch Linux</small>
->
-> #### Terminal: &emsp;<small> urxvt -> tmux -> zsh</small>
+> A GitHub CLI interface written in Go. Allows developers quick and easy access to GitHub issues and
+> pull requests for the project they are working from the command line.

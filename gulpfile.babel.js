@@ -61,7 +61,7 @@ gulp.task('svg', () =>
     .src('site/layouts/partials/svg.html')
     .pipe(inject(
       gulp
-        .src('site/static/image/icons-*.svg')
+        .src('site/static/image/icons/*.svg')
         .pipe(svgmin())
         .pipe(svgstore({ inlineSvg: true })),
       { transform: (filePath, { contents }) => contents.toString() },
@@ -80,8 +80,8 @@ gulp.task('server', ['hugo', 'svg'], () => {
       aggregateTimeout: 360,
       poll: true,
     },
-    buildAssets,
+    (err, stats) => buildAssets(err, stats).catch(error => log('[webpack]', error)),
   );
-  gulp.watch('./site/static/image/icons-*.svg', ['svg']);
+  gulp.watch('./site/static/image/icons/*.svg', ['svg']);
   gulp.watch('./site/**/*', ['hugo']);
 });

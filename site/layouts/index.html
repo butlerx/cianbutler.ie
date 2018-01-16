@@ -1,21 +1,24 @@
 {{ define "main" }}
-  <div class="markdown-body container-fluid">
-    <section id="about">
-      <div class="container">
+  <div class="markdown-body">
+    <section class="about">
+      <div>
         <div class="avatar">
           <img class="img-circle" src="/images/{{ .Site.Params.avatar }}" alt="Mug shot">
         </div>
-        <h3>I'm <strong>{{ .Site.Params.author }}</strong>, {{ .Params.job }}.</h3>
+        <h3>My Name is <strong>{{ .Site.Params.author }}</strong>, I'm a {{ .Params.job }}.</h3>
         <h3>{{ .Params.blurb | markdownify }}.</h3>
         <h3>{{ .Params.project_link | markdownify }}<a href="/projects/"> projects</a>.</h3>
-        <h3>{{ .Params.resume_link | markdownify }}<a href="/me">resume</a>.</h3>
+        <h3>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</h3>
+        {{ .Content }}
         <h3>Contact me at <a href="http://twitter.com/{{ .Site.Params.Twitter }}">@{{ .Site.Params.Twitter }}</a> or by <a href="mailto:{{ .Site.Params.Email }}">email</a>.</h3>
-      {{ range .Site.Params.social }}
-        <a href="{{ .link }}" class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"aria-hidden="true" ></i>
-          <i class="fa fa-{{ .icon }} fa-stack-1x fa-inverse" aria-hidden="true"></i>
-        </a>
-      {{ end }}
+        <div class="about__icons">
+          {{ range .Site.Params.social }}
+            <a href="{{ .link }}" class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"aria-hidden="true" ></i>
+              <i class="fa fa-{{ .icon }} fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </a>
+          {{ end }}
+        </div>
       </div>
     </section>
   </div>

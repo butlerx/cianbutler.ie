@@ -1,0 +1,73 @@
+@media print {
+  body {
+    border-top: 0 !important;
+    font-size: 12px;
+    line-height: 1.4;
+
+    .container {
+      grid-template-areas: 'main' !important;
+      grid-template-columns: 100% !important;
+      max-width: 100% !important;
+    }
+
+    hr {
+      display: none;
+    }
+
+    .icon {
+      margin: 0;
+
+      .label {
+        margin-left: 4px;
+      }
+    }
+
+    .markdown-body {
+      h2 {
+        font-size: 1.2em !important;
+      }
+
+      h3 {
+        font-size: 1em !important;
+      }
+
+      p {
+        font-size: 0.8em;
+      }
+
+      blockquote {
+        border-bottom: 0;
+        border-left: 0.25em solid #ddd;
+        border-right: 0;
+        border-top: 0;
+        color: #777;
+        font-size: 1em;
+        padding: 0 1em;
+
+        h4 {
+          font-size: 0.8em !important;
+        }
+      }
+    }
+
+    blockquote,
+    div,
+    img {
+      page-break-inside: avoid !important;
+    }
+  }
+
+  a[href] {
+    &::after {
+      font-size: 12px !important;
+    }
+  }
+
+  @page {
+    margin: 0.8cm;
+  }
+
+  .hidden-print {
+    display: none;
+  }
+}

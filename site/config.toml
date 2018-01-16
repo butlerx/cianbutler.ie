@@ -10,6 +10,7 @@ sectionPagesMenu = "main"
   avatar = "me.png"
   author = "Cian Butler"
   email = "butlerx@notthe.cloud"
+  repo = "butlerx/cv"
 
 [[Params.social]]
   icon = "twitter"
