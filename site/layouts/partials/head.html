@@ -11,8 +11,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="mobile-web-app-capable" content="yes">
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Resume",
+    "image" : {{ apply .Params.images "absURL" "." }}
+  }
+  </script>
 
-  <title>{{ .Site.Title }}</title>
+  <title>
+    {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+    {{- if eq $url "/" -}}
+        {{- .Site.Title -}}
+    {{- else -}}
+        {{- if .Params.heading -}} {{- .Params.heading -}} {{- else -}} {{- .Title -}} {{- end -}}
+    {{- end -}}
+  </title>
+  {{ .Hugo.Generator }}
   <meta name="description" content="{{ .Site.Params.Description }}">
   <meta name="theme-color" content="#fff">
 

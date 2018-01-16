@@ -1,15 +1,15 @@
 baseURL = "cian.notthe.cloud"
 languageCode = "en-us"
 title = "Not the Cloud"
+sectionPagesMenu = "main"
 
 [Params]
   Description = "A Place to put projects info, with a meh title i like."
   twitter = "cianbutlerx"
   favicon = "favicon.ico"
-
-[[menu.main]]
-  name = "Me"
-  url = "me"
+  avatar = "me.png"
+  author = "Cian Butler"
+  email = "butlerx@notthe.cloud"
 
 [[Params.social]]
   icon = "twitter"
