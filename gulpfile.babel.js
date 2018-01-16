@@ -33,10 +33,12 @@ const buildSite = options =>
 
 function buildAssets(err, stats) {
   if (err || stats.hasErrors()) {
-    return Promise.reject(new PluginError({
-      plugin: 'webpack',
-      message: err || stats.toJson().errors,
-    }));
+    return Promise.reject(
+      new PluginError({
+        plugin: 'webpack',
+        message: err || stats.toJson().errors,
+      }),
+    );
   }
   log(
     '[webpack]',
@@ -59,14 +61,17 @@ gulp.task('webpack', () => webpack(webpackConfig, buildAssets));
 gulp.task('svg', () =>
   gulp
     .src('site/layouts/partials/svg.html')
-    .pipe(inject(
-      gulp
-        .src('site/static/image/icons/*.svg')
-        .pipe(svgmin())
-        .pipe(svgstore({ inlineSvg: true })),
-      { transform: (filePath, { contents }) => contents.toString() },
-    ))
-    .pipe(gulp.dest('site/layouts/partials/')));
+    .pipe(
+      inject(
+        gulp
+          .src('site/static/image/icons/*.svg')
+          .pipe(svgmin())
+          .pipe(svgstore({ inlineSvg: true })),
+        { transform: (filePath, { contents }) => contents.toString() },
+      ),
+    )
+    .pipe(gulp.dest('site/layouts/partials/')),
+);
 
 gulp.task('server', ['hugo', 'svg'], () => {
   browserSync.init({

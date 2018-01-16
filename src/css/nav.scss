@@ -6,7 +6,7 @@
   }
 
   a {
-    color: $heavy-grey !important;
+    color: $heavy-grey !important; // sass-lint:disable-line no-important
     overflow: hidden;
     white-space: pre;
     @media screen and (max-width: $large-phone) {
