@@ -1,12 +1,9 @@
 .markdown-body {
+  margin-left: 8em;
+  margin-right: auto;
   max-width: 758px;
   overflow: visible;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  margin-right: auto;
-  margin-left: 8em;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 40px 16px;
 
   &::after,
   &::before {
@@ -67,9 +64,9 @@
   blockquote {
     border-left: 0.25em solid $dark-grey;
     color: $heavy-grey;
-    padding: 0 1em;
-    margin: 0 0 20px;
     font-size: 17.5px;
+    margin: 0 0 20px;
+    padding: 0 1em;
 
     >  {
       :first-child {
@@ -110,11 +107,12 @@
 
   h3 {
     font-size: 1.25em;
+
     small {
+      color: $heavy-grey;
       font-size: 65%;
       font-weight: 400;
       line-height: 1;
-      color: $heavy-grey;
     }
   }
 
@@ -127,18 +125,18 @@
   }
 
   img {
-    vertical-align: middle;
     background-color: $black;
     box-sizing: content-box;
     max-width: 100%;
+    vertical-align: middle;
   }
 
   code {
     background-color: $light-black;
     border-radius: 3px;
     color: inherit;
-    font-size: 0.8em;
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.8em;
     margin: 0;
     padding: 0;
     padding-bottom: 0.2em;

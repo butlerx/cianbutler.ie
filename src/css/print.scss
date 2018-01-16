@@ -1,3 +1,5 @@
+// sass-lint:disable no-important, no-qualifying-elements
+
 @media print {
   body {
     border-top: 0 !important;
@@ -37,10 +39,10 @@
 
       blockquote {
         border-bottom: 0;
-        border-left: 0.25em solid #ddd;
+        border-left: 0.25em solid $dark-grey;
         border-right: 0;
         border-top: 0;
-        color: #777;
+        color: $heavy-grey;
         font-size: 1em;
         padding: 0 1em;
 
@@ -57,9 +59,11 @@
     }
   }
 
-  a[href] {
-    &::after {
-      font-size: 12px !important;
+  a {
+    [href] {
+      &::after {
+        font-size: 12px !important;
+      }
     }
   }
 
