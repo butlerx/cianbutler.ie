@@ -1,8 +1,12 @@
 .markdown-body {
   max-width: 758px;
-  overflow: visible !important;
+  overflow: visible;
   padding-bottom: 40px;
   padding-top: 40px;
+  margin-right: auto;
+  margin-left: 8em;
+  padding-left: 16px;
+  padding-right: 16px;
 
   &::after,
   &::before {
@@ -16,11 +20,11 @@
 
   >  {
     :first-child {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
 
     :last-child {
-      margin-bottom: 0 !important;
+      margin-bottom: 0;
     }
   }
 
@@ -36,11 +40,13 @@
   @media screen and (max-width: $large-tablet) {
     margin-left: 8px;
   }
-
-  @media screen and (max-width: $small-phone) {
-    margin-left: 16px;
-    margin-right: 16px;
+  @media screen and (max-width: $large-phone) {
+    margin: 0 1em;
     max-width: 100%;
+  }
+
+  p {
+    margin: 0 0 10px;
   }
 
   blockquote,
@@ -62,6 +68,8 @@
     border-left: 0.25em solid $dark-grey;
     color: $heavy-grey;
     padding: 0 1em;
+    margin: 0 0 20px;
+    font-size: 17.5px;
 
     >  {
       :first-child {
@@ -102,6 +110,12 @@
 
   h3 {
     font-size: 1.25em;
+    small {
+      font-size: 65%;
+      font-weight: 400;
+      line-height: 1;
+      color: $heavy-grey;
+    }
   }
 
   h4 {
@@ -113,6 +127,7 @@
   }
 
   img {
+    vertical-align: middle;
     background-color: $black;
     box-sizing: content-box;
     max-width: 100%;
@@ -121,8 +136,9 @@
   code {
     background-color: $light-black;
     border-radius: 3px;
-    color: inherit !important;
+    color: inherit;
     font-size: 0.8em;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
     margin: 0;
     padding: 0;
     padding-bottom: 0.2em;

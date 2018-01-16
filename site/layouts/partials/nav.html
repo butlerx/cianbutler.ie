@@ -1,30 +1,24 @@
-<div class="ui-toc-dropdown hidden-print" data-spy="affix">
-  <div class="toc">
-    <ul class="nav">
+<div class="sidebar hidden-print" data-spy="affix">
+  <ul class="nav">
+    <a href="/">{{ humanize .Site.Title }}</a>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
       <li>
-        <a href="/">{{ humanize .Site.Title }}</a>
+        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="/{{ .Identifier }}">{{ humanize .Identifier }}</a>
+      </li>
+    {{ end }}
+    {{ if isset .Params "menu" }}
+      <hr/>
+      <li class="sub-nav">
+        <a href="#{{ lower .Params.Title }}">{{ humanize .Params.title }}</a>
         <ul class="nav">
-          {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
+          {{ range .Params.menu}}
             <li>
-              <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="/{{ .Identifier }}">{{ humanize .Identifier }}</a>
-            </li>
-          {{ end }}
-          {{ if isset .Params "menu" }}
-            <hr/>
-            <li>
-              <a href="#{{ lower .Params.Title }}">{{ humanize .Params.title }}</a>
-              <ul class="nav">
-                {{ range .Params.menu}}
-                  <li>
-                    <a href="#{{ lower . }}"> {{ humanize . }}</a>
-                  </li>
-                {{ end }}
-              </ul>
+              <a href="#{{ lower . }}"> {{ humanize . }}</a>
             </li>
           {{ end }}
         </ul>
       </li>
-    </ul>
-  </div>
+    {{ end }}
+  </ul>
 </div>
