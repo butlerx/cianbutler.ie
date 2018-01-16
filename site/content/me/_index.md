@@ -1,6 +1,6 @@
 ---
 title: "Cian-Butler"
-tags: "cv, CV, resume, me"
+tags: ["cv", "CV", "resume", "me"]
 menu:
   - experience
   - education

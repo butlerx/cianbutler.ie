@@ -4,9 +4,10 @@
       <li>
         <a href="/">{{ humanize .Site.Title }}</a>
         <ul class="nav">
-          {{ range .Site.Menus.main}}
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
             <li>
-              <a href="/{{ lower .URL }}"> {{ .Name }}</a>
+              <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="/{{ .Identifier }}">{{ humanize .Identifier }}</a>
             </li>
           {{ end }}
           {{ if isset .Params "menu" }}

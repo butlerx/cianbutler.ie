@@ -27,8 +27,8 @@ const buildSite = options =>
         reject(new PluginError({ plugin: 'hugo', message: ' build failed' }));
       }
     });
-    hugo.stdout.on('data', data => log('[hugo]', data.toString()));
-    hugo.stderr.on('data', data => log('[hugo]', data.toString()));
+    hugo.stdout.on('data', data => log('[hugo]', data.toString().slice(0, -1)));
+    hugo.stderr.on('data', data => log('[hugo]', data.toString().slice(0, -1)));
   });
 
 function buildAssets(err, stats) {
@@ -75,10 +75,13 @@ gulp.task('server', ['hugo', 'svg'], () => {
     },
   });
   const compiler = webpack(webpackConfig);
-  compiler.watch({
-    aggregateTimeout: 360,
-    poll: true,
-  }, buildAssets);
+  compiler.watch(
+    {
+      aggregateTimeout: 360,
+      poll: true,
+    },
+    buildAssets,
+  );
   gulp.watch('./site/static/image/icons-*.svg', ['svg']);
   gulp.watch('./site/**/*', ['hugo']);
 });
