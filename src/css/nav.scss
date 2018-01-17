@@ -59,13 +59,25 @@
         display: none;
       }
 
-      a {
+      > a {
         font-weight: 400;
-        padding: 1px 30px;
+        padding: 1px 20px;
 
         &:focus,
         &:hover {
-          padding-left: 29px;
+          padding-left: 19px;
+        }
+      }
+
+      nav {
+        a {
+          font-weight: 400;
+          padding: 1px 30px;
+
+          &:focus,
+          &:hover {
+            padding-left: 29px;
+          }
         }
       }
     }

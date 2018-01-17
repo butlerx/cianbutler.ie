@@ -10,11 +10,11 @@
     {{ if isset .Params "menu" }}
       <hr/>
       <li class="sub-nav">
-        <a href="#{{ lower .Params.Title }}">{{ humanize .Params.title }}</a>
+        <a href="#{{ lower .Params.Title }}" class="sub-nav__link">{{ humanize .Params.title }}</a>
         <ul class="nav">
           {{ range .Params.menu}}
             <li>
-              <a href="#{{ lower . }}"> {{ humanize . }}</a>
+              <a href="#{{ lower . }}" class="sub-nav__link"> {{ humanize . }}</a>
             </li>
           {{ end }}
         </ul>
