@@ -1,0 +1,29 @@
+---
+title: Education
+source:
+  -
+    title: Computer Applications and Software Engineering
+    where: DCU
+    start: 2013
+    finish: present
+    lanuages:
+      - C++
+      - Java
+      - JavaCC
+      - Prolog
+      - Haskell
+      - bash
+      - MySQL
+      - R
+      - HTML
+      - CSS
+      - MIPS
+      - Assembly
+    description: >
+      DCU has given me experience with crypto & secure programming. I became
+      familiar with programming in many languages and for different platforms. A
+      large number of topics were covered including search technologies,
+      distributed and thread programming, compilers, cryptography, database
+      design and network design and implementation. I gained experience using
+      UML, Scrum and agile as well as becoming familiar with source control
+      through group projects.

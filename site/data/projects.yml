@@ -39,7 +39,7 @@ source:
     description: >
       An IRC game bot framework written in Node.js. It Includes game engines for
       Cards Against Humanity, Countdown, and UNO. The framework supports plugins
-      for extra modules as required.'
+      for extra modules as required.
   -
     icon: globe
     name: Zen
