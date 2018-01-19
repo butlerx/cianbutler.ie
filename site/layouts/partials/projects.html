@@ -1,6 +1,6 @@
-<h2 id="{{ .Site.Data.projects.name | urlize }}">{{ .Site.Data.projects.name }}</h3>
+<h2 id="{{ urlize .name }}">{{ .name }}</h3>
 <div class="panel panel-default">
-  {{ range $i, $el := .Site.Data.projects.source }}
+  {{ range $i, $el := .source }}
     <h5>
       <i class="fa fa-{{ with .icon }}{{ . }}{{ else }}github{{ end }}"></i>&nbsp;&nbsp;
       <strong>
