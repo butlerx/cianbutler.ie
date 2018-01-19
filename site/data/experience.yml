@@ -1,0 +1,79 @@
+---
+title: Experience
+source:
+  -
+    title: SRE for CoderDojo Foundation
+    start: July 2017
+    finish: December 2017
+    languages:
+      - Node.js
+      - Python
+      - Docker
+      - Kubernetes
+      - AWS
+      - Linux
+      - PostgreSQL
+      - Graphite
+    description: >
+      I worked on migrating CoderDojo's
+      [Zen platform](https://zen.coderdojo.com) from single AWS instances that
+      were difficult to scale to a Kubernetes cluster, allowing an independent
+      scaling for each microservice as well as the ability to scale the cluster
+      as needed. This also simplifies Zen's setup and deployment. After
+      migrating to Kubernetes I began upgrading the deployment pipeline as well
+      as the Node version and dependencies for all the microservices. I was also
+      responsible for monitoring all the infrastructure using new-relic and
+      graphite.
+  -
+    title: Programming Tutor
+    start: September 2016
+    finish: April 2017_
+    languages:
+      - Python
+      - HTML
+      - CSS
+      - JavaScript
+    description: >
+      I was a DCU lab tutor for the year. I helped students with lab problems
+      and make sure they understood how their program worked. I had to be able
+      to explain different issues and help students understand how best to write
+      in their respective language.
+  -
+    title: Technical Intern at CoderDojo Foundation
+    start: April 2016
+    finish: October 2016
+    languages:
+      - Node.js
+      - Docker
+      - Angular.js
+      - AWS
+      - Linux
+      - PostgreSQL
+      - NGINX
+    description: >
+      In CoderDojo I worked on their [Zen platform](https://zen.coderdojo.com).
+      This involved designing new features, working on both the angular
+      front-end and Node.js backend. I was also responsible for the deployment
+      pipeline and maintaining the AWS instance for Zen and the
+      [forums](https://forums.coderdojo.com).
+  -
+    title: Webmaster Redbrick
+    start: April 2016
+    finish: April 2017
+    languages:
+      - Python
+      - Bash
+      - LDAP
+      - Apache
+      - JavaScript
+      - Node
+      - CSS
+      - Docker
+      - Linux
+      - BSD
+    description: >
+      At Redbrick I was part of a team of three. I was in charge of maintaining
+      all web-related service. This meant maintaining uptime on servers,
+      managing and upgrading user web services including user web-spaces and
+      user facing services such as Wikis, Gitea, Mastodon and more, as well as
+      designing and maintaining Redbrick's site.
