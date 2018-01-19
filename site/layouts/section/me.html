@@ -4,6 +4,11 @@
     {{ humanize .Params.title }}
   </h1>
   {{ partial "social" . }}
-  {{ .Content }}
-  {{ partial "projects" . }}
+  <blockquote>
+    {{ partial "languages" .Params.languages }}
+    {{ .Content }}
+  </blockquote>
+  {{ partial "experience" .Site.Data.experience }}
+  {{ partial "experience" .Site.Data.education }}
+  {{ partial "projects" .Site.Data.projects }}
 {{ end }}

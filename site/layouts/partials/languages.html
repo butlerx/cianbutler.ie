@@ -1,0 +1,6 @@
+<p>
+  {{ range $i, $el := . }}
+    {{if $i}}, {{end}}
+    <code>{{ $el }}</code>
+  {{ end }}
+</p>

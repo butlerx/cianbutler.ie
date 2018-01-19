@@ -19,5 +19,5 @@ languages:
   - java
 ---
 
-> **"** I'm open source developer. I'm familiar with distributed systems, and
-> using microservices to build web platform. **"**
+**"** I'm open source developer. I'm familiar with distributed systems, and
+using microservices to build web platform. **"**
