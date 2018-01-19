@@ -1,24 +1,86 @@
 ---
-name: Projects
+name: 'Open Source Projects'
 source:
-  - icon: fa fa-github
-    description: Ei viderer tacimates pro, quem assum ea nam. Veritus omnesque eam te. Et natum mucius tamquam vel, ea dolorem volumus deterruisset nec. Graeci mentitum sea an, eu prima elaboraret est.
-
-  - icon: fa fa-github
-    description: An eripuit phaedrum qui, nec facer splendide ex, vel ea assum facilisi convenire. Te his neglegentur consectetuer.
-
-  - icon: fa fa-github
-    description: An alii quot tantas eum, doming platonem persecuti mea et, vim perpetua cotidieque delicatissimi in.
-
-  - icon: fa fa-globe
-    description: Vim an case vidit sententiae, est at euismod laboramus efficiantur. Ei sit brute lorem, ea eam timeam viderer aliquid, cu integre omittam moderatius quo.
-
-  - icon: fa fa-globe
-    description: Dicta causae meliore ex vel, in vix erant integre petentium. Vix ei nisl scripta recusabo, eam doming blandit facilisis.
-
-  - icon: fa fa-cog
-    description: Inermis recusabo elaboraret mea et, dicat neglegentur vim te. Nec et sanctus scriptorem, usu ex sapientem gubergren. Tamquam admodum ei usu.
-
-  - icon: fa fa-cog
-    description: Essent putant indoctum sed in, reprimique persequeris neglegentur te quo. Nam rebum tractatos partiendo at, debet ubique oporteat ut his.
-
+  -
+    icon: github
+    name: AgileGit
+    repo: 'https://github.com/butlerx/AgileGit'
+    description: >
+      A GitHub CLI interface written in Go. Allows developers quick and easy
+      access to GitHub issues and pull requests for the project they are working
+      from the command line.
+  -
+    icon: github
+    name: event-page
+    repo: 'https://github.com/butlerx/event-page'
+    links:
+      -
+        name: Techweek,
+        link: 'https://techweek.dcu.ie'
+    description: >
+      A custom static site generator that uses JSON and Markdown to generate
+      talk pages for a conference. It uses SCSS and Handlebars.js for styling.
+  -
+    icon: globe
+    name: static-site
+    repo: 'https://github.com/redbrick/static-site'
+    description: >
+      A Statically generated website written using the Hexo site generator using
+      plain JavaScript and Stylus. An API is provided by a Node.js server that
+      parses the Markdown and YAML to generate content.
+    links:
+      -
+        name: 'Redbrick Website'
+        link: 'https://redbrick.dcu.ie'
+  -
+    icon: github
+    name: ButlerBot
+    repo: 'https://github.com/butlerx/butlerbot'
+    description: >
+      An IRC game bot framework written in Node.js. It Includes game engines for
+      Cards Against Humanity, Countdown, and UNO. The framework supports plugins
+      for extra modules as required.'
+  -
+    icon: globe
+    name: Zen
+    repo: 'https://zen.coderdojo.com'
+    description: >
+      Zen is CoderDojo''s community platform. It allows people to get involved,
+      with the CoderDojo movement, find Dojos, chat to other members and keep
+      themselves informed about their local Dojo.  For my Final Year Project, I
+      Implemented Zen''s new development environment and implemented a scalable
+      and modular setup for each mircoservice.
+    links:
+      -
+        name: cp-zen-platform
+        link: 'https://github.com/CoderDojo/cp-zen-platform'
+      -
+        name: cp-local-development
+        link: 'https://github.com/CoderDojo/cp-local-development'
+      -
+        name: cp-events-service
+        link: 'https://github.com/CoderDojo/cp-events-service'
+      -
+        name: cp-dojos-service
+        link: 'https://github.com/CoderDojo/cp-dojos-service'
+      -
+        name: cp-users-service
+        link: 'https://github.com/CoderDojo/cp-users-service'
+      -
+        name: cp-eventbrite-service
+        link: 'https://github.com/CoderDojo/cp-eventbrite-service'
+      -
+        name: cp-organisations-service
+        link: 'https://github.com/CoderDojo/cp-organisations-service'
+      -
+        name: cp-zen-frontend
+        link: 'https://github.com/CoderDojo/cp-zen-frontend'
+  -
+    name: wetty
+    repo: 'https://github.com/butlerx/wetty'
+    description: >
+      Terminal over HTTP and HTTPS. Wetty is an alternative to ajaxterm/anyterm
+      but much better than them because wetty uses ChromeOS'' terminal emulator
+      (hterm) which is a full fledged implementation of terminal emulation
+      written entirely in Javascript. Also it uses websockets instead of Ajax
+      and hence better response time.

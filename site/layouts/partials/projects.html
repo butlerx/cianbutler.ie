@@ -1,0 +1,13 @@
+<h2 id="{{ .Site.Data.projects.name | urlize }}">{{ .Site.Data.projects.name }}</h3>
+<div class="panel panel-default">
+  {{ range $i, $el := .Site.Data.projects.source }}
+    <h5>
+      <i class="fa fa-{{ with .icon }}{{ . }}{{ else }}github{{ end }}"></i>&nbsp;&nbsp;
+      <strong>
+        <a href="{{ with .repo }}{{ . }}{{ else }}#{{ end }}">
+          {{ with .name }}{{ . }}{{ else }}Project {{ add $i 1 }}{{ end }}
+        </a>
+      </strong>&nbsp;-&nbsp;{{ $el.description | markdownify }}
+    </h5>
+  {{ end }}
+</div>
