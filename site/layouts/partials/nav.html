@@ -1,10 +1,15 @@
 <div class="sidebar hidden-print" data-spy="affix">
   <ul class="nav">
-    <a href="/">{{ humanize .Site.Title }}</a>
+    <a class="animation-target{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }} active{{ end }}"
+      href="{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }}#{{ else }}/{{ end }}"
+    >{{ humanize .Site.Title }}</a>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
       <li>
-        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="/{{ urlize .Identifier }}">{{ humanize .Identifier }}</a>
+        <a
+          class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}"
+          href="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}#{{ else }}/{{ urlize .Identifier }}{{ end }}"
+          >{{ humanize .Identifier }}</a>
       </li>
     {{ end }}
     {{ if isset .Params "menu" }}
