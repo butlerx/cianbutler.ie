@@ -19,6 +19,7 @@
   }
   </script>
 
+  <link rel="manifest" href="/manifest.json">
   <title>
     {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
     {{- if eq $url "/" -}}
