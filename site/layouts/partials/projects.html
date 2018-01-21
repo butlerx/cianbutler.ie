@@ -1,13 +1,23 @@
 <h2 id="{{ urlize .name }}">{{ .name }}</h3>
-<div class="panel panel-default">
+<div class="project-list">
   {{ range $i, $el := .source }}
-    <h5>
-      <i class="fa fa-{{ with .icon }}{{ . }}{{ else }}github{{ end }}"></i>&nbsp;&nbsp;
-      <strong>
-        <a href="{{ with .repo }}{{ . }}{{ else }}#{{ end }}">
-          {{ with .name }}{{ . }}{{ else }}Project {{ add $i 1 }}{{ end }}
-        </a>
-      </strong>&nbsp;-&nbsp;{{ $el.description | markdownify }}
-    </h5>
+  <div>
+    <span class="project-list-element">
+      <span class="project-list-element-title">
+        <i class="fa fa-{{ with .icon }}{{ . }}{{ else }}github{{ end }}"></i>&nbsp;&nbsp;
+        <strong>
+          <a href="{{ with .repo }}{{ . }}{{ else }}#{{ end }}">
+            {{ with .name }}{{ . }}{{ else }}Project {{ add $i 1 }}{{ end }}
+          </a>
+        </strong>
+        {{ with .extra }}
+          &nbsp;-&nbsp;<a href="{{ .link }}">{{ .name }}</a>
+        {{ end }}
+        </span>
+      <span class="project-list-element-description">
+        &nbsp;-&nbsp;{{ $el.description | markdownify }}
+      </span>
+    </span>
+  </div>
   {{ end }}
 </div>

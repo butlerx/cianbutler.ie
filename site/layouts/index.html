@@ -10,15 +10,10 @@
         <h3>{{ .Params.project_link | markdownify }}<a href="/projects/"> projects</a>.</h3>
         <h3>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</h3>
         {{ .Content }}
-        <h3>Contact me at <a href="http://twitter.com/{{ .Site.Params.Twitter }}">@{{ .Site.Params.Twitter }}</a> or by <a href="mailto:{{ .Site.Params.Email }}">email</a>.</h3>
-        <div class="about__icons">
-          {{ range .Site.Params.social }}
-            <a href="{{ .link }}" class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"aria-hidden="true" ></i>
-              <i class="fa fa-{{ .icon }} fa-stack-1x fa-inverse" aria-hidden="true"></i>
-            </a>
-          {{ end }}
-        </div>
+        <h3>Contact me at <a href="http://twitter.com/{{ .Site.Params.Social.twitter.user }}">@{{ .Site.Params.Social.twitter.user }}</a> or by <a href="mailto:{{ .Site.Params.Social.email.address }}">email</a>.</h3>
+        {{ with .Site.Params.social }}
+          {{ partial "icons" . }}
+        {{ end }}
       </div>
     </section>
   </div>
