@@ -4,8 +4,8 @@ source:
   -
     title: Computer Applications and Software Engineering @ DCU
     where: DCU
-    start: 2013
-    finish: present
+    start: 2013-09-30
+    finish: ''
     lanuages:
       - C++
       - Java

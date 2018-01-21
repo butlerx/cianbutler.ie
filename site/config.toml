@@ -1,30 +1,28 @@
-baseURL = "cian.notthe.cloud"
+baseURL = "https://cian.notthe.cloud/"
 languageCode = "en-us"
 title = "Not the Cloud"
 sectionPagesMenu = "main"
 
 [Params]
   Description = "A Place to put projects info, with a meh title i like."
-  twitter = "cianbutlerx"
   favicon = "favicon.ico"
   avatar = "me.png"
   author = "Cian Butler"
-  email = "butlerx@notthe.cloud"
   repo = "butlerx/cv"
 
-[[Params.social]]
+[Params.social.twitter]
   icon = "twitter"
-  link = "https://twitter.com/cianbutlerx"
-  medium = "Twitter"
-[[Params.social]]
+  user = "cianbutlerx"
+[Params.social.mastodon]
   icon = "retweet"
-  link = "https://mastodon.redbrick.dcu.ie/@butlerx"
-  medium = "Mastodon"
-[[Params.social]]
+  user = "butlerx"
+  host = "mastodon.redbrick.dcu.ie"
+[Params.social.github]
   icon = "github-alt"
-  link = "https://github.com/butlerx/"
-  medium = "Github"
-[[Params.social]]
+  user = "butlerx"
+[Params.social.email]
   icon = "envelope"
-  link = "mailto:butlerx@notthe.cloud"
-  medium = "Email"
+  address = "butlerx@notthe.cloud"
+[Params.social.linkedin]
+  icon = "linkedin"
+  user = "butlerx"

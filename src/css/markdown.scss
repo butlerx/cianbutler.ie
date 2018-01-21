@@ -2,6 +2,7 @@
   margin-left: 8em;
   margin-right: auto;
   max-width: 758px;
+  min-height: 660px;
   overflow: visible;
   padding: 40px 16px;
 
@@ -146,6 +147,23 @@
     &::before {
       content: '\A0';
       letter-spacing: -0.2em;
+    }
+  }
+
+  .project-list {
+
+    &-element {
+      display: block;
+      margin: 1.67em 0;
+
+      &-title {
+        font-size: .9em;
+        font-weight: bold;
+      }
+
+      &-description {
+        font-size: 0.8em;
+      }
     }
   }
 }

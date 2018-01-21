@@ -1,10 +1,10 @@
 <h2 id="{{ urlize .title }}">{{ humanize .title }}</h3>
-{{ range $i, $el := .source }}
-  <h3 id="{{ urlize .title }}">{{ .title }}&emsp;<small><em>{{ .start }} - {{ .finish }}</em></small></h3>
+{{ range sort .source "start" "desc"}}
+<h3 id="{{ urlize .title }}">{{ .title }}&emsp;<small><em>{{ dateFormat "Jan 1, 2006" .start }} - {{ with .finish }}{{ dateFormat "Jan 1, 2006" . }}{{ else }}present{{end}}</em></small></h3>
   {{ partial "languages" .languages }}
   <blockquote>
     <p>
-      {{ $el.description | markdownify }}
+      {{ markdownify .description }}
     </p>
   </blockquote>
   <hr>
