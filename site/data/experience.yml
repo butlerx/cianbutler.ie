@@ -2,9 +2,10 @@
 title: Experience
 source:
   -
-    title: SRE for CoderDojo Foundation
+    title: SRE
+    where: CoderDojo Foundation
     start: 2017-06-10
-    finish: 2087-01-10
+    finish: 2018-01-10
     languages:
       - Node.js
       - Python
@@ -22,10 +23,11 @@ source:
       as needed. This also simplifies Zen's setup and deployment. After
       migrating to Kubernetes I began upgrading the deployment pipeline as well
       as the Node version and dependencies for all the microservices. I was also
-      responsible for monitoring all the infrastructure using new-relic and
-      graphite.
+      responsible for monitoring all the infrastructure using NewRelic and
+      Graphite.
   -
     title: Programming Tutor
+    where: DCU
     start: 2016-09-30
     finish: 2017-04-22
     languages:
@@ -35,11 +37,12 @@ source:
       - JavaScript
     description: >
       I was a DCU lab tutor for the year. I helped students with lab problems
-      and make sure they understood how their program worked. I had to be able
+      and made sure they understood how their program worked. I had to be able
       to explain different issues and help students understand how best to write
       in their respective language.
   -
-    title: Technical Intern at CoderDojo Foundation
+    title: Technical Intern
+    where: CoderDojo Foundation
     start: 2016-04-06
     finish: 2016-10-06
     languages:
@@ -52,12 +55,13 @@ source:
       - NGINX
     description: >
       In CoderDojo I worked on their [Zen platform](https://zen.coderdojo.com).
-      This involved designing new features, working on both the angular
+      This involved designing new features, working on both the Angular
       front-end and Node.js backend. I was also responsible for the deployment
       pipeline and maintaining the AWS instance for Zen and the
       [forums](https://forums.coderdojo.com).
   -
-    title: Webmaster Redbrick
+    title: Webmaster
+    where: Redbrick
     start: 2016-04-04
     finish: 2017-04-06
     languages:
