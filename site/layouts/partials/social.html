@@ -41,4 +41,11 @@
       </a>
     </li>
   {{ end }}
+  {{ with .Site.Params.social.phone }}
+    <li>
+      <a href="tel:{{ .num }}" class="icon fa fa-{{ .icon }}">
+        <span class="label">Phone</span>
+      </a>
+    </li>
+  {{ end }}
 </ul>

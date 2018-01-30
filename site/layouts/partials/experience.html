@@ -1,11 +1,13 @@
-<h2 id="{{ urlize .title }}">{{ humanize .title }}</h3>
-{{ range sort .source "start" "desc"}}
-<h3 id="{{ urlize .title }}">{{ .title }}&emsp;<small><em>{{ dateFormat "Jan 1, 2006" .start }} - {{ with .finish }}{{ dateFormat "Jan 1, 2006" . }}{{ else }}present{{end}}</em></small></h3>
-  {{ partial "languages" .languages }}
-  <blockquote>
-    <p>
-      {{ markdownify .description }}
-    </p>
-  </blockquote>
-  <hr>
-{{ end }}
+<div class="experience">
+  <h2 id="{{ urlize .title }}">{{ humanize .title }}</h3>
+  {{ range sort .source "start" "desc"}}
+    <h3 id="{{ urlize .title }}">{{ .title }}&emsp;<small><em>{{ dateFormat "Jan 1, 2006" .start }} - {{ with .finish }}{{ dateFormat "Jan 1, 2006" . }}{{ else }}present{{end}}</em></small></h3>
+    {{ partial "languages" .languages }}
+    <blockquote>
+      <p>
+        {{ markdownify .description }}
+      </p>
+    </blockquote>
+    <hr>
+  {{ end }}
+</div>
