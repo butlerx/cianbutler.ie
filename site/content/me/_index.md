@@ -6,18 +6,20 @@ menu:
   - education
   - 'open source projects'
 languages:
-  - node
-  - docker
-  - linux
-  - python
-  - javascript
-  - c
-  - c++
-  - scss
-  - postgresql
-  - go
-  - java
+  - Node
+  - Docker
+  - Linux
+  - Python
+  - JavaScript
+  - C
+  - C++
+  - SCSS
+  - PostgreSQL
+  - Go
+  - Java
+  - Kubernetes
+  - AWS
 ---
 
-**"** I'm open source developer. I'm familiar with distributed systems, and
-using microservices to build web platform. **"**
+**"** I'm an open source developer. I'm familiar with distributed systems, and
+using micro services to build web platforms. **"**

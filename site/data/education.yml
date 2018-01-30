@@ -2,7 +2,7 @@
 title: Education
 source:
   -
-    title: Computer Applications and Software Engineering @ DCU
+    title: Computer Applications and Software Engineering
     where: DCU
     start: 2013-09-30
     finish: ''
@@ -12,7 +12,7 @@ source:
       - JavaCC
       - Prolog
       - Haskell
-      - bash
+      - Bash
       - MySQL
       - R
       - HTML
