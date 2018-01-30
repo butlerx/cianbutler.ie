@@ -37,7 +37,7 @@ export default {
   module: {
     loaders: [
       {
-        test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.((png)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader?name=/[hash].[ext]',
       },
       {
@@ -62,9 +62,8 @@ export default {
         query: { cacheDirectory: true },
       },
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml' },
-      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=application/font-woff' },
       {
-        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader?mimetype=application/font-woff',
       },
       {
