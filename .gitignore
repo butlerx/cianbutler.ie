@@ -2,6 +2,7 @@
 public
 dist
 *.pdf
+priv*
 ### OSX ###
 *.DS_Store
 .AppleDouble
