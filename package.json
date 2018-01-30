@@ -6,9 +6,10 @@
   "scripts": {
     "hugo": "gulp hugo",
     "webpack": "gulp webpack",
-    "build": "gulp build",
+    "build": "NODE_ENV=production gulp build",
     "build-preview": "gulp build-preview",
-    "start": "gulp server",
+    "print": "gulp print",
+    "start": "NODE_ENV=development gulp server",
     "gulp": "gulp",
     "lint": "eslint . --fix && prettier --write src/**/*.scss && sass-lint -v -q"
   },

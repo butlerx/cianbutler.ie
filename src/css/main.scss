@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased; // sass-lint:disable-line no-vendor-prefixes
   -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes, no-misspelled-properties
   border-top: 6px solid $red;
-  font-family: Segoe UI, Roboto, Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: $fonts;
   font-size: 16px;
   font-smooth: auto; // sass-lint:disable-line no-misspelled-properties
   letter-spacing: 0.025em;
