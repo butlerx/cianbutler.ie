@@ -1,7 +1,7 @@
 <h2 id="{{ urlize .name }}">{{ .name }}</h3>
 <div class="project-list">
   {{ range $i, $el := .source }}
-  <div>
+  <div class="project">
     <span class="project-list-element">
       <span class="project-list-element-title">
         <i class="fa fa-{{ with .icon }}{{ . }}{{ else }}github{{ end }}"></i>&nbsp;&nbsp;

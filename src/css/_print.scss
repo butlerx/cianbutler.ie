@@ -25,6 +25,8 @@
     }
 
     .markdown-body {
+      margin: 0;
+
       h2 {
         font-size: 1.2em !important;
       }
@@ -33,6 +35,7 @@
         font-size: 1em !important;
       }
 
+      .project-list-element-title,
       p {
         font-size: 0.8em;
       }
@@ -52,6 +55,8 @@
       }
     }
 
+    .experience,
+    .project,
     blockquote,
     div,
     img {
@@ -60,10 +65,10 @@
   }
 
   a {
-    [href] {
-      &::after {
-        font-size: 12px !important;
-      }
+    &::after {
+      content: ' (' attr(href) ') ';
+      font-size: 0.8em;
+      font-weight: normal;
     }
   }
 

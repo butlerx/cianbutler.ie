@@ -7,8 +7,11 @@ import webpack from 'webpack';
 import svgstore from 'gulp-svgstore';
 import svgmin from 'gulp-svgmin';
 import inject from 'gulp-inject';
+import puppeteer from 'puppeteer';
+import { promisify } from 'util';
 import webpackConfig from './webpack.conf';
 
+const sleep = promisify(setTimeout);
 const browserSync = BrowserSync.create();
 
 const buildSite = options =>
@@ -75,6 +78,7 @@ gulp.task('svg', () =>
 
 gulp.task('server', ['hugo', 'svg'], () => {
   browserSync.init({
+    notify: false,
     server: {
       baseDir: './dist',
     },
@@ -89,4 +93,15 @@ gulp.task('server', ['hugo', 'svg'], () => {
   );
   gulp.watch('./site/static/image/icons/*.svg', ['svg']);
   gulp.watch('./site/**/*', ['hugo']);
+});
+
+gulp.task('print', ['server'], async () => {
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000/me', { waitUntil: 'networkidle2' });
+  await page.emulateMedia('print');
+  await sleep(100);
+  await page.pdf({ path: 'cv.pdf', format: 'A4' });
+  await browser.close();
+  process.exit();
 });
