@@ -8,7 +8,7 @@
     "webpack": "gulp webpack",
     "build": "NODE_ENV=production gulp build",
     "build-preview": "gulp build-preview",
-    "print": "gulp print",
+    "print": "NODE_ENV=production gulp print",
     "start": "NODE_ENV=development gulp server",
     "gulp": "gulp",
     "lint": "eslint . --fix && prettier --write src/**/*.scss && sass-lint -v -q"
