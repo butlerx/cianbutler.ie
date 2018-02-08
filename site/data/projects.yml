@@ -54,8 +54,8 @@ source:
       for extra modules as required.
   -
     icon: github
-    name: AgileGit
-    repo: 'https://github.com/butlerx/AgileGit'
+    name: sushi
+    repo: 'https://github.com/butlerx/sushi'
     description: >
       A GitHub CLI interface written in Go. Allows developers quick and easy
       access to GitHub issues and pull requests for the project they are working
