@@ -1,10 +1,14 @@
 # C.V.
 
-A Hugo static site.
+![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/butlerx/cv/blob/master/LICENSE.md)
+[![CircleCI](https://circleci.com/gh/butlerx/cv.svg?style=svg)](https://circleci.com/gh/butlerx/cv)
+
+A Hugo static site To display past work experience and projects on.
 
 # Installation
 
-Hugo binaries are bundled so just need to add dependencies for sass and js.
+Hugo binaries are bundled so just need to add dependencies for sass and JS.
 
 Run `yarn` to install dependencies.
 
@@ -12,15 +16,14 @@ Run `yarn` to install dependencies.
 
 ## Development
 
-To Preview the site do `yarn start`
-The Browser will open the main page automagically.
-The Site will live reload based on any changes.
+To Preview the site do `yarn start` The Browser will open the main page
+automagically. The Site will live reload based on any changes.
 
 ## Publish
 
-To Build the site for deployment run `yarn build`, the site will be output to `dist` folder.
-This can then be served from any hosting. To see how to auto deploy to a GitHub
-Pages see `./.circleci/config.yml`
+To Build the site for deployment run `yarn build`, the site will be output to
+`dist` folder. This can then be served from any hosting. To see how to auto
+deploy to a GitHub Pages see `./.circleci/config.yml`
 
 ## PDF
 
@@ -32,9 +35,9 @@ root dir.
 All pages content sections can be edited from `./site/content`. These files are
 simple markdown with front-matter yaml
 
-A of the content is shared and stored in `./site/data` such as `experience.yaml`,
-`education.yaml` and `projects.yaml`. The tech in the yaml files are treated as
-markdown and rendered out in to the templates.
+A of the content is shared and stored in `./site/data` such as
+`experience.yaml`, `education.yaml` and `projects.yaml`. The tech in the yaml
+files are treated as markdown and rendered out in to the templates.
 
 The Social links can be found in `./site/config.toml`. Each link have slightly
 different structure for there unique need, so you can refer to the template

@@ -22,6 +22,7 @@
       float: left;
       margin-left: 8px;
       padding-bottom: 8px;
+      position: absolute;
     }
 
     display: flex;
@@ -33,12 +34,16 @@
     padding-left: 0;
     position: fixed;
 
+    @import 'sub-nav';
+
     hr {
       margin: 4px;
     }
 
     li {
-      a {
+      @import 'bounce';
+
+      .sidebar-nav-item {
         display: block;
         font-size: 12px;
         font-weight: 500;
@@ -51,34 +56,6 @@
           color: $black;
           padding-left: 19px;
           text-decoration: none;
-        }
-      }
-    }
-
-    .sub-nav {
-      @media screen and (max-width: $large-phone) {
-        display: none;
-      }
-
-      > a {
-        font-weight: 400;
-        padding: 1px 20px;
-
-        &:focus,
-        &:hover {
-          padding-left: 19px;
-        }
-      }
-
-      nav {
-        a {
-          font-weight: 400;
-          padding: 1px 30px;
-
-          &:focus,
-          &:hover {
-            padding-left: 29px;
-          }
         }
       }
     }
