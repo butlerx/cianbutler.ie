@@ -13,6 +13,5 @@ module.exports = {
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     'no-use-before-define': ['error', { functions: false }],
     'no-shadow': ['error', { builtinGlobals: true }],
-    'consistent-return': 0,
   },
 };

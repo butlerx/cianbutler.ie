@@ -66,6 +66,7 @@
 
   a {
     font-family: $fonts;
+
     &::after {
       content: ' (' attr(href) ') ';
       font-size: 0.8em;

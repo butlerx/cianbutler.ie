@@ -6,6 +6,8 @@
   overflow: visible;
   padding: 40px 16px;
 
+  @import 'about';
+
   &::after,
   &::before {
     content: '';
@@ -151,13 +153,12 @@
   }
 
   .project-list {
-
     &-element {
       display: block;
       margin: 1.67em 0;
 
       &-title {
-        font-size: .9em;
+        font-size: 0.9em;
         font-weight: bold;
       }
 

@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1 id="{{ lower .Params.Title }}">
+  <h1 id="{{ urlize .Params.Title }}">
     <img src="/images/me.png" alt="Itsa ME" class="avatar"/>
     {{ humanize .Params.title }}
   </h1>

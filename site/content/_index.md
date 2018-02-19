@@ -1,5 +1,5 @@
 ---
-title: "Cian-Butler"
+title: "Cian Butler"
 job: SRE
 blurb: 'Open Source Developer'
 project_link: 'Have a look at some of my working'
