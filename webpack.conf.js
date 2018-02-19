@@ -14,24 +14,6 @@ const imports = new webpack.ProvidePlugin({
   fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
 });
 
-const plugins =
-  process.env.NODE_ENV !== 'development'
-    ? [
-        imports,
-        extractSass,
-        new PurifyCSSPlugin({
-          paths: glob.sync(path.join(__dirname, 'dist/**/*.html')),
-          minimize: true,
-        }),
-        new UglifyJSPlugin({
-          parallel: true,
-          uglifyOptions: {
-            ecma: 8,
-          },
-        }),
-      ]
-    : [imports, extractSass];
-
 export default {
   module: {
     loaders: [
@@ -73,7 +55,23 @@ export default {
     ],
   },
 
-  plugins,
+  plugins:
+    process.env.NODE_ENV !== 'development'
+      ? [
+          imports,
+          extractSass,
+          new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, 'dist/**/*.html')),
+            minimize: true,
+          }),
+          new UglifyJSPlugin({
+            parallel: true,
+            uglifyOptions: {
+              ecma: 8,
+            },
+          }),
+        ]
+      : [imports, extractSass],
   context: path.join(__dirname, 'src'),
   entry: {
     main: ['./js/main'],
