@@ -6,19 +6,21 @@ menu:
   - education
   - 'open source projects'
 languages:
-  - Node
-  - Docker
-  - Linux
-  - Python
-  - JavaScript
+  - AWS
   - C
   - C++
-  - SCSS
-  - PostgreSQL
+  - Docker
   - Go
   - Java
+  - JavaScript
+  - Kotlin
   - Kubernetes
-  - AWS
+  - Linux
+  - Node
+  - PostgreSQL
+  - Python
+  - Rust
+  - SCSS
 ---
 
 **"** I'm an open source developer. I'm familiar with distributed systems, and
