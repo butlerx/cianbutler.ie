@@ -2,7 +2,7 @@
   <ul class="nav">
     <a class="animation-target{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }} active{{ end }}"
       href="{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }}#{{ else }}/{{ end }}"
-    >{{ humanize .Site.Title }}</a>
+    >{{ .Site.Title }}</a>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
       <li>

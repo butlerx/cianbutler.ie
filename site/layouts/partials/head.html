@@ -1,7 +1,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="/main.css" />
   <script src="/main.js"></script>
@@ -29,10 +28,11 @@
 
   <link rel="manifest" href="/manifest.json">
   <title>
+    {{- $isHomePage := eq .Title .Site.Title -}}
     {{- if .Params.heading -}}
       {{- .Params.heading -}}
     {{- else -}}
-      {{- .Title }} | {{ .Site.Title }}
+      {{- .Title -}}{{- if eq $isHomePage false }} | {{ .Site.Title }}{{ end -}}
     {{- end -}}
   </title>
   <meta name="description" content="{{ .Site.Params.Description }}">
