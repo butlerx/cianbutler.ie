@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <h1 id="{{ urlize .Params.Title }}">
+  <h1 id="{{ urlize .Params.heading }}">
     <img src="/images/me.png" alt="Itsa ME" class="avatar"/>
-    {{ humanize .Params.title }}
+    {{ .Params.heading }}
   </h1>
   {{ partial "social" . }}
   <blockquote>

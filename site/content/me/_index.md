@@ -1,5 +1,6 @@
 ---
-title: "Cian-Butler"
+title: "Me"
+heading: "Cian Butler"
 tags: ["cv", "CV", "resume", "me"]
 menu:
   - experience
