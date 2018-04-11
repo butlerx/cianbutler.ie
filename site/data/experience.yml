@@ -7,14 +7,14 @@ source:
     start: 2017-06-10
     finish: 2018-01-10
     languages:
-      - Node.js
-      - Python
-      - Docker
-      - Kubernetes
       - AWS
-      - Linux
-      - PostgreSQL
+      - Docker
       - Graphite
+      - Kubernetes
+      - Linux
+      - Node.js
+      - PostgreSQL
+      - Python
     description: >
       I worked on migrating CoderDojo's
       [Zen platform](https://zen.coderdojo.com) from single AWS instances that
@@ -31,10 +31,10 @@ source:
     start: 2016-09-30
     finish: 2017-04-22
     languages:
-      - Python
-      - HTML
       - CSS
+      - HTML
       - JavaScript
+      - Python
     description: >
       I was a DCU lab tutor for the year. I helped students with lab problems
       and made sure they understood how their program worked. I had to be able
@@ -46,13 +46,13 @@ source:
     start: 2016-04-06
     finish: 2016-10-06
     languages:
-      - Node.js
-      - Docker
-      - Angular.js
       - AWS
+      - Angular.js
+      - Docker
       - Linux
-      - PostgreSQL
       - NGINX
+      - Node.js
+      - PostgreSQL
     description: >
       In CoderDojo I worked on their [Zen platform](https://zen.coderdojo.com).
       This involved designing new features, working on both the Angular
@@ -65,16 +65,18 @@ source:
     start: 2016-04-04
     finish: 2017-04-06
     languages:
-      - Python
-      - Bash
-      - LDAP
       - Apache
-      - JavaScript
-      - Node
+      - BSD
+      - Bash
       - CSS
       - Docker
+      - ELK
+      - JavaScript
+      - LDAP
       - Linux
-      - BSD
+      - Node
+      - Prometheus
+      - Python
     description: >
       At Redbrick I was part of a team of three. I was in charge of maintaining
       all web-related service. This meant maintaining uptime on servers,

@@ -14,10 +14,6 @@ sectionPagesMenu = "main"
 [Params.social.twitter]
   icon = "twitter"
   user = "cianbutlerx"
-[Params.social.mastodon]
-  icon = "retweet"
-  user = "butlerx"
-  host = "mastodon.redbrick.dcu.ie"
 [Params.social.github]
   icon = "github-alt"
   user = "butlerx"

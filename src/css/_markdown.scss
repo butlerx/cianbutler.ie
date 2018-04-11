@@ -155,11 +155,12 @@
   .project-list {
     &-element {
       display: block;
-      margin: 1.67em 0;
+      margin: 0 0 1.67em;
 
       &-title {
         font-size: 0.9em;
         font-weight: bold;
+        margin-top: 0;
       }
 
       &-description {
