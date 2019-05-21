@@ -1,4 +1,4 @@
-.markdown-body {
+.markdownBody {
   margin-left: 8em;
   margin-right: auto;
   max-width: 758px;
@@ -18,7 +18,7 @@
     clear: both;
   }
 
-  >  {
+  > {
     :first-child {
       margin-top: 0;
     }
@@ -71,7 +71,7 @@
     margin: 0 0 20px;
     padding: 0 1em;
 
-    >  {
+    > {
       :first-child {
         margin-top: 0;
       }

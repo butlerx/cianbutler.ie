@@ -1,4 +1,6 @@
-.sidebar {
+@import 'variables';
+
+.Sidebar {
   margin-top: 64px;
   text-align: inherit;
   @media screen and (max-width: $large-phone) {
@@ -15,7 +17,7 @@
     }
   }
 
-  .nav {
+  .Nav {
     @media screen and (max-width: $large-phone) {
       border-bottom: 1px solid $light-grey;
       flex-direction: row;
@@ -34,14 +36,40 @@
     padding-left: 0;
     position: fixed;
 
-    @import 'sub-nav';
+    .SubNav {
+      @media screen and (max-width: $large-phone) {
+        display: none;
+      }
+
+      > a {
+        font-weight: 400;
+        padding: 1px 20px;
+
+        &:focus,
+        &:hover {
+          padding-left: 19px;
+        }
+      }
+
+      nav {
+        .SidebarNavItem {
+          font-weight: 400;
+          padding: 1px 30px;
+
+          &:focus,
+          &:hover {
+            padding-left: 29px;
+          }
+        }
+      }
+    }
 
     hr {
       margin: 4px;
     }
 
     li {
-      .sidebar-nav-item {
+      .SidebarNavItem {
         display: block;
         font-size: 12px;
         font-weight: 500;
