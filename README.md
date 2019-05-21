@@ -2,13 +2,10 @@
 
 ![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/butlerx/cv/blob/master/LICENSE.md)
-[![CircleCI](https://circleci.com/gh/butlerx/cv.svg?style=svg)](https://circleci.com/gh/butlerx/cv)
 
-A Hugo static site To display past work experience and projects on.
+A Gatsby static site To display past work experience and projects i've worked on.
 
 # Installation
-
-Hugo binaries are bundled so just need to add dependencies for sass and JS.
 
 Run `yarn` to install dependencies.
 

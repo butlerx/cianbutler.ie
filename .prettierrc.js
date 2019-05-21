@@ -1,13 +1,8 @@
 module.exports = {
   singleQuote: true,
-  trailingComma: 'all',
-  proseWrap: 'always',
-  overrides: [
-    {
-      files: ['*.js', '*.mjs'],
-      options: {
-        printWidth: 100,
-      },
-    },
-  ],
-};
+  trailingComma: "all",
+  proseWrap: "always",
+  printWidth: 100,
+  endOfLine: "lf",
+  tabWidth: 2,
+}

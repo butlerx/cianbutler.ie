@@ -1,0 +1,159 @@
+import { graphql, Link } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
+import * as React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+
+import {
+  Experience,
+  ExperienceData,
+  Languages,
+  Layout,
+  SEO,
+  Social,
+  SocialProps,
+} from '../components';
+
+interface YAML {
+  title: string;
+  source: ExperienceData[];
+}
+
+interface IndexPageProps {
+  data: {
+    site: {
+      siteMetadata: {
+        author: string;
+        description: string;
+        title: string;
+        social: SocialProps;
+        languages: string[];
+        menu: string[];
+      };
+    };
+    placeholderImage: {
+      childImageSharp: {
+        fluid: FluidObject;
+      };
+    };
+    allYaml: {
+      edges: Array<{
+        node: YAML;
+      }>;
+    };
+  };
+}
+
+export const IndexPageQuery = graphql`
+  query ExperienceQuery {
+    site {
+      siteMetadata {
+        author
+        description
+        title
+        languages
+        menu
+        social {
+          twitter {
+            icon
+            user
+          }
+          linkedIn {
+            icon
+            user
+          }
+          email {
+            icon
+            address
+          }
+          github {
+            icon
+            user
+          }
+        }
+      }
+    }
+    placeholderImage: file(relativePath: { eq: "me.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allYaml {
+      edges {
+        node {
+          title
+          source {
+            title
+            where
+            start
+            finish
+            languages
+            description
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default class IndexPage extends React.Component<IndexPageProps, {}> {
+  public render() {
+    const {
+      description,
+      title,
+      author,
+      social,
+      languages,
+      menu,
+    } = this.props.data.site.siteMetadata;
+    const { fluid } = this.props.data.placeholderImage.childImageSharp;
+    return (
+      <Layout
+        title={title}
+        currentPage='me'
+        pages={menu}
+        internalLinks={['experience', 'education']}
+      >
+        <SEO pageTitle='me' author={social.twitter.user} title={title} description={description} />
+        <ScrollableAnchor id={'me'}>
+          <h1 id='me'>
+            <Img fluid={fluid} alt='Itsa ME' className='avatar' />
+            {author}
+          </h1>
+        </ScrollableAnchor>
+        <Social
+          twitter={social.twitter}
+          github={social.github}
+          git={social.git}
+          mastodon={social.mastodon}
+          mail={social.mail}
+          linkedin={social.linkedin}
+          phone={social.phone}
+        />
+        <blockquote>
+          <Languages languages={languages} />
+          {description}
+        </blockquote>
+        <ScrollableAnchor id={'experience'}>
+          <Experience data={this.experience} title='Experience' />
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'education'}>
+          <Experience data={this.education} title='Education' />
+        </ScrollableAnchor>
+      </Layout>
+    );
+  }
+  private getYaml = (id: string): Array<{ node: YAML }> =>
+    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === 'Experience');
+
+  private get experience(): ExperienceData[] {
+    const [{ node }] = this.getYaml('Experience');
+    return node.source;
+  }
+
+  private get education(): ExperienceData[] {
+    const [{ node }] = this.getYaml('Education');
+    return node.source;
+  }
+}

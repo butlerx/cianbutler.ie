@@ -1,0 +1,97 @@
+---
+title: Experience
+source:
+  - title: SRE
+    Where: Demonware
+    languages:
+      - Docker
+      - Prometheus
+      - Graphite
+      - Kubernetes
+      - Puppet
+      - Python
+      - MySQL
+      - Typescript
+    start: 2019-05-16
+  -
+    title: SRE
+    where: CoderDojo Foundation
+    start: 2017-06-10
+    finish: 2018-01-10
+    languages:
+      - AWS
+      - Docker
+      - Graphite
+      - Kubernetes
+      - Linux
+      - Node.js
+      - PostgreSQL
+      - Python
+    description: >
+      I worked on migrating CoderDojo's
+      [Zen platform](https://zen.coderdojo.com) from single AWS instances that
+      were difficult to scale to a Kubernetes cluster, allowing an independent
+      scaling for each microservice as well as the ability to scale the cluster
+      as needed. This also simplifies Zen's setup and deployment. After
+      migrating to Kubernetes I began upgrading the deployment pipeline as well
+      as the Node version and dependencies for all the microservices. I was also
+      responsible for monitoring all the infrastructure using NewRelic and
+      Graphite.
+  -
+    title: Programming Tutor
+    where: DCU
+    start: 2016-09-30
+    finish: 2017-04-22
+    languages:
+      - CSS
+      - HTML
+      - JavaScript
+      - Python
+    description: >
+      I was a DCU lab tutor for the year. I helped students with lab problems
+      and made sure they understood how their program worked. I had to be able
+      to explain different issues and help students understand how best to write
+      in their respective language.
+  -
+    title: Technical Intern
+    where: CoderDojo Foundation
+    start: 2016-04-06
+    finish: 2016-10-06
+    languages:
+      - AWS
+      - Angular.js
+      - Docker
+      - Linux
+      - NGINX
+      - Node.js
+      - PostgreSQL
+    description: >
+      In CoderDojo I worked on their [Zen platform](https://zen.coderdojo.com).
+      This involved designing new features, working on both the Angular
+      front-end and Node.js backend. I was also responsible for the deployment
+      pipeline and maintaining the AWS instance for Zen and the
+      [forums](https://forums.coderdojo.com).
+  -
+    title: Webmaster
+    where: Redbrick
+    start: 2016-04-04
+    finish: 2017-04-06
+    languages:
+      - Apache
+      - BSD
+      - Bash
+      - CSS
+      - Docker
+      - ELK
+      - JavaScript
+      - LDAP
+      - Linux
+      - Node
+      - Prometheus
+      - Python
+    description: >
+      At Redbrick I was part of a team of three. I was in charge of maintaining
+      all web-related service. This meant maintaining uptime on servers,
+      managing and upgrading user web services including user web-spaces and
+      user facing services such as Wikis, Gitea, Mastodon and more, as well as
+      designing and maintaining Redbrick's site.

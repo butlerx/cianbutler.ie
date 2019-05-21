@@ -1,0 +1,12 @@
+.project {
+  &List {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Element {
+      font-size: 110%;
+      margin: 1em 0;
+    }
+  }
+}
