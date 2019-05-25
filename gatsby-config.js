@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Cian Butler',
     description: 'Cian Butler, open source developer and SRE',
+    siteUrl: 'https://cianbutler.ie',
     author: 'Cian Butler',
     repo: 'butlerx/cv',
     job: 'SRE',

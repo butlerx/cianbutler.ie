@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 
 import { GithubCorner } from './github-corner';
 import styles from './layout.module.scss';
@@ -11,7 +11,7 @@ interface LayoutProps {
   internalLinks: string[];
 }
 
-export class Layout extends React.Component<LayoutProps, {}> {
+export class Layout extends Component<LayoutProps, {}> {
   public render() {
     const { title, currentPage, pages, internalLinks } = this.props;
     return (

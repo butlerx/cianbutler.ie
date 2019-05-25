@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 
 interface LanguagesProps {
   languages: string[];
 }
 
-export class Languages extends React.Component<LanguagesProps, {}> {
+export class Languages extends Component<LanguagesProps, {}> {
   public static defaultProps = { languages: [] };
 
   public render() {

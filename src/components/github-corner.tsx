@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import * as React from 'react';
+import React, { Component } from 'react';
 import * as styles from './github-corner.module.scss';
 import OctoCat from './github-corner.svg';
 
@@ -8,7 +8,7 @@ interface GithubCornerProps {
   repo: string;
 }
 
-export class GithubCorner extends React.Component<GithubCornerProps, {}> {
+export class GithubCorner extends Component<GithubCornerProps, {}> {
   public static defaultProps = {
     repo: 'butlerx/cv',
   };

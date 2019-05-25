@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import * as styles from './social.module.scss';
 
 interface SocialAccount {
@@ -28,13 +28,13 @@ export interface SocialProps {
   phone?: Phone;
 }
 
-export class Social extends React.Component<SocialProps, {}> {
+export class Social extends Component<SocialProps, {}> {
   public static defaultProps = {};
 
   public render() {
     const { twitter, mastodon, github, git, mail, linkedin, phone } = this.props;
     return (
-      <ul className={styles.icon}>
+      <ul className={styles.icons}>
         {this.socialLink(this.twitter, 'Twitter', twitter)}
         {this.socialLink(this.mastodon, 'Mastodon', mastodon)}
         {this.socialLink(this.github, 'Github', github)}
@@ -52,14 +52,13 @@ export class Social extends React.Component<SocialProps, {}> {
     }
     return (
       <li>
-        <a href={`${func(social)}`} className={this.iconClass(social.icon)}>
+        <a href={`${func(social)}`} className={`fa fa-${social.icon}`}>
           <span className='label'>{label}</span>
         </a>
       </li>
     );
   }
 
-  private iconClass = (icon: string): string => `${styles.icon} fa fa-${icon}`;
   private twitter = (twitter: SocialAccount): string => `https://twitter.com/${twitter.user}`;
   private github = (github: SocialAccount): string => `https://github.com/${github.user}`;
   private mastodon = (mastodon: CustomSocialAccount): string =>
