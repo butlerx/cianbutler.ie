@@ -8,3 +8,4 @@ export * from './repositories';
 export * from './section';
 export * from './seo';
 export * from './social';
+export * from './avatar';

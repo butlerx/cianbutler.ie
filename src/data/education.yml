@@ -6,7 +6,7 @@ source:
     where: DCU
     start: 2013-09-30
     finish: 2018-10-01
-    lanuages:
+    languages:
       - C++
       - Java
       - JavaCC

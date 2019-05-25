@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import * as styles from './repositories.scss';
+import * as styles from './repositories.module.scss';
 
 export interface RepositoryData {
   name: string;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as styles from './social.scss';
+import * as styles from './social.module.scss';
 
 interface SocialAccount {
   user: string;
