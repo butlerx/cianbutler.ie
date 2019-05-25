@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { Languages } from './languages';
@@ -18,7 +18,7 @@ interface ExperienceProps {
   data: ExperienceData[];
 }
 
-export class Experience extends React.Component<ExperienceProps, {}> {
+export class Experience extends Component<ExperienceProps, {}> {
   public static defaultProps = {
     data: [],
   };

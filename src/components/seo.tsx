@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 interface SEOProps {
@@ -10,7 +10,7 @@ interface SEOProps {
   title: string;
 }
 
-export class SEO extends React.Component<SEOProps, {}> {
+export class SEO extends Component<SEOProps, {}> {
   public static defaultProps = {
     description: '',
     lang: 'en',

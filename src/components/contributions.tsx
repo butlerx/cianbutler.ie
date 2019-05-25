@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import * as styles from './contributions.module.scss';
 
@@ -21,7 +21,7 @@ interface ContributionsProps {
   }>;
 }
 
-export class Contributions extends React.Component<ContributionsProps, {}> {
+export class Contributions extends Component<ContributionsProps, {}> {
   public static defaultProps = {};
 
   public render() {
