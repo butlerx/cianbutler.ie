@@ -1,6 +1,6 @@
 @import 'variables';
 
-.Sidebar {
+.sidebar {
   margin-top: 64px;
   text-align: inherit;
   @media screen and (max-width: $large-phone) {
@@ -17,7 +17,7 @@
     }
   }
 
-  .Nav {
+  .nav {
     @media screen and (max-width: $large-phone) {
       border-bottom: 1px solid $light-grey;
       flex-direction: row;
@@ -36,7 +36,7 @@
     padding-left: 0;
     position: fixed;
 
-    .SubNav {
+    .subNav {
       @media screen and (max-width: $large-phone) {
         display: none;
       }
@@ -51,8 +51,8 @@
         }
       }
 
-      nav {
-        .SidebarNavItem {
+      .nav {
+        .sidebarNavItem {
           font-weight: 400;
           padding: 1px 30px;
 
@@ -69,7 +69,7 @@
     }
 
     li {
-      .SidebarNavItem {
+      .sidebarNavItem {
         display: block;
         font-size: 12px;
         font-weight: 500;

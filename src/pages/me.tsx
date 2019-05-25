@@ -74,7 +74,7 @@ export const IndexPageQuery = graphql`
     }
     placeholderImage: file(relativePath: { eq: "me.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -145,7 +145,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     );
   }
   private getYaml = (id: string): Array<{ node: YAML }> =>
-    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === 'Experience');
+    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === id);
 
   private get experience(): ExperienceData[] {
     const [{ node }] = this.getYaml('Experience');

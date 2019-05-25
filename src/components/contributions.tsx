@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import * as styles from './contribution.scss';
+import * as styles from './contributions.module.scss';
 
 export interface ContributionData {
   title: string;

@@ -1,7 +1,4 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="/main.css" />
   <script src="/main.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}">
@@ -25,8 +22,6 @@
      "name": "{{- if .Params.title -}} {{- .Params.title -}} {{- else -}} {{- .Site.Title }} {{- end -}}"
   }
   </script>
-
-  <link rel="manifest" href="/manifest.json">
   <title>
     {{- $isHomePage := eq .Title .Site.Title -}}
     {{- if .Params.heading -}}
@@ -36,7 +31,6 @@
     {{- end -}}
   </title>
   <meta name="description" content="{{ .Site.Params.Description }}">
-  <meta name="theme-color" content="#fd6c6c">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@{{ .Site.Params.social.twitter.user }}">

@@ -1,19 +1,21 @@
-.GithubCorner {
+@import 'variables';
+
+.githubCorner {
   &:hover {
-    .octo-arm {
+    .octoArm {
       animation: octocat-wave 560ms ease-in-out;
     }
   }
 
   svg {
     border: 0;
-    color: #fff;
-    fill: #fd6c6c;
+    color: $white;
+    fill: $red;
     position: absolute;
     right: 0;
     top: 0;
 
-    .OctoArm {
+    .octoArm {
       transform-origin: 130px 106px;
     }
   }
@@ -36,14 +38,14 @@
 }
 
 @media (max-width: 500px) {
-  .GithubCorner {
+  .githubCorner {
     &:hover {
-      .OctoArm {
+      .octoArm {
         animation: none;
       }
     }
 
-    .OctoArm {
+    .octoArm {
       animation: octocat-wave 560ms ease-in-out;
     }
   }

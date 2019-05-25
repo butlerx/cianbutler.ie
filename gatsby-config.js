@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: 'Cian Butler',
     description: 'Cian Butler, open source developer and SRE',
     author: 'Cian Butler',
     repo: 'butlerx/cv',
+    job: 'SRE',
+    blurb: 'Open Source Developer',
     menu: ['me', 'projects'],
     languages: [
       'AWS',

@@ -18,6 +18,7 @@ interface IndexPageProps {
         author: string;
         description: string;
         title: string;
+        menu: string[];
       };
     };
     githubData: {
@@ -45,6 +46,7 @@ export const IndexPageQuery = graphql`
       siteMetadata {
         author
         title
+        menu
       }
     }
     githubData {
@@ -90,10 +92,10 @@ export const IndexPageQuery = graphql`
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
-    const { description, title, author } = this.props.data.site.siteMetadata;
+    const { description, title, author, menu } = this.props.data.site.siteMetadata;
     const { user, search } = this.props.data.githubData.data;
     return (
-      <Layout title={title}>
+      <Layout title={title} currentPage='projects' pages={menu} internalLinks={[]}>
         <SEO pageTitle='Home' author={author} title={title} description={description} />
         <Section label='Recent projects' />
         <Repositories data={user.repositories.edges} />

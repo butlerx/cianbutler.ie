@@ -13,8 +13,7 @@ source:
       - MySQL
       - Typescript
     start: 2019-05-16
-  -
-    title: SRE
+  - title: SRE
     where: CoderDojo Foundation
     start: 2017-06-10
     finish: 2018-01-10
@@ -37,8 +36,7 @@ source:
       as the Node version and dependencies for all the microservices. I was also
       responsible for monitoring all the infrastructure using NewRelic and
       Graphite.
-  -
-    title: Programming Tutor
+  - title: Programming Tutor
     where: DCU
     start: 2016-09-30
     finish: 2017-04-22

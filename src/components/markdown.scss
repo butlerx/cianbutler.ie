@@ -1,3 +1,5 @@
+@import 'variables';
+
 .markdownBody {
   margin-left: 8em;
   margin-right: auto;
@@ -26,11 +28,6 @@
     :last-child {
       margin-bottom: 0;
     }
-  }
-
-  .avatar {
-    height: 100px;
-    width: 100px;
   }
 
   @media screen and (max-width: $tablet) {
@@ -152,18 +149,18 @@
     }
   }
 
-  .project-list {
-    &-element {
+  .projectList {
+    &Element {
       display: block;
       margin: 0 0 1.67em;
 
-      &-title {
+      &Title {
         font-size: 0.9em;
         font-weight: bold;
         margin-top: 0;
       }
 
-      &-description {
+      &Description {
         font-size: 0.8em;
       }
     }

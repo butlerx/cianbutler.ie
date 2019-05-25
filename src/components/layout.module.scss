@@ -4,7 +4,7 @@ $fa-font-path: '~font-awesome/fonts';
 
 //@import '~font-awesome/scss/font-awesome';
 @import 'variables';
-@import 'print';
+@import 'print.module';
 
 body {
   -webkit-font-smoothing: subpixel-antialiased; // sass-lint:disable-line no-vendor-prefixes
@@ -19,7 +19,7 @@ body {
   text-shadow: 0 0 1em transparent, 1px 1px 1.2px $shadow;
   word-wrap: break-word;
 
-  .Container {
+  .container {
     @media screen and (max-width: $large-phone) {
       grid-row-gap: 15px; // sass-lint:disable-line no-misspelled-properties
       // sass-lint:disable indentation
@@ -66,15 +66,16 @@ body {
       padding-bottom: 1em;
     }
 
-    .MarkdownBody {
+    .markdownBody {
       grid-area: main;
     }
 
-    .Sidebar {
+    nav {
       grid-area: sidebar;
     }
   }
 }
+
 :focus {
   outline: none;
 }

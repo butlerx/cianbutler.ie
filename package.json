@@ -1,6 +1,5 @@
 {
   "name": "cianbutler.ie",
-  "private": true,
   "description": "personal site",
   "version": "2.0.0",
   "author": "Cian Butler <butlerx@notthe.cloud>",
@@ -11,7 +10,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
-    "lint": "tslint --project ."
+    "lint": "tslint --project .",
+    "lint-sass": "sass-lint -vq src/**/*.scss"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

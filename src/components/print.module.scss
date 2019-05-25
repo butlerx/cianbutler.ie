@@ -11,7 +11,7 @@
       grid-template-columns: 100% !important;
       max-width: 100% !important;
 
-      .markdown-body {
+      .markdownBody {
         margin: 0 !important;
         padding-top: 20px !important;
 
@@ -24,7 +24,7 @@
           margin: 1em 0 0.8em !important;
         }
 
-        .project-list-element-title,
+        .projectListElementTitle,
         p {
           font-size: 0.8em !important;
         }
@@ -33,7 +33,7 @@
           margin-bottom: 1em !important;
         }
 
-        .project-list-element {
+        .projectListElement {
           margin: 0.5em 0 !important;
         }
 
@@ -66,13 +66,13 @@
     }
 
     .experience,
-    .project-list {
+    .projectList {
       page-break-inside: unset !important;
     }
 
-    .experience-block,
+    .experienceBlock,
     .project,
-    .project-list-element,
+    .projectListElement,
     blockquote,
     div,
     img {
@@ -94,7 +94,7 @@
     margin: 0.8cm;
   }
 
-  .hidden-print {
+  .hiddenPrint {
     display: none;
   }
 

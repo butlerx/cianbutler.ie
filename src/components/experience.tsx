@@ -29,7 +29,10 @@ export class Experience extends React.Component<ExperienceProps, {}> {
       <div>
         <Section label={title} />
         {data
-          .sort((a: ExperienceData, b: ExperienceData) => b.start.getTime() - a.start.getTime())
+          .sort(
+            (a: ExperienceData, b: ExperienceData) =>
+              new Date(b.start).getTime() - new Date(a.start).getTime(),
+          )
           .map(this.experience)}
       </div>
     );
@@ -48,13 +51,30 @@ export class Experience extends React.Component<ExperienceProps, {}> {
       <Languages languages={languages} />
       <blockquote>
         <p>
-          <ReactMarkdown source={description} />,
+          <ReactMarkdown source={description} />
         </p>
       </blockquote>
       <hr />
     </div>
   );
 
-  private formatDate = (date?: Date) =>
-    date === undefined ? 'present' : date.toLocaleString('en-GB', { timeZone: 'UTC' });
+  private formatDate = (date?: Date): string =>
+    date === undefined
+      ? 'present'
+      : `${
+          [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+          ][new Date(date).getMonth()]
+        } ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
 }
