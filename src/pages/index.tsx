@@ -1,6 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
-import * as React from 'react';
+import React, { SFC } from 'react';
 
 import { Avatar, Layout, SEO } from '../components';
 
@@ -28,6 +28,34 @@ interface IndexPageProps {
   };
 }
 
+const index: SFC<IndexPageProps> = props => {
+  const { description, title, author, menu, job, social, blurb } = props.data.site.siteMetadata;
+  const { fluid } = props.data.placeholderImage.childImageSharp;
+  return (
+    <Layout title={title} currentPage={title} pages={menu} internalLinks={[]}>
+      <SEO pageTitle='Home' author={social.twitter.user} title={title} description={description} />
+      <Avatar avatar={fluid} />
+      <h3>
+        My Name is <strong>{author}</strong>, I'm a {job}.
+      </h3>
+      <h3>{blurb}</h3>
+      <h3>
+        Have a look at some of my working <Link to='projects'>projects</Link>.
+      </h3>
+      <h3>
+        For more check out my academic & professional <Link to='me'>resume</Link>.
+      </h3>
+      content
+      <h3>
+        Contact me at{' '}
+        <a href={`http://twitter.com/${social.twitter.user}`}>@{social.twitter.user}</a> or by{' '}
+        <a href={`mailto:${social.email.address}`}>email</a>.
+      </h3>
+    </Layout>
+  );
+};
+
+export default index;
 export const IndexPageQuery = graphql`
   query SiteTitleQuery {
     site {
@@ -58,45 +86,3 @@ export const IndexPageQuery = graphql`
     }
   }
 `;
-
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
-  public render() {
-    const {
-      description,
-      title,
-      author,
-      menu,
-      job,
-      social,
-      blurb,
-    } = this.props.data.site.siteMetadata;
-    const { fluid } = this.props.data.placeholderImage.childImageSharp;
-    return (
-      <Layout title={title} currentPage={title} pages={menu} internalLinks={[]}>
-        <SEO
-          pageTitle='Home'
-          author={social.twitter.user}
-          title={title}
-          description={description}
-        />
-        <Avatar avatar={fluid} />
-        <h3>
-          My Name is <strong>{author}</strong>, I'm a {job}.
-        </h3>
-        <h3>{blurb}</h3>
-        <h3>
-          Have a look at some of my working <Link to='projects'>projects</Link>.
-        </h3>
-        <h3>
-          For more check out my academic & professional <Link to='me'>resume</Link>.
-        </h3>
-        content
-        <h3>
-          Contact me at{' '}
-          <a href={`http://twitter.com/${social.twitter.user}`}>@{social.twitter.user}</a> or by{' '}
-          <a href={`mailto:${social.email.address}`}>email</a>.
-        </h3>
-      </Layout>
-    );
-  }
-}

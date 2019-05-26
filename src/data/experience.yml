@@ -2,7 +2,7 @@
 title: Experience
 source:
   - title: SRE
-    Where: Demonware
+    where: Demonware
     languages:
       - Docker
       - Prometheus

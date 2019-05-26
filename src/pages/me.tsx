@@ -1,6 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
-import * as React from 'react';
+import React, { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { Avatar, Section } from '../components';
 
@@ -19,7 +19,7 @@ interface YAML {
   source: ExperienceData[];
 }
 
-interface IndexPageProps {
+interface MePageProps {
   data: {
     site: {
       siteMetadata: {
@@ -98,7 +98,7 @@ export const IndexPageQuery = graphql`
   }
 `;
 
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
+export default class MePage extends Component<MePageProps, {}> {
   public render() {
     const {
       description,
@@ -125,8 +125,8 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           github={social.github}
           git={social.git}
           mastodon={social.mastodon}
-          mail={social.mail}
-          linkedin={social.linkedin}
+          email={social.email}
+          linkedIn={social.linkedIn}
           phone={social.phone}
         />
         <blockquote>

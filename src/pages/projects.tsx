@@ -1,5 +1,5 @@
 import { graphql, Link } from 'gatsby';
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 import {
@@ -41,6 +41,30 @@ interface ProjectPageProps {
   };
 }
 
+const projects: SFC<ProjectPageProps> = props => {
+  const { description, title, author, menu } = props.data.site.siteMetadata;
+  const { user, search } = props.data.githubData.data;
+  return (
+    <Layout
+      title={title}
+      currentPage='projects'
+      pages={menu}
+      internalLinks={['Recent projects', 'Recent contributions']}
+    >
+      <SEO pageTitle='Projects' author={author} title={title} description={description} />
+      <ScrollableAnchor id='Recent projects'>
+        <Section label='Recent projects' />
+      </ScrollableAnchor>
+      <Repositories data={user.repositories.edges} />
+      <ScrollableAnchor id='Recent contributions'>
+        <Section label='Recent contributions' />
+      </ScrollableAnchor>
+      <Contributions data={search.edges} />
+    </Layout>
+  );
+};
+
+export default projects;
 export const ProjectPageQuery = graphql`
   query ProjectQuery {
     site {
@@ -90,28 +114,3 @@ export const ProjectPageQuery = graphql`
     }
   }
 `;
-
-export default class ProjectPage extends Component<ProjectPageProps, {}> {
-  public render() {
-    const { description, title, author, menu } = this.props.data.site.siteMetadata;
-    const { user, search } = this.props.data.githubData.data;
-    return (
-      <Layout
-        title={title}
-        currentPage='projects'
-        pages={menu}
-        internalLinks={['Recent projects', 'Recent contributions']}
-      >
-        <SEO pageTitle='Projects' author={author} title={title} description={description} />
-        <ScrollableAnchor id='Recent projects'>
-          <Section label='Recent projects' />
-        </ScrollableAnchor>
-        <Repositories data={user.repositories.edges} />
-        <ScrollableAnchor id='Recent contributions'>
-          <Section label='Recent contributions' />
-        </ScrollableAnchor>
-        <Contributions data={search.edges} />
-      </Layout>
-    );
-  }
-}
