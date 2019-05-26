@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import Helmet from 'react-helmet';
 
 interface SEOProps {
   pageTitle: string;
-  description: string;
-  lang: string;
-  meta: Array<{ content: string; name: string }>;
+  description?: string;
+  lang?: string;
+  meta?: Array<{ content: string; name: string }>;
   author: string;
   title: string;
 }
 
-export class SEO extends Component<SEOProps, {}> {
-  public static defaultProps = {
-    description: '',
-    lang: 'en',
-    meta: [],
-  };
-
-  public render() {
-    const { title, description, lang, meta, pageTitle, author } = this.props;
-    const metaUpdated = [
+export const SEO: SFC<SEOProps> = ({ title, description, lang, meta, pageTitle, author }) => (
+  <Helmet
+    htmlAttributes={{
+      lang,
+    }}
+    title={pageTitle}
+    titleTemplate={`%s | ${title}`}
+    meta={[
       {
         content: description,
         name: 'description',
@@ -52,16 +50,12 @@ export class SEO extends Component<SEOProps, {}> {
         content: description,
         name: 'twitter:description',
       },
-    ].concat(meta);
-    return (
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={pageTitle}
-        titleTemplate={`%s | ${title}`}
-        meta={metaUpdated}
-      />
-    );
-  }
-}
+    ].concat(meta || [])}
+  />
+);
+
+SEO.defaultProps = {
+  description: '',
+  lang: 'en',
+  meta: [],
+};

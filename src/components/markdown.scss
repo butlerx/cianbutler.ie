@@ -8,7 +8,12 @@
   overflow: visible;
   padding: 40px 16px;
 
-  @import 'about';
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-around;
+  }
 
   &::after,
   &::before {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { Languages } from './languages';
@@ -16,58 +16,52 @@ interface ExperienceProps {
   data: ExperienceData[];
 }
 
-export class Experience extends Component<ExperienceProps, {}> {
-  public static defaultProps = {
-    data: [],
-  };
+const formatDate = (date?: Date): string =>
+  date === undefined || date === null
+    ? 'present'
+    : `${
+        [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ][new Date(date).getMonth()]
+      } ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
 
-  public render() {
-    const { data } = this.props;
-    return data
-      .sort(
-        (a: ExperienceData, b: ExperienceData) =>
-          new Date(b.start).getTime() - new Date(a.start).getTime(),
-      )
-      .map(this.experience);
-  }
+const experience = ({ title, where, start, finish, languages, description }: ExperienceData) => (
+  <div key={`${title}@${where}`}>
+    <h3 id={encodeURI(title)}>
+      {title}@{where}&emsp;
+      <small>
+        <em>
+          {formatDate(start)} - {formatDate(finish)}
+        </em>
+      </small>
+    </h3>
+    <Languages languages={languages} />
+    <blockquote>
+      <ReactMarkdown source={description} />
+    </blockquote>
+    <hr />
+  </div>
+);
 
-  public experience = ({ title, where, start, finish, languages, description }: ExperienceData) => (
-    <div>
-      <h3 id={encodeURI(title)}>
-        {title}@{where}&emsp;
-        <small>
-          <em>
-            {this.formatDate(start)} - {this.formatDate(finish)}
-          </em>
-        </small>
-      </h3>
-      <Languages languages={languages} />
-      <blockquote>
-        <p>
-          <ReactMarkdown source={description} />
-        </p>
-      </blockquote>
-      <hr />
-    </div>
-  );
+export const Experience: SFC<ExperienceProps> = ({ data }) =>
+  data
+    .sort(
+      (a: ExperienceData, b: ExperienceData) =>
+        new Date(b.start).getTime() - new Date(a.start).getTime(),
+    )
+    .map(experience);
 
-  private formatDate = (date?: Date): string =>
-    date === undefined
-      ? 'present'
-      : `${
-          [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December',
-          ][new Date(date).getMonth()]
-        } ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
-}
+Experience.defaultProps = {
+  data: [],
+};

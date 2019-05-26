@@ -1,23 +1,16 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 
 interface LanguagesProps {
   languages: string[];
 }
 
-export class Languages extends Component<LanguagesProps, {}> {
-  public static defaultProps = { languages: [] };
-
-  public render() {
-    const { languages } = this.props;
-    return (
-      <p>
-        {languages.map((language: string, position: number) => (
-          <>
-            {position !== 0 ? ', ' : ''}
-            <code key={position}>{language}</code>
-          </>
-        ))}
-      </p>
-    );
-  }
-}
+export const Languages: SFC<LanguagesProps> = ({ languages }) => (
+  <p>
+    {languages.map((language: string, position: number) => (
+      <span key={position}>
+        {position !== 0 ? ', ' : ''}
+        <code>{language}</code>
+      </span>
+    ))}
+  </p>
+);
