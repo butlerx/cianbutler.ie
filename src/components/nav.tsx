@@ -44,13 +44,10 @@ export class Navigation extends React.Component<NavigationProps, {}> {
   private subNav(currentPage: string, links: string[]) {
     return (
       <li className={styles.SubNav}>
-        <a href={`#${currentPage}`} className={styles.sidebarNavItem}>
-          {this.humanize(currentPage)}
-        </a>
         <ul className={styles.nav}>
           {links.map(label => (
             <li key={label}>
-              <a href={`#${label}`} className={styles.sidebarNavItem}>
+              <a href={`#${encodeURI(label)}`} className={styles.sidebarNavItem}>
                 {this.humanize(label)}
               </a>
             </li>
