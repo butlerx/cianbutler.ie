@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import * as React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import { Avatar, Section } from '../components';
 
 import {
   Experience,
@@ -116,12 +117,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
         internalLinks={['experience', 'education']}
       >
         <SEO pageTitle='me' author={social.twitter.user} title={title} description={description} />
-        <ScrollableAnchor id={'me'}>
-          <h1 id='me'>
-            <Img fluid={fluid} alt='Itsa ME' className='avatar' />
-            {author}
-          </h1>
-        </ScrollableAnchor>
+        <h1 id='me'>
+          <Avatar avatar={fluid}>{author}</Avatar>
+        </h1>
         <Social
           twitter={social.twitter}
           github={social.github}
@@ -135,12 +133,14 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <Languages languages={languages} />
           {description}
         </blockquote>
-        <ScrollableAnchor id={'experience'}>
-          <Experience data={this.experience} title='Experience' />
+        <ScrollableAnchor id='experience'>
+          <Section label='experience' />
         </ScrollableAnchor>
-        <ScrollableAnchor id={'education'}>
-          <Experience data={this.education} title='Education' />
+        <Experience data={this.experience} />
+        <ScrollableAnchor id='education'>
+          <Section label='education' />
         </ScrollableAnchor>
+        <Experience data={this.education} />
       </Layout>
     );
   }

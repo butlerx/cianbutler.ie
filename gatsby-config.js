@@ -95,7 +95,7 @@ module.exports = {
             repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC}) {
               edges {
                 node {
-                  name
+                  nameWithOwner
                   description
                   url
                   stargazers {
@@ -143,8 +143,8 @@ module.exports = {
         }`,
         variables: {
           author: 'butlerx',
-          userFirst: 6,
-          searchFirst: 6,
+          userFirst: 10,
+          searchFirst: 10,
           q: 'author:butlerx is:merged state:closed type:pr sort:comments',
         },
       },

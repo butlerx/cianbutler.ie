@@ -1,8 +1,12 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import React, { Component } from 'react';
 
 import { GithubCorner } from './github-corner';
 import styles from './layout.module.scss';
 import { Navigation } from './nav';
+
+library.add(fab);
 
 interface LayoutProps {
   title: string;

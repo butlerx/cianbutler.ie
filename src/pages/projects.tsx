@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby';
-import * as React from 'react';
+import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import {
   ContributionData,
@@ -11,7 +12,7 @@ import {
   SEO,
 } from '../components';
 
-interface IndexPageProps {
+interface ProjectPageProps {
   data: {
     site: {
       siteMetadata: {
@@ -40,7 +41,7 @@ interface IndexPageProps {
   };
 }
 
-export const IndexPageQuery = graphql`
+export const ProjectPageQuery = graphql`
   query ProjectQuery {
     site {
       siteMetadata {
@@ -72,7 +73,7 @@ export const IndexPageQuery = graphql`
           repositories {
             edges {
               node {
-                name
+                nameWithOwner
                 description
                 url
                 stargazers {
@@ -90,16 +91,25 @@ export const IndexPageQuery = graphql`
   }
 `;
 
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
+export default class ProjectPage extends Component<ProjectPageProps, {}> {
   public render() {
     const { description, title, author, menu } = this.props.data.site.siteMetadata;
     const { user, search } = this.props.data.githubData.data;
     return (
-      <Layout title={title} currentPage='projects' pages={menu} internalLinks={[]}>
-        <SEO pageTitle='Home' author={author} title={title} description={description} />
-        <Section label='Recent projects' />
+      <Layout
+        title={title}
+        currentPage='projects'
+        pages={menu}
+        internalLinks={['Recent projects', 'Recent contributions']}
+      >
+        <SEO pageTitle='Projects' author={author} title={title} description={description} />
+        <ScrollableAnchor id='Recent projects'>
+          <Section label='Recent projects' />
+        </ScrollableAnchor>
         <Repositories data={user.repositories.edges} />
-        <Section label='Recent contributions' />
+        <ScrollableAnchor id='Recent contributions'>
+          <Section label='Recent contributions' />
+        </ScrollableAnchor>
         <Contributions data={search.edges} />
       </Layout>
     );

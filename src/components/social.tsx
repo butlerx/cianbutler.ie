@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 import * as styles from './social.module.scss';
 
@@ -52,8 +53,9 @@ export class Social extends Component<SocialProps, {}> {
     }
     return (
       <li>
-        <a href={`${func(social)}`} className={`fa fa-${social.icon}`}>
-          <span className='label'>{label}</span>
+        <a href={`${func(social)}`}>
+          <FontAwesomeIcon icon={['fab', social.icon]} />
+          <span className={styles.label}>{label}</span>
         </a>
       </li>
     );

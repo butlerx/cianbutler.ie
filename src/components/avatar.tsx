@@ -7,15 +7,25 @@ interface AvatarProps {
 
 export class Avatar extends Component<AvatarProps, {}> {
   public render() {
-    const { avatar } = this.props;
+    const { avatar, children } = this.props;
     return (
       <div
         style={{
-          height: '100px',
-          width: '100px',
+          'align-items': 'center',
+          display: 'flex',
+          'flex-direction': 'row',
         }}
       >
-        <Img fluid={avatar} alt='Mug shot' />
+        <Img
+          style={{
+            height: '100px',
+            'margin-right': '0.5em',
+            width: '100px',
+          }}
+          fluid={avatar}
+          alt='Mug shot'
+        />
+        {children}
       </div>
     );
   }

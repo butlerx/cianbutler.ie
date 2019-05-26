@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { Languages } from './languages';
-import { Section } from './section';
 
 export interface ExperienceData {
   title: string;
@@ -14,7 +13,6 @@ export interface ExperienceData {
 }
 
 interface ExperienceProps {
-  title: string;
   data: ExperienceData[];
 }
 
@@ -24,18 +22,13 @@ export class Experience extends Component<ExperienceProps, {}> {
   };
 
   public render() {
-    const { title, data } = this.props;
-    return (
-      <div>
-        <Section label={title} />
-        {data
-          .sort(
-            (a: ExperienceData, b: ExperienceData) =>
-              new Date(b.start).getTime() - new Date(a.start).getTime(),
-          )
-          .map(this.experience)}
-      </div>
-    );
+    const { data } = this.props;
+    return data
+      .sort(
+        (a: ExperienceData, b: ExperienceData) =>
+          new Date(b.start).getTime() - new Date(a.start).getTime(),
+      )
+      .map(this.experience);
   }
 
   public experience = ({ title, where, start, finish, languages, description }: ExperienceData) => (
