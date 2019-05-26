@@ -48,7 +48,7 @@ export const Navigation: SFC<NavigationProps> = ({
           <Link to={location.pathname === '/' ? '#' : '/'}>{siteTitle}</Link>
         )}
       </Location>
-      {pages.map((page: string) => (
+      {pages.map(page => (
         <li key={page}>
           <Link to={page} className={styles.sidebarNavItem}>
             {humanize(page)}
@@ -56,7 +56,7 @@ export const Navigation: SFC<NavigationProps> = ({
         </li>
       ))}
       <hr />
-      <SubNav currentPage={currentPage} links={internalLink} />}
+      <SubNav currentPage={currentPage} links={internalLink} />
     </ul>
   </nav>
 );
