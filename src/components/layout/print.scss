@@ -1,5 +1,7 @@
 // sass-lint:disable no-important, no-qualifying-elements
 
+@import '../variables';
+
 @media print {
   body {
     border-top: 0 !important;
