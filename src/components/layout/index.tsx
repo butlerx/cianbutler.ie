@@ -5,6 +5,7 @@ import React, { SFC } from 'react';
 
 import { GithubCorner, Navigation } from '..';
 import styles from './layout.module.scss';
+import './print.scss';
 
 library.add(fab, faEnvelope);
 
@@ -35,6 +36,8 @@ export const Layout: SFC<LayoutProps> = ({
         <main>{children}</main>
       </section>
     </div>
-    <footer>Built on {new Date().getFullYear()}</footer>
+    <footer>
+      <div className='hidden-print'>Built on {new Date().getFullYear()}</div>
+    </footer>
   </div>
 );
