@@ -1,6 +1,7 @@
 import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+import { formatDate } from '../utils';
 import { Languages } from './languages';
 
 export interface ExperienceData {
@@ -15,26 +16,6 @@ export interface ExperienceData {
 interface ExperienceProps {
   data: ExperienceData[];
 }
-
-const formatDate = (date?: Date): string =>
-  date === undefined || date === null
-    ? 'present'
-    : `${
-        [
-          'January',
-          'February',
-          'March',
-          'April',
-          'May',
-          'June',
-          'July',
-          'August',
-          'September',
-          'October',
-          'November',
-          'December',
-        ][new Date(date).getMonth()]
-      } ${new Date(date).getDay()}, ${new Date(date).getFullYear()}`;
 
 const experience = ({ title, where, start, finish, languages, description }: ExperienceData) => (
   <div key={`${title}@${where}`}>

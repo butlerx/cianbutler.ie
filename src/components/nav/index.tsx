@@ -5,6 +5,7 @@ import * as styles from './nav.module.scss';
 //import * as printStyles from './print.module.scss';
 
 import { humanize } from '../../utils';
+import { SubNav } from './subNav';
 
 interface NavigationProps {
   currentPage: string;
@@ -12,28 +13,6 @@ interface NavigationProps {
   pages: string[];
   internalLink: string[];
 }
-
-interface SubNavProps {
-  currentPage: string;
-  links: string[];
-}
-
-export const SubNav: SFC<SubNavProps> = ({ currentPage, links }) =>
-  links.length === 0 ? (
-    <></>
-  ) : (
-    <li className={styles.SubNav}>
-      <ul className={styles.nav}>
-        {links.map(label => (
-          <li key={label}>
-            <a href={`#${encodeURI(label)}`} className={styles.sidebarNavItem}>
-              {humanize(label)}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </li>
-  );
 
 export const Navigation: SFC<NavigationProps> = ({
   siteTitle,

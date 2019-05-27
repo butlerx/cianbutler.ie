@@ -25,12 +25,16 @@ interface IndexPageProps {
         fluid: FluidObject;
       };
     };
+    markdownRemark: {
+      html: string;
+    };
   };
 }
 
 const index: SFC<IndexPageProps> = props => {
   const { description, title, author, menu, job, social, blurb } = props.data.site.siteMetadata;
   const { fluid } = props.data.placeholderImage.childImageSharp;
+  const { html } = props.data.markdownRemark;
   return (
     <Layout title={title} currentPage={title} pages={menu} internalLinks={[]}>
       <SEO pageTitle='Home' author={social.twitter.user} title={title} description={description} />
@@ -45,7 +49,7 @@ const index: SFC<IndexPageProps> = props => {
       <h3>
         For more check out my academic & professional <Link to='me'>resume</Link>.
       </h3>
-      content
+      <span dangerouslySetInnerHTML={{ __html: html }} />
       <h3>
         Contact me at{' '}
         <a href={`http://twitter.com/${social.twitter.user}`}>@{social.twitter.user}</a> or by{' '}
@@ -57,7 +61,7 @@ const index: SFC<IndexPageProps> = props => {
 
 export default index;
 export const IndexPageQuery = graphql`
-  query SiteTitleQuery {
+  query IndexQuery {
     site {
       siteMetadata {
         author
@@ -83,6 +87,9 @@ export const IndexPageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    markdownRemark(frontmatter: { path: { eq: "index" } }) {
+      html
     }
   }
 `;
