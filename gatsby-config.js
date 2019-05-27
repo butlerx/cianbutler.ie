@@ -59,13 +59,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Cian Butler, Personal site`,
+        short_name: `Cian Butler`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#ffffff`,
+        theme_color: '#ffffff',
+        display: 'standalone',
+        icon: `src/images/me.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -149,5 +149,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `src/content`,
+        name: 'markdown-pages',
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };

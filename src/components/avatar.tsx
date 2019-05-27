@@ -5,7 +5,7 @@ interface AvatarProps {
   avatar: FluidObject;
 }
 
-export const Avatar: FC<AvatarProps> = props => (
+export const Avatar: FC<AvatarProps> = ({ avatar, children }) => (
   <div
     style={{
       alignItems: 'center',
@@ -19,9 +19,9 @@ export const Avatar: FC<AvatarProps> = props => (
         marginRight: '0.5em',
         width: '100px',
       }}
-      fluid={props.avatar}
+      fluid={avatar}
       alt='Mug shot'
     />
-    {props.children}
+    {children}
   </div>
 );

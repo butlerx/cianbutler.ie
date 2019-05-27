@@ -41,7 +41,71 @@ interface MePageProps {
         node: YAML;
       }>;
     };
+    markdownRemark: {
+      html: string;
+    };
   };
+}
+
+export default class MePage extends Component<MePageProps, {}> {
+  public render() {
+    const {
+      description,
+      title,
+      author,
+      social,
+      languages,
+      menu,
+    } = this.props.data.site.siteMetadata;
+    const { fluid } = this.props.data.placeholderImage.childImageSharp;
+    const { html } = this.props.data.markdownRemark;
+    return (
+      <Layout
+        title={title}
+        currentPage='me'
+        pages={menu}
+        internalLinks={['experience', 'education']}
+      >
+        <SEO pageTitle='me' author={social.twitter.user} title={title} description={description} />
+        <h1 id='me'>
+          <Avatar avatar={fluid}>{author}</Avatar>
+        </h1>
+        <Social
+          twitter={social.twitter}
+          github={social.github}
+          git={social.git}
+          mastodon={social.mastodon}
+          email={social.email}
+          linkedIn={social.linkedIn}
+          phone={social.phone}
+        />
+        <blockquote>
+          <Languages languages={languages} />
+          <span dangerouslySetInnerHTML={{ __html: html }} />
+        </blockquote>
+        <ScrollableAnchor id='experience'>
+          <Section label='experience' />
+        </ScrollableAnchor>
+        <Experience data={this.experience} />
+        <ScrollableAnchor id='education'>
+          <Section label='education' />
+        </ScrollableAnchor>
+        <Experience data={this.education} />
+      </Layout>
+    );
+  }
+  private getYaml = (id: string): Array<{ node: YAML }> =>
+    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === id);
+
+  private get experience(): ExperienceData[] {
+    const [{ node }] = this.getYaml('Experience');
+    return node.source;
+  }
+
+  private get education(): ExperienceData[] {
+    const [{ node }] = this.getYaml('Education');
+    return node.source;
+  }
 }
 
 export const IndexPageQuery = graphql`
@@ -87,73 +151,16 @@ export const IndexPageQuery = graphql`
           source {
             title
             where
-            start
-            finish
+            start(formatString: "YYYY-MM-DD")
+            finish(formatString: "YYYY-MM-DD")
             languages
             description
           }
         }
       }
     }
+    markdownRemark(frontmatter: { path: { eq: "me" } }) {
+      html
+    }
   }
 `;
-
-export default class MePage extends Component<MePageProps, {}> {
-  public render() {
-    const {
-      description,
-      title,
-      author,
-      social,
-      languages,
-      menu,
-    } = this.props.data.site.siteMetadata;
-    const { fluid } = this.props.data.placeholderImage.childImageSharp;
-    return (
-      <Layout
-        title={title}
-        currentPage='me'
-        pages={menu}
-        internalLinks={['experience', 'education']}
-      >
-        <SEO pageTitle='me' author={social.twitter.user} title={title} description={description} />
-        <h1 id='me'>
-          <Avatar avatar={fluid}>{author}</Avatar>
-        </h1>
-        <Social
-          twitter={social.twitter}
-          github={social.github}
-          git={social.git}
-          mastodon={social.mastodon}
-          email={social.email}
-          linkedIn={social.linkedIn}
-          phone={social.phone}
-        />
-        <blockquote>
-          <Languages languages={languages} />
-          {description}
-        </blockquote>
-        <ScrollableAnchor id='experience'>
-          <Section label='experience' />
-        </ScrollableAnchor>
-        <Experience data={this.experience} />
-        <ScrollableAnchor id='education'>
-          <Section label='education' />
-        </ScrollableAnchor>
-        <Experience data={this.education} />
-      </Layout>
-    );
-  }
-  private getYaml = (id: string): Array<{ node: YAML }> =>
-    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === id);
-
-  private get experience(): ExperienceData[] {
-    const [{ node }] = this.getYaml('Experience');
-    return node.source;
-  }
-
-  private get education(): ExperienceData[] {
-    const [{ node }] = this.getYaml('Education');
-    return node.source;
-  }
-}

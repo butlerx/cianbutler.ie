@@ -1,3 +1,9 @@
+---
+path: index
+type: page
+date: 2019-05-27
+---
+
 ### Favorites
 
 > #### Editor: &emsp;<small>vim</small>
