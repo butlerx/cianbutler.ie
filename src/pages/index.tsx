@@ -12,8 +12,6 @@ interface IndexPageProps {
         description: string;
         title: string;
         menu: string[];
-        job: string;
-        blurb: string;
         social: {
           email: { address: string };
           twitter: { user: string };
@@ -27,17 +25,29 @@ interface IndexPageProps {
     };
     markdownRemark: {
       html: string;
+      frontmatter: {
+        job: string;
+        blurb: string;
+      };
     };
   };
 }
 
 const index: SFC<IndexPageProps> = props => {
-  const { description, title, author, menu, job, social, blurb } = props.data.site.siteMetadata;
+  const { description, title, author, menu, social } = props.data.site.siteMetadata;
   const { fluid } = props.data.placeholderImage.childImageSharp;
   const { html } = props.data.markdownRemark;
+  const { job, blurb } = props.data.markdownRemark.frontmatter;
+
   return (
-    <Layout title={title} currentPage={title} pages={menu} internalLinks={[]}>
-      <SEO pageTitle='Home' author={social.twitter.user} title={title} description={description} />
+    <Layout
+      title={title}
+      currentPage={title}
+      pages={menu}
+      internalLinks={[]}
+      twitter={social.twitter.user}
+      description={description}
+    >
       <Avatar avatar={fluid} />
       <h3>
         My Name is <strong>{author}</strong>, I'm a {job}.
@@ -90,6 +100,10 @@ export const IndexPageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: "index" } }) {
       html
+      frontmatter {
+        job
+        blurb
+      }
     }
   }
 `;

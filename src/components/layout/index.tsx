@@ -3,7 +3,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import React, { SFC } from 'react';
 
-import { GithubCorner, Navigation } from '..';
+import { Footer, GithubCorner, Navigation, SEO } from '..';
+import { humanize } from '../../utils';
+import './base.scss';
 import styles from './layout.module.scss';
 import './print.scss';
 
@@ -14,6 +16,8 @@ interface LayoutProps {
   currentPage: string;
   pages: string[];
   internalLinks: string[];
+  twitter: string;
+  description: string;
 }
 
 export const Layout: SFC<LayoutProps> = ({
@@ -21,6 +25,8 @@ export const Layout: SFC<LayoutProps> = ({
   currentPage,
   pages,
   internalLinks,
+  twitter,
+  description,
   children,
 }) => (
   <div className={styles.container}>
@@ -31,13 +37,19 @@ export const Layout: SFC<LayoutProps> = ({
       pages={pages}
       internalLink={internalLinks}
     />
+    <SEO
+      pageTitle={humanize(currentPage)}
+      author={twitter}
+      title={title}
+      description={description}
+    />
     <div className={styles.markdownBody}>
-      <section className={styles.about}>
-        <main>{children}</main>
-      </section>
+      <div className={styles.wrapper}>
+        <section className={styles.about}>
+          <main>{children}</main>
+        </section>
+      </div>
     </div>
-    <footer>
-      <div className='hidden-print'>Built on {new Date().getFullYear()}</div>
-    </footer>
+    <Footer />
   </div>
 );

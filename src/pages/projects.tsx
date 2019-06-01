@@ -50,8 +50,9 @@ const projects: SFC<ProjectPageProps> = props => {
       currentPage='projects'
       pages={menu}
       internalLinks={['Recent projects', 'Recent contributions']}
+      twitter={author}
+      description={description}
     >
-      <SEO pageTitle='Projects' author={author} title={title} description={description} />
       <ScrollableAnchor id='Recent projects'>
         <Section label='Recent projects' />
       </ScrollableAnchor>

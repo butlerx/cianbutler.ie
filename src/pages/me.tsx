@@ -1,6 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { Avatar, Section } from '../components';
 
@@ -17,6 +17,12 @@ import {
 interface YAML {
   title: string;
   source: ExperienceData[];
+}
+
+interface AllYaml {
+  edges: Array<{
+    node: YAML;
+  }>;
 }
 
 interface MePageProps {
@@ -36,78 +42,69 @@ interface MePageProps {
         fluid: FluidObject;
       };
     };
-    allYaml: {
-      edges: Array<{
-        node: YAML;
-      }>;
-    };
+    allYaml: AllYaml;
     markdownRemark: {
       html: string;
     };
   };
 }
 
-export default class MePage extends Component<MePageProps, {}> {
-  public render() {
-    const {
-      description,
-      title,
-      author,
-      social,
-      languages,
-      menu,
-    } = this.props.data.site.siteMetadata;
-    const { fluid } = this.props.data.placeholderImage.childImageSharp;
-    const { html } = this.props.data.markdownRemark;
-    return (
-      <Layout
-        title={title}
-        currentPage='me'
-        pages={menu}
-        internalLinks={['experience', 'education']}
-      >
-        <SEO pageTitle='me' author={social.twitter.user} title={title} description={description} />
-        <h1 id='me'>
-          <Avatar avatar={fluid}>{author}</Avatar>
-        </h1>
-        <Social
-          twitter={social.twitter}
-          github={social.github}
-          git={social.git}
-          mastodon={social.mastodon}
-          email={social.email}
-          linkedIn={social.linkedIn}
-          phone={social.phone}
-        />
-        <blockquote>
-          <Languages languages={languages} />
-          <span dangerouslySetInnerHTML={{ __html: html }} />
-        </blockquote>
-        <ScrollableAnchor id='experience'>
-          <Section label='experience' />
-        </ScrollableAnchor>
-        <Experience data={this.experience} />
-        <ScrollableAnchor id='education'>
-          <Section label='education' />
-        </ScrollableAnchor>
-        <Experience data={this.education} />
-      </Layout>
-    );
-  }
-  private getYaml = (id: string): Array<{ node: YAML }> =>
-    this.props.data.allYaml.edges.filter(({ node }: { node: YAML }) => node.title === id);
+const getYaml = (yaml: AllYaml, id: string): Array<{ node: YAML }> =>
+  yaml.edges.filter(({ node }) => node.title === id);
 
-  private get experience(): ExperienceData[] {
-    const [{ node }] = this.getYaml('Experience');
-    return node.source;
-  }
-
-  private get education(): ExperienceData[] {
-    const [{ node }] = this.getYaml('Education');
-    return node.source;
-  }
+function experience({ allYaml }: { allYaml: AllYaml }): ExperienceData[] {
+  const [{ node }] = getYaml(allYaml, 'Experience');
+  return node.source;
 }
 
+function education({ allYaml }: { allYaml: AllYaml }): ExperienceData[] {
+  const [{ node }] = getYaml(allYaml, 'Education');
+  return node.source;
+}
+
+const me: SFC<MePageProps> = ({ data }) => {
+  const { description, title, author, social, languages, menu } = data.site.siteMetadata;
+  const { fluid } = data.placeholderImage.childImageSharp;
+  const { html } = data.markdownRemark;
+
+  return (
+    <Layout
+      title={title}
+      currentPage='me'
+      pages={menu}
+      internalLinks={['experience', 'education']}
+      twitter={social.twitter.user}
+      description={description}
+    >
+      <h1 id='me'>
+        <Avatar avatar={fluid}>{author}</Avatar>
+      </h1>
+      <Social
+        twitter={social.twitter}
+        github={social.github}
+        git={social.git}
+        mastodon={social.mastodon}
+        email={social.email}
+        linkedIn={social.linkedIn}
+        phone={social.phone}
+      />
+      <blockquote>
+        <Languages languages={languages} />
+        <span dangerouslySetInnerHTML={{ __html: html }} />
+      </blockquote>
+      <ScrollableAnchor id='experience'>
+        <Section label='experience' />
+      </ScrollableAnchor>
+      <Experience data={experience(data)} />
+      <ScrollableAnchor id='education'>
+        <Section label='education' />
+      </ScrollableAnchor>
+      <Experience data={education(data)} />
+    </Layout>
+  );
+};
+
+export default me;
 export const IndexPageQuery = graphql`
   query ExperienceQuery {
     site {
