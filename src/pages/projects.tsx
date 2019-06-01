@@ -84,7 +84,7 @@ export const ProjectPageQuery = graphql`
               merged
               url
               state
-              bodyText
+              bodyHTML
               repository {
                 name
                 repoUrl
