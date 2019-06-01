@@ -1,11 +1,15 @@
 import React, { SFC } from 'react';
-import ReactMarkdown from 'react-markdown';
+import { Card, Cards } from '..';
 import * as styles from './contributions.module.scss';
 
-export interface ContributionData {
+interface ContributionProps {
   title: string;
   merged: string;
+  url: string;
   state: string;
+  bodyHTML: string;
+}
+export interface ContributionData extends ContributionProps {
   repository: {
     repoUrl: string;
     name: string;
@@ -21,21 +25,35 @@ interface ContributionsProps {
   }>;
 }
 
-export const Contributions: SFC<ContributionsProps> = ({ data }) => (
-  <div className={styles.projectList}>
-    {data.map(({ node }, i) => (
-      <div key={i} className={styles.project}>
-        <span className={styles.projectListElement}>
-          <h3 className={styles.projectListElementTitle}>
-            <strong>
-              <a href={node.repository.repoUrl}>{node.title}</a>
-            </strong>
-          </h3>
-          <span className={styles.projectListElementDescription}>
-            <ReactMarkdown source={node.state} />,
-          </span>
-        </span>
-      </div>
-    ))}
+const Contribution: SFC<ContributionProps> = ({ title, merged, url, state, bodyHTML }) => (
+  <div className={styles.project}>
+    <span className={styles.projectElement}>
+      <span>
+        <h4 className={styles.projectElementTitle}>
+          <a href={url}>{title}</a>
+        </h4>
+        <span>{state}</span>
+      </span>
+      <span
+        dangerouslySetInnerHTML={{ __html: bodyHTML }}
+        className={styles.projectElementDescription}
+      />
+    </span>
   </div>
+);
+
+export const Contributions: SFC<ContributionsProps> = ({ data }) => (
+  <Cards>
+    {data.map(({ node }, i) => (
+      <Card key={i} icon='github' url={node.repository.repoUrl} title={node.repository.name}>
+        <Contribution
+          title={node.title}
+          merged={node.merged}
+          url={node.url}
+          state={node.state}
+          bodyHTML={node.bodyHTML}
+        />
+      </Card>
+    ))}
+  </Cards>
 );

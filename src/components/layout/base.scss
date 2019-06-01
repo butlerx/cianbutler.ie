@@ -14,6 +14,121 @@ body {
   margin: 0;
   text-shadow: 0 0 1em transparent, 1px 1px 1.2px $shadow;
   word-wrap: break-word;
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  blockquote,
+  p,
+  ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  hr {
+    background-color: $grey;
+    border: 0;
+    border-top: 1px solid $grey;
+    box-sizing: content-box;
+    height: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  blockquote {
+    border-left: 0.25em solid $dark-grey;
+    color: $heavy-grey;
+    font-size: 17.5px;
+    margin: 0 0 20px;
+    padding: 0 1em;
+
+    > {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h4 {
+      margin: 8;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  h1 {
+    border-bottom: 1px solid $light-grey;
+    font-size: 2em;
+    padding-bottom: 0.3em;
+  }
+
+  h2 {
+    border-bottom: 1px solid $light-grey;
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+
+    small {
+      color: $heavy-grey;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  ul {
+    padding-left: 2em;
+  }
+
+  img {
+    background-color: $black;
+    box-sizing: content-box;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  code {
+    background-color: $light-black;
+    border-radius: 3px;
+    color: inherit;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+
+    &::after,
+    &::before {
+      content: '\A0';
+      letter-spacing: -0.2em;
+    }
+  }
 }
 
 :focus {

@@ -75,9 +75,7 @@ export const IndexPageQuery = graphql`
     site {
       siteMetadata {
         author
-        blurb
         description
-        job
         menu
         title
         social {
@@ -88,7 +86,6 @@ export const IndexPageQuery = graphql`
             user
           }
         }
-        blurb
       }
     }
     placeholderImage: file(relativePath: { eq: "me.png" }) {

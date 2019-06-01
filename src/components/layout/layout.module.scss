@@ -26,29 +26,60 @@
   grid-template-rows: auto;
   max-width: 90%;
 
-  @import 'markdown';
+  .markdownBody {
+    grid-area: main;
+    margin-left: 8em;
+    margin-right: auto;
+    min-height: 660px;
+    overflow: visible;
+    padding: 40px 16px;
 
-  hr {
-    border: 0;
-    border-top: 1px solid $grey;
-    box-sizing: content-box;
-    height: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+    .wrapper {
+      margin-left: 8em;
+      padding: 40px 16px;
 
-  a {
-    color: $blue;
-    text-decoration: none;
+      .about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    > {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      max-width: 80%;
+    }
+
+    @media screen and (max-width: $large-tablet) {
+      margin-left: 8px;
+    }
+    @media screen and (max-width: $large-phone) {
+      margin: 0 1em;
+      max-width: 100%;
+    }
   }
 
   footer {
     grid-area: footer;
-    padding-bottom: 1em;
-  }
-
-  .markdownBody {
-    grid-area: main;
   }
 
   nav {

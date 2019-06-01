@@ -1,5 +1,8 @@
+export * from './avatar';
+export * from './cards';
 export * from './contributions';
 export * from './experience';
+export * from './footer';
 export * from './githubCorner';
 export * from './languages';
 export * from './layout';
@@ -8,5 +11,3 @@ export * from './repositories';
 export * from './section';
 export * from './seo';
 export * from './social';
-export * from './avatar';
-export * from './footer';
