@@ -2,6 +2,8 @@
 path: index
 type: page
 date: 2019-05-27
+blurb: 'Open Source Developer'
+job: 'SRE'
 ---
 
 ### Favorites

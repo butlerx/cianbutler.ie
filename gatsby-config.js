@@ -1,92 +1,93 @@
-module.exports = {
-  siteMetadata: {
-    title: 'Cian Butler',
-    description: 'Cian Butler, open source developer and SRE',
-    siteUrl: 'https://cianbutler.ie',
-    author: 'Cian Butler',
-    repo: 'butlerx/cv',
-    job: 'SRE',
-    blurb: 'Open Source Developer',
-    menu: ['me', 'projects'],
-    languages: [
-      'AWS',
-      'C',
-      'C++',
-      'Docker',
-      'Go',
-      'Java',
-      'JavaScript',
-      'Kotlin',
-      'Kubernetes',
-      'Linux',
-      'Node',
-      'PostgreSQL',
-      'Python',
-      'Rust',
-      'SCSS',
-      'TypeScript',
-    ],
-    social: {
-      twitter: {
-        icon: 'twitter',
-        user: 'cianbutlerx',
-      },
-      github: {
-        icon: 'github-alt',
-        user: 'butlerx',
-      },
-      email: {
-        icon: 'envelope',
-        address: 'butlerx@notthe.cloud',
-      },
-      linkedIn: {
-        icon: 'linkedin',
-        user: 'butlerx',
-      },
+const siteMetadata = {
+  title: 'Cian Butler',
+  description: 'Cian Butler, open source developer and SRE',
+  siteUrl: 'https://cianbutler.ie',
+  author: 'Cian Butler',
+  repo: 'butlerx/cv',
+  colour: '#ffffff',
+  menu: ['me', 'projects'],
+  languages: [
+    'AWS',
+    'C',
+    'C++',
+    'Docker',
+    'Go',
+    'Java',
+    'JavaScript',
+    'Kotlin',
+    'Kubernetes',
+    'Linux',
+    'Node',
+    'PostgreSQL',
+    'Python',
+    'Rust',
+    'SCSS',
+    'TypeScript',
+  ],
+  social: {
+    twitter: {
+      icon: 'twitter',
+      user: 'cianbutlerx',
+    },
+    github: {
+      icon: 'github-alt',
+      user: 'butlerx',
+    },
+    email: {
+      icon: 'envelope',
+      address: 'butlerx@notthe.cloud',
+    },
+    linkedIn: {
+      icon: 'linkedin',
+      user: 'butlerx',
     },
   },
+};
+
+module.exports = {
+  siteMetadata,
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Cian Butler, Personal site`,
-        short_name: `Cian Butler`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: '#ffffff',
+        name: siteMetadata.description,
+        short_name: siteMetadata.title,
+        start_url: '/',
+        background_color: siteMetadata.colour,
+        theme_color: siteMetadata.colour,
         display: 'standalone',
-        icon: `src/images/me.png`,
+        icon: 'src/images/me.png',
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-tslint`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-transformer-yaml`,
+      resolve: 'gatsby-transformer-yaml',
       options: {
-        typeName: `Yaml`,
+        typeName: 'Yaml',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `./src/data/`,
+        path: './src/data/',
       },
     },
     {
-      resolve: `gatsby-source-github-api`,
+      resolve: 'gatsby-source-github-api',
       options: {
         token: process.env.GITHUB_TOKEN,
         graphQLQuery: `
@@ -142,20 +143,22 @@ module.exports = {
           }
         }`,
         variables: {
-          author: 'butlerx',
+          author: siteMetadata.social.github.user,
           userFirst: 10,
           searchFirst: 10,
-          q: 'author:butlerx is:merged state:closed type:pr sort:comments',
+          q: `author:${
+            siteMetadata.social.github.user
+          } is:merged state:closed type:pr sort:comments`,
         },
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `src/content`,
+        path: 'src/content',
         name: 'markdown-pages',
       },
     },
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-remark',
   ],
 };

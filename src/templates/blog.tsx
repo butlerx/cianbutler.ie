@@ -27,7 +27,7 @@ const Blog: SFC<BlogProps> = ({ markdownRemark }) => (
 
 export default Blog;
 export const pageQuery = graphql`
-  query($path: String!) {
+  query BlogQuery($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {

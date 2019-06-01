@@ -1,81 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext');
-
 @import '../variables';
 
-body {
-  -webkit-font-smoothing: subpixel-antialiased; // sass-lint:disable-line no-vendor-prefixes
-  -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-vendor-prefixes, no-misspelled-properties
-  border-top: 6px solid $red;
-  font-family: $fonts;
-  font-size: 16px;
-  font-smooth: auto; // sass-lint:disable-line no-misspelled-properties
-  letter-spacing: 0.025em;
-  line-height: 1.5;
-  margin: 0;
-  text-shadow: 0 0 1em transparent, 1px 1px 1.2px $shadow;
-  word-wrap: break-word;
-
-  .container {
-    @media screen and (max-width: $large-phone) {
-      grid-row-gap: 15px; // sass-lint:disable-line no-misspelled-properties
-      // sass-lint:disable indentation
-      grid-template-areas:
-        'sidebar'
-        'main'
-        'footer';
-      // sass-lint:enable indentation
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      max-width: 100%;
-    }
-
-    display: grid;
-    grid-column-gap: 10px; // sass-lint:disable-line no-misspelled-properties
+.container {
+  @media screen and (max-width: $large-phone) {
     grid-row-gap: 15px; // sass-lint:disable-line no-misspelled-properties
     // sass-lint:disable indentation
     grid-template-areas:
-      'main sidebar'
-      'footer footer';
+      'sidebar'
+      'main'
+      'footer';
     // sass-lint:enable indentation
-    grid-template-columns: 80% 20%;
+    grid-template-columns: auto;
     grid-template-rows: auto;
-    max-width: 90%;
-
-    @import '../markdown';
-
-    hr {
-      border: 0;
-      border-top: 1px solid $grey;
-      box-sizing: content-box;
-      height: 0;
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-
-    a {
-      color: $blue;
-      text-decoration: none;
-    }
-
-    footer {
-      grid-area: footer;
-      padding-bottom: 1em;
-    }
-
-    .markdownBody {
-      grid-area: main;
-    }
-
-    nav {
-      grid-area: sidebar;
-    }
+    max-width: 100%;
   }
-}
 
-:focus {
-  outline: none;
-}
+  display: grid;
+  grid-column-gap: 10px; // sass-lint:disable-line no-misspelled-properties
+  grid-row-gap: 15px; // sass-lint:disable-line no-misspelled-properties
+  // sass-lint:disable indentation
+  grid-template-areas:
+    'main sidebar'
+    'footer footer';
+  // sass-lint:enable indentation
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+  max-width: 90%;
 
-::-focus-inner {
-  border: 0;
+  @import 'markdown';
+
+  hr {
+    border: 0;
+    border-top: 1px solid $grey;
+    box-sizing: content-box;
+    height: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  footer {
+    grid-area: footer;
+    padding-bottom: 1em;
+  }
+
+  .markdownBody {
+    grid-area: main;
+  }
+
+  nav {
+    grid-area: sidebar;
+  }
 }
