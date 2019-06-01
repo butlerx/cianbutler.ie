@@ -1,17 +1,18 @@
-.projectList {
+@import '../variables';
+
+.cardList {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 
-  .projectOuter {
-    //height: 232px;
-    margin-top: 1rem;
+  .cardOuter {
+    margin: 1rem;
+    max-width: 30em;
     padding: 0;
-    //width: 33%;
 
-    .project {
-      border: 0 solid #7d97ad;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    .card {
+      border: 0 solid $shadow-border;
+      box-shadow: 0 2px 5px 0 $top-shadow, 0 2px 10px 0 $side-shadow;
       display: flex;
       flex-direction: column;
       //height: 200px;
@@ -36,7 +37,8 @@
         }
 
         &Space {
-          width: 100%;
+          max-width: 100%;
+          min-width: 10%;
         }
 
         &Links {
@@ -66,35 +68,35 @@
   }
 
   @media all and (max-width: 1200px) {
-    .project {
+    .card {
       margin: 0 0.35rem;
     }
   }
 
   @media all and (max-width: 1155px) {
-    .projectTitle {
+    .cardTitle {
       font-size: 1.3rem;
     }
   }
 
   @media all and (max-width: 1000px) {
-    .projectOuter {
+    .cardOuter {
       width: 50%;
 
-      .project {
+      .card {
         margin: 0 0.5rem;
       }
     }
   }
 
   @media all and (max-width: 820px) {
-    .projectOuter {
+    .cardOuter {
       height: 242px;
 
-      .project {
+      .card {
         height: 210px;
 
-        .projectTitle {
+        .cardTitle {
           min-height: unset;
         }
       }
@@ -102,10 +104,10 @@
   }
 
   @media all and (max-width: 600px) {
-    .projectOuter {
+    .cardOuter {
       height: 282px;
 
-      .project {
+      .card {
         height: 250px;
         margin: 0 0.35rem;
       }
@@ -113,11 +115,11 @@
   }
 
   @media all and (max-width: 550px) {
-    .projectOuter {
+    .cardOuter {
       height: 222px;
       width: 100%;
 
-      .project {
+      .card {
         height: 190px;
         margin: 0 auto;
         max-width: 85%;
@@ -126,16 +128,16 @@
   }
 
   @media all and (max-width: 400px) {
-    .project {
+    .card {
       max-width: 90%;
     }
   }
 
   @media all and (max-width: 350px) {
-    .projectOuter {
+    .cardOuter {
       height: 232px;
 
-      .project {
+      .card {
         height: 200px;
       }
     }

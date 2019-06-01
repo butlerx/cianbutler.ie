@@ -84,12 +84,13 @@ export const ProjectPageQuery = graphql`
               merged
               url
               state
+              bodyText
               repository {
+                name
                 repoUrl
                 stargazers {
                   totalCount
                 }
-                name
               }
             }
           }

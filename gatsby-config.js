@@ -119,6 +119,7 @@ module.exports = {
                   merged
                   url
                   state
+                  bodyHTML
                   repository {
                     stargazers {
                       totalCount

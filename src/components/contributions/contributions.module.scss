@@ -1,23 +1,17 @@
 .project {
-  &List {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  &Element {
+    display: block;
+    font-size: 110%;
+    margin: 1em 0;
 
-    &Element {
-      display: block;
-      font-size: 110%;
-      margin: 1em 0;
+    &Title {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 0;
+    }
 
-      &Title {
-        font-size: 0.9em;
-        font-weight: bold;
-        margin-top: 0;
-      }
-
-      &Description {
-        font-size: 0.8em;
-      }
+    &Description {
+      font-size: 0.8em;
     }
   }
 }
