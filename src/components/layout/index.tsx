@@ -1,15 +1,10 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import React, { SFC } from 'react';
-
 import { Footer, GithubCorner, Navigation, SEO } from '..';
 import { humanize } from '../../utils';
 import './base.scss';
-import styles from './layout.module.scss';
+import './icons';
+import * as styles from './layout.module.scss';
 import './print.scss';
-
-library.add(fab, faEnvelope);
 
 interface LayoutProps {
   title: string;

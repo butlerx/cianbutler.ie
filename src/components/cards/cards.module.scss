@@ -29,24 +29,36 @@
         flex-direction: row;
         font-size: 1.5rem;
         height: auto;
+        margin-right: 0.5em;
         min-height: 2rem;
 
         &Text {
           margin: 0 1rem 0 0;
-          width: 100%;
+          max-width: 100%;
+          width: 80%;
         }
 
         &Space {
           max-width: 100%;
-          min-width: 10%;
         }
 
-        &Links {
-          margin: 0 1rem;
-          opacity: 0.54;
+        &Link {
+          max-width: 100%;
+          min-width: 20%;
+          text-align: center;
+          vertical-align: middle;
           white-space: nowrap;
 
-          .link {
+          &Count {
+            font-size: 0.8rem;
+            padding-right: 0.5rem;
+
+            > svg {
+              padding-right: 0.3rem;
+            }
+          }
+
+          &Icon {
             height: 1rem;
             margin-left: 0 0.2rem 0 0.4rem;
             width: 1rem;
