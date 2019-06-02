@@ -18,7 +18,7 @@ export const SubNav: SFC<SubNavProps> = ({ currentPage, links }) =>
       <ul className={styles.nav}>
         {links.map(label => (
           <li key={label}>
-            <a href={`#${label}`} className={styles.sidebarNavItem}>
+            <a href={`#${encodeURI(label)}`} className={styles.sidebarNavItem}>
               {titlize(label)}
             </a>
           </li>

@@ -1,7 +1,5 @@
 import { graphql, Link } from 'gatsby';
 import React, { SFC } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
-
 import {
   ContributionData,
   Contributions,
@@ -53,13 +51,9 @@ const projects: SFC<ProjectPageProps> = props => {
       twitter={author}
       description={description}
     >
-      <ScrollableAnchor id='Recent projects'>
-        <Section label='Recent projects' />
-      </ScrollableAnchor>
+      <Section label='Recent projects' />
       <Repositories data={user.repositories.edges} />
-      <ScrollableAnchor id='Recent contributions'>
-        <Section label='Recent contributions' />
-      </ScrollableAnchor>
+      <Section label='Recent contributions' />
       <Contributions data={search.edges} />
     </Layout>
   );
