@@ -3,3 +3,9 @@ export const humanize = (str: string): string =>
 
 export const trimReadme = (readme: string, length: number): string =>
   `${readme.substring(0, length)}...`;
+
+export const titlize = (str: string): string =>
+  str
+    .split(' ')
+    .map(humanize)
+    .join(' ');

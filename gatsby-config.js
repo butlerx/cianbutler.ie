@@ -137,6 +137,8 @@ module.exports = {
                 edges {
                   node {
                     name
+                    url
+                    description
                   }
                 }
               }

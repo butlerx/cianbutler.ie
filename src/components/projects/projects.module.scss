@@ -1,0 +1,24 @@
+@import './print';
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &Element {
+    display: block;
+    font-size: 110%;
+    //margin: 1em 0;
+    margin: 0 0 1.67em;
+
+    &Title {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    &Description {
+      font-size: 0.8em;
+    }
+  }
+}

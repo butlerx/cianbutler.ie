@@ -7,6 +7,7 @@ export * from './githubCorner';
 export * from './languages';
 export * from './layout';
 export * from './nav/index';
+export * from './projects';
 export * from './repositories';
 export * from './section';
 export * from './seo';
