@@ -136,12 +136,13 @@ body {
         font-weight: normal;
       }
     }
+
     @page {
       margin: 0.8cm;
     }
 
     hr {
-      @include hiddenPrint;
+      display: none;
     }
 
     blockquote,

@@ -2,6 +2,7 @@
 
 .sidebar {
   @import './mobile';
+  grid-area: sidebar;
   margin-top: 64px;
   text-align: inherit;
 
