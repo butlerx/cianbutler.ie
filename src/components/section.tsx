@@ -6,4 +6,6 @@ interface SectionProps {
   label: string;
 }
 
-export const Section: SFC<SectionProps> = ({ label }) => <h2 id={label}>{titlize(label)}</h2>;
+export const Section: SFC<SectionProps> = ({ label }) => (
+  <h2 id={encodeURI(label)}>{titlize(label)}</h2>
+);
