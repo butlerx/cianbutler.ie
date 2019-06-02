@@ -1,0 +1,52 @@
+@mixin subTitle($font-size) {
+  font-size: $font-size;
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+  max-width: 60%;
+
+  > a {
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+@mixin state($background-color) {
+  background-color: $background-color;
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: 600;
+  height: max-content;
+  line-height: 20px;
+  padding: 4px 8px;
+  text-align: center;
+
+  > svg {
+    margin-right: 0.5rem;
+  }
+}
+
+@mixin hiddenPrint {
+  @media print {
+    display: none;
+  }
+}
+
+@mixin faIcon {
+  font-size: 0.8rem;
+  padding-right: 0.5rem;
+
+  > svg {
+    padding-right: 0.3rem;
+  }
+}
+
+@mixin heading($font-size) {
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}

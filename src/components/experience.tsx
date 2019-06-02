@@ -17,31 +17,29 @@ interface ExperienceProps {
   data: ExperienceData[];
 }
 
-const experience = ({ title, where, start, finish, languages, description }: ExperienceData) => (
-  <div key={`${title}@${where}`}>
-    <h3 id={encodeURI(title)}>
-      {title}@{where}&emsp;
-      <small>
-        <em>
-          {formatDate(start)} - {formatDate(finish)}
-        </em>
-      </small>
-    </h3>
-    <Languages languages={languages} />
-    <blockquote>
-      <ReactMarkdown source={description} />
-    </blockquote>
-    <hr />
-  </div>
-);
-
 export const Experience: SFC<ExperienceProps> = ({ data }) =>
   data
     .sort(
       (a: ExperienceData, b: ExperienceData) =>
         new Date(b.start).getTime() - new Date(a.start).getTime(),
     )
-    .map(experience);
+    .map(({ title, where, start, finish, languages, description }) => (
+      <div key={`${title}@${where}`}>
+        <h3 id={encodeURI(title)}>
+          {title}@{where}&emsp;
+          <small>
+            <em>
+              {formatDate(start)} - {formatDate(finish)}
+            </em>
+          </small>
+        </h3>
+        <Languages languages={languages} />
+        <blockquote>
+          <ReactMarkdown source={description} />
+        </blockquote>
+        <hr />
+      </div>
+    ));
 
 Experience.defaultProps = {
   data: [],
