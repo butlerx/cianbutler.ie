@@ -1,7 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import {
   Avatar,
   Experience,
@@ -106,17 +105,11 @@ const me: SFC<MePageProps> = ({ data }) => {
         <Languages languages={languages} />
         <span dangerouslySetInnerHTML={{ __html: html }} />
       </blockquote>
-      <ScrollableAnchor id='experience'>
-        <Section label='experience' />
-      </ScrollableAnchor>
+      <Section label='experience' />
       <Experience data={experience(data)} />
-      <ScrollableAnchor id='education'>
-        <Section label='education' />
-      </ScrollableAnchor>
+      <Section label='education' />
       <Experience data={education(data)} />
-      <ScrollableAnchor id='open source projects'>
-        <Section label='open source projects' />
-      </ScrollableAnchor>
+      <Section label='open source projects' />
       <Projects data={edges} />
     </Layout>
   );
