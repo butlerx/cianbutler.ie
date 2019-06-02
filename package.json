@@ -19,7 +19,7 @@
       "tslint --fix",
       "git add"
     ],
-    "*.scss": [
+    "*.s{a,c}ss": [
       "prettier --write",
       "sass-lint -v",
       "git add"
@@ -28,7 +28,7 @@
       "prettier --write",
       "git add"
     ],
-    "*.{js,jsx}": [
+    "*.js{x, on}": [
       "prettier --write",
       "git add"
     ]

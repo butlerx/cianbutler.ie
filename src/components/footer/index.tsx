@@ -8,8 +8,6 @@ const year = new Date().getFullYear();
 
 export const Footer: SFC<{}> = () => (
   <footer className={styles.footer}>
-    <div className='hiddenPrint'>
-      Built on {month}, {year}
-    </div>
+    Built on {month}, {year}
   </footer>
 );

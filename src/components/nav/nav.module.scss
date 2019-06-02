@@ -1,32 +1,17 @@
 @import '../variables';
 
 .sidebar {
+  @import './mobile';
   margin-top: 64px;
   text-align: inherit;
-  @media screen and (max-width: $large-phone) {
-    margin-top: 1em;
-  }
 
   a {
     color: $heavy-grey !important; // sass-lint:disable-line no-important
     overflow: hidden;
     white-space: pre;
-    @media screen and (max-width: $large-phone) {
-      border-right: 1px solid $light-grey;
-      padding: 0 1em;
-    }
   }
 
   .nav {
-    @media screen and (max-width: $large-phone) {
-      border-bottom: 1px solid $light-grey;
-      flex-direction: row;
-      float: left;
-      margin-left: 8px;
-      padding-bottom: 8px;
-      position: absolute;
-    }
-
     display: flex;
     flex-direction: column;
     float: right;
@@ -37,10 +22,6 @@
     position: fixed;
 
     .subNav {
-      @media screen and (max-width: $large-phone) {
-        display: none;
-      }
-
       > a {
         font-weight: 400;
         padding: 1px 20px;

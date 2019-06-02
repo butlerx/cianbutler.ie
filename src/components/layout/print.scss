@@ -1,106 +1,41 @@
-// sass-lint:disable no-important, no-qualifying-elements
-
+// sass-lint:disable no-important
 @import '../variables';
 
 @media print {
-  body {
-    border-top: 0 !important;
-    font-size: 12px;
-    line-height: 1.4;
+  grid-template-areas: 'main' !important;
+  grid-template-columns: 100% !important;
+  max-width: 100% !important;
 
-    .container {
-      grid-template-areas: 'main' !important;
-      grid-template-columns: 100% !important;
-      max-width: 100% !important;
+  .markdownBody {
+    margin: 0 !important;
+    padding-top: 20px !important;
 
-      .markdownBody {
-        margin: 0 !important;
-        padding-top: 20px !important;
+    h2 {
+      font-size: 1.2em !important;
+    }
 
-        h2 {
-          font-size: 1.2em !important;
-        }
+    h3 {
+      font-size: 1em !important;
+      margin: 1em 0 0.8em !important;
+    }
 
-        h3 {
-          font-size: 1em !important;
-          margin: 1em 0 0.8em !important;
-        }
+    p {
+      font-size: 0.8em !important;
+      margin-bottom: 1em !important;
+    }
 
-        .projectListElementTitle,
-        p {
-          font-size: 0.8em !important;
-        }
+    blockquote {
+      border-bottom: 0;
+      border-left: 0.25em solid $dark-grey;
+      border-right: 0;
+      border-top: 0;
+      color: $heavy-grey;
+      font-size: 1em;
+      padding: 0 1em;
 
-        p {
-          margin-bottom: 1em !important;
-        }
-
-        .projectListElement {
-          margin: 0.5em 0 !important;
-        }
-
-        blockquote {
-          border-bottom: 0;
-          border-left: 0.25em solid $dark-grey;
-          border-right: 0;
-          border-top: 0;
-          color: $heavy-grey;
-          font-size: 1em;
-          padding: 0 1em;
-
-          h4 {
-            font-size: 0.8em !important;
-          }
-        }
+      h4 {
+        font-size: 0.8em !important;
       }
     }
-
-    hr {
-      display: none;
-    }
-
-    .icon {
-      margin: 0;
-
-      .label {
-        margin-left: 4px;
-      }
-    }
-
-    .experience,
-    .projectList {
-      page-break-inside: unset !important;
-    }
-
-    .experienceBlock,
-    .project,
-    .projectListElement,
-    blockquote,
-    div,
-    img {
-      page-break-inside: avoid !important;
-    }
-  }
-
-  a {
-    font-family: $fonts;
-
-    &::after {
-      content: ' (' attr(href) ') ';
-      font-size: 0.8em;
-      font-weight: normal;
-    }
-  }
-
-  @page {
-    margin: 0.8cm;
-  }
-
-  .hiddenPrint {
-    display: none;
-  }
-
-  .icons {
-    margin-bottom: 0.5em !important;
   }
 }

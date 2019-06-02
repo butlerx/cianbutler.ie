@@ -1,6 +1,9 @@
 @import '../variables';
+@import '../mixins';
 
 .githubCorner {
+  @include hiddenPrint;
+
   &:hover {
     .octoArm {
       animation: octocat-wave 560ms ease-in-out;
@@ -20,6 +23,7 @@
     }
   }
 }
+
 @keyframes octocat-wave {
   0%,
   100% {
@@ -37,7 +41,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: $medium-phone) {
   .githubCorner {
     &:hover {
       .octoArm {

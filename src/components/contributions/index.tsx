@@ -9,6 +9,7 @@ interface ContributionProps {
   url: string;
   state: string;
   bodyHTML: string;
+  titleLength: number;
 }
 export interface ContributionData extends ContributionProps {
   repository: {
@@ -26,13 +27,28 @@ interface ContributionsProps {
   }>;
 }
 
-const Contribution: SFC<ContributionProps> = ({ title, merged, url, state, bodyHTML }) => (
+const Contribution: SFC<ContributionProps> = ({
+  title,
+  titleLength,
+  merged,
+  url,
+  state,
+  bodyHTML,
+}) => (
   <div className={styles.project}>
     <span className={styles.projectElement}>
       <div className={styles.projectElementHeader}>
-        <h4 className={styles.projectElementTitle}>
-          <a href={url}>{title}</a>
-        </h4>
+        <div>
+          <h4
+            className={
+              title.length < titleLength
+                ? styles.projectElementTitle
+                : styles.projectElementTitleSmall
+            }
+          >
+            <a href={url}>{title}</a>
+          </h4>
+        </div>
         <State status={state} />
       </div>
       <span
@@ -42,6 +58,10 @@ const Contribution: SFC<ContributionProps> = ({ title, merged, url, state, bodyH
     </span>
   </div>
 );
+
+Contribution.defaultProps = {
+  titleLength: 30,
+};
 
 export const Contributions: SFC<ContributionsProps> = ({ data }) => (
   <Cards>

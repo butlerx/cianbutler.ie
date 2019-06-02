@@ -3,16 +3,14 @@ import React, { SFC } from 'react';
 import { humanize } from '../../utils';
 import * as styles from './contributions.module.scss';
 
-const getClass = (cls: string): string => [styles.projectElementState, cls].join(' ');
-
 function colour(state: string): string {
   switch (state) {
     case 'MERGED':
-      return getClass(styles.projectElementStateMerged);
+      return styles.projectElementStateMerged;
     case 'CLOSED':
-      return getClass(styles.projectElementStateClosed);
+      return styles.projectElementStateClosed;
     default:
-      return getClass(styles.projectElementStateOpen);
+      return styles.projectElementStateOpen;
   }
 }
 

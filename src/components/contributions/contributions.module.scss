@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 
 .project {
   &Element {
@@ -14,41 +15,26 @@
       display: flex;
       flex-flow: wrap;
       justify-content: space-between;
-      text-align: center;
-      vertical-align: middle;
     }
 
     &Title {
-      font-size: 0.9em;
-      font-weight: bold;
-      margin: 0 1rem 0 0;
+      @include subTitle(0.9em);
     }
 
-    &State {
-      border-radius: 3px;
-      color: $white;
-      display: inline-block;
-      font-weight: 600;
-      height: max-content;
-      line-height: 20px;
-      padding: 4px 8px;
-      text-align: center;
+    &TitleSmall {
+      @include subTitle(0.8em);
+    }
 
-      > svg {
-        margin-right: 0.5rem;
-      }
+    &StateMerged {
+      @include state($purple);
+    }
 
-      &Merged {
-        background-color: $purple;
-      }
+    &StateClosed {
+      @include state($dark-red);
+    }
 
-      &Closed {
-        background-color: $dark-red;
-      }
-
-      &Open {
-        background-color: $green;
-      }
+    &StateOpen {
+      @include state($green);
     }
   }
 }
