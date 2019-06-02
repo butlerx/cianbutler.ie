@@ -52,7 +52,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/images`,
       },
     },
     'gatsby-transformer-sharp',
@@ -66,7 +66,7 @@ module.exports = {
         background_color: siteMetadata.colour,
         theme_color: siteMetadata.colour,
         display: 'standalone',
-        icon: 'src/images/me.png',
+        icon: 'content/images/me.png',
       },
     },
     'gatsby-plugin-offline',
@@ -78,12 +78,6 @@ module.exports = {
       resolve: 'gatsby-transformer-yaml',
       options: {
         typeName: 'Yaml',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: './src/data/',
       },
     },
     {
@@ -158,7 +152,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: 'src/content',
+        path: 'content',
         name: 'markdown-pages',
       },
     },
