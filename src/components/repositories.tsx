@@ -26,7 +26,13 @@ interface RepositoriesProps {
 export const Repositories: SFC<RepositoriesProps> = ({ data, readMeLength }) => (
   <Cards>
     {data.map(({ node }, i) => (
-      <Card key={i} url={node.url} title={node.nameWithOwner} icon='github'>
+      <Card
+        key={i}
+        url={node.url}
+        title={node.nameWithOwner}
+        icon='github'
+        count={node.stargazers.totalCount}
+      >
         <ReactMarkdown
           source={
             node.readme.text.length > readMeLength

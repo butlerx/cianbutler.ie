@@ -35,10 +35,12 @@ interface SocialLinkProps {
   social: SocialAccount;
 }
 
+const icon = (i: string) => (i === 'envelope' ? i : ['fab', i]);
+
 const SocialLink: SFC<SocialLinkProps> = ({ url, label, social }) => (
   <li>
     <a href={url}>
-      <FontAwesomeIcon icon={['fab', social.icon]} />
+      <FontAwesomeIcon icon={icon(social.icon)} />
       <span className={styles.label}>{label}</span>
     </a>
   </li>
