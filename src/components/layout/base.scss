@@ -161,24 +161,3 @@ body {
 ::-focus-inner {
   border: 0;
 }
-
-// sass-lint:disable no-important
-@media print {
-  .markdownBody {
-    .projectListElement {
-      font-size: 0.8em !important;
-      margin: 0.5em 0 !important;
-    }
-  }
-
-  .experience,
-  .projectList {
-    page-break-inside: unset !important;
-  }
-
-  .experienceBlock,
-  .project,
-  .projectListElement {
-    page-break-inside: avoid !important;
-  }
-}

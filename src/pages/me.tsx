@@ -2,13 +2,15 @@ import { graphql, Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import { Avatar, Section } from '../components';
-
 import {
+  Avatar,
   Experience,
   ExperienceData,
   Languages,
   Layout,
+  PinnedRepositoryData,
+  Projects,
+  Section,
   SEO,
   Social,
   SocialProps,
@@ -46,6 +48,17 @@ interface MePageProps {
     markdownRemark: {
       html: string;
     };
+    githubData: {
+      data: {
+        repositoryOwner: {
+          pinnedRepositories: {
+            edges: Array<{
+              node: PinnedRepositoryData;
+            }>;
+          };
+        };
+      };
+    };
   };
 }
 
@@ -66,13 +79,14 @@ const me: SFC<MePageProps> = ({ data }) => {
   const { description, title, author, social, languages, menu } = data.site.siteMetadata;
   const { fluid } = data.placeholderImage.childImageSharp;
   const { html } = data.markdownRemark;
+  const { edges } = data.githubData.data.repositoryOwner.pinnedRepositories;
 
   return (
     <Layout
       title={title}
       currentPage='me'
       pages={menu}
-      internalLinks={['experience', 'education']}
+      internalLinks={['experience', 'education', 'open source projects']}
       twitter={social.twitter.user}
       description={description}
     >
@@ -100,6 +114,10 @@ const me: SFC<MePageProps> = ({ data }) => {
         <Section label='education' />
       </ScrollableAnchor>
       <Experience data={education(data)} />
+      <ScrollableAnchor id='open source projects'>
+        <Section label='open source projects' />
+      </ScrollableAnchor>
+      <Projects data={edges} />
     </Layout>
   );
 };
@@ -158,6 +176,21 @@ export const IndexPageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: "me" } }) {
       html
+    }
+    githubData {
+      data {
+        repositoryOwner {
+          pinnedRepositories {
+            edges {
+              node {
+                name
+                url
+                description
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;

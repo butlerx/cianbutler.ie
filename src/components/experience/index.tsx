@@ -1,8 +1,8 @@
 import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
-
-import { formatDate } from '../utils';
-import { Languages } from './languages';
+import { Languages } from '..';
+import { formatDate } from '../../utils';
+import * as styles from './experience.module.scss';
 
 export interface ExperienceData {
   title: string;
@@ -18,14 +18,14 @@ interface ExperienceProps {
 }
 
 export const Experience: SFC<ExperienceProps> = ({ data }) => (
-  <div className='experience'>
+  <div className={styles.experience}>
     {data
       .sort(
         (a: ExperienceData, b: ExperienceData) =>
           new Date(b.start).getTime() - new Date(a.start).getTime(),
       )
       .map(({ title, where, start, finish, languages, description }) => (
-        <div key={`${title}@${where}`} className='experienceBlock'>
+        <div key={`${title}@${where}`} className={styles.experienceBlock}>
           <h3 id={encodeURI(title)}>
             {title}@{where}&emsp;
             <small>
