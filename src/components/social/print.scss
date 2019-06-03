@@ -1,0 +1,13 @@
+// sass-lint:disable no-important
+//
+@media print {
+  margin-bottom: 0.5em !important;
+
+  a {
+    margin: 0;
+
+    .label {
+      margin-left: 4px;
+    }
+  }
+}
