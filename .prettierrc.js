@@ -1,8 +1,9 @@
 module.exports = {
   singleQuote: true,
-  trailingComma: "all",
-  proseWrap: "always",
+  jsxSingleQuote: true,
+  trailingComma: 'all',
+  proseWrap: 'always',
   printWidth: 100,
-  endOfLine: "lf",
+  endOfLine: 'lf',
   tabWidth: 2,
-}
+};
