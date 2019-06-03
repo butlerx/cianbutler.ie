@@ -19,7 +19,6 @@ export const Projects: SFC<ProjectsProps> = ({ data }) => (
         <span className={styles.projectListElement}>
           <h3 className={styles.projectListElementTitle}>
             <FontAwesomeIcon icon={['fab', 'github']} size='lg' />
-            &nbsp;&nbsp;
             <strong>
               <a href={node.url}>{node.name}</a>
             </strong>
