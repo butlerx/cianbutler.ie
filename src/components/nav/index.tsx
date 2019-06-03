@@ -22,11 +22,7 @@ export const Navigation: SFC<NavigationProps> = ({
 }) => (
   <nav className={styles.sidebar} data-spy='affix'>
     <ul className={styles.nav}>
-      <Location>
-        {({ location }: { location: { pathname: string } }) => (
-          <Link to={location.pathname === '/' ? '#' : '/'}>{siteTitle}</Link>
-        )}
-      </Location>
+      <Link to='/'>{siteTitle}</Link>
       {pages.map(page => (
         <li key={page}>
           <Link to={page} className={styles.sidebarNavItem}>

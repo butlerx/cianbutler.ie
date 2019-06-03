@@ -48,6 +48,14 @@ module.exports = {
   siteMetadata,
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sass',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -55,8 +63,13 @@ module.exports = {
         path: `${__dirname}/content/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content`,
+        name: 'markdown-pages',
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -66,14 +79,9 @@ module.exports = {
         background_color: siteMetadata.colour,
         theme_color: siteMetadata.colour,
         display: 'standalone',
-        icon: 'content/images/me.png',
+        icon: `${__dirname}/content/images/me.png`,
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-tslint',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
@@ -88,39 +96,35 @@ module.exports = {
         query ($author: String = "", $userFirst: Int = 0, $searchFirst: Int = 0, $q: String = "") {
           user(login: $author) {
             repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC}) {
-              edges {
-                node {
-                  nameWithOwner
-                  description
-                  url
-                  stargazers {
-                    totalCount
-                  }
-                  readme: object(expression:"master:README.md"){
-                    ... on Blob{
-                      text
-                    }
+              nodes {
+                nameWithOwner
+                description
+                url
+                stargazers {
+                  totalCount
+                }
+                readme: object(expression:"master:README.md"){
+                  ... on Blob{
+                    text
                   }
                 }
               }
             }
           }
           search(query: $q, type: ISSUE, first: $searchFirst) {
-            edges {
-              node {
-                ... on PullRequest {
-                  title
-                  merged
-                  url
-                  state
-                  bodyHTML
-                  repository {
-                    stargazers {
-                      totalCount
-                    }
-                    repoUrl: url
-                    name
+            nodes {
+              ... on PullRequest {
+                title
+                merged
+                url
+                state
+                bodyHTML
+                repository {
+                  stargazers {
+                    totalCount
                   }
+                  repoUrl: url
+                  name
                 }
               }
             }
@@ -128,12 +132,10 @@ module.exports = {
           repositoryOwner(login: $author) {
             ... on User {
               pinnedRepositories(first:6) {
-                edges {
-                  node {
-                    name
-                    url
-                    description
-                  }
+                nodes {
+                  name
+                  url
+                  description
                 }
               }
             }
@@ -149,13 +151,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: 'content',
-        name: 'markdown-pages',
-      },
-    },
-    'gatsby-transformer-remark',
   ],
 };

@@ -20,12 +20,6 @@ interface YAML {
   source: ExperienceData[];
 }
 
-interface AllYaml {
-  edges: Array<{
-    node: YAML;
-  }>;
-}
-
 interface MePageProps {
   data: {
     site: {
@@ -43,7 +37,9 @@ interface MePageProps {
         fluid: FluidObject;
       };
     };
-    allYaml: AllYaml;
+    allYaml: {
+      nodes: YAML[];
+    };
     markdownRemark: {
       html: string;
     };
@@ -51,9 +47,7 @@ interface MePageProps {
       data: {
         repositoryOwner: {
           pinnedRepositories: {
-            edges: Array<{
-              node: PinnedRepositoryData;
-            }>;
+            nodes: PinnedRepositoryData[];
           };
         };
       };
@@ -61,24 +55,16 @@ interface MePageProps {
   };
 }
 
-const getYaml = (yaml: AllYaml, id: string): Array<{ node: YAML }> =>
-  yaml.edges.filter(({ node }) => node.title === id);
-
-function experience({ allYaml }: { allYaml: AllYaml }): ExperienceData[] {
-  const [{ node }] = getYaml(allYaml, 'Experience');
-  return node.source;
-}
-
-function education({ allYaml }: { allYaml: AllYaml }): ExperienceData[] {
-  const [{ node }] = getYaml(allYaml, 'Education');
-  return node.source;
-}
+const getYaml = (yaml: YAML[], id: string): ExperienceData[] =>
+  yaml.filter(({ title }) => title === id)[0].source;
 
 const me: SFC<MePageProps> = ({ data }) => {
   const { description, title, author, social, languages, menu } = data.site.siteMetadata;
   const { fluid } = data.placeholderImage.childImageSharp;
   const { html } = data.markdownRemark;
-  const { edges } = data.githubData.data.repositoryOwner.pinnedRepositories;
+  const { nodes } = data.githubData.data.repositoryOwner.pinnedRepositories;
+  const experience = getYaml(data.allYaml.nodes, 'Experience');
+  const education = getYaml(data.allYaml.nodes, 'Education');
 
   return (
     <Layout
@@ -106,11 +92,11 @@ const me: SFC<MePageProps> = ({ data }) => {
         <span dangerouslySetInnerHTML={{ __html: html }} />
       </blockquote>
       <Section label='experience' />
-      <Experience data={experience(data)} />
+      <Experience data={experience} />
       <Section label='education' />
-      <Experience data={education(data)} />
+      <Experience data={education} />
       <Section label='open source projects' />
-      <Projects data={edges} />
+      <Projects data={nodes} />
     </Layout>
   );
 };
@@ -153,17 +139,15 @@ export const IndexPageQuery = graphql`
       }
     }
     allYaml {
-      edges {
-        node {
+      nodes {
+        title
+        source {
           title
-          source {
-            title
-            where
-            start(formatString: "YYYY-MM-DD")
-            finish(formatString: "YYYY-MM-DD")
-            languages
-            description
-          }
+          where
+          start(formatString: "YYYY-MM-DD")
+          finish(formatString: "YYYY-MM-DD")
+          languages
+          description
         }
       }
     }
@@ -174,12 +158,10 @@ export const IndexPageQuery = graphql`
       data {
         repositoryOwner {
           pinnedRepositories {
-            edges {
-              node {
-                name
-                url
-                description
-              }
+            nodes {
+              name
+              url
+              description
             }
           }
         }
