@@ -1,0 +1,31 @@
+.post {
+  margin-bottom: 4rem;
+  padding: 4rem 8rem;
+
+  .meta {
+    margin-bottom: 1rem;
+
+    .key {
+      color: #747369;
+
+      &::after {
+        content: '\A0';
+      }
+    }
+
+    .value {
+      color: #cc99cc;
+    }
+  }
+
+  .headline {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .article {
+    a {
+      color: #d27b53;
+    }
+  }
+}

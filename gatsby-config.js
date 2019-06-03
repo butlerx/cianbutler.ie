@@ -5,7 +5,7 @@ const siteMetadata = {
   author: 'Cian Butler',
   repo: 'butlerx/cv',
   colour: '#ffffff',
-  menu: ['me', 'projects'],
+  menu: ['me', 'projects', 'blog'],
   languages: [
     'AWS',
     'C',

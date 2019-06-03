@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { trimReadme } from '../utils';

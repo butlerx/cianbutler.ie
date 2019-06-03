@@ -1,4 +1,3 @@
-import { Location } from '@reach/router';
 import { Link } from 'gatsby';
 import React, { SFC } from 'react';
 import * as styles from './nav.module.scss';

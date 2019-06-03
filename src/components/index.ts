@@ -1,4 +1,5 @@
 export * from './avatar';
+export * from './posts';
 export * from './cards';
 export * from './contributions';
 export * from './experience';
