@@ -24,15 +24,11 @@ interface ProjectPageProps {
       data: {
         user: {
           repositories: {
-            edges: Array<{
-              node: RepositoryData;
-            }>;
+            nodes: RepositoryData[];
           };
         };
         search: {
-          edges: Array<{
-            node: ContributionData;
-          }>;
+          nodes: ContributionData[];
         };
       };
     };
@@ -52,9 +48,9 @@ const projects: SFC<ProjectPageProps> = props => {
       description={description}
     >
       <Section label='Recent projects' />
-      <Repositories data={user.repositories.edges} />
+      <Repositories data={user.repositories.nodes} />
       <Section label='Recent contributions' />
-      <Contributions data={search.edges} />
+      <Contributions data={search.nodes} />
     </Layout>
   );
 };
@@ -72,36 +68,32 @@ export const ProjectPageQuery = graphql`
     githubData {
       data {
         search {
-          edges {
-            node {
-              title
-              merged
-              url
-              state
-              bodyHTML
-              repository {
-                name
-                repoUrl
-                stargazers {
-                  totalCount
-                }
+          nodes {
+            title
+            merged
+            url
+            state
+            bodyHTML
+            repository {
+              name
+              repoUrl
+              stargazers {
+                totalCount
               }
             }
           }
         }
         user {
           repositories {
-            edges {
-              node {
-                nameWithOwner
-                description
-                url
-                stargazers {
-                  totalCount
-                }
-                readme {
-                  text
-                }
+            nodes {
+              nameWithOwner
+              description
+              url
+              stargazers {
+                totalCount
+              }
+              readme {
+                text
               }
             }
           }

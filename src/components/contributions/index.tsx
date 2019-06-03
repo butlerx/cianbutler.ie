@@ -22,9 +22,7 @@ export interface ContributionData extends ContributionProps {
 }
 
 interface ContributionsProps {
-  data: Array<{
-    node: ContributionData;
-  }>;
+  data: ContributionData[];
 }
 
 const Contribution: SFC<ContributionProps> = ({
@@ -65,21 +63,15 @@ Contribution.defaultProps = {
 
 export const Contributions: SFC<ContributionsProps> = ({ data }) => (
   <Cards>
-    {data.map(({ node }, i) => (
+    {data.map(({ repository, title, merged, url, state, bodyHTML }, i) => (
       <Card
         key={i}
         icon='github'
-        url={node.repository.repoUrl}
-        title={node.repository.name}
-        count={node.repository.stargazers.totalCount}
+        url={repository.repoUrl}
+        title={repository.name}
+        count={repository.stargazers.totalCount}
       >
-        <Contribution
-          title={node.title}
-          merged={node.merged}
-          url={node.url}
-          state={node.state}
-          bodyHTML={node.bodyHTML}
-        />
+        <Contribution title={title} merged={merged} url={url} state={state} bodyHTML={bodyHTML} />
       </Card>
     ))}
   </Cards>

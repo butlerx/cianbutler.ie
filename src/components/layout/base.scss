@@ -104,16 +104,35 @@ body {
     vertical-align: middle;
   }
 
+  pre {
+    background-color: $light-black;
+    font-family: $mono-fonts;
+    overflow: auto;
+    padding: 0.5em 1em;
+
+    code {
+      background: none;
+      border: 0;
+      font-size: 0.8em * 0.875;
+      letter-spacing: normal;
+      line-height: 1em;
+      word-break: break-all;
+
+      &::after,
+      &::before {
+        content: '';
+      }
+    }
+  }
+
   code {
     background-color: $light-black;
     border-radius: 3px;
     color: inherit;
-    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-family: $mono-fonts;
     font-size: 0.8em;
     margin: 0;
-    padding: 0;
-    padding-bottom: 0.2em;
-    padding-top: 0.2em;
+    padding: 0.2em 0;
 
     &::after,
     &::before {

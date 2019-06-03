@@ -1,7 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import React, { SFC } from 'react';
-
-import { Layout, SEO } from '../components';
+import { Layout } from '../components';
 
 interface ErrorProps {
   data: {

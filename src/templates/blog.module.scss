@@ -1,0 +1,30 @@
+.post {
+  * {
+    max-width: 100%;
+  }
+
+  .meta {
+    font-size: 0.9em;
+    text-align: right;
+
+    .key {
+      color: #747369;
+
+      &::after {
+        content: '\A0';
+      }
+    }
+
+    .value {
+      color: #cc99cc;
+    }
+  }
+
+  .headline {
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+  .article {
+  }
+}

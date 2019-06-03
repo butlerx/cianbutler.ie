@@ -9,21 +9,21 @@ export interface PinnedRepositoryData {
 }
 
 interface ProjectsProps {
-  data: Array<{ node: PinnedRepositoryData }>;
+  data: PinnedRepositoryData[];
 }
 
 export const Projects: SFC<ProjectsProps> = ({ data }) => (
   <div className={styles.projectList}>
-    {data.sort().map(({ node }, i) => (
+    {data.sort().map(({ url, name, description }, i) => (
       <div key={i} className={styles.project}>
         <span className={styles.projectListElement}>
           <h3 className={styles.projectListElementTitle}>
             <FontAwesomeIcon icon={['fab', 'github']} size='lg' />
             <strong>
-              <a href={node.url}>{node.name}</a>
+              <a href={url}>{name}</a>
             </strong>
           </h3>
-          <span className={styles.projectListElementDescription}>{node.description}</span>
+          <span className={styles.projectListElementDescription}>{description}</span>
         </span>
       </div>
     ))}

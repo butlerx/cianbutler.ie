@@ -17,27 +17,17 @@ export interface RepositoryData {
 }
 
 interface RepositoriesProps {
-  data: Array<{
-    node: RepositoryData;
-  }>;
+  data: RepositoryData[];
   readMeLength: number;
 }
 
 export const Repositories: SFC<RepositoriesProps> = ({ data, readMeLength }) => (
   <Cards>
-    {data.map(({ node }, i) => (
-      <Card
-        key={i}
-        url={node.url}
-        title={node.nameWithOwner}
-        icon='github'
-        count={node.stargazers.totalCount}
-      >
+    {data.map(({ url, nameWithOwner, stargazers, readme }, i) => (
+      <Card key={i} url={url} title={nameWithOwner} icon='github' count={stargazers.totalCount}>
         <ReactMarkdown
           source={
-            node.readme.text.length > readMeLength
-              ? trimReadme(node.readme.text, readMeLength)
-              : node.readme.text
+            readme.text.length > readMeLength ? trimReadme(readme.text, readMeLength) : readme.text
           }
         />
       </Card>
