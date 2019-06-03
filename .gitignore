@@ -3,6 +3,7 @@ public
 dist
 *.pdf
 priv*
+
 ### OSX ###
 *.DS_Store
 .AppleDouble
@@ -104,4 +105,17 @@ typings/
 # dotenv environment variables file
 .env
 
+# sass files cached from build
 .sass-cache
+
+# gatsby files
+.cache/
+public
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js

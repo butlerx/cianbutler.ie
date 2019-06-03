@@ -1,13 +1,9 @@
 module.exports = {
   singleQuote: true,
+  jsxSingleQuote: true,
   trailingComma: 'all',
   proseWrap: 'always',
-  overrides: [
-    {
-      files: ['*.js', '*.mjs'],
-      options: {
-        printWidth: 100,
-      },
-    },
-  ],
+  printWidth: 80,
+  endOfLine: 'lf',
+  tabWidth: 2,
 };
