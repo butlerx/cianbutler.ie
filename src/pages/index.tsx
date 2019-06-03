@@ -34,7 +34,13 @@ interface IndexPageProps {
 }
 
 const index: SFC<IndexPageProps> = props => {
-  const { description, title, author, menu, social } = props.data.site.siteMetadata;
+  const {
+    description,
+    title,
+    author,
+    menu,
+    social,
+  } = props.data.site.siteMetadata;
   const { fluid } = props.data.placeholderImage.childImageSharp;
   const { html } = props.data.markdownRemark;
   const { job, blurb } = props.data.markdownRemark.frontmatter;
@@ -57,13 +63,16 @@ const index: SFC<IndexPageProps> = props => {
         Have a look at some of my working <Link to='projects'>projects</Link>.
       </h3>
       <h3>
-        For more check out my academic & professional <Link to='me'>resume</Link>.
+        For more check out my academic & professional{' '}
+        <Link to='me'>resume</Link>.
       </h3>
       <span dangerouslySetInnerHTML={{ __html: html }} />
       <h3>
         Contact me at{' '}
-        <a href={`http://twitter.com/${social.twitter.user}`}>@{social.twitter.user}</a> or by{' '}
-        <a href={`mailto:${social.email.address}`}>email</a>.
+        <a href={`http://twitter.com/${social.twitter.user}`}>
+          @{social.twitter.user}
+        </a>{' '}
+        or by <a href={`mailto:${social.email.address}`}>email</a>.
       </h3>
     </Layout>
   );

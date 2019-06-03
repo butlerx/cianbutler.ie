@@ -29,7 +29,12 @@ export const Card: SFC<CardProps> = ({ title, url, icon, count, children }) => (
         <span className={styles.cardTitleSpace} />
         <span className={styles.cardTitleLink}>
           <Star count={count} />
-          <a href={url} target='_blank' className={styles.cardTitleLinkIcon} title={humanize(icon)}>
+          <a
+            href={url}
+            target='_blank'
+            className={styles.cardTitleLinkIcon}
+            title={humanize(icon)}
+          >
             <FontAwesomeIcon icon={['fab', icon]} />
           </a>
         </span>
@@ -39,4 +44,6 @@ export const Card: SFC<CardProps> = ({ title, url, icon, count, children }) => (
   </div>
 );
 
-export const Cards: SFC<{}> = ({ children }) => <div className={styles.cardList}>{children}</div>;
+export const Cards: SFC<{}> = ({ children }) => (
+  <div className={styles.cardList}>{children}</div>
+);
