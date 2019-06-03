@@ -1,5 +1,5 @@
-import { graphql, Link } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
 import {
   Avatar,
@@ -10,7 +10,6 @@ import {
   PinnedRepositoryData,
   Projects,
   Section,
-  SEO,
   Social,
   SocialProps,
 } from '../components';

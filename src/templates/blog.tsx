@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import React, { SFC } from 'react';
-import { Layout } from '../components';
-import * as styles from './blog.module.scss';
+import { Layout, Post } from '../components';
 
 interface BlogProps {
   data: {
@@ -39,24 +38,13 @@ const Blog: SFC<BlogProps> = ({ data }) => {
       twitter={social.twitter.user}
       description={frontmatter.description}
     >
-      <article className={styles.post}>
-        <div className={styles.meta}>
-          <span className={styles.key}>published on</span>
-          <span className={styles.value}>{frontmatter.date}</span>
-          <br />
-          <span className={styles.key}>author:</span>
-          <span className={styles.value}>{frontmatter.author}</span>
-          <br />
-          <span className={styles.key}>tags:</span>
-          <span className={styles.value}>{frontmatter.tags.join(', ')}</span>
-          <br />
-        </div>
-        <h1 className={styles.headline}>{frontmatter.title}</h1>
-        <section
-          className={styles.article}
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </article>
+      <Post
+        html={html}
+        date={frontmatter.date}
+        author={frontmatter.author}
+        tags={frontmatter.tags}
+        title={frontmatter.title}
+      />
     </Layout>
   );
 };

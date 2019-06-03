@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React, { SFC } from 'react';
 import * as styles from './github-corner.module.scss';
 

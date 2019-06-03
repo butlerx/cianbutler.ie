@@ -1,8 +1,8 @@
 import { graphql, Link } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
 
-import { Avatar, Layout, SEO } from '../components';
+import { Avatar, Layout } from '../components';
 
 interface IndexPageProps {
   data: {

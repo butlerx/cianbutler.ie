@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React, { SFC } from 'react';
 import {
   ContributionData,
@@ -7,7 +7,6 @@ import {
   Repositories,
   RepositoryData,
   Section,
-  SEO,
 } from '../components';
 
 interface ProjectPageProps {
