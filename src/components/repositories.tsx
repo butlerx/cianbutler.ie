@@ -21,13 +21,24 @@ interface RepositoriesProps {
   readMeLength: number;
 }
 
-export const Repositories: SFC<RepositoriesProps> = ({ data, readMeLength }) => (
+export const Repositories: SFC<RepositoriesProps> = ({
+  data,
+  readMeLength,
+}) => (
   <Cards>
     {data.map(({ url, nameWithOwner, stargazers, readme }, i) => (
-      <Card key={i} url={url} title={nameWithOwner} icon='github' count={stargazers.totalCount}>
+      <Card
+        key={i}
+        url={url}
+        title={nameWithOwner}
+        icon='github'
+        count={stargazers.totalCount}
+      >
         <ReactMarkdown
           source={
-            readme.text.length > readMeLength ? trimReadme(readme.text, readMeLength) : readme.text
+            readme.text.length > readMeLength
+              ? trimReadme(readme.text, readMeLength)
+              : readme.text
           }
         />
       </Card>

@@ -59,7 +59,14 @@ const getYaml = (yaml: YAML[], id: string): ExperienceData[] =>
   yaml.filter(({ title }) => title === id)[0].source;
 
 const me: SFC<MePageProps> = ({ data }) => {
-  const { description, title, author, social, languages, menu } = data.site.siteMetadata;
+  const {
+    description,
+    title,
+    author,
+    social,
+    languages,
+    menu,
+  } = data.site.siteMetadata;
   const { fluid } = data.placeholderImage.childImageSharp;
   const { html } = data.markdownRemark;
   const { nodes } = data.githubData.data.repositoryOwner.pinnedRepositories;

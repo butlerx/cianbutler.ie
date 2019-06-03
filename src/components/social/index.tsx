@@ -56,7 +56,11 @@ export const Social: SFC<SocialProps> = ({
   phone,
 }) => (
   <ul className={styles.icons}>
-    <SocialLink link={`https://twitter.com/${twitter.user}`} label='Twitter' social={twitter} />
+    <SocialLink
+      link={`https://twitter.com/${twitter.user}`}
+      label='Twitter'
+      social={twitter}
+    />
     {mastodon === undefined ? (
       <></>
     ) : (
@@ -69,17 +73,29 @@ export const Social: SFC<SocialProps> = ({
     {github === undefined ? (
       <></>
     ) : (
-      <SocialLink link={`https://github.com/${github.user}`} label='Github' social={github} />
+      <SocialLink
+        link={`https://github.com/${github.user}`}
+        label='Github'
+        social={github}
+      />
     )}
     {git === undefined ? (
       <></>
     ) : (
-      <SocialLink link={`https://${git.host}/@${git.user}`} label='Git' social={git} />
+      <SocialLink
+        link={`https://${git.host}/@${git.user}`}
+        label='Git'
+        social={git}
+      />
     )}
     {email === undefined ? (
       <></>
     ) : (
-      <SocialLink link={`mailto://${email.address}`} label='email' social={email} />
+      <SocialLink
+        link={`mailto://${email.address}`}
+        label='email'
+        social={email}
+      />
     )}
     {linkedIn === undefined ? (
       <></>

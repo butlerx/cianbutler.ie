@@ -71,7 +71,13 @@ export const Contributions: SFC<ContributionsProps> = ({ data }) => (
         title={repository.name}
         count={repository.stargazers.totalCount}
       >
-        <Contribution title={title} merged={merged} url={url} state={state} bodyHTML={bodyHTML} />
+        <Contribution
+          title={title}
+          merged={merged}
+          url={url}
+          state={state}
+          bodyHTML={bodyHTML}
+        />
       </Card>
     ))}
   </Cards>

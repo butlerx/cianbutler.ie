@@ -18,6 +18,6 @@ export const getMonth = (i: number): string => months[i];
 export const formatDate = (date?: Date): string =>
   date === undefined || date === null
     ? 'present'
-    : `${getMonth(new Date(date).getMonth())} ${new Date(date).getDay()}, ${new Date(
+    : `${getMonth(new Date(date).getMonth())} ${new Date(
         date,
-      ).getFullYear()}`;
+      ).getDay()}, ${new Date(date).getFullYear()}`;

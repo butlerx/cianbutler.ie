@@ -10,7 +10,14 @@ interface SEOProps {
   title: string;
 }
 
-export const SEO: SFC<SEOProps> = ({ title, description, lang, meta, pageTitle, author }) => (
+export const SEO: SFC<SEOProps> = ({
+  title,
+  description,
+  lang,
+  meta,
+  pageTitle,
+  author,
+}) => (
   <Helmet
     htmlAttributes={{
       lang,

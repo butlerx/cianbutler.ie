@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "format": "prettier --write '{src,content}/**/*.{ts,tsx,md,scss}' '*.{js, json}'",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
@@ -19,16 +19,12 @@
       "tslint --fix",
       "git add"
     ],
-    "*.s{a,c}ss": [
+    "*.scss": [
       "prettier --write",
       "sass-lint -v",
       "git add"
     ],
-    "*.{json,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.js{x, on}": [
+    "*.{js,json,md}": [
       "prettier --write",
       "git add"
     ]

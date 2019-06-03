@@ -23,7 +23,9 @@ export const Projects: SFC<ProjectsProps> = ({ data }) => (
               <a href={url}>{name}</a>
             </strong>
           </h3>
-          <span className={styles.projectListElementDescription}>{description}</span>
+          <span className={styles.projectListElementDescription}>
+            {description}
+          </span>
         </span>
       </div>
     ))}

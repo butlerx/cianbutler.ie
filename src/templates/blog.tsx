@@ -52,7 +52,10 @@ const Blog: SFC<BlogProps> = ({ data }) => {
           <br />
         </div>
         <h1 className={styles.headline}>{frontmatter.title}</h1>
-        <section className={styles.article} dangerouslySetInnerHTML={{ __html: html }} />
+        <section
+          className={styles.article}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </article>
     </Layout>
   );
