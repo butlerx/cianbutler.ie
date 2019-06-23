@@ -1,8 +1,8 @@
 @mixin subTitle($font-size) {
   font-size: $font-size;
   font-weight: bold;
-  margin: 0 1rem 0 0;
-  max-width: 60%;
+  margin: 0;
+  max-width: 25em;
 
   > a {
     line-height: 20px;
