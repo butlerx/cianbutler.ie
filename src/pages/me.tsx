@@ -7,8 +7,8 @@ import {
   ExperienceData,
   Languages,
   Layout,
-  PinnedRepositoryData,
-  Projects,
+  Repositories,
+  RepositoryData,
   Section,
   Social,
   SocialProps,
@@ -46,7 +46,7 @@ interface MePageProps {
       data: {
         repositoryOwner: {
           pinnedRepositories: {
-            nodes: PinnedRepositoryData[];
+            nodes: RepositoryData[];
           };
         };
       };
@@ -102,7 +102,7 @@ const me: SFC<MePageProps> = ({ data }) => {
       <Section label='education' />
       <Experience data={education} />
       <Section label='open source projects' />
-      <Projects data={nodes} />
+      <Repositories data={nodes} />
     </Layout>
   );
 };
@@ -166,8 +166,9 @@ export const IndexPageQuery = graphql`
           pinnedRepositories {
             nodes {
               name
-              url
-              description
+              owner {
+                login
+              }
             }
           }
         }
