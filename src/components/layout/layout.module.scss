@@ -12,7 +12,6 @@
   // sass-lint:enable indentation
   grid-template-columns: 80% 20%;
   grid-template-rows: auto;
-  max-width: 90%;
 
   .markdownBody {
     grid-area: main;
@@ -23,7 +22,7 @@
     padding: 40px 16px;
 
     .wrapper {
-      margin-left: 8em;
+      margin-left: 4em;
       padding: 40px 16px;
 
       .about {

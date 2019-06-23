@@ -97,16 +97,9 @@ module.exports = {
           user(login: $author) {
             repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC}) {
               nodes {
-                nameWithOwner
-                description
-                url
-                stargazers {
-                  totalCount
-                }
-                readme: object(expression:"master:README.md"){
-                  ... on Blob{
-                    text
-                  }
+                name
+                owner {
+                  login
                 }
               }
             }
@@ -134,8 +127,9 @@ module.exports = {
               pinnedRepositories(first:6) {
                 nodes {
                   name
-                  url
-                  description
+                  owner {
+                    login
+                  }
                 }
               }
             }

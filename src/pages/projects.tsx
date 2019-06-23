@@ -85,14 +85,9 @@ export const ProjectPageQuery = graphql`
         user {
           repositories {
             nodes {
-              nameWithOwner
-              description
-              url
-              stargazers {
-                totalCount
-              }
-              readme {
-                text
+              name
+              owner {
+                login
               }
             }
           }

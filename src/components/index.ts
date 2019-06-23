@@ -4,6 +4,7 @@ export * from './cards';
 export * from './contributions';
 export * from './experience';
 export * from './footer';
+export * from './cards/githubCard';
 export * from './githubCorner';
 export * from './languages';
 export * from './layout';
