@@ -3,7 +3,7 @@ const siteMetadata = {
   description: 'Cian Butler, open source developer and SRE',
   siteUrl: 'https://cianbutler.ie',
   author: 'Cian Butler',
-  repo: 'butlerx/cv',
+  repo: 'butlerx/cianbutler.ie',
   colour: '#ffffff',
   menu: ['me', 'projects', 'blog'],
   languages: [

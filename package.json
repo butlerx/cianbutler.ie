@@ -1,7 +1,7 @@
 {
   "name": "cianbutler.ie",
   "description": "personal site",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Cian Butler <butlerx@notthe.cloud>",
   "scripts": {
     "build": "gatsby build",
@@ -35,10 +35,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/butlerx/cv"
+    "url": "https://github.com/butlerx/cianbutler.ie"
   },
   "bugs": {
-    "url": "https://github.com/butlerx/cv/issues"
+    "url": "https://github.com/butlerx/cianbutler.ie/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
