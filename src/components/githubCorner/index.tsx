@@ -30,5 +30,5 @@ export const GithubCorner: SFC<GithubCornerProps> = ({ repo }) => {
   );
 };
 GithubCorner.defaultProps = {
-  repo: 'butlerx/cv',
+  repo: 'butlerx/cianbutler.ie',
 };
