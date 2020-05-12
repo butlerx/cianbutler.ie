@@ -143,7 +143,7 @@ module.exports = {
           author: siteMetadata.social.github.user,
           userFirst: 10,
           searchFirst: 10,
-          q: `author:${siteMetadata.social.github.user} is:merged state:closed type:pr sort:comments`,
+          q: `author:${siteMetadata.social.github.user} type:pr`,
         },
       },
     },
