@@ -1,5 +1,5 @@
-import { graphql } from 'gatsby';
 import React, { SFC } from 'react';
+import { graphql } from 'gatsby';
 import { Excerpt, Layout } from '../components';
 
 interface BlogPageProps {
@@ -30,39 +30,34 @@ interface BlogPageProps {
   };
 }
 
-const blog: SFC<BlogPageProps> = (props) => {
-  const {
-    description,
-    title,
-    author,
-    menu,
-    social,
-  } = props.data.site.siteMetadata;
-
-  return (
-    <Layout
-      title={title}
-      currentPage={title}
-      pages={menu}
-      internalLinks={[]}
-      twitter={social.twitter.user}
-      description={description}
-    >
-      {props.data.allMarkdownRemark.nodes.map(
-        ({ id, excerpt, frontmatter }) => (
-          <Excerpt
-            key={id}
-            excerpt={excerpt}
-            title={frontmatter.title}
-            author={frontmatter.author}
-            path={frontmatter.path}
-            date={frontmatter.date}
-          />
-        ),
-      )}
-    </Layout>
-  );
-};
+const blog: SFC<BlogPageProps> = ({
+  data: {
+    site: {
+      siteMetadata: { description, title, author, menu, social },
+    },
+    allMarkdownRemark: { nodes },
+  },
+}) => (
+  <Layout
+    title={title}
+    currentPage={title}
+    pages={menu}
+    internalLinks={[]}
+    twitter={social.twitter.user}
+    description={description}
+  >
+    {nodes.map(({ id, excerpt, frontmatter }) => (
+      <Excerpt
+        key={id}
+        excerpt={excerpt}
+        title={frontmatter.title}
+        author={frontmatter.author}
+        path={frontmatter.path}
+        date={frontmatter.date}
+      />
+    ))}
+  </Layout>
+);
 
 export default blog;
 export const BlogPageQuery = graphql`

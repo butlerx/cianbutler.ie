@@ -17,8 +17,10 @@ interface RepositoriesProps {
 
 export const Repositories: SFC<RepositoriesProps> = ({ data }) => (
   <Cards>
-    {data.map(({ name, owner }, i) => (
-      <GithubCard key={i} repo={name} user={owner.login} />
-    ))}
+    {data
+      .filter(({ name, owner }) => name !== null && owner !== null)
+      .map(({ name, owner }, i) => (
+        <GithubCard key={i} repo={name} user={owner.login} />
+      ))}
   </Cards>
 );

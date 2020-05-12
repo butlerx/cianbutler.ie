@@ -34,25 +34,30 @@ interface ProjectPageProps {
   };
 }
 
-const projects: SFC<ProjectPageProps> = props => {
-  const { description, title, author, menu } = props.data.site.siteMetadata;
-  const { user, search } = props.data.githubData.data;
-  return (
-    <Layout
-      title={title}
-      currentPage='projects'
-      pages={menu}
-      internalLinks={['Recent projects', 'Recent contributions']}
-      twitter={author}
-      description={description}
-    >
-      <Section label='Recent projects' />
-      <Repositories data={user.repositories.nodes} />
-      <Section label='Recent contributions' />
-      <Contributions data={search.nodes} />
-    </Layout>
-  );
-};
+const projects: SFC<ProjectPageProps> = ({
+  data: {
+    site: {
+      siteMetadata: { description, title, author, menu },
+    },
+    githubData: {
+      data: { user, search },
+    },
+  },
+}) => (
+  <Layout
+    title={title}
+    currentPage='projects'
+    pages={menu}
+    internalLinks={['Recent projects', 'Recent contributions']}
+    twitter={author}
+    description={description}
+  >
+    <Section label='Recent projects' />
+    <Repositories data={user.repositories.nodes} />
+    <Section label='Recent contributions' />
+    <Contributions data={search.nodes} />
+  </Layout>
+);
 
 export default projects;
 export const ProjectPageQuery = graphql`
