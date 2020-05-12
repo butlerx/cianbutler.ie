@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const siteMetadata = {
   title: 'Cian Butler',
   description: 'Cian Butler, open source developer and SRE',
@@ -124,11 +126,13 @@ module.exports = {
           }
           repositoryOwner(login: $author) {
             ... on User {
-              pinnedRepositories(first:6) {
+              pinnedItems(first:6) {
                 nodes {
-                  name
-                  owner {
-                    login
+                  ... on Repository {
+                    name
+                    owner {
+                      login
+                    }
                   }
                 }
               }
@@ -139,9 +143,7 @@ module.exports = {
           author: siteMetadata.social.github.user,
           userFirst: 10,
           searchFirst: 10,
-          q: `author:${
-            siteMetadata.social.github.user
-          } is:merged state:closed type:pr sort:comments`,
+          q: `author:${siteMetadata.social.github.user} is:merged state:closed type:pr sort:comments`,
         },
       },
     },

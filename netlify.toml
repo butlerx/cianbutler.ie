@@ -1,4 +1,11 @@
 [build]
   base    = ""
-  command = "gatsby build"
+  command = "yarn build"
   publish = "public"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+[[plugins]]
+  package = "netlify-plugin-checklinks"

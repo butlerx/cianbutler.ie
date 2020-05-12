@@ -16,7 +16,7 @@ interface BlogPageProps {
       };
     };
     allMarkdownRemark: {
-      nodes: Array<{
+      nodes: {
         id: string;
         excerpt: string;
         frontmatter: {
@@ -25,12 +25,12 @@ interface BlogPageProps {
           title: string;
           author: string;
         };
-      }>;
+      }[];
     };
   };
 }
 
-const blog: SFC<BlogPageProps> = props => {
+const blog: SFC<BlogPageProps> = (props) => {
   const {
     description,
     title,
