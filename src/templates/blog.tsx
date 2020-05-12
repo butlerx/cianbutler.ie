@@ -26,28 +26,31 @@ interface BlogProps {
   };
 }
 
-const Blog: SFC<BlogProps> = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark;
-  const { menu, social, title } = data.site.siteMetadata;
-  return (
-    <Layout
-      title={title}
-      currentPage={frontmatter.title}
-      pages={menu}
-      internalLinks={[]}
-      twitter={social.twitter.user}
-      description={frontmatter.description}
-    >
-      <Post
-        html={html}
-        date={frontmatter.date}
-        author={frontmatter.author}
-        tags={frontmatter.tags}
-        title={frontmatter.title}
-      />
-    </Layout>
-  );
-};
+const Blog: SFC<BlogProps> = ({
+  data: {
+    markdownRemark: { frontmatter, html },
+    site: {
+      siteMetadata: { menu, social, title },
+    },
+  },
+}) => (
+  <Layout
+    title={title}
+    currentPage={frontmatter.title}
+    pages={menu}
+    internalLinks={[]}
+    twitter={social.twitter.user}
+    description={frontmatter.description}
+  >
+    <Post
+      html={html}
+      date={frontmatter.date}
+      author={frontmatter.author}
+      tags={frontmatter.tags}
+      title={frontmatter.title}
+    />
+  </Layout>
+);
 
 export default Blog;
 export const BlogQuery = graphql`
