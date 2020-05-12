@@ -45,7 +45,7 @@ interface MePageProps {
     githubData: {
       data: {
         repositoryOwner: {
-          pinnedRepositories: {
+          pinnedItems: {
             nodes: RepositoryData[];
           };
         };
@@ -68,7 +68,7 @@ const me: SFC<MePageProps> = ({ data }) => {
   } = data.site.siteMetadata;
   const { fluid } = data.placeholderImage.childImageSharp;
   const { html } = data.markdownRemark;
-  const { nodes } = data.githubData.data.repositoryOwner.pinnedRepositories;
+  const { nodes } = data.githubData.data.repositoryOwner.pinnedItems;
   const experience = getYaml(data.allYaml.nodes, 'Experience');
   const education = getYaml(data.allYaml.nodes, 'Education');
 
@@ -160,10 +160,16 @@ export const IndexPageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: "me" } }) {
       html
     }
-    githubData {
+    githubData(
+      data: {
+        repositoryOwner: {
+          pinnedItems: { nodes: { elemMatch: { name: { ne: null } } } }
+        }
+      }
+    ) {
       data {
         repositoryOwner {
-          pinnedRepositories {
+          pinnedItems {
             nodes {
               name
               owner {

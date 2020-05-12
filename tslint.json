@@ -42,7 +42,6 @@
     "whitespace": [true, "check-branch", "check-decl", "check-type"],
     "quotemark": [true, "single", "avoid-escape", "avoid-template"],
     "arrow-parens": [false],
-    "interface-name": [true, "never-prefix"],
-    "no-unused-variable": true
+    "interface-name": [true, "never-prefix"]
   }
 }

@@ -1,11 +1,11 @@
 import React, { SFC } from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 interface SEOProps {
   pageTitle: string;
   description?: string;
   lang?: string;
-  meta?: Array<{ content: string; name: string }>;
+  meta?: { content: string; name: string }[];
   author: string;
   title: string;
 }
