@@ -1,7 +1,7 @@
-@import '../variables';
+@import '../../shared/variables';
 
 .sidebar {
-  @import './mobile';
+  @import '../nav/mobile';
   grid-area: sidebar;
   margin-top: 64px;
   text-align: inherit;

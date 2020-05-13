@@ -1,5 +1,5 @@
 .container {
-  @import './print';
+  @import '../shared/print';
   @import './mobile';
 
   display: grid;

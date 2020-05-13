@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React, { SFC } from 'react';
-import { Layout, Post } from '../components';
+import { Layout } from '../components/layout';
+import { Post } from '../components/posts';
 
 interface BlogProps {
   data: {

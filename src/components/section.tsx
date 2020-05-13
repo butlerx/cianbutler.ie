@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
 
-import { titlize } from '../utils';
+import { titlize } from '../utils/humanize';
 
 interface SectionProps {
   label: string;

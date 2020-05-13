@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import '../shared/variables';
+@import '../layout/shared/mixins';
 
 .cardList {
   @import './mobile';

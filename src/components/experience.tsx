@@ -1,8 +1,9 @@
 import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Languages } from '..';
-import { formatDate } from '../../utils';
-import * as styles from './experience.module.scss';
+import { Languages } from './experience/languages';
+import { formatDate } from '../utils/dates';
+import * as styles from './experience/experience.module.scss';
+export * from './experience/languages';
 
 export interface ExperienceData {
   title: string;

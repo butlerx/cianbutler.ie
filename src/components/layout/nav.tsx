@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import React, { SFC } from 'react';
-import * as styles from './nav.module.scss';
+import * as styles from './shared/nav.module.scss';
 //import * as printStyles from './print.module.scss';
 
-import { humanize } from '../../utils';
-import { SubNav } from './subNav';
+import { humanize } from '../../utils/humanize';
+import { SubNav } from './nav/subNav';
 
 interface NavigationProps {
   currentPage: string;
@@ -22,7 +22,7 @@ export const Navigation: SFC<NavigationProps> = ({
   <nav className={styles.sidebar} data-spy='affix'>
     <ul className={styles.nav}>
       <Link to='/'>{siteTitle}</Link>
-      {pages.map(page => (
+      {pages.map((page) => (
         <li key={page}>
           <Link to={page} className={styles.sidebarNavItem}>
             {humanize(page)}

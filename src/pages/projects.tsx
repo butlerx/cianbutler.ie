@@ -1,13 +1,15 @@
 import { graphql } from 'gatsby';
 import React, { SFC } from 'react';
+import { Avatar } from '../components/avatar';
+import { ContributionData, Contributions } from '../components/contributions';
 import {
-  ContributionData,
-  Contributions,
-  Layout,
-  Repositories,
-  RepositoryData,
-  Section,
-} from '../components';
+  Experience,
+  ExperienceData,
+  Languages,
+} from '../components/experience';
+import { Layout } from '../components/layout';
+import { Repositories, RepositoryData } from '../components/repositories';
+import { Section } from '../components/section';
 
 interface ProjectPageProps {
   data: {

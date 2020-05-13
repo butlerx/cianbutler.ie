@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
-import { Card, Cards } from '..';
-import * as styles from './contributions.module.scss';
+import { Card, Cards } from './shared/cards';
+import * as styles from './shared/contributions.module.scss';
 import { State } from './state';
 
 interface ContributionProps {

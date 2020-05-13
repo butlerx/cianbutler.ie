@@ -1,10 +1,13 @@
 import React, { SFC } from 'react';
-import { Footer, GithubCorner, Navigation, SEO } from '..';
-import { humanize } from '../../utils';
-import './base.scss';
-import './icons';
-import * as styles from './layout.module.scss';
-import './print.scss';
+import { GithubCorner } from './layout/githubCorner';
+import { Footer } from './layout/footer';
+import { Navigation } from './layout/nav';
+import { SEO } from './layout/seo';
+import { humanize } from '../utils/humanize';
+import './layout/base.scss';
+import './layout/icons';
+import * as styles from './layout/layout.module.scss';
+import './shared/print.scss';
 
 interface LayoutProps {
   title: string;
