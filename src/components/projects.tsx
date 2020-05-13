@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
-import * as styles from './projects.module.scss';
+import * as styles from './projects/projects.module.scss';
 
 export interface PinnedRepositoryData {
   name: string;

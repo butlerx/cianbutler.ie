@@ -1,8 +1,8 @@
 import React, { SFC } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { trimReadme } from '../utils';
-import { Cards } from './cards';
-import { GithubCard } from './cards/githubCard';
+import { trimReadme } from '../utils/humanize';
+import { Cards } from './shared/cards';
+import { GithubCard } from './repositories/githubCard';
 
 export interface RepositoryData {
   name: string;

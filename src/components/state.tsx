@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
-import { humanize } from '../../utils';
-import * as styles from './contributions.module.scss';
+import { humanize } from '../utils/humanize';
+import * as styles from './shared/contributions.module.scss';
 
 function colour(state: string): string {
   switch (state) {

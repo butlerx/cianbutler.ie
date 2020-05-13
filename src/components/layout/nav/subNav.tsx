@@ -1,7 +1,7 @@
 import React, { SFC } from 'react';
-import * as styles from './nav.module.scss';
+import * as styles from '../shared/nav.module.scss';
 
-import { titlize } from '../../utils';
+import { titlize } from '../../../utils/humanize';
 
 interface SubNavProps {
   currentPage: string;
@@ -14,7 +14,7 @@ export const SubNav: SFC<SubNavProps> = ({ currentPage, links }) =>
   ) : (
     <li className={styles.SubNav}>
       <ul className={styles.nav}>
-        {links.map(label => (
+        {links.map((label) => (
           <li key={label}>
             <a href={`#${encodeURI(label)}`} className={styles.sidebarNavItem}>
               {titlize(label)}

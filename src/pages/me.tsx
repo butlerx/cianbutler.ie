@@ -1,18 +1,16 @@
 import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
+import { Avatar } from '../components/avatar';
 import {
-  Avatar,
   Experience,
   ExperienceData,
   Languages,
-  Layout,
-  Repositories,
-  RepositoryData,
-  Section,
-  Social,
-  SocialProps,
-} from '../components';
+} from '../components/experience';
+import { Layout } from '../components/layout';
+import { Repositories, RepositoryData } from '../components/repositories';
+import { Section } from '../components/section';
+import { Social, SocialProps } from '../components/social';
 
 interface YAML {
   title: string;

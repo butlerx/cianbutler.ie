@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
-import * as styles from './social.module.scss';
+import * as styles from './social/social.module.scss';
 
 interface SocialAccount {
   user: string;

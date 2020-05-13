@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
 
-import { humanize } from '../../utils';
-import * as styles from './cards.module.scss';
+import { humanize } from '../../utils/humanize';
+import * as styles from '../repositories/cards.module.scss';
 
 interface CardProps {
   title: string;
@@ -11,7 +11,7 @@ interface CardProps {
   count?: number;
 }
 
-const Star: SFC<{ count?: number }> = props => {
+const Star: SFC<{ count?: number }> = (props) => {
   if (props.count === undefined || props.count === null) return <></>;
   return (
     <span className={styles.cardTitleLinkCount}>

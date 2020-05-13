@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
 
-import { getMonth } from '../../utils';
+import { getMonth } from '../../utils/dates';
 import styles from './footer.module.scss';
 
 const month = getMonth(new Date().getMonth());

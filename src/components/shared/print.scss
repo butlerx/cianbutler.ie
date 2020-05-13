@@ -1,5 +1,5 @@
 // sass-lint:disable no-important
-@import '../variables';
+@import './variables';
 
 @media print {
   grid-template-areas: 'main' !important;

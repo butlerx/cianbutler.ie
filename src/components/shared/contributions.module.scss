@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import './variables';
+@import '../layout/shared/mixins';
 
 .project {
   &Element {

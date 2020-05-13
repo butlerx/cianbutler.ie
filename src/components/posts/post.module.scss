@@ -1,3 +1,5 @@
+@import '../shared/variables';
+
 .post {
   * {
     max-width: 100%;
@@ -8,7 +10,7 @@
     text-align: right;
 
     .key {
-      color: #747369;
+      color: $heavy-grey;
 
       &::after {
         content: '\A0';
@@ -16,15 +18,12 @@
     }
 
     .value {
-      color: #cc99cc;
+      color: $pink;
     }
   }
 
   .headline {
     font-size: 3em;
     margin-top: 0;
-  }
-
-  .article {
   }
 }
