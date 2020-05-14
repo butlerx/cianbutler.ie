@@ -1,10 +1,16 @@
 require('dotenv').config();
 
+const author = 'Cian Butler';
+const blurb = 'Open Source Developer';
+const job = 'SRE';
+
 const siteMetadata = {
-  title: 'Cian Butler',
-  description: 'Cian Butler, open source developer and SRE',
+  title: author,
+  description: `${author}, ${blurb} and ${job}`,
+  blurb,
+  job,
   siteUrl: 'https://cianbutler.ie',
-  author: 'Cian Butler',
+  author,
   repo: 'butlerx/cianbutler.ie',
   colour: '#ffffff',
   menu: ['me', 'projects', 'blog'],
@@ -49,15 +55,31 @@ const siteMetadata = {
 module.exports = {
   siteMetadata,
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-tslint',
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-tslint',
+    'gatsby-plugin-typescript',
+    'gatsby-remark-images',
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -68,8 +90,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content`,
-        name: 'markdown-pages',
+        path: `${__dirname}/content/data`,
+        name: 'yaml',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/posts`,
+        name: 'posts',
       },
     },
     {

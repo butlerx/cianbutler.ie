@@ -1,2 +1,2 @@
-export * from './posts/post';
-export * from './posts/excerpt';
+export * from './blog/posts/post';
+export * from './blog/posts/excerpt';

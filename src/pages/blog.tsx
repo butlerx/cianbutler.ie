@@ -1,9 +1,9 @@
 import React, { SFC } from 'react';
 import { graphql } from 'gatsby';
-import { Excerpt } from '../components/posts/excerpt';
-import { Layout } from '../components/layout';
+import { Excerpt } from '../components/blog/posts/excerpt';
+import { Layout } from '../components/shared/layout';
 
-interface BlogPageProps {
+interface BlogProps {
   data: {
     site: {
       siteMetadata: {
@@ -16,27 +16,29 @@ interface BlogPageProps {
         };
       };
     };
-    allMarkdownRemark: {
+    allMdx: {
       nodes: {
         id: string;
         excerpt: string;
         frontmatter: {
           date: string;
-          path: string;
           title: string;
           author: string;
+        };
+        fields: {
+          slug: string;
         };
       }[];
     };
   };
 }
 
-const blog: SFC<BlogPageProps> = ({
+const Blog: SFC<BlogProps> = ({
   data: {
     site: {
       siteMetadata: { description, title, author, menu, social },
     },
-    allMarkdownRemark: { nodes },
+    allMdx: { nodes },
   },
 }) => (
   <Layout
@@ -47,21 +49,21 @@ const blog: SFC<BlogPageProps> = ({
     twitter={social.twitter.user}
     description={description}
   >
-    {nodes.map(({ id, excerpt, frontmatter }) => (
+    {nodes.map(({ id, excerpt, frontmatter, fields }) => (
       <Excerpt
         key={id}
         excerpt={excerpt}
         title={frontmatter.title}
         author={frontmatter.author}
-        path={frontmatter.path}
+        path={fields.slug}
         date={frontmatter.date}
       />
     ))}
   </Layout>
 );
 
-export default blog;
-export const BlogPageQuery = graphql`
+export default Blog;
+export const pageQuery = graphql`
   query BlogPageQuery {
     site {
       siteMetadata {
@@ -76,18 +78,17 @@ export const BlogPageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { path: { nin: ["index", "me"] } } }
-    ) {
+    allMdx {
       nodes {
         id
         excerpt(pruneLength: 250)
         frontmatter {
           date(formatString: "MMM DD, YYYY")
-          path
           title
           author
+        }
+        fields {
+          slug
         }
       }
     }

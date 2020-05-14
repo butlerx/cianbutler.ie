@@ -1,0 +1,40 @@
+@import '../me/shared/variables.scss';
+@import '../me/layout/shared/mixins.scss';
+
+.project {
+  &Element {
+    display: block;
+    font-size: 110%;
+    margin: 1em 0;
+
+    &Description {
+      font-size: 0.8em;
+    }
+
+    &Header {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+    }
+
+    &Title {
+      @include subTitle(0.9em);
+    }
+
+    &TitleSmall {
+      @include subTitle(0.8em);
+    }
+
+    &StateMerged {
+      @include state($purple);
+    }
+
+    &StateClosed {
+      @include state($dark-red);
+    }
+
+    &StateOpen {
+      @include state($green);
+    }
+  }
+}

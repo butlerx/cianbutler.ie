@@ -1,33 +1,58 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
-import * as styles from './projects/projects.module.scss';
+import { Avatar } from './shared/avatar';
+import { ContributionData, Contributions } from './projects/contributions';
+import { Experience, ExperienceData } from './shared/experience';
+import { Languages } from './shared/languages';
+import { Layout } from './shared/layout';
+import { Repositories, RepositoryData } from './shared/repositories';
+import { Section } from './shared/section';
 
-export interface PinnedRepositoryData {
-  name: string;
-  url: string;
-  description: string;
+interface ProjectProps {
+  data: {
+    site: {
+      siteMetadata: {
+        author: string;
+        description: string;
+        title: string;
+        menu: string[];
+      };
+    };
+    githubData: {
+      data: {
+        user: {
+          repositories: {
+            nodes: RepositoryData[];
+          };
+        };
+        search: {
+          nodes: ContributionData[];
+        };
+      };
+    };
+  };
 }
 
-interface ProjectsProps {
-  data: PinnedRepositoryData[];
-}
-
-export const Projects: SFC<ProjectsProps> = ({ data }) => (
-  <div className={styles.projectList}>
-    {data.sort().map(({ url, name, description }, i) => (
-      <div key={i} className={styles.project}>
-        <span className={styles.projectListElement}>
-          <h3 className={styles.projectListElementTitle}>
-            <FontAwesomeIcon icon={['fab', 'github']} size='lg' />
-            <strong>
-              <a href={url}>{name}</a>
-            </strong>
-          </h3>
-          <span className={styles.projectListElementDescription}>
-            {description}
-          </span>
-        </span>
-      </div>
-    ))}
-  </div>
+export const Projects: SFC<ProjectProps> = ({
+  data: {
+    site: {
+      siteMetadata: { description, title, author, menu },
+    },
+    githubData: {
+      data: { user, search },
+    },
+  },
+}) => (
+  <Layout
+    title={title}
+    currentPage='projects'
+    pages={menu}
+    internalLinks={['Recent projects', 'Recent contributions']}
+    twitter={author}
+    description={description}
+  >
+    <Section label='Recent projects' />
+    <Repositories data={user.repositories.nodes} />
+    <Section label='Recent contributions' />
+    <Contributions data={search.nodes} />
+  </Layout>
 );

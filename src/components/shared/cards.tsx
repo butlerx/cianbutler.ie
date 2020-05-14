@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { SFC } from 'react';
 
 import { humanize } from '../../utils/humanize';
-import * as styles from '../repositories/cards.module.scss';
+import * as styles from '../me/repositories/cards.module.scss';
 
 interface CardProps {
   title: string;

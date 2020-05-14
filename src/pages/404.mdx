@@ -1,0 +1,35 @@
+import { graphql, Link } from 'gatsby';
+import { Error } from '../components/error';
+
+<Error
+  title={props.data.site.siteMetadata.title}
+  error='404: Not found'
+  description={props.data.site.siteMetadata.desctiption}
+  menu={props.data.site.siteMetadata.menu}
+  twitter={props.data.site.siteMetadata.social.twitter.user}
+>
+
+# 404 Not Found
+
+You just hit a route that doesn't exist... the sadness. Please head back
+
+<Link to='/'>home</Link>.
+
+</Error>
+
+export const PageQuery = graphql`
+  query SiteErrorQuery {
+    site {
+      siteMetadata {
+        description
+        menu
+        title
+        social {
+          twitter {
+            user
+          }
+        }
+      }
+    }
+  }
+`;

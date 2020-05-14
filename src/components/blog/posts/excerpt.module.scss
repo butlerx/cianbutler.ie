@@ -1,0 +1,33 @@
+@import '../../me/shared/variables.scss';
+
+.post {
+  margin-bottom: 4rem;
+  padding: 4rem 8rem;
+
+  .meta {
+    margin-bottom: 1rem;
+
+    .key {
+      color: $heavy-grey;
+
+      &::after {
+        content: '\A0';
+      }
+    }
+
+    .value {
+      color: $pink;
+    }
+  }
+
+  .headline {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .article {
+    a {
+      color: $orange;
+    }
+  }
+}

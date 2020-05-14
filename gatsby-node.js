@@ -1,32 +1,40 @@
 const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-const blogPostTemplate = path.resolve('src/templates/blog.tsx');
+const blogPostTemplate = path.resolve('src/components/blog.tsx');
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode });
+    actions.createNodeField({
+      name: 'slug',
+      node,
+      value: `/blog${value}`,
+    });
+  }
+};
 
 exports.createPages = ({ actions, graphql }) =>
   graphql(`
     query blogMarkdown {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-        filter: { frontmatter: { path: { nin: ["index", "me"] } } }
-      ) {
+      allMdx {
         nodes {
           id
-          frontmatter {
-            path
+          fields {
+            slug
           }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
 
     const { createPage } = actions;
-    result.data.allMarkdownRemark.nodes.forEach(({ id, frontmatter }) => {
+    result.data.allMdx.nodes.forEach(({ id, fields }) => {
       createPage({
-        path: frontmatter.path,
+        path: fields.slug,
         component: blogPostTemplate,
         context: { id },
       });
