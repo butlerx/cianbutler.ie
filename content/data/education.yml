@@ -2,9 +2,10 @@
 title: Education
 source:
   - title: Computer Applications and Software Engineering
-    where: DCU
-    start: 2013-09-30
-    finish: 2018-10-01
+    institution: Dublin City University
+    area: Software Engineering
+    startDate: 2013-09-30
+    endDate: 2018-10-01
     languages:
       - C++
       - Java

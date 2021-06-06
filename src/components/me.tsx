@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React, { SFC } from 'react';
 import { Avatar } from './shared/avatar';

@@ -13,10 +13,11 @@ import { me } from '../components/me';
   yaml={props.data.allYaml.nodes}
 >
 
-**"** I'm an open source developer. I'm familiar with distributed systems, and
-using micro services to build web platforms. **"**
+**"**I'm an open source developer. I'm familiar with distributed systems, and
+using micro services to build web platforms and event processing pipelines.**"**
 
 </Me>
+
 export const pageQuery = graphql`
   query ExperienceQuery {
     site {
@@ -57,10 +58,11 @@ export const pageQuery = graphql`
       nodes {
         title
         source {
-          title
-          where
-          start(formatString: "YYYY-MM-DD")
-          finish(formatString: "YYYY-MM-DD")
+          position
+          website
+          company
+          startDate(formatString: "YYYY-MM-DD")
+          endDate(formatString: "YYYY-MM-DD")
           languages
           description
         }
@@ -80,4 +82,5 @@ export const pageQuery = graphql`
         }
       }
     }
-  } `;
+  }
+`;

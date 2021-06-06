@@ -16,8 +16,8 @@ const siteMetadata = {
   menu: ['me', 'projects', 'blog'],
   languages: [
     'AWS',
+    'GCP',
     'C',
-    'C++',
     'Docker',
     'Go',
     'Java',
@@ -27,6 +27,7 @@ const siteMetadata = {
     'Linux',
     'Node',
     'PostgreSQL',
+    'Puppet',
     'Python',
     'Rust',
     'SCSS',
@@ -69,15 +70,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
       },
     },
     {
@@ -90,15 +82,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/data`,
         name: 'yaml',
+        path: `${__dirname}/content/data`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/posts`,
         name: 'posts',
+        path: `${__dirname}/content/posts`,
       },
     },
     {

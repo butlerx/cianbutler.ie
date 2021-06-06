@@ -1,22 +1,32 @@
 ---
 title: Experience
 source:
-  - title: SRE
-    where: Demonware
+  - position: SRE
+    company: Demonware
+    startDate: 2019-05-16
+    website: https://demonware.net
     languages:
       - Docker
       - Prometheus
       - Graphite
       - Kubernetes
       - Puppet
+      - Ansible
+      - Terrafrom
       - Python
       - MySQL
+      - Cassandra
       - Typescript
-    start: 2019-05-16
-  - title: SRE
-    where: CoderDojo Foundation
-    start: 2017-06-10
-    finish: 2018-01-10
+      - ElasticSearch
+      - Clickhouse
+      - Kafka
+    highlights:
+      - built and maintained monitoring and alerting pipeline
+  - position: SRE
+    company: CoderDojo Foundation
+    startDate: 2017-06-10
+    endDate: 2018-01-10
+    website: https://coderdojo.com
     languages:
       - AWS
       - Docker
@@ -26,7 +36,7 @@ source:
       - Node.js
       - PostgreSQL
       - Python
-    description: >
+    summary: >
       I worked on migrating CoderDojo's
       [Zen platform](https://zen.coderdojo.com) from single AWS instances that
       were difficult to scale to a Kubernetes cluster, allowing an independent
@@ -36,24 +46,26 @@ source:
       as the Node version and dependencies for all the microservices. I was also
       responsible for monitoring all the infrastructure using NewRelic and
       Graphite.
-  - title: Programming Tutor
-    where: DCU
-    start: 2016-09-30
-    finish: 2017-04-22
+  - position: Programming Tutor
+    company: DCU
+    website: http://dcu.ie
+    startDate: 2016-09-30
+    endDate: 2017-04-22
     languages:
       - CSS
       - HTML
       - JavaScript
       - Python
-    description: >
+    summary: >
       I was a DCU lab tutor for the year. I helped students with lab problems
       and made sure they understood how their program worked. I had to be able
       to explain different issues and help students understand how best to write
       in their respective language.
-  - title: Technical Intern
-    where: CoderDojo Foundation
-    start: 2016-04-06
-    finish: 2016-10-06
+  - position: Technical Intern
+    company: CoderDojo Foundation
+    website: https://coderdojo.com
+    startDate: 2016-04-06
+    endDate: 2016-10-06
     languages:
       - AWS
       - Angular.js
@@ -62,16 +74,17 @@ source:
       - NGINX
       - Node.js
       - PostgreSQL
-    description: >
+    summary: >
       In CoderDojo I worked on their [Zen platform](https://zen.coderdojo.com).
       This involved designing new features, working on both the Angular
       front-end and Node.js backend. I was also responsible for the deployment
       pipeline and maintaining the AWS instance for Zen and the
       [forums](https://forums.coderdojo.com).
-  - title: Webmaster
-    where: Redbrick
-    start: 2016-04-04
-    finish: 2017-04-06
+  - position: Webmaster
+    company: Redbrick
+    website: http://redbrick.dcu.ie
+    startDate: 2016-04-04
+    endDate: 2017-04-06
     languages:
       - Apache
       - BSD
@@ -85,7 +98,7 @@ source:
       - Node
       - Prometheus
       - Python
-    description: >
+    summary: >
       At Redbrick I was part of a team of three. I was in charge of maintaining
       all web-related service. This meant maintaining uptime on servers,
       managing and upgrading user web services including user web-spaces and
