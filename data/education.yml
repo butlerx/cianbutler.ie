@@ -1,0 +1,29 @@
+---
+title: Education
+source:
+  - title: Computer Applications and Software Engineering
+    institution: Dublin City University
+    area: Software Engineering
+    startDate: 2013-09-30
+    endDate: 2018-10-01
+    languages:
+      - C++
+      - Java
+      - JavaCC
+      - Prolog
+      - Haskell
+      - Bash
+      - MySQL
+      - R
+      - HTML
+      - CSS
+      - MIPS
+      - Assembly
+    summary: >
+      DCU has given me experience with crypto & secure programming. I became
+      familiar with programming in many languages and for different platforms. A
+      large number of topics were covered including search technologies,
+      distributed and thread programming, compilers, cryptography, database
+      design and network design and implementation. I gained experience using
+      UML, Scrum and agile as well as becoming familiar with source control
+      through group projects.

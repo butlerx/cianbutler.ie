@@ -1,0 +1,18 @@
+<ul class="social">
+  {{ range . }}
+    <li>
+      <a href="{{ .url }}">
+        {{ if eq .network "email" }}
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="label">{{ .network }}</span>
+        {{ else if eq .network "github" }}
+          <i class="fab fa-{{ .network }}-alt" aria-hidden="true"></i>
+          <span class="label">{{ .network }}</span>
+        {{ else }}
+          <i class="fab fa-{{ .network }}" aria-hidden="true"></i>
+          <span class="label">{{ .network }}</span>
+        {{ end }}
+      </a>
+    </li>
+  {{ end }}
+</ul>

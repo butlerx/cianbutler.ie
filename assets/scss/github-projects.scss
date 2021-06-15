@@ -1,0 +1,41 @@
+.project-list {
+  @media print {
+    page-break-inside: unset !important;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-element {
+    display: flex;
+    font-size: 110%;
+    margin: 0.5rem 0;
+
+    @media print {
+      font-size: 0.8em !important;
+      margin: 0.5em 0 !important;
+    }
+
+    &-title {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin: 0 0.4rem 0 0;
+
+      > svg {
+        margin-right: 0.4rem;
+      }
+    }
+
+    &-description {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media print {
+  .project,
+  .project-list-element {
+    page-break-inside: avoid !important;
+  }
+}

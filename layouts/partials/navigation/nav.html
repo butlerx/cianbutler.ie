@@ -1,0 +1,28 @@
+<nav class="sidebar" data-spy="affix">
+  <div class="nav">
+    <a
+      class="animation-target{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }} active{{ end }}"
+      href="{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }}#{{ else }}/{{ end }}"
+    >{{ .Site.Title }}</a>
+    {{ $currentPage := . }}
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a
+            class="sidebar-nav-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}"
+            href="
+              {{- if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+                #
+              {{- else -}}
+                {{ $.Site.BaseURL }}{{ urlize .Identifier }}
+              {{- end -}}"
+            >{{ humanize .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    {{ with .Params.menu }}
+      <hr/>
+      {{ partial "navigation/subnav" $ }}
+    {{ end }}
+  </div>
+</nav>

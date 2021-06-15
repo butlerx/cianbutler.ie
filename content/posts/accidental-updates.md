@@ -6,6 +6,10 @@ description: Why you need to lock versions
 tags:
   - Docker
   - PostgrSQL
+audio: []
+images: []
+series: []
+videos: []
 ---
 
 # Why you need to lock versions
@@ -26,6 +30,8 @@ day, just a MySQL. So inside another container, we run PostgreSQL.
 
 The update process was meant to be simple update the `Dockerfile`, run
 `docker-compose up --build` and wait...
+
+<!-- more -->
 
 ## What Actually Went Wrong
 

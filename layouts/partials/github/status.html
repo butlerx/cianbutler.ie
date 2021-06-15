@@ -1,0 +1,7 @@
+{{- if eq . "MERGED" -}}
+  project-element-state-merged
+{{- else if eq . "CLOSED" -}}
+  project-element-state-closed
+{{- else -}}
+  project-element-state-open
+{{- end -}}

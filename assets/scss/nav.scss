@@ -1,0 +1,72 @@
+@use 'shared/screens';
+@use 'shared/colours';
+
+.sidebar {
+  grid-area: sidebar;
+  margin-top: 64px;
+  text-align: inherit;
+
+  @media screen and (max-width: screens.$large-phone) {
+    margin-top: 1em;
+  }
+
+  a {
+    color: colours.$heavy-grey !important;
+    overflow: hidden;
+
+    @media screen and (max-width: screens.$large-phone) {
+      border-right: 1px solid colours.$light-grey;
+      padding: 0 1em;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    position: fixed;
+
+    @media screen and (max-width: screens.$large-phone) {
+      border-bottom: 1px solid colours.$light-grey;
+      flex-direction: row;
+      float: left;
+      margin-left: 8px;
+      padding-bottom: 8px;
+      position: absolute;
+
+      .nav {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    li {
+      .sidebar-nav-item {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 0 20px 4px;
+
+        &:focus,
+        &:hover {
+          background-color: transparent;
+          border-left: 1px solid colours.$black;
+          color: colours.$black;
+          padding-left: 19px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    hr {
+      margin: 4px;
+    }
+  }
+}

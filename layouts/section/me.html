@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <h1 id="{{ urlize .Params.title }}">
+    <div class="avatar">
+      <img src="{{ (resources.Get .Site.Data.info.picture | fingerprint).RelPermalink }}" alt="Mug Shot" />
+      {{ .Site.Data.info.name }}
+    </div>
+  </h1>
+  {{ with .Site.Data.info.profiles }}
+    {{ partial "social/list" . }}
+  {{ end }}
+  <blockquote>
+    {{ partial "languages" .Site.Data.info.languages }} {{ .Content }}
+  </blockquote>
+  {{ partial "experience" .Site.Data.work }}
+  {{ partial "experience" .Site.Data.education }}
+  {{ with "Open Source Projects" }}
+    <h2 id="{{ urlize . }}">{{ humanize . }}</h3>
+  {{ end }}
+  {{ partial "github/repos" .Site.Data.github.pinnedRepos }}
+{{ end }}

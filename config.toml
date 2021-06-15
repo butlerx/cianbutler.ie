@@ -1,0 +1,39 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Cian Butler"
+pygmentsCodeFences = true
+paginate = 5
+sectionPagesMenu = "main"
+
+[author]
+  name = "Cian Butler"
+
+[outputs]
+  home = ["HTML", "RSS", "MANIFEST"]
+  page = ["HTML"]
+
+[outputFormats]
+  [outputFormats.manifest]
+    name = "manifest"
+    baseName = "manifest"
+    mediaType = "application/json"
+    notAlternative = "true"
+
+[params]
+  description = "Open Source Developer and SRE"
+  images = [
+    "images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png"
+  ]
+  email = "butlerx@notthe.cloud"
+  repo = "butlerx/cianbutler.ie"
+  twitter = "cianbutlerx"
+  title = "Cian Butler, SRE"
+  theme = "#e7e7e7"
+
+[taxonomies]
+  series = "series"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

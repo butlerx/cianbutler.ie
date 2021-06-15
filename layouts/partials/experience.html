@@ -1,0 +1,36 @@
+<div class="experience">
+  <h2 id="{{ urlize .title }}">{{ humanize .title }}</h3>
+  {{ range sort .source "startDate" "desc"}}
+    <div class="experience-block">
+      {{ if isset  . "company" }}
+        <h3 id="{{ urlize ( printf "%s-%s" .position .company) }}"><a href="{{ .website }}">{{ .position }}@{{ .company }}&emsp;</a>
+      {{ else }}
+        <h3 id="{{ urlize ( printf "%s-%s" .title .institution) }}"><a href="{{ .website }}">{{ .title }}@{{ .institution }}&emsp;</a>
+      {{ end }}
+        <small>
+          <em>
+            {{ dateFormat "Jan 1, 2006" .startDate }} - {{ with .endDate -}}
+              {{ dateFormat "Jan 1, 2006" . }}
+            {{- else -}}
+              present
+            {{- end -}}
+          </em>
+        </small>
+      </h3>
+      {{ partial "languages" .languages }}
+      <blockquote>
+        {{ with .summary }}
+          <p>{{ markdownify . }}</p>
+        {{ end }}
+      </blockquote>
+      {{ with .highlights }}
+        <ul>
+          {{ range . }}
+            <li>{{ markdownify . }}</li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      <hr>
+    </div>
+  {{ end }}
+</div>

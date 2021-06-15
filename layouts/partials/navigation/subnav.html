@@ -1,0 +1,11 @@
+<div>
+  <ul class="nav">
+    {{ range .Params.menu }}
+      <li>
+        <a href="{{ $.Permalink | absURL }}#{{ urlize . }}" class="sidebar-nav-item">
+          {{ humanize . }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
