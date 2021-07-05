@@ -1,0 +1,19 @@
+<div class="about-icons">
+  {{ range . }}
+  <a href="{{ .url }}" class="fa-stack fa-lg">
+    <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+    &nbsp;
+    {{ if eq .network "email" }}
+    <i
+      class="fas fa-envelope fa-stack-1x fa-inverse"
+      aria-label="email address link"
+    ></i>
+    {{ else }}
+    <i
+      class="fab fa-{{ .network }} fa-stack-1x fa-inverse"
+      aria-label="{{ .network }} link"
+    ></i>
+    {{ end }}
+  </a>
+  {{ end }}
+</div>

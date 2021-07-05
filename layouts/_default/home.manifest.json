@@ -1,0 +1,41 @@
+{{- $image := resources.Get .Site.Data.info.picture -}}
+{
+  "name": "{{ .Site.Title }}",
+  "short_name": "{{ .Site.Title }}",
+  "icons": [
+    {
+      "src": "{{ ($image.Resize "128x128" | fingerprint).RelPermalink }}",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ ($image.Resize "144x144" | fingerprint).RelPermalink }}",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ ($image.Resize "152x152" | fingerprint).RelPermalink }}",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ ($image.Resize "196x196" | fingerprint).RelPermalink }}",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ ($image.Resize "512x512" | fingerprint).RelPermalink }}",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "default_locale": "en",
+  "orientation": "portrait",
+  "background_color": "{{ .Site.Params.theme }}",
+  "theme_color": "{{ .Site.Params.theme }}",
+  "description": "{{ .Site.Params.description }}",
+  "author": "{{ .Site.Author.Name }}",
+  "manifest_version": 2
+}

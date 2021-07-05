@@ -1,0 +1,2 @@
+tap "chrmoritz/deno"
+brew "deno"

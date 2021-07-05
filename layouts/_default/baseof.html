@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  {{ partial "head/header" . }}
+  <body>
+    <div class="container">
+      {{ partial "github/corner" . }}
+      {{ partial "navigation/nav" . }}
+      <div class="markdown-body">
+        <div class="wrapper">
+          <section class="about">
+            <main>{{ block "main" . }}{{ end }}</main>
+          </section>
+        </div>
+      </div>
+    </div>
+    {{ partial "footer" . }}
+  </body>
+</html>

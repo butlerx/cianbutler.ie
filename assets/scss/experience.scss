@@ -1,0 +1,15 @@
+@use 'shared/colours';
+
+.experience {
+  @media print {
+    page-break-inside: unset !important;
+
+    .experience-block {
+      page-break-inside: avoid !important;
+    }
+  }
+
+  h3 a {
+    color: colours.$black;
+  }
+}

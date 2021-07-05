@@ -1,0 +1,44 @@
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=6.0"
+  />
+
+  {{ partial "head/assets" . }}
+
+  <base href="{{ .Site.BaseURL }}">
+  <link rel="canonical" href="{{ .Permalink | absURL }}">
+  <link rel="manifest" href="{{ absURL "manifest.json" }}" />
+  {{ with  .OutputFormats.Get "rss" -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
+  {{ end -}}
+
+  {{ partial "head/icons" . }}
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="{{ .Site.Params.theme }}" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Resume",
+      "image" : {{ apply .Params.images "absURL" "." }},
+      "name": "{{- if .Params.title -}} {{- .Params.title -}} {{- else -}} {{- .Site.Title }} {{- end -}}"
+    }
+  </script>
+
+  <title>
+    {{- $isHomePage := eq .Title .Site.Title -}}
+    {{- with .Params.heading -}}
+      {{- . -}}
+    {{- else -}}
+      {{- .Title -}}{{- if eq $isHomePage false }} | {{ .Site.Title }}{{ end -}}
+    {{- end -}}
+  </title>
+  <meta name="theme-color" content="{{ .Site.Params.theme }}" />
+  {{ partial "head/social" .}}
+</head>

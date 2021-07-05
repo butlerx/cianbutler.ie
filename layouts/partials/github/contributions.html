@@ -1,0 +1,47 @@
+<div class="card-list">
+  {{ range . }}
+    <div class="card-outer">
+      <div class="card">
+        <div class="card-title">
+          <span class="card-title-text">{{ .repo.name }}</span>
+          <span class="card-title-space" />
+          <span class="card-title-link">
+            {{ with .repo.stars }}
+              <span class="card-title-link-count">
+                <i class="fas fa-star" aria-hidden="true" ></i>
+                {{ . }}
+              </span>
+            {{ end }}
+            <a href="{{ .repo.url }}"
+              target='_blank'
+              class="card-title-link-icon"
+              title="github"
+            >
+              <i class="fab fa-github" aria-hidden="true" ></i>
+            </a>
+          </span>
+        </div>
+        <div class="card-desc">
+          <div class="project">
+            <span class="project-element">
+              <div class="project-element-header">
+                <div>
+                  <h4 class="project-element-title">
+                    <a href="{{ .repo.url }}">{{ .title }}</a>
+                  </h4>
+                </div>
+                <a class="{{ partial "github/status" .state }}" href="{{ .url }}">
+                  <i class="fas fa-code-branch" aria-hidden="true"></i>
+                  {{ humanize .state }}
+                </a>
+              </div>
+              <span class="project-element-description">
+                {{ .bodyHTML  | safeHTML }}
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>

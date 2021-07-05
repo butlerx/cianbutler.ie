@@ -1,0 +1,42 @@
+@use '../shared/colours';
+@use '../shared/screens';
+
+ul .post {
+  margin-bottom: 4rem;
+  padding: 1rem;
+
+  @media screen and (min-width: screens.$tablet) {
+    padding: 2rem;
+  }
+
+  @media screen and (min-width: screens.$large-tablet) {
+    padding: 3rem;
+  }
+
+  .meta {
+    margin-bottom: 1rem;
+
+    .key {
+      color: colours.$heavy-grey;
+
+      &::after {
+        content: '\A0';
+      }
+    }
+
+    .value {
+      color: colours.$pink;
+    }
+  }
+
+  .headline {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .article {
+    a {
+      color: colours.$orange;
+    }
+  }
+}

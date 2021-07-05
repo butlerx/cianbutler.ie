@@ -1,0 +1,23 @@
+<article class="post">
+  <h2 class="headline">
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </h2>
+  <div class="meta">
+    <span class="key">published on</span>
+    <span class="value">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+    <br />
+    {{ with .Site.Author.name }}
+      <span class="key">author:</span>
+      <span class="value">{{ . }}</span>
+      <br />
+    {{ end }}
+  </div>
+  <section class="article">
+    {{ .Summary }}
+    <br />
+    <a href="{{ .Permalink }}">Read more...</a>
+  </section>
+  <hr />
+</article>

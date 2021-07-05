@@ -1,0 +1,43 @@
+{{- $image := resources.Get .Site.Data.info.picture -}}
+{{- $favicon := $image.Resize "32x32" -}}
+<link
+  rel="shortcut icon"
+  type="image/x-icon"
+  href="{{ $favicon.RelPermalink }}"
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ $favicon.RelPermalink }}"
+/>
+
+{{- $icon_120 := $image.Resize "120x120" -}}
+<link href="{{ $icon_120.RelPermalink }}" rel="icon" />
+<link href="{{ $icon_120.RelPermalink }}" rel="apple-touch-icon" />
+
+<link
+  href="{{ ($image.Resize "152x152").RelPermalink }}"
+  rel="apple-touch-icon"
+  sizes="152x152"
+/>
+<link
+  href="{{ ($image.Resize "167x167").RelPermalink }}"
+  rel="apple-touch-icon"
+  sizes="167x167"
+/>
+<link
+  href="{{ ($image.Resize "180x180").RelPermalink }}"
+  rel="apple-touch-icon"
+  sizes="180x180"
+/>
+<link
+  href="{{ ($image.Resize "192x192").RelPermalink }}"
+  rel="icon"
+  sizes="192x192"
+/>
+<link
+  href="{{ ($image.Resize "128x128").RelPermalink }}"
+  rel="icon"
+  sizes="128x128"
+/>
+

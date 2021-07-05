@@ -1,0 +1,18 @@
+{{- with .Params.keywords -}}
+  <meta name="keywords" content="{{ delimit . "," }}">
+{{- end -}}
+
+{{- with .Site.Author.name -}}
+  <meta name="author" content="{{ . }}" />
+{{- end -}}
+
+{{ template "_internal/twitter_cards.html" . }}
+{{- with .Params.twitter -}}
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{- end -}}
+{{ template "_internal/opengraph.html" . }}
+
+{{/* Update to use .Params.description if exists */}}
+{{- with .Site.Params.description -}}
+  <meta name="description" content="{{ . }}" />
+{{- end -}}

@@ -1,0 +1,91 @@
+@use 'shared/print';
+@use 'shared/colours';
+@use 'shared/screens';
+
+.container {
+  @include print.show;
+
+  @media screen and (max-width: screens.$large-phone) {
+    grid-row-gap: 15px;
+    // sass-lint:disable indentation
+    grid-template-areas:
+      'sidebar'
+      'main'
+      'footer';
+    // sass-lint:enable indentation
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    max-width: 100%;
+  }
+
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  // sass-lint:disable indentation
+  grid-template-areas:
+    'main sidebar'
+    'footer footer';
+  // sass-lint:enable indentation
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+
+  .markdown-body {
+    @media screen and (max-width: screens.$large-phone) {
+      margin: 0 1em;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: screens.$tablet) {
+      max-width: 80%;
+      padding: 1em 1.5em;
+    }
+
+    @media screen and (max-width: screens.$large-tablet) {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    grid-area: main;
+    margin-left: 8em;
+    margin-right: auto;
+    min-height: 660px;
+    overflow: visible;
+    padding: 40px 16px;
+
+    .wrapper {
+      margin-left: 4em;
+      padding: 40px 16px;
+
+      @media screen and (max-width: screens.$tablet) {
+        margin: 0;
+        padding: 0;
+      }
+
+      .about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    > {
+      :first-child {
+        margin-top: 0;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

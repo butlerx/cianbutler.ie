@@ -1,0 +1,40 @@
+@use 'shared/colours';
+@use 'shared/mixins';
+
+.project {
+  &-element {
+    display: block;
+    font-size: 110%;
+    margin: 1em 0;
+
+    &-description {
+      font-size: 0.8em;
+    }
+
+    &-header {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+    }
+
+    &-title {
+      @include mixins.subTitle(0.9em);
+    }
+
+    &-title-small {
+      @include mixins.subTitle(0.8em);
+    }
+
+    &-state-merged {
+      @include mixins.state(colours.$purple);
+    }
+
+    &-state-closed {
+      @include mixins.state(colours.$dark-red);
+    }
+
+    &-state-open {
+      @include mixins.state(colours.$green);
+    }
+  }
+}

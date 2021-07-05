@@ -1,0 +1,140 @@
+@use 'shared/screens';
+@use 'shared/colours';
+@use 'shared/mixins';
+
+.card-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+
+  .card-outer {
+    margin: 1rem;
+    max-width: 30em;
+    padding: 0;
+
+    @media screen and (max-width: screens.$large-tablet) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: screens.$tablet) {
+      height: 242px;
+    }
+
+    @media screen and (max-width: screens.$xl-phone) {
+      height: 282px;
+    }
+
+    @media screen and (max-width: screens.$large-phone) {
+      height: 222px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: screens.$small-phone) {
+      height: 232px;
+    }
+
+    .gh-card {
+      background-color: colours.$white;
+      min-width: 31em;
+    }
+
+    .card {
+      @include mixins.card;
+
+      display: flex;
+      flex-direction: column;
+      margin: 0 0.4rem;
+      min-width: 28em;
+      padding: 16px 1rem;
+      transition: 0.4s;
+
+      @media screen and (max-width: screens.$laptop) {
+        margin: 0 0.35rem;
+      }
+
+      @media screen and (max-width: screens.$large-tablet) {
+        margin: 0 0.5rem;
+      }
+
+      @media screen and (max-width: screens.$tablet) {
+        height: 210px;
+      }
+
+      @media screen and (max-width: screens.$xl-phone) {
+        height: 250px;
+        margin: 0 0.35rem;
+      }
+
+      @media screen and (max-width: screens.$large-phone) {
+        height: 190px;
+        margin: 0 auto;
+        max-width: 85%;
+      }
+
+      @media screen and (max-width: screens.$small-phone) {
+        height: 200px;
+        max-width: 90%;
+      }
+
+      &:hover {
+        transition-delay: 0.2s;
+      }
+
+      &-title {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5rem;
+        height: auto;
+        margin-right: 0.5em;
+        min-height: 2rem;
+
+        @media screen and (max-width: screens.$laptop) {
+          font-size: 1.3rem;
+        }
+
+        @media screen and (max-width: screens.$tablet) {
+          min-height: unset;
+        }
+
+        &-text {
+          margin: 0 1rem 0 0;
+          max-width: 100%;
+          width: 80%;
+        }
+
+        &-space {
+          max-width: 100%;
+        }
+
+        &-link {
+          max-width: 100%;
+          min-width: 20%;
+          text-align: center;
+          vertical-align: middle;
+          white-space: nowrap;
+
+          &-count {
+            @include mixins.faIcon;
+          }
+
+          &-icon {
+            height: 1rem;
+            margin-left: 0 0.2rem 0 0.4rem;
+            width: 1rem;
+          }
+        }
+      }
+
+      &-desc {
+        flex-grow: 100;
+        margin: 0.5rem 0 0;
+        opacity: 0.65;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
