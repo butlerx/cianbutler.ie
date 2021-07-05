@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <div class="avatar">
+    <img src="{{ (resources.Get .Site.Data.info.picture | fingerprint).RelPermalink }}" alt="Mug Shot" />
+  </div>
+  <h3>
+    My Name is <strong>{{ .Site.Data.info.name }}</strong>, I'm a {{
+    .Params.job }}.
+  </h3>
+  <h3>{{ .Params.blurb | markdownify }}.</h3>
+  <h3>
+    {{ .Params.project_link | markdownify }}<a href="/projects/">
+      projects</a
+    >.
+  </h3>
+  <h3>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</h3>
+  {{ .Content }}
+  <h3>
+    Contact me at
+    <a href="http://twitter.com/{{ .Site.Params.twitter }}"
+      >@{{ .Site.Params.twitter }}</a
+    >
+    or by <a href="mailto:{{ .Site.Params.email }}">email</a>.
+  </h3>
+  {{ with .Site.Data.info.profiles }}
+    {{ partial "social/icons" . }}
+  {{ end }}
+{{ end }}

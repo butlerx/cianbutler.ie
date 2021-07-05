@@ -1,0 +1,57 @@
+@use 'shared/print';
+@use 'shared/colours';
+@use 'shared/screens';
+
+.github-corner {
+  @include print.hidden;
+
+  svg {
+    border: 0;
+    color: colours.$white;
+    fill: colours.$red;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .octoArm {
+      transform-origin: 130px 106px;
+    }
+  }
+
+  &:hover {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media screen and (max-width: screens.$medium-phone) {
+  .github-corner {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+
+    &:hover {
+      .octo-arm {
+        animation: none;
+      }
+    }
+  }
+}
