@@ -7,7 +7,6 @@
 /resources/_gen/
 hugo_stats.json
 *.pdf
-/data/github.json
 
 # Executable may be added to repository
 hugo.exe

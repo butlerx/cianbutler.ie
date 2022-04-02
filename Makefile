@@ -31,10 +31,6 @@ public: $(HUGO) config.toml $(THEME_DIR) content data/github.json data/*.yml
 	@echo "🧂 Optimizing images"
 	find $@ -not -path "*/static/*" \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) -print0 | xargs -0 -P8 -n2 mogrify -strip -thumbnail '1000>'
 
-.PHONY: deploy
-deploy:  public ## Manually deploy site to netlify
-	netlify $@
-
 .PHONY: update
 update: ## Update themes
 	@echo "🛎 Updating Them"
@@ -47,7 +43,7 @@ serve: $(HUGO) data/github.json ## Run development server in debug mode
 .PHONY: clean
 clean: ## Clean built site
 	@echo "🧹 Cleaning old build"
-	rm -rf public resources .cache
+	rm -rf public resources
 
 .PHONY: lint lint-scss lint-markdown lint-html format
 lint: lint-scss lint-markdown lint-html ## Run all linter
@@ -83,15 +79,8 @@ $(SASS):  ## Install dependencies for sass
 	@mv -f tmp/sass_embedded/dart-sass-embedded $@
 	@rm -rf tmp/
 
-.PHONY: api-server
-api-server: github-server.ts ## Run dev server for github etl
-	@deployctl run --watch --env .env $<
-
-.cache/github: github.ts
-	deno compile -o $@ --allow-env --allow-net --allow-write $<
-
-data/github.json: .cache/github
-	$<
+data/github.json: github.ts
+	deno run --allow-env --allow-net --allow-write $< || exit 0
 
 .PHONY: help
 help: ## Display this help screen
