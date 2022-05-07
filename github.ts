@@ -1,3 +1,5 @@
+#!/usr/bin/env -S deno run --allow-env --allow-net --allow-write
+
 import { graphql } from 'https://cdn.skypack.dev/@octokit/graphql';
 
 const path = 'data/github.json';

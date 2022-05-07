@@ -21,7 +21,13 @@ source:
       - Clickhouse
       - Kafka
     highlights:
-      - built and maintained monitoring and alerting pipeline
+      - Built and maintained monitoring and alerting pipeline.
+      - Support Scaling of data pipeline for ingesting and processing realtime
+        telemetry.
+      - Mainted Metrics and Logging pipelines ingesting Millions of datapoints a
+        second.
+      - Desgined and maintained custom metrics, logging and tracing integrations
+        for use in python applications.
   - position: SRE
     company: CoderDojo Foundation
     startDate: 2017-06-10
