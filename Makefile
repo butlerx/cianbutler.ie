@@ -7,7 +7,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 DESTDIR := public
-HUGO_VERSION := 0.83.1
+HUGO_VERSION := 0.96.0
 HUGO := .cache/hugo_$(HUGO_VERSION)
 SASS_VERSION := 1.0.0-beta.7
 SASS := .cache/dart-sass-embedded_$(SASS_VERSION)
@@ -17,6 +17,7 @@ THEME := $(shell awk -F\= '/theme/ {gsub(/"/,"",$$2);gsub(/ /, "", $$2);print $$
 THEME_DIR := themes/$(THEME)
 
 PATH := $(PATH):$(SASS)
+BINS = $(HUGO) $(SASS)
 
 $(THEME_DIR):
 	@git submodule init
@@ -25,19 +26,19 @@ $(THEME_DIR):
 
 .PHONY: build
 build: public  ## Build Site
-public: $(HUGO) config.toml $(THEME_DIR) content data/github.json data/*.yml
+public: $(BINS) config.toml $(THEME_DIR) content data/github.json data/*.yml
 	@echo "🍳 Generating site"
 	$< --gc --minify -d $(DESTDIR)
 	@echo "🧂 Optimizing images"
 	find $@ -not -path "*/static/*" \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) -print0 | xargs -0 -P8 -n2 mogrify -strip -thumbnail '1000>'
 
 .PHONY: update
-update: ## Update themes
+update: $(BINS) ## Update themes and binaries
 	@echo "🛎 Updating Them"
 	git submodule update --remote --merge
 
 .PHONY: serve
-serve: $(HUGO) data/github.json ## Run development server in debug mode
+serve: $(BINS) data/github.json ## Run development server in debug mode
 	$< server -D -w --ignoreCache
 
 .PHONY: clean
@@ -63,7 +64,7 @@ lint-html: public ## Run HTML linter
 	@echo "🍜 Testing HTML"
 	@docker run --rm -v $$(pwd):/hugo ruby:2 sh -c 'gem install html-proofer && htmlproofer --allow-hash-href --check-html --empty-alt-ignore --disable-external /hugo/public'
 
-$(HUGO): $(SASS)
+$(HUGO): ## Install dependencies for hugo
 	@echo "🤵 Getting Hugo"
 	@wget -q -P tmp/ https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_extended_$(HUGO_VERSION)_$(PLATFORM).tar.gz
 	@tar xf tmp/hugo_extended_$(HUGO_VERSION)_$(PLATFORM).tar.gz -C tmp/
@@ -79,7 +80,7 @@ $(SASS):  ## Install dependencies for sass
 	@mv -f tmp/sass_embedded/dart-sass-embedded $@
 	@rm -rf tmp/
 
-data/github.json: github.ts
+data/github.json: github.ts ## build github data file
 	deno run --allow-env --allow-net --allow-write $< || exit 0
 
 .PHONY: help
