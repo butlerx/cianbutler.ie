@@ -7,7 +7,7 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 DESTDIR := public
-HUGO_VERSION := 0.96.0
+HUGO_VERSION := 0.102.3
 HUGO := .cache/hugo_$(HUGO_VERSION)
 SASS_VERSION := 1.0.0-beta.7
 SASS := .cache/dart-sass-embedded_$(SASS_VERSION)
