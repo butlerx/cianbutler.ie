@@ -61,6 +61,10 @@
         padding: 0;
       }
 
+      @media print {
+        padding: 0;
+      }
+
       .about {
         display: flex;
         flex-flow: row wrap;

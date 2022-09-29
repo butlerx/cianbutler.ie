@@ -1,8 +1,8 @@
-@use 'shared/colours';
+@use "shared/colours";
 
 .experience {
   @media print {
-    page-break-inside: unset !important;
+    page-break-inside: avoid !important;
 
     .experience-block {
       page-break-inside: avoid !important;

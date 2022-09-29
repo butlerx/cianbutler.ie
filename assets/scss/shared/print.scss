@@ -1,14 +1,14 @@
-@use 'shared/colours';
+@use "shared/colours";
 
 @mixin show {
   @media print {
-    grid-template-areas: 'main' !important;
     grid-template-columns: 100% !important;
     max-width: 100% !important;
 
     .markdown-body {
       margin: 0 !important;
-      padding-top: 20px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
 
       h2 {
         font-size: 1.2em !important;
