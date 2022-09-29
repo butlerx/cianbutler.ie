@@ -7,29 +7,21 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 DESTDIR := public
-HUGO_VERSION := 0.102.3
+HUGO_VERSION := 0.104.2
 HUGO := .cache/hugo_$(HUGO_VERSION)
-SASS_VERSION := 1.0.0-beta.7
+SASS_VERSION := 1.55.0
 SASS := .cache/dart-sass-embedded_$(SASS_VERSION)
 PLATFORM := Linux-64bit
 
-THEME := $(shell awk -F\= '/theme/ {gsub(/"/,"",$$2);gsub(/ /, "", $$2);print $$2}' config.toml)
-THEME_DIR := themes/$(THEME)
-
-PATH := $(PATH):$(SASS)
+export PATH := $(PATH):$(PWD)/$(SASS)
 BINS = $(HUGO) $(SASS)
-
-$(THEME_DIR):
-	@git submodule init
-	@git submodule sync
-	@git submodule update
 
 .PHONY: build
 build: public  ## Build Site
-public: $(BINS) config.toml $(THEME_DIR) content data/github.json data/*.yml
+public: $(BINS) config.toml content layouts assets data/github.json data/*.yml
 	@echo "🍳 Generating site"
 	$< --gc --minify -d $(DESTDIR)
-	@echo "🧂 Optimizing images"
+	echo "🧂 Optimizing images"
 	find $@ -not -path "*/static/*" \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) -print0 | xargs -0 -P8 -n2 mogrify -strip -thumbnail '1000>'
 
 .PHONY: update
