@@ -1,6 +1,6 @@
-@use 'shared/screens';
-@use 'shared/colours';
-@use 'shared/mixins';
+@use "shared/screens";
+@use "shared/colours";
+@use "shared/mixins";
 
 .card-list {
   display: flex;
@@ -31,6 +31,16 @@
 
     @media screen and (max-width: screens.$small-phone) {
       height: 232px;
+    }
+
+    @media print {
+      margin-bottom: 0;
+
+      a {
+        &::after {
+          content: '';
+        }
+      }
     }
 
     .gh-card {

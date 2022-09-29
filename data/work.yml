@@ -20,14 +20,15 @@ source:
       - ElasticSearch
       - Clickhouse
       - Kafka
+      - Go
     highlights:
-      - Built and maintained monitoring and alerting pipeline.
+      - Built and maintained a monitoring and alerting pipeline designed to Replace the role of the Noc team.
       - Support Scaling of data pipeline for ingesting and processing realtime
-        telemetry.
-      - Mainted Metrics and Logging pipelines ingesting Millions of datapoints a
+        telemetry for Millions of user in Call of Duty.
+      - Mainted Metrics and Logging pipelines ingesting Billions of datapoints a
         second.
-      - Desgined and maintained custom metrics, logging and tracing integrations
-        for use in python applications.
+      - Maintained and Evolved custom metrics, logging and tracing integrations
+        for use in all Python Service in demonware.
   - position: SRE
     company: CoderDojo Foundation
     startDate: 2017-06-10
