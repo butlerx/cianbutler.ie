@@ -19,6 +19,10 @@ jobs:
           deno-version: v1.x
       - name: Build data/github.json
         run: deno run --allow-env --allow-net --allow-write github.ts
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.2
+        with:
+          prettier_options: --write .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Rebuild data/github.json
