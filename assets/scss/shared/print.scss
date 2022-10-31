@@ -1,4 +1,4 @@
-@use "shared/colours";
+@use 'shared/colours';
 
 @mixin show {
   @media print {

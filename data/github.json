@@ -24,7 +24,51 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3382
+        "stars": 3433
+      },
+      "title": "Update development flow to be less confusing",
+      "url": "https://github.com/butlerx/wetty/pull/441",
+      "state": "MERGED",
+      "bodyHTML": "<p dir=\"auto\">close issue <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1369023421\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/432\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/432/hovercard\" href=\"https://github.com/butlerx/wetty/issues/432\">#432</a></p>\n<ul dir=\"auto\">\n<li>use <code class=\"notranslate\">snowpack build --watch</code> rather then <code class=\"notranslate\">snowpack dev</code></li>\n<li>Update <code class=\"notranslate\">docs/developments.md</code> to reflect the acutal development<br>\nenvironment</li>\n</ul>"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/wetty",
+        "name": "wetty",
+        "stars": 3433
+      },
+      "title": "bump xterm to v5",
+      "url": "https://github.com/butlerx/wetty/pull/439",
+      "state": "MERGED",
+      "bodyHTML": ""
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/wetty",
+        "name": "wetty",
+        "stars": 3433
+      },
+      "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
+      "url": "https://github.com/butlerx/wetty/pull/438",
+      "state": "MERGED",
+      "bodyHTML": "<p dir=\"auto\">closses <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1367426926\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/428\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/428/hovercard\" href=\"https://github.com/butlerx/wetty/issues/428\">#428</a></p>"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/wetty",
+        "name": "wetty",
+        "stars": 3433
+      },
+      "title": "update codeQL workflow",
+      "url": "https://github.com/butlerx/wetty/pull/437",
+      "state": "MERGED",
+      "bodyHTML": ""
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/wetty",
+        "name": "wetty",
+        "stars": 3433
       },
       "title": "revert to yarn 1",
       "url": "https://github.com/butlerx/wetty/pull/421",
@@ -35,7 +79,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3382
+        "stars": 3433
       },
       "title": "ARM support",
       "url": "https://github.com/butlerx/wetty/pull/419",
@@ -46,7 +90,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3382
+        "stars": 3433
       },
       "title": "docker wf",
       "url": "https://github.com/butlerx/wetty/pull/413",
@@ -57,7 +101,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 2953
+        "stars": 3006
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
@@ -68,7 +112,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3382
+        "stars": 3433
       },
       "title": "format documentation",
       "url": "https://github.com/butlerx/wetty/pull/363",
@@ -79,56 +123,12 @@
       "repo": {
         "url": "https://github.com/grafana/helm-charts",
         "name": "helm-charts",
-        "stars": 981
+        "stars": 1023
       },
       "title": "[grafana] Add `livenessProbe` to grafana image renderer",
       "url": "https://github.com/grafana/helm-charts/pull/724",
       "state": "MERGED",
       "bodyHTML": "<p dir=\"auto\">Signed-off-by: butlerx <a href=\"mailto:butlerx@notthe.cloud\">butlerx@notthe.cloud</a></p>"
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/wetty",
-        "name": "wetty",
-        "stars": 3382
-      },
-      "title": "fmt",
-      "url": "https://github.com/butlerx/wetty/pull/359",
-      "state": "MERGED",
-      "bodyHTML": "<ul dir=\"auto\">\n<li>Bump nth-check from 2.0.0 to 2.0.1 (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1004898507\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/357\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/357/hovercard\" href=\"https://github.com/butlerx/wetty/pull/357\">#357</a>)</li>\n<li>Bump semver-regex from 3.1.2 to 3.1.3 (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1001623974\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/353\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/353/hovercard\" href=\"https://github.com/butlerx/wetty/pull/353\">#353</a>)</li>\n<li>run formatting on client config</li>\n</ul>"
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/wetty",
-        "name": "wetty",
-        "stars": 3382
-      },
-      "title": "update linters",
-      "url": "https://github.com/butlerx/wetty/pull/358",
-      "state": "MERGED",
-      "bodyHTML": ""
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/cianbutler.ie",
-        "name": "cianbutler.ie",
-        "stars": 0
-      },
-      "title": "Hugo ",
-      "url": "https://github.com/butlerx/cianbutler.ie/pull/2",
-      "state": "MERGED",
-      "bodyHTML": "<p dir=\"auto\">TODO</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> manifest</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> submenu</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Render number of images</li>\n</ul>"
-    },
-    {
-      "repo": {
-        "url": "https://github.com/redbrick/nix-configs",
-        "name": "nix-configs",
-        "stars": 11
-      },
-      "title": "add ssl reshashsignal to irc",
-      "url": "https://github.com/redbrick/nix-configs/pull/108",
-      "state": "MERGED",
-      "bodyHTML": ""
     }
   ]
 }
