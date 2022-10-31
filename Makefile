@@ -26,8 +26,8 @@ public: $(BINS) config.toml content layouts assets data/github.json data/*.yml
 
 .PHONY: update
 update: $(BINS) ## Update themes and binaries
-	@echo "🛎 Updating Them"
-	git submodule update --remote --merge
+	@echo "🛎 Updating Theme"
+	$(HUGO) mod get -u ./...
 
 .PHONY: serve
 serve: $(BINS) data/github.json ## Run development server in debug mode
