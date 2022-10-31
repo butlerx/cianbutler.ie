@@ -2,9 +2,8 @@
 
 ![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/butlerx/cianbutler.ie/blob/master/LICENSE.md)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/72ca1f9c-2c7e-47d8-a644-5d01446272be/deploy-status)](https://app.netlify.com/sites/cianbutler/deploys)
 
-A Hugo static site To display past work experience and projects i've worked on.
+A Hugo static site to display past work experience and projects I've worked on.
 
 # Installation
 
@@ -21,7 +20,7 @@ To Preview the site do `make serve` then open a browser and navigate to
 
 To Build the site for deployment run `make build`, the site will be output to
 `public` folder. This can then be served from any hosting. The site is auto
-deployed using netlify hosting
+deployed using cloudflare hosting
 
 ## PDF
 
