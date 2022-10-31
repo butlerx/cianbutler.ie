@@ -22,12 +22,13 @@ source:
       - Kafka
       - Go
     highlights:
-      - Built and maintained a monitoring and alerting pipeline designed to Replace the role of the Noc team.
-      - Support Scaling of data pipeline for ingesting and processing realtime
-        telemetry for Millions of user in Call of Duty.
+      - Built and maintained a monitoring and alerting pipeline designed to
+        replace the role of the NOC team.
+      - Support scaling of the data pipeline for ingesting and processing
+        realtime telemetry for Millions of user in Call of Duty.
       - Mainted Metrics and Logging pipelines ingesting Billions of datapoints a
         second.
-      - Maintained and Evolved custom metrics, logging and tracing integrations
+      - Maintained and evolved custom metrics, logging and tracing integrations
         for use in all Python Service in demonware.
   - position: SRE
     company: CoderDojo Foundation
