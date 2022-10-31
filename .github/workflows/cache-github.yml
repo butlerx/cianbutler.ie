@@ -22,9 +22,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Prettify code
-        uses: creyD/prettier_action@v4.2
+        uses: actionsx/prettier@v2
         with:
-          prettier_options: --write .
+          args: --write .
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Rebuild data/github.json
