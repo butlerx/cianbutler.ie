@@ -19,6 +19,8 @@ jobs:
           deno-version: v1.x
       - name: Build data/github.json
         run: deno run --allow-env --allow-net --allow-write github.ts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Prettify code
         uses: creyD/prettier_action@v4.2
         with:
