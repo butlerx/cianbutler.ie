@@ -13,9 +13,9 @@
     { "repo": "fastify-bookshelfjs", "user": "butlerx" },
     { "repo": "docs-old", "user": "redbrick" },
     { "repo": "creabot", "user": "nixdak" },
+    { "repo": "hugo-recipes", "user": "butlerx" },
     { "repo": "good_stv", "user": "redbrick" },
     { "repo": "butlerbot", "user": "butlerx" },
-    { "repo": "hugo-recipes", "user": "butlerx" },
     { "repo": "invbeertory", "user": "butlerx" },
     { "repo": "rb-ldap", "user": "redbrick" }
   ],
@@ -101,7 +101,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 3011
+        "stars": 3022
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
@@ -123,7 +123,7 @@
       "repo": {
         "url": "https://github.com/grafana/helm-charts",
         "name": "helm-charts",
-        "stars": 1025
+        "stars": 1026
       },
       "title": "[grafana] Add `livenessProbe` to grafana image renderer",
       "url": "https://github.com/grafana/helm-charts/pull/724",
