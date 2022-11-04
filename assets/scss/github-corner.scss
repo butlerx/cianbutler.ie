@@ -1,6 +1,6 @@
-@use 'shared/print';
-@use 'shared/colours';
-@use 'shared/screens';
+@use "shared/print";
+@use "shared/colours";
+@use "shared/screens";
 
 .github-corner {
   @include print.hidden;
@@ -13,7 +13,7 @@
     right: 0;
     top: 0;
 
-    .octoArm {
+    .octo-arm {
       transform-origin: 130px 106px;
     }
   }

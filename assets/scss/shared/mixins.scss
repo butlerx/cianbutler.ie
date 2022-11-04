@@ -1,5 +1,5 @@
-@use 'colours';
-@use 'shadows';
+@use "colours";
+@use "shadows";
 
 @mixin subTitle($font-size) {
   font-size: $font-size;

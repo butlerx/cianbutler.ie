@@ -1,5 +1,5 @@
-@use 'shared/screens';
-@use 'shared/colours';
+@use "shared/screens";
+@use "shared/colours";
 
 .sidebar {
   grid-area: sidebar;
@@ -33,22 +33,10 @@
       margin-left: 8px;
       padding-bottom: 8px;
       position: absolute;
-
-      .nav {
-        display: none;
-      }
-    }
-
-    ul {
-      list-style: none;
-      margin-bottom: 0;
-      margin-top: 0;
-      padding-left: 0;
-      padding-top: 0;
     }
 
     li {
-      .sidebar-nav-item {
+      a {
         display: block;
         font-size: 12px;
         font-weight: 500;
@@ -62,6 +50,18 @@
           padding-left: 19px;
           text-decoration: none;
         }
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: 0;
+      padding-top: 0;
+
+      & > li {
+        margin-left: 1em;
       }
     }
 

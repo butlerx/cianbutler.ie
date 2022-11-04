@@ -1,6 +1,6 @@
 {{ define "main" }}
   <ul>
-    {{ range (.Paginator 4).Pages.ByPublishDate }}
+    {{ range (.Paginator 4).Pages }}
       <div>
         {{ .Render "li"}}
       </div>
