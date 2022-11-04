@@ -1,11 +1,15 @@
-<div>
-  <ul class="nav">
-    {{ range .Params.menu }}
-      <li>
-        <a href="{{ $.Permalink | absURL }}#{{ urlize . }}" class="sidebar-nav-item">
-          {{ humanize . }}
-        </a>
-      </li>
-    {{ end }}
-  </ul>
-</div>
+{{ if isset .Params "menu" }}
+  <nav class="TableOfContents">
+    <ul>
+      {{ range .Params.menu }}
+        <li>
+          <a href="{{ $.Permalink | absURL }}#{{ urlize . }}">
+            {{ humanize . }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ else }}
+  {{ .TableOfContents }}
+{{ end }}

@@ -1,5 +1,5 @@
-@use 'shared/colours';
-@use 'shared/fonts';
+@use "shared/colours";
+@use "shared/fonts";
 
 .social {
   @media print {
@@ -16,8 +16,6 @@
 
   list-style: none;
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 
   a {
@@ -43,7 +41,7 @@
 
   &::after {
     clear: both;
-    content: '';
+    content: "";
     display: table;
   }
 

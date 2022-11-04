@@ -14,7 +14,7 @@
         <span class="value">
           {{ range $i, $e := . -}}
             {{- if $i -}}, {{ end -}}
-            <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . | humanize }}</a>
+            <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
           {{- end -}}
           </span>
         <br />
@@ -23,7 +23,7 @@
     <h1
       class="headline"
       id="{{ urlize .Params.Title }}"
-    >{{ humanize .Params.title }}</h1>
+    >{{ .Params.title }}</h1>
     <section class="article">{{ .Content }}</section>
   </article>
 {{ end }}

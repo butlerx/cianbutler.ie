@@ -1,32 +1,32 @@
 const CACHE_VERSION = 1;
 
 const BASE_CACHE_FILES = [
-  '/images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png',
-  '/style.ee64ee5b458242ed5d4d53bec6a656f29b1433da20783d6f8231a49b33ceef053ae11f2cb670b9763ecb0896d4438066d2401378a76e47c18a7a7605844e851e.css',
-  '/sitemap.xml',
-  '/manifest.json',
+  "/images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png",
+  "/style.ee64ee5b458242ed5d4d53bec6a656f29b1433da20783d6f8231a49b33ceef053ae11f2cb670b9763ecb0896d4438066d2401378a76e47c18a7a7605844e851e.css",
+  "/sitemap.xml",
+  "/manifest.json",
 ];
 
 const OFFLINE_CACHE_FILES = [];
 
 const NOT_FOUND_CACHE_FILES = [
-  '/404.html',
-  '/style.ee64ee5b458242ed5d4d53bec6a656f29b1433da20783d6f8231a49b33ceef053ae11f2cb670b9763ecb0896d4438066d2401378a76e47c18a7a7605844e851e.css',
+  "/404.html",
+  "/style.ee64ee5b458242ed5d4d53bec6a656f29b1433da20783d6f8231a49b33ceef053ae11f2cb670b9763ecb0896d4438066d2401378a76e47c18a7a7605844e851e.css",
 ];
 
-const OFFLINE_PAGE = '/index.html';
-const NOT_FOUND_PAGE = '/404.html';
+const OFFLINE_PAGE = "/index.html";
+const NOT_FOUND_PAGE = "/404.html";
 
 const CACHE_VERSIONS = {
-  assets: 'assets-v' + CACHE_VERSION,
-  content: 'content-v' + CACHE_VERSION,
-  offline: 'offline-v' + CACHE_VERSION,
-  notFound: '404-v' + CACHE_VERSION,
+  assets: "assets-v" + CACHE_VERSION,
+  content: "content-v" + CACHE_VERSION,
+  offline: "offline-v" + CACHE_VERSION,
+  notFound: "404-v" + CACHE_VERSION,
 };
 
 // Define MAX_TTL's in SECONDS for specific file extensions
 const MAX_TTL = {
-  '/': 3600,
+  "/": 3600,
   html: 3600,
   json: 86400,
   js: 86400,
@@ -35,11 +35,11 @@ const MAX_TTL = {
 
 const CACHE_BLACKLIST = [
   (str) => {
-    return !str.startsWith('http://localhost');
+    return !str.startsWith("http://localhost");
   },
 ];
 
-const SUPPORTED_METHODS = ['GET'];
+const SUPPORTED_METHODS = ["GET"];
 
 /**
  * isBlackListed
@@ -49,12 +49,12 @@ const SUPPORTED_METHODS = ['GET'];
 function isBlacklisted(url) {
   return CACHE_BLACKLIST.length > 0
     ? !CACHE_BLACKLIST.filter((rule) => {
-        if (typeof rule === 'function') {
-          return !rule(url);
-        } else {
-          return false;
-        }
-      }).length
+      if (typeof rule === "function") {
+        return !rule(url);
+      } else {
+        return false;
+      }
+    }).length
     : false;
 }
 
@@ -64,8 +64,8 @@ function isBlacklisted(url) {
  * @returns {string}
  */
 function getFileExtension(url) {
-  let extension = url.split('.').reverse()[0].split('?')[0];
-  return extension.endsWith('/') ? '/' : extension;
+  let extension = url.split(".").reverse()[0].split("?")[0];
+  return extension.endsWith("/") ? "/" : extension;
 }
 
 /**
@@ -73,9 +73,9 @@ function getFileExtension(url) {
  * @param {string} url
  */
 function getTTL(url) {
-  if (typeof url === 'string') {
+  if (typeof url === "string") {
     let extension = getFileExtension(url);
-    if (typeof MAX_TTL[extension] === 'number') {
+    if (typeof MAX_TTL[extension] === "number") {
       return MAX_TTL[extension];
     } else {
       return null;
@@ -143,12 +143,12 @@ function cleanupLegacyCache() {
   });
 }
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(installServiceWorker());
 });
 
 // The activate handler takes care of cleaning up old caches.
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(
     Promise.all([cleanupLegacyCache()]).catch((err) => {
       event.skipWaiting();
@@ -156,7 +156,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.open(CACHE_VERSIONS.content).then((cache) => {
       return cache
@@ -167,7 +167,7 @@ self.addEventListener('fetch', (event) => {
             let date = null;
 
             for (let pair of headers) {
-              if (pair[0] === 'date') {
+              if (pair[0] === "date") {
                 date = new Date(pair[1]);
               }
             }
@@ -240,7 +240,7 @@ self.addEventListener('fetch', (event) => {
           }
         })
         .catch((error) => {
-          console.error('  Error in fetch handler:', error);
+          console.error("  Error in fetch handler:", error);
           throw error;
         });
     }),

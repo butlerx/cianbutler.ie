@@ -1,5 +1,5 @@
-@use '../shared/colours';
-@use '../shared/screens';
+@use "../shared/colours";
+@use "../shared/screens";
 
 ul .post {
   margin-bottom: 4rem;
@@ -20,7 +20,7 @@ ul .post {
       color: colours.$heavy-grey;
 
       &::after {
-        content: '\A0';
+        content: "\A0";
       }
     }
 
