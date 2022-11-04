@@ -9,7 +9,6 @@
 
   {{ partial "head/assets" . }}
 
-  <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink | absURL }}">
   <link rel="manifest" href="{{ absURL "manifest.json" }}" />
   {{ with  .OutputFormats.Get "rss" -}}

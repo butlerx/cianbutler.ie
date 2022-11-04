@@ -1,10 +1,10 @@
 #!/usr/bin/env -S deno run --allow-env --allow-net --allow-write
 
-import { graphql } from 'https://cdn.skypack.dev/@octokit/graphql';
+import { graphql } from "https://cdn.skypack.dev/@octokit/graphql";
 
-const path = 'data/github.json';
-const GITHUB_USER = 'butlerx';
-const GITHUB_TOKEN = Deno.env.get('GH_TOKEN');
+const path = "data/github.json";
+const GITHUB_USER = "butlerx";
+const GITHUB_TOKEN = Deno.env.get("GH_TOKEN");
 
 interface SearchResults {
   user: {

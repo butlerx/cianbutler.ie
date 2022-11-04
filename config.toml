@@ -32,6 +32,7 @@ sectionPagesMenu = "main"
 
 [taxonomies]
   series = "series"
+  tag = "tags"
 
 [sitemap]
   changefreq = "monthly"
