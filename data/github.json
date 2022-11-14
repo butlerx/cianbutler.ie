@@ -101,7 +101,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 3086
+        "stars": 3088
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
@@ -123,7 +123,7 @@
       "repo": {
         "url": "https://github.com/grafana/helm-charts",
         "name": "helm-charts",
-        "stars": 1036
+        "stars": 1038
       },
       "title": "[grafana] Add `livenessProbe` to grafana image renderer",
       "url": "https://github.com/grafana/helm-charts/pull/724",
