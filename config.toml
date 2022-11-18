@@ -26,7 +26,8 @@ sectionPagesMenu = "main"
   ]
   email = "butlerx@notthe.cloud"
   repo = "butlerx/cianbutler.ie"
-  twitter = "cianbutlerx"
+  mastodonUser = "butlerx"
+  mastodonHost = "mastodon.ie"
   title = "Cian Butler, SRE"
   theme = "#e7e7e7"
 

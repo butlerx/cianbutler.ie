@@ -16,8 +16,8 @@
   {{ .Content }}
   <h3>
     Contact me at
-    <a href="http://twitter.com/{{ .Site.Params.twitter }}"
-      >@{{ .Site.Params.twitter }}</a
+    <a href="https://{{ .Site.Params.mastodonHost }}/@{{ .Site.Params.mastodonUser }}"
+      >@{{ .Site.Params.mastodonUser }}@{{ .Site.Params.mastodonHost }}</a
     >
     or by <a href="mailto:{{ .Site.Params.email }}">email</a>.
   </h3>
