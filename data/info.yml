@@ -11,17 +11,19 @@ location:
   countryCode: IE
   region: Dublin
 profiles:
-  - network: twitter
-    username: "cianbutlerx"
-    url: https://twitter.com/cianbutlerx
   - network: github
     username: butlerx
     url: https://github.com/butlerx
   - network: linkedin
     username: butlerx
-    url: https://linkedin.com/butlerx
+    url: https://ie.linkedin.com/in/butlerx
   - network: email
     url: "mailto:butlerx@notthe.cloud"
+  - network: mastodon
+    url: https://mastodon.ie/@butlerx
+  - network: twitter
+    username: "cianbutlerx"
+    url: https://twitter.com/cianbutlerx
 languages:
   - AWS
   - GCP

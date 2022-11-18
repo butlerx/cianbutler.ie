@@ -1,6 +1,6 @@
 <div class="about-icons">
   {{ range . }}
-  <a href="{{ .url }}" class="fa-stack fa-lg">
+  <a href="{{ .url }}" rel="me" class="fa-stack fa-lg">
     <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
     &nbsp;
     {{ if eq .network "email" }}
