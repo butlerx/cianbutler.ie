@@ -49,12 +49,12 @@ const SUPPORTED_METHODS = ["GET"];
 function isBlacklisted(url) {
   return CACHE_BLACKLIST.length > 0
     ? !CACHE_BLACKLIST.filter((rule) => {
-      if (typeof rule === "function") {
-        return !rule(url);
-      } else {
-        return false;
-      }
-    }).length
+        if (typeof rule === "function") {
+          return !rule(url);
+        } else {
+          return false;
+        }
+      }).length
     : false;
 }
 
