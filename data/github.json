@@ -22,9 +22,20 @@
   "contributions": [
     {
       "repo": {
+        "url": "https://github.com/ema/pets",
+        "name": "pets",
+        "stars": 421
+      },
+      "title": "Add Support for Arch Pacman package manager",
+      "url": "https://github.com/ema/pets/pull/13",
+      "state": "OPEN",
+      "bodyHTML": "<p dir=\"auto\">Adding Support for using with arch machines</p>"
+    },
+    {
+      "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "Update development flow to be less confusing",
       "url": "https://github.com/butlerx/wetty/pull/441",
@@ -35,7 +46,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "bump xterm to v5",
       "url": "https://github.com/butlerx/wetty/pull/439",
@@ -46,7 +57,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
       "url": "https://github.com/butlerx/wetty/pull/438",
@@ -57,7 +68,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "update codeQL workflow",
       "url": "https://github.com/butlerx/wetty/pull/437",
@@ -68,7 +79,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "revert to yarn 1",
       "url": "https://github.com/butlerx/wetty/pull/421",
@@ -79,7 +90,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "ARM support",
       "url": "https://github.com/butlerx/wetty/pull/419",
@@ -90,7 +101,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "docker wf",
       "url": "https://github.com/butlerx/wetty/pull/413",
@@ -112,23 +123,12 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 3468
+        "stars": 3469
       },
       "title": "format documentation",
       "url": "https://github.com/butlerx/wetty/pull/363",
       "state": "MERGED",
       "bodyHTML": ""
-    },
-    {
-      "repo": {
-        "url": "https://github.com/grafana/helm-charts",
-        "name": "helm-charts",
-        "stars": 1058
-      },
-      "title": "[grafana] Add `livenessProbe` to grafana image renderer",
-      "url": "https://github.com/grafana/helm-charts/pull/724",
-      "state": "MERGED",
-      "bodyHTML": "<p dir=\"auto\">Signed-off-by: butlerx <a href=\"mailto:butlerx@notthe.cloud\">butlerx@notthe.cloud</a></p>"
     }
   ]
 }
