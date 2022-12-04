@@ -1,9 +1,20 @@
 ---
 title: Experience
 source:
+  - position: Senior SRE
+    company: Evervault
+    startDate: 2022-12-05
+    website: https://evervault.com
+    languages:
+      - Rust
+  # TODO Fill out more info on the role
+  # summary: ""
+  # highlights: []
+
   - position: SRE
     company: Demonware
     startDate: 2019-05-16
+    endDate: 2022-11-28
     website: https://demonware.net
     languages:
       - Docker
