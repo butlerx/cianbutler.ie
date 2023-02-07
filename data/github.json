@@ -112,7 +112,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 3199
+        "stars": 3203
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
