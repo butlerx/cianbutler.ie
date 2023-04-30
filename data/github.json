@@ -15,9 +15,9 @@
     { "repo": "creabot", "user": "nixdak" },
     { "repo": "good_stv", "user": "redbrick" },
     { "repo": "rb-ldap", "user": "redbrick" },
+    { "repo": "invbeertory", "user": "butlerx" },
     { "repo": "butlerbot", "user": "butlerx" },
-    { "repo": "hugo-recipes", "user": "butlerx" },
-    { "repo": "invbeertory", "user": "butlerx" }
+    { "repo": "advent-of-code", "user": "butlerx" }
   ],
   "contributions": [
     {
