@@ -24,7 +24,7 @@
       "repo": {
         "url": "https://github.com/ema/pets",
         "name": "pets",
-        "stars": 439
+        "stars": 440
       },
       "title": "Add Support for Arch Pacman package manager",
       "url": "https://github.com/ema/pets/pull/13",
@@ -112,7 +112,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 3372
+        "stars": 3373
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
