@@ -15,8 +15,8 @@
     { "repo": "creabot", "user": "nixdak" },
     { "repo": "good_stv", "user": "redbrick" },
     { "repo": "rb-ldap", "user": "redbrick" },
-    { "repo": "invbeertory", "user": "butlerx" },
     { "repo": "git-emoji", "user": "butlerx" },
+    { "repo": "invbeertory", "user": "butlerx" },
     { "repo": "butlerbot", "user": "butlerx" }
   ],
   "contributions": [
@@ -112,7 +112,7 @@
       "repo": {
         "url": "https://github.com/prometheus/client_python",
         "name": "client_python",
-        "stars": 3449
+        "stars": 3451
       },
       "title": "Support metric help text in multiprocess mode",
       "url": "https://github.com/prometheus/client_python/pull/804",
