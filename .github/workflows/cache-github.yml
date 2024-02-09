@@ -1,11 +1,10 @@
----
 name: Rebuild Github data
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: "0 4 * * *"
+    - cron: '0 4 * * *'
 jobs:
   githubData:
     runs-on: ubuntu-latest
@@ -16,7 +15,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x
+          deno-version: v2.x
       - name: Build data/github.json
         run: deno run --allow-env --allow-net --allow-write github.ts
         env:
@@ -24,7 +23,7 @@ jobs:
       - name: Prettify code
         uses: actionsx/prettier@v3
         with:
-          args: --write .
+          args: --write data
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Rebuild data/github.json

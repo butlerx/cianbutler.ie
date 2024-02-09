@@ -2,40 +2,44 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Cian Butler"
 pygmentsCodeFences = true
-paginate = 5
 sectionPagesMenu = "main"
 
-[author]
-  name = "Cian Butler"
+[pagination]
+disableAliases = false
+pagerSize = 5
+path = 'page'
 
 [outputs]
-  home = ["HTML", "RSS", "MANIFEST"]
-  page = ["HTML"]
+home = ["HTML", "RSS", "MANIFEST"]
+page = ["HTML"]
 
 [outputFormats]
-  [outputFormats.manifest]
-    name = "manifest"
-    baseName = "manifest"
-    mediaType = "application/json"
-    notAlternative = "true"
+[outputFormats.manifest]
+name = "manifest"
+baseName = "manifest"
+mediaType = "application/json"
+notAlternative = "true"
 
 [params]
-  description = "Open Source Developer and SRE"
-  images = [
-    "images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png"
-  ]
-  email = "butlerx@notthe.cloud"
-  repo = "butlerx/cianbutler.ie"
-  mastodonUser = "butlerx"
-  mastodonHost = "mastodon.ie"
-  title = "Cian Butler, SRE"
-  theme = "#e7e7e7"
+description = "Open Source Developer and SRE"
+images = [
+  "images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png",
+]
+email = "butlerx@notthe.cloud"
+repo = "butlerx/cianbutler.ie"
+mastodonUser = "butlerx"
+mastodonHost = "mastodon.ie"
+title = "Cian Butler, SRE"
+theme = "#e7e7e7"
+
+[params.author]
+name = "Cian Butler"
 
 [taxonomies]
-  series = "series"
-  tag = "tags"
+series = "series"
+tag = "tags"
 
 [sitemap]
-  changefreq = "monthly"
-  filename = "sitemap.xml"
-  priority = 0.5
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5

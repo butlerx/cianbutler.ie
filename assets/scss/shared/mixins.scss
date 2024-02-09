@@ -1,5 +1,5 @@
-@use "colours";
-@use "shadows";
+@use 'colours';
+@use 'shadows';
 
 @mixin subTitle($font-size) {
   font-size: $font-size;
@@ -50,7 +50,5 @@
 
 @mixin card {
   border: 0 solid shadows.$border;
-  box-shadow:
-    0 2px 5px 0 shadows.$top,
-    0 2px 10px 0 shadows.$side;
+  box-shadow: 0 2px 5px 0 shadows.$top, 0 2px 10px 0 shadows.$side;
 }

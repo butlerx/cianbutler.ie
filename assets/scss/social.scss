@@ -1,5 +1,5 @@
-@use "shared/colours";
-@use "shared/fonts";
+@use 'shared/colours';
+@use 'shared/fonts';
 
 .social {
   @media print {
@@ -41,7 +41,7 @@
 
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 

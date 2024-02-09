@@ -15,7 +15,7 @@
     {{ end }}
   </div>
   <section class="article">
-    {{ .Summary }}
+    {{- with .Params.description -}}{{- . | markdownify -}}{{- else -}}{{- .Summary -}}{{- end -}}
     <br />
     <a href="{{ .Permalink }}">Read more...</a>
   </section>

@@ -3,17 +3,15 @@ p {
   margin-top: 0;
 }
 
-@each $prop,
-  $font-size
-    in (
-      "h1": 2rem,
-      "h2": 1.5rem,
-      "h3": 1.25rem,
-      "h4": 1rem,
-      "h5": 0.875rem,
-      "h6": 0.75rem
-    )
-{
+@each $prop, $font-size
+  in (
+    'h1': 2rem,
+    'h2': 1.5rem,
+    'h3': 1.25rem,
+    'h4': 1rem,
+    'h5': 0.875rem,
+    'h6': 0.75rem,
+  ) {
   #{$prop} {
     @include margin($bottom: 0.5em, $top: 1em);
     font-size: $font-size;

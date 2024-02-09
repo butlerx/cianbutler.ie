@@ -1,6 +1,5 @@
----
 name: Cian Butler
-picture: "images/me.png"
+picture: 'images/me.png'
 email: butlerx@notthe.cloud
 website: cianbutler.ie
 summary: >-
@@ -18,12 +17,9 @@ profiles:
     username: butlerx
     url: https://ie.linkedin.com/in/butlerx
   - network: email
-    url: "mailto:butlerx@notthe.cloud"
+    url: 'mailto:butlerx@notthe.cloud'
   - network: mastodon
     url: https://mastodon.ie/@butlerx
-  - network: twitter
-    username: "cianbutlerx"
-    url: https://twitter.com/cianbutlerx
 languages:
   - AWS
   - GCP

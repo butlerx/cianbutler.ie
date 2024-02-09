@@ -1,10 +1,10 @@
 #!/usr/bin/env -S deno run --allow-env --allow-net --allow-write
 
-import { graphql } from "https://cdn.skypack.dev/@octokit/graphql";
+import { graphql } from '@octokit/graphql';
 
-const path = "data/github.json";
-const GITHUB_USER = "butlerx";
-const GITHUB_TOKEN = Deno.env.get("GH_TOKEN");
+const path = 'data/github.json';
+const GITHUB_USER = 'butlerx';
+const GITHUB_TOKEN = Deno.env.get('GH_TOKEN');
 
 interface SearchResults {
   user: {
@@ -109,30 +109,30 @@ try {
     },
   );
 
-  const pinnedRepos = repositoryOwner.pinnedItems.nodes.map(
-    ({ name, owner }) => ({
-      repo: name,
-      user: owner.login,
-    }),
-  );
+  const pinnedRepos = repositoryOwner.pinnedItems.nodes.map((
+    { name, owner },
+  ) => ({
+    repo: name,
+    user: owner.login,
+  }));
 
   const repos = user.repositories.nodes
     .filter(({ name, owner }) => name !== null && owner !== null)
     .map(({ name, owner }, _) => ({ repo: name, user: owner.login }));
 
-  const contributions = search.nodes.map(
-    ({ repository, title, url, state, bodyHTML }) => ({
-      repo: {
-        url: repository.repoUrl,
-        name: repository.name,
-        stars: repository.stargazers.totalCount,
-      },
-      title: title,
-      url: url,
-      state: state,
-      bodyHTML: bodyHTML,
-    }),
-  );
+  const contributions = search.nodes.map((
+    { repository, title, url, state, bodyHTML },
+  ) => ({
+    repo: {
+      url: repository.repoUrl,
+      name: repository.name,
+      stars: repository.stargazers.totalCount,
+    },
+    title: title,
+    url: url,
+    state: state,
+    bodyHTML: bodyHTML,
+  }));
 
   Deno.writeTextFileSync(
     path,
