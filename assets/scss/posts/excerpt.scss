@@ -1,5 +1,5 @@
-@use "../shared/colours";
-@use "../shared/screens";
+@use '../shared/colours';
+@use '../shared/screens';
 
 ul .post {
   margin-bottom: 4rem;
@@ -7,10 +7,12 @@ ul .post {
 
   @media screen and (min-width: screens.$tablet) {
     padding: 2rem;
+    width: 100%;
   }
 
   @media screen and (min-width: screens.$large-tablet) {
     padding: 3rem;
+    width: 150%;
   }
 
   .meta {
@@ -20,7 +22,7 @@ ul .post {
       color: colours.$heavy-grey;
 
       &::after {
-        content: "\A0";
+        content: '\A0';
       }
     }
 

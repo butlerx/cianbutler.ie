@@ -1,0 +1,15 @@
+{
+  "tasks": {
+    "fetch": "deno run --allow-env --allow-net --allow-write github.ts"
+  },
+  "fmt": {
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "proseWrap": "always",
+    "exclude": ["layouts", "resources", "public"]
+  },
+  "imports": {
+    "@octokit/graphql": "npm:@octokit/graphql@^8.1.1"
+  }
+}
