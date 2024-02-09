@@ -41,6 +41,6 @@ The Social links can be found in `data/info.yaml`.
 ## Github
 
 A portion of the site uses Github as a source for rendering templates. Given it
-is not possible to render graphql data from hugo, `github.ts` exists.
-`github.ts` is a deno serverless function to etl data from github's graphql api
-for use in hugo.
+is not possible to render graphql data from hugo, `github.go` exists.
+`github.go` is a go script to scrape data from github's graphql api for use in
+hugo.
