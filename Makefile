@@ -12,6 +12,7 @@ HUGO := .cache/hugo_$(HUGO_VERSION)
 SASS_VERSION := 1.55.0
 SASS := .cache/dart-sass-embedded_$(SASS_VERSION)
 PLATFORM := Linux-64bit
+GITHUB_BIN := .cache/github
 
 export PATH := $(PATH):$(PWD)/$(SASS)
 BINS = $(HUGO) $(SASS)
@@ -36,7 +37,8 @@ serve: $(BINS) data/github.json ## Run development server in debug mode
 .PHONY: clean
 clean: ## Clean built site
 	@echo "🧹 Cleaning old build"
-	rm -rf public resources
+	go clean
+	rm -rf public resources $(GITHUB_BIN) data/github.json
 
 .PHONY: lint lint-scss lint-markdown lint-html format
 lint: lint-scss lint-markdown lint-html ## Run all linter
@@ -72,8 +74,17 @@ $(SASS):  ## Install dependencies for sass
 	@mv -f tmp/sass_embedded/dart-sass-embedded $@
 	@rm -rf tmp/
 
-data/github.json: github.ts ## build github data file
-	deno run --allow-env --allow-net --allow-write $< || exit 0
+data/github.json: $(GITHUB_BIN) ## build github data file
+	$(GITHUB_BIN) $<
+
+$(GITHUB_BIN): dep
+	@echo "🍳 Building $(GITHUB_BIN)"
+	go build -v -o $(GITHUB_BIN) .
+
+.PHONY: dep
+dep: ## go get all dependencies
+	@echo "🛎 Updateing Dependencies"
+	go get -v -d ./...
 
 .PHONY: help
 help: ## Display this help screen
