@@ -1,4 +1,4 @@
-@use "./shared/print";
+@use './shared/print';
 
 .footer {
   @include print.hidden;

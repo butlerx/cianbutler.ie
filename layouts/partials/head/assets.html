@@ -1,5 +1,5 @@
 {{ $options := dict "transpiler" "dartsass" "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint "sha512" }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass $options | resources.Fingerprint "sha512" }}
 <link
   rel="stylesheet"
   href="{{ $style.RelPermalink }}"
