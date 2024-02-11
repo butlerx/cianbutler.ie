@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="canonical" href="{{ .Permalink | absURL }}">
+    {{ partial "head/icons" . }}
+    <title>
+      {{- with .Params.heading -}}
+        {{- . -}}
+      {{- else -}}
+        {{- .Title -}}
+      {{- end -}}
+    </title>
+    <meta name="theme-color" content="{{- with .Params.theme -}}{{- . -}}{{- else -}}{{ .Site.Params.theme }}{{- end -}}" />
+    <meta
+      name="description"
+      content="{{- with .Params.description -}}{{- . -}}{{- else -}}{{ .Site.Params.description -}}{{- end -}}"
+    />
+    <link rel="manifest" href="{{ absURL "manifest.json" }}" />
+
+    <link rel="stylesheet" href="/assets/reveal/reset.css" />
+    <link rel="stylesheet" href="/assets/reveal/reveal.css" />
+
+    {{- $theme := "black.css" -}}
+    {{- with .Params.slideOptions.theme -}}
+      {{- $theme = (printf "%s.css" .) -}}
+    {{- end -}}
+    <link rel="stylesheet" href="/assets/reveal/theme/{{- $theme -}}" />
+    <link rel="stylesheet" href="/assets/reveal/plugin/highlight/monokai.css" />
+
+    {{ partial "head/social" . }}
+  </head>
+  <body>
+    {{ .Content }}
+    <script src="/assets/reveal/reveal.js"></script>
+    <script src="/assets/reveal/plugin/highlight/highlight.js"></script>
+    <script src="/assets/reveal/plugin/notes/notes.js"></script>
+    <script src="/assets/reveal/plugin/zoom/zoom.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        slideNumber: false,
+        hash: false,
+        plugins: [RevealHighlight, RevealNotes, RevealZoom],
+      });
+    </script>
+  </body>
+</html>

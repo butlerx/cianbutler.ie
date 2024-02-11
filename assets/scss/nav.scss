@@ -6,7 +6,7 @@
   margin-top: 64px;
   text-align: inherit;
 
-  @media screen and (max-width: screens.$large-phone) {
+  @media screen and (max-width: screens.$tablet) {
     margin-top: 1em;
   }
 
@@ -26,13 +26,20 @@
     float: right;
     position: fixed;
 
-    @media screen and (max-width: screens.$large-phone) {
+    @media screen and (max-width: screens.$tablet) {
       border-bottom: 1px solid colours.$light-grey;
       flex-direction: row;
       float: left;
       margin-left: 8px;
       padding-bottom: 8px;
       position: absolute;
+
+      hr {
+        display: none;
+      }
+      nav {
+        display: none;
+      }
     }
 
     li {
@@ -59,6 +66,10 @@
       margin-top: 0;
       padding-left: 0;
       padding-top: 0;
+
+      @media screen and (max-width: screens.$tablet) {
+        display: inherit;
+      }
 
       & > li {
         margin-left: 1em;
