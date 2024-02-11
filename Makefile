@@ -75,7 +75,7 @@ $(SASS):  ## Install dependencies for sass
 	rm -rf tmp/
 
 data/github.json: $(GITHUB_BIN) ## build github data file
-	#@$(GITHUB_BIN) $<
+	@$(GITHUB_BIN) $<
 
 $(GITHUB_BIN): dep
 	@echo "🍳 Building $(GITHUB_BIN)"
