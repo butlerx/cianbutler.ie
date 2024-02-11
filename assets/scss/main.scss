@@ -34,7 +34,9 @@ body {
   line-height: 1.5;
   margin: 0;
   scroll-behavior: smooth;
-  text-shadow: 0 0 1em transparent, 1px 1px 1.2px shadows.$shadow;
+  text-shadow:
+    0 0 1em transparent,
+    1px 1px 1.2px shadows.$shadow;
   word-wrap: break-word;
 
   p {
