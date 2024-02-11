@@ -90,18 +90,18 @@ LOG_ROTATE='24h'\
 ### Docker Compose
 
 ```yaml
-version: "3"
+version: '3'
 services:
   redbrick:
-    image: "redbrick/site:latest"
-    restart: "always"
+    image: 'redbrick/site:latest'
+    restart: 'always'
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
-      SECRET_API_TOKEN: "somethingThatMustChange"
-      RECAPTCHA_SITE_KEY: "redbrickIsGreat"
-      RECAPTCHA_SECRET_KEY: "totalySecretKey"
-      LOG_ROTATE: "24h"
+      SECRET_API_TOKEN: 'somethingThatMustChange'
+      RECAPTCHA_SITE_KEY: 'redbrickIsGreat'
+      RECAPTCHA_SECRET_KEY: 'totalySecretKey'
+      LOG_ROTATE: '24h'
 ```
 
 ===

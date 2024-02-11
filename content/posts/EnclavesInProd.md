@@ -12,7 +12,7 @@ description: |-
   - [Evervault Enclaves project](https://github.com/evervault/enclaves/)
   - [Evervault Enclave cli](https://github.com/evervault/enclave-cli)
   - [Confiential Computring as Evervault](https://evervault.com/solutions/confidential-computing)
-author: "Cian Butler <butlerx@notthe.cloud>"
+author: 'Cian Butler <butlerx@notthe.cloud>'
 slideOptions:
   theme: evervault
 ---

@@ -1,6 +1,6 @@
-@use "shared/print";
-@use "shared/colours";
-@use "shared/screens";
+@use 'shared/print';
+@use 'shared/colours';
+@use 'shared/screens';
 
 .container {
   @include print.show;
@@ -8,9 +8,9 @@
   @media screen and (max-width: screens.$tablet) {
     grid-row-gap: 15px;
     grid-template:
-      "sidebar"
-      "main"
-      "footer"
+      'sidebar'
+      'main'
+      'footer'
       auto / auto;
     max-width: 100%;
   }
@@ -19,7 +19,7 @@
   grid-gap: 5px 10px;
   grid-template-rows: auto;
   grid-template-columns: 80% 20%;
-  grid-template-areas: "main sidebar" "footer footer";
+  grid-template-areas: 'main sidebar' 'footer footer';
 
   .markdown-body {
     @media screen and (max-width: screens.$large-phone) {
@@ -66,7 +66,7 @@
 
     &::after,
     &::before {
-      content: "";
+      content: '';
       display: table;
     }
 

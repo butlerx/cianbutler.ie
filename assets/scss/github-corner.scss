@@ -1,6 +1,6 @@
-@use "shared/print";
-@use "shared/colours";
-@use "shared/screens";
+@use 'shared/print';
+@use 'shared/colours';
+@use 'shared/screens';
 
 .github-corner {
   @include print.hidden;
