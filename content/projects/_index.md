@@ -1,10 +1,10 @@
 ---
-title: "Projects"
-categories: ["projects"]
-tags: ["projects"]
+title: 'Projects'
+categories: ['projects']
+tags: ['projects']
 menu:
-  - "Recent projects"
-  - "Recent contributions"
+  - 'Recent projects'
+  - 'Recent contributions'
 ---
 
 {{< section "Recent projects" >}}
