@@ -11,7 +11,13 @@ import (
 	"golang.org/x/oauth2"
 )
 
-const GITHUB_USER = "butlerx"
+const (
+	githubUser    = "butlerx"
+	errorExitCode = 2
+	numCliArgs    = 2
+	numSearchArgs = 10
+	outputPerms   = 0o600
+)
 
 type SearchResults struct {
 	User            User            `graphql:"user(login: $author)"`
@@ -27,7 +33,9 @@ type RepoNode struct {
 }
 
 type User struct {
-	Repositories struct{ Nodes []RepoNode } `graphql:"repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC})"`
+	Repositories struct {
+		Nodes []RepoNode
+	} `graphql:"repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC})"`
 }
 
 type RepositoryOwner struct {
@@ -51,8 +59,8 @@ type Search struct {
 }
 
 type Repo struct {
-	RepoName string `json:"repo"`
-	User     string `json:"user"`
+	Repo string `json:"repo"`
+	User string `json:"user"`
 }
 
 type Contribution struct {
@@ -76,7 +84,7 @@ type Output struct {
 }
 
 func getDataFilePath() string {
-	if len(os.Args) < 2 {
+	if len(os.Args) < numCliArgs {
 		return "data/github.json"
 	}
 
@@ -87,15 +95,15 @@ func main() {
 	githubToken := os.Getenv("GITHUB_TOKEN")
 	if githubToken == "" {
 		slog.Error("Environment variable GITHUB_TOKEN is not set")
-		os.Exit(2)
+		os.Exit(errorExitCode)
 	}
 
 	ctx := context.Background()
 
 	results, err := queryGitHub(ctx, githubToken)
 	if err != nil {
-		slog.Error("Failed to query GitHub", "user", GITHUB_USER, "error", err)
-		os.Exit(2)
+		slog.Error("Failed to query GitHub", "user", githubUser, "error", err)
+		os.Exit(errorExitCode)
 	}
 
 	pinnedRepos := serialiseRepos(results.RepositoryOwner.PinnedItems.Nodes)
@@ -120,10 +128,10 @@ func main() {
 
 	if err = writeDataFile(path, pinnedRepos, repos, contributions); err != nil {
 		slog.Error("Failed to create data file", "path", path, "error", err)
-		os.Exit(2)
+		os.Exit(errorExitCode)
 	}
 
-	slog.Info("Written to to file", "path", path)
+	slog.Info("Written to file", "path", path)
 }
 
 func queryGitHub(ctx context.Context, githubToken string) (SearchResults, error) {
@@ -132,13 +140,12 @@ func queryGitHub(ctx context.Context, githubToken string) (SearchResults, error)
 	client := githubv4.NewClient(httpClient)
 
 	var results SearchResults
-	err := client.Query(ctx, &results, map[string]any{
-		"author":      githubv4.String(GITHUB_USER),
-		"userFirst":   githubv4.Int(10),
-		"searchFirst": githubv4.Int(10),
-		"q":           githubv4.String(fmt.Sprintf("author:%s type:pr", GITHUB_USER)),
-	})
-	if err != nil {
+	if err := client.Query(ctx, &results, map[string]any{
+		"author":      githubv4.String(githubUser),
+		"userFirst":   githubv4.Int(numSearchArgs),
+		"searchFirst": githubv4.Int(numSearchArgs),
+		"q":           githubv4.String(fmt.Sprintf("author:%s type:pr", githubUser)),
+	}); err != nil {
 		return SearchResults{}, fmt.Errorf("error querying GitHub: %w", err)
 	}
 
@@ -148,30 +155,23 @@ func queryGitHub(ctx context.Context, githubToken string) (SearchResults, error)
 func serialiseRepos(nodes []RepoNode) []Repo {
 	repos := make([]Repo, len(nodes))
 	for i, repo := range nodes {
-		repos[i] = Repo{
-			RepoName: repo.Name,
-			User:     repo.Owner.Login,
-		}
+		repos[i] = Repo{Repo: repo.Name, User: repo.Owner.Login}
 	}
 
 	return repos
 }
 
 func writeDataFile(path string, pinnedRepos, repos []Repo, contributions []Contribution) error {
-	output := Output{
-		PinnedRepos:   pinnedRepos,
-		Repos:         repos,
-		Contributions: contributions,
-	}
+	output := Output{PinnedRepos: pinnedRepos, Repos: repos, Contributions: contributions}
 
 	outputJSON, err := json.Marshal(output)
 	if err != nil {
-		return fmt.Errorf("Failed to marshal JSON: %w", err)
+		return fmt.Errorf("failed to marshal JSON: %w", err)
 	}
 
-	err = os.WriteFile(path, outputJSON, 0644)
+	err = os.WriteFile(path, outputJSON, outputPerms)
 	if err != nil {
-		return fmt.Errorf("Failed to write to file: %w", err)
+		return fmt.Errorf("failed to write to file: %w", err)
 	}
 
 	return nil

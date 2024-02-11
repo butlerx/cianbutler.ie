@@ -16,21 +16,9 @@
       width: 50%;
     }
 
-    @media screen and (max-width: screens.$tablet) {
-      height: 242px;
-    }
-
-    @media screen and (max-width: screens.$xl-phone) {
-      height: 282px;
-    }
 
     @media screen and (max-width: screens.$large-phone) {
-      height: 222px;
       width: 100%;
-    }
-
-    @media screen and (max-width: screens.$small-phone) {
-      height: 232px;
     }
 
     @media print {
