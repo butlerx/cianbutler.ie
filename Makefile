@@ -22,8 +22,6 @@ build: public  ## Build Site
 public: $(BINS) config.toml content layouts assets data/github.json data/*.yml
 	@echo "🍳 Generating site"
 	$< --gc --minify -d $(DESTDIR)
-	echo "🧂 Optimizing images"
-	find $@ -not -path "*/static/*" \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' \) -print0 | xargs -0 -P8 -n2 mogrify -strip -thumbnail '1000>'
 
 .PHONY: update
 update: $(BINS) ## Update themes and binaries
@@ -75,7 +73,7 @@ $(SASS):  ## Install dependencies for sass
 	rm -rf tmp/
 
 data/github.json: $(GITHUB_BIN) ## build github data file
-	@$(GITHUB_BIN) $<
+	@GITHUB_TOKEN=$(GITHUB_TOKEN) $(GITHUB_BIN) $<
 
 $(GITHUB_BIN): dep
 	@echo "🍳 Building $(GITHUB_BIN)"
