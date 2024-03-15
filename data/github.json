@@ -24,7 +24,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "Attempt to paralleise the docker build",
       "url": "https://github.com/butlerx/wetty/pull/508",
@@ -35,7 +35,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "remove yarn",
       "url": "https://github.com/butlerx/wetty/pull/507",
@@ -57,7 +57,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "Update development flow to be less confusing",
       "url": "https://github.com/butlerx/wetty/pull/441",
@@ -68,7 +68,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "bump xterm to v5",
       "url": "https://github.com/butlerx/wetty/pull/439",
@@ -79,7 +79,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
       "url": "https://github.com/butlerx/wetty/pull/438",
@@ -90,7 +90,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "update codeQL workflow",
       "url": "https://github.com/butlerx/wetty/pull/437",
@@ -101,7 +101,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "revert to yarn 1",
       "url": "https://github.com/butlerx/wetty/pull/421",
@@ -112,7 +112,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "ARM support",
       "url": "https://github.com/butlerx/wetty/pull/419",
@@ -123,7 +123,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4028
+        "stars": 4030
       },
       "title": "docker wf",
       "url": "https://github.com/butlerx/wetty/pull/413",
