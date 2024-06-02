@@ -46,7 +46,7 @@
       "repo": {
         "url": "https://github.com/ema/pets",
         "name": "pets",
-        "stars": 458
+        "stars": 459
       },
       "title": "Add Support for Arch Pacman package manager",
       "url": "https://github.com/ema/pets/pull/13",
