@@ -13,12 +13,18 @@ source:
       - ElasticSearch
       - Clickhouse
     highlights:
-      - Designing, and managing Incident management process and automation to ensure reliable service and allow us as a team to learn from our faluires.
+      - Designing, and managing Incident management process and automation to
+        ensure reliable service and allow us as a team to learn from our
+        faluires.
       - Working on scaling of rust and node API servers
-      - Built a hosted Enclave service to provide confidential computing environments to our users so they have fully attested and secure services.
+      - Built a hosted Enclave service to provide confidential computing
+        environments to our users so they have fully attested and secure
+        services.
       - Using our Enclave product to scale our internal Encryption service
-      - Scaling and mainting our transparent HTTP Encryption as a Service Proxy, Allowing customers to descope their Production environemnt For PCI.
-      - Building a 3DS payment gateway for our users to handle card payments with.
+      - Scaling and mainting our transparent HTTP Encryption as a Service Proxy,
+        Allowing customers to descope their Production environemnt For PCI.
+      - Building a 3DS payment gateway for our users to handle card payments
+        with.
 
   - position: SRE
     company: Demonware
