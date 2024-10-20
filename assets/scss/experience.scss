@@ -4,6 +4,10 @@
   @media print {
     page-break-inside: avoid !important;
 
+    .experience-block:nth-child(n + 5) {
+      display: none;
+    }
+
     .experience-block {
       page-break-inside: avoid !important;
     }

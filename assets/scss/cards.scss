@@ -5,18 +5,15 @@
 .card-list {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 120%;
 
   .card-outer {
-    margin: 1rem;
-    max-width: 30em;
+    margin: 0.5rem;
+    max-width: 20em;
     padding: 0;
+    width: 50%;
 
-    @media screen and (max-width: screens.$large-tablet) {
-      width: 50%;
-    }
-
-    @media screen and (max-width: screens.$large-phone) {
+    @media screen and (max-width: screens.$tablet) {
       width: 100%;
     }
 
@@ -32,7 +29,6 @@
 
     .gh-card {
       background-color: colours.$white;
-      min-width: 31em;
     }
 
     .card {
