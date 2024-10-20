@@ -35,14 +35,13 @@ serve: $(BINS) data/github.json ## Run development server in debug mode
 .PHONY: clean
 clean: ## Clean built site
 	@echo "🧹 Cleaning old build"
-	go clean
 	rm -rf public resources $(GITHUB_BIN)
 
 .PHONY: lint lint-scss lint-markdown lint-html format
 lint: lint-scss lint-markdown lint-html ## Run all linter
 format: ## Format Markdown files
 	@prettier --write .
-	golangci-lint run --fix
+	deno fmt
 
 lint-scss: format ## Run scss linter
 	@echo "🍜 Testing SCSS"
@@ -72,17 +71,8 @@ $(SASS):  ## Install dependencies for sass
 	mv -f tmp/dart-sass/* $@
 	rm -rf tmp/
 
-data/github.json: $(GITHUB_BIN) ## build github data file
-	@GITHUB_TOKEN=$(GITHUB_TOKEN) $(GITHUB_BIN) $<
-
-$(GITHUB_BIN): dep
-	@echo "🍳 Building $(GITHUB_BIN)"
-	go build -v -o $(GITHUB_BIN) .
-
-.PHONY: dep
-dep: ## go get all dependencies
-	@echo "🛎 Updateing Dependencies"
-	go get -v -d ./...
+data/github.json: ## build github data file
+	deno run --allow-env --allow-net --allow-write $< || exit 0
 
 .PHONY: help
 help: ## Display this help screen
