@@ -18,17 +18,8 @@
         </small>
       </h3>
       {{ partial "languages" .languages }}
-      <blockquote>
-        {{ with .summary }}
-          <p>{{ markdownify . }}</p>
-        {{ end }}
-      </blockquote>
-      {{ with .highlights }}
-        <ul>
-          {{ range . }}
-            <li>{{ markdownify . }}</li>
-          {{ end }}
-        </ul>
+      {{ with .summary }}
+        <p>{{ markdownify . }}</p>
       {{ end }}
       <hr>
     </div>
