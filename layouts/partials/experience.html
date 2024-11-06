@@ -5,7 +5,7 @@
       {{ if isset  . "company" }}
         <h3 id="{{ urlize ( printf "%s-%s" .position .company) }}"><a href="{{ .website }}">{{ .position }}@{{ .company }}&emsp;</a>
       {{ else }}
-        <h3 id="{{ urlize ( printf "%s-%s" .title .institution) }}"><a href="{{ .website }}">{{ .title }}@{{ .institution }}&emsp;</a>
+        <h3 id="{{ urlize ( printf "%s-%s" .title .institution) }}">{{ .title }}@{{ .institution }}&emsp;
       {{ end }}
         <small>
           <em>
@@ -19,7 +19,7 @@
       </h3>
       {{ partial "languages" .languages }}
       {{ with .summary }}
-        <p>{{ markdownify . }}</p>
+        {{ trim . "\n" | markdownify }}
       {{ end }}
       <hr>
     </div>

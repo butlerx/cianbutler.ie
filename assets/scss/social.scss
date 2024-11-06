@@ -2,27 +2,24 @@
 @use 'shared/fonts';
 
 .social {
-  @media print {
-    margin-bottom: 0.5em !important;
-
-    a {
-      margin: 0;
-
-      .label {
-        margin-left: 4px;
-      }
-    }
-  }
-
   list-style: none;
   margin: 0 auto;
   width: fit-content;
+
+  @media print {
+    margin-bottom: 0.5em !important;
+  }
 
   a {
     display: block;
     margin: 0 1px 0 0;
     padding: 10px 12px;
     text-decoration: none;
+
+    @media print {
+      margin: 0;
+      padding: 0.5em 0.75em;
+    }
 
     .label {
       border-radius: 0.25em;
@@ -36,6 +33,10 @@
       text-align: center;
       vertical-align: baseline;
       white-space: nowrap;
+
+      @media print {
+        margin-left: 0.5em !important;
+      }
     }
   }
 
