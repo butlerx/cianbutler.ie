@@ -1,0 +1,40 @@
+title = "Education"
+
+[[source]]
+title = "Bachelor of Science in Computer Applications and Software Engineering"
+institution = "Dublin City University"
+area = "Software Engineering"
+startDate = "2013-09-30"
+endDate = "2018-10-01"
+languages = [
+  "C++",
+  "Java",
+  "JavaCC",
+  "Prolog",
+  "Haskell",
+  "Bash",
+  "MySQL",
+  "R",
+  "HTML",
+  "CSS",
+  "MIPS",
+  "Assembly",
+]
+summary = """
+Completed a comprehensive software engineering degree with strong emphasis on practical application and theoretical
+foundations.
+
+Core areas of study included:
+
+Advanced software engineering practices including distributed systems, concurrent programming, and systems
+architecture. Gained extensive experience with agile methodologies and team-based development through
+practical projects.
+
+Specialised coursework in security and cryptography, complemented by in-depth study of data structures, algorithms,
+and systems programming. Developed expertise across multiple programming paradigms and languages through practical
+application in web, mobile, and systems development.
+
+Technical foundation strengthened through focused study of computer networks, operating systems, and database design.
+Participated in team-based projects using industry-standard practices including version control, UML design, and agile
+project management methodologies.
+"""

@@ -1,0 +1,182 @@
+title = "Experience"
+
+[[source]]
+position = "Senior SRE"
+company = "Evervault"
+startDate = "2022-12-05"
+website = "https://evervault.com"
+languages = [
+  "Rust",
+  "Typescript",
+  "Postgresql",
+  "Go",
+  "ElasticSearch",
+  "Clickhouse",
+  "Terraform",
+]
+summary = """
+As the lead Site Reliability Engineer at a security-focused startup, I contribute to the design and implementation of
+critical infrastructure and services that enable secure payment processing and data protection.
+
+My key achievements include:
+
+Collaborated on the development and scaling of a Confidential Computing platform using secure enclaves, working with
+the team to enable customers to run sensitive workloads in fully attested environments. Successfully optimised and 
+scaled both Rust and Node.js-based API services to meet growing demand while maintaining performance and reliability.
+
+Contributed to the development of a transparent HTTP encryption proxy service that helps customers achieve PCI DSS
+compliance through automated data protection, and supported the implementation of a 3D Secure payment gateway
+integration, expanding our payment processing capabilities.
+
+Established comprehensive incident management frameworks and automation, fostering a culture of continuous improvement
+through systematic incident analysis and learning. This includes designing monitoring solutions and operational
+tooling that enhance service reliability and team efficiency.
+"""
+
+[[source]]
+position = "SRE"
+company = "Demonware"
+startDate = "2019-05-16"
+endDate = "2022-11-28"
+website = "https://demonware.net"
+languages = [
+  "Docker",
+  "Prometheus",
+  "Graphite",
+  "Kubernetes",
+  "Puppet",
+  "Ansible",
+  "Terraform",
+  "Python",
+  "MySQL",
+  "Cassandra",
+  "Typescript",
+  "ElasticSearch",
+  "Clickhouse",
+  "Kafka",
+  "Go",
+]
+summary = """
+Site Reliability Engineer at Demonware, supporting online gaming services for major AAA titles including Call of Duty.
+Progressed through multiple specialised teams, focusing on monitoring, data pipelines, and observability while
+handling massive scale requirements.
+
+Contributed as a core team member to the design and implementation of an automated monitoring and alerting pipeline
+that successfully replaced manual NOC operations. Engineered and maintained high-throughput data pipelines processing
+billions of real-time telemetry datapoints per second from millions of concurrent users.
+
+Led the migration and unification of disparate logging and tracing systems to an OpenTelemetry-based distributed
+tracing platform, standardising observability practices across all Python services within the organisation. This
+unified approach significantly improved cross-service visibility and troubleshooting capabilities.
+
+Participated in the Root Cause Analysis review group, contributing to the improvement of post-incident review
+processes by reviewing major incidents and providing technical guidance to teams. This work helped establish more
+effective practices for learning from and documenting system failures.
+"""
+
+[[source]]
+position = "SRE"
+company = "CoderDojo Foundation (Raspberry Pi Foundation)"
+startDate = "2017-06-10"
+endDate = "2018-01-10"
+website = "https://coderdojo.com"
+languages = [
+  "AWS",
+  "Docker",
+  "Graphite",
+  "Kubernetes",
+  "Linux",
+  "Node.js",
+  "PostgreSQL",
+  "Python",
+]
+summary = """
+Site Reliability Engineer at Raspberry Pi Foundation, supporting the CoderDojo community platform that enables youth
+coding education worldwide. Led significant infrastructure modernisation efforts while contributing to educational
+technology initiatives.
+
+Orchestrated the migration of the [Zen community platform](https://zen.coderdojo.com) from monolithic AWS instances to
+a Kubernetes-based architecture, enabling independent service scaling and improving overall system reliability.
+Modernised the deployment pipeline and upgraded core dependencies across microservices, significantly enhancing
+platform stability and maintainability.
+
+Implemented comprehensive monitoring solutions using NewRelic and Graphite to ensure platform reliability and
+performance. Developed a data warehouse solution to gain insights into community engagement and volunteer support
+needs, enabling data-driven decisions for community support initiatives.
+
+Contributed to the development of the organisation's learning resource platform, helping create tools for sharing
+educational content and projects with the global CoderDojo and Code Club communities.
+"""
+
+[[source]]
+position = "Programming Tutor"
+company = "DCU"
+website = "http://dcu.ie"
+startDate = "2016-09-30"
+endDate = "2017-04-22"
+languages = ["CSS", "HTML", "JavaScript", "Python"]
+summary = """
+Computing Lab Tutor at Dublin City University, providing hands-on programming support to astrophysics students
+developing complex mathematical applications. Guided students through algorithmic problem-solving, programming
+concepts, and best practices in scientific computing. Developed effective techniques for explaining technical
+concepts and debugging methodologies, helping students bridge the gap between theoretical physics and practical
+implementation.
+"""
+
+[[source]]
+position = "Technical Intern"
+company = "CoderDojo Foundation"
+website = "https://coderdojo.com"
+startDate = "2016-04-06"
+endDate = "2016-10-06"
+languages = [
+  "AWS",
+  "Angular.js",
+  "Docker",
+  "Linux",
+  "NGINX",
+  "Node.js",
+  "PostgreSQL",
+]
+summary = """
+Software Engineering Intern at CoderDojo, contributing to the development of the Zen platform that supports a global
+community of volunteer coding mentors. As part of a small, dynamic team, worked across the full stack to enhance the
+platform that enables children's coding education worldwide.
+
+Developed new features using Angular and Node.js, working on both frontend and backend components of the community
+platform. Managed deployment pipelines and AWS infrastructure, including maintaining critical community engagement
+tools like the forums system.
+"""
+
+[[source]]
+position = "Webmaster"
+company = "Redbrick"
+website = "http://redbrick.dcu.ie"
+startDate = "2016-04-04"
+endDate = "2017-04-06"
+languages = [
+  "Apache",
+  "BSD",
+  "Bash",
+  "CSS",
+  "Docker",
+  "ELK",
+  "JavaScript",
+  "LDAP",
+  "Linux",
+  "Node",
+  "Prometheus",
+  "Python",
+]
+summary = """
+Served as Webmaster for Redbrick, Dublin City University's Computing Society, managing web infrastructure that
+provided computing services to the student community. As part of a three-person systems team, maintained and enhanced
+a diverse ecosystem of user-facing services.
+
+Responsible for ensuring availability of infrastructure including student web spaces, collaborative tools (Wiki
+systems, Gitea), and social platforms (Mastodon, IRC). Handled system troubleshooting and maintenance of on-campus
+servers and managing common infrastructure and network challenges.
+
+Designed and maintained the society's website while managing service upgrades and implementing new features to support
+the growing student computing community.
+"""

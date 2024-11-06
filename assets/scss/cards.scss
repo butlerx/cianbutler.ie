@@ -5,13 +5,11 @@
 .card-list {
   display: flex;
   flex-flow: row wrap;
-  width: 120%;
 
   .card-outer {
-    margin: 0.5rem;
+    margin: 0.5em 1em;
     max-width: 20em;
     padding: 0;
-    width: 50%;
 
     @media screen and (max-width: screens.$tablet) {
       width: 100%;
