@@ -34,7 +34,9 @@ body {
   line-height: 1.5;
   margin: 0;
   scroll-behavior: smooth;
-  text-shadow: 0 0 1em transparent, 1px 1px 1.2px shadows.$shadow;
+  text-shadow:
+    0 0 1em transparent,
+    1px 1px 1.2px shadows.$shadow;
   word-wrap: break-word;
 
   p {
@@ -57,6 +59,10 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 0;
+
+    @media print {
+      display: none;
+    }
   }
 
   a {
@@ -69,6 +75,11 @@ body {
 
     border-bottom: 1px solid colours.$light-grey;
     padding-bottom: 0.3em;
+
+    @media print {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
   }
 
   h2 {
@@ -100,7 +111,7 @@ body {
     margin: 0 0 20px;
     padding: 0 1em;
 
-    >  {
+    > {
       :first-child {
         margin-top: 0;
       }
@@ -182,11 +193,6 @@ body {
       margin: 0.8cm;
     }
 
-    hr {
-      display: none;
-    }
-
-    blockquote,
     div,
     img {
       page-break-inside: avoid !important;
