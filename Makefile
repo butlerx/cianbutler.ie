@@ -18,7 +18,7 @@ BINS = $(HUGO) $(SASS)
 
 .PHONY: build
 build: public  ## Build Site
-public: $(BINS) config.toml content layouts assets data/github.json data/*.yml
+public: $(BINS) config.toml content layouts assets data
 	@echo "🍳 Generating site"
 	$< --gc --minify -d $(DESTDIR)
 
