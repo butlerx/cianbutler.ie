@@ -24,7 +24,7 @@
       "repo": {
         "url": "https://github.com/webpro-nl/knip",
         "name": "knip",
-        "stars": 7426
+        "stars": 7428
       },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
@@ -57,7 +57,7 @@
       "repo": {
         "url": "https://github.com/ema/pets",
         "name": "pets",
-        "stars": 463
+        "stars": 462
       },
       "title": "Add Support for Arch Pacman package manager",
       "url": "https://github.com/ema/pets/pull/13",
