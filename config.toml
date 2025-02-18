@@ -22,9 +22,6 @@ notAlternative = "true"
 
 [params]
 description = "Open Source Developer and SRE"
-images = [
-  "images/me.5cd0e5a860fe9fc2ab0f835419ca7edc5697d2ab4140663639e182ca53061b78.png",
-]
 email = "butlerx@notthe.cloud"
 repo = "butlerx/cianbutler.ie"
 mastodonUser = "butlerx"

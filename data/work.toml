@@ -2,8 +2,16 @@ title = "Experience"
 
 [[source]]
 position = "Senior SRE"
+company = "Cloudsmith"
+startDate = "2025-02-26"
+website = "https://cloudsmith.com"
+languages = ["Python"]
+
+[[source]]
+position = "Senior SRE"
 company = "Evervault"
 startDate = "2022-12-05"
+endDate = "2025-01-28"
 website = "https://evervault.com"
 languages = [
   "Rust",
@@ -21,7 +29,7 @@ critical infrastructure and services that enable secure payment processing and d
 My key achievements include:
 
 Collaborated on the development and scaling of a Confidential Computing platform using secure enclaves, working with
-the team to enable customers to run sensitive workloads in fully attested environments. Successfully optimised and 
+the team to enable customers to run sensitive workloads in fully attested environments. Successfully optimised and
 scaled both Rust and Node.js-based API services to meet growing demand while maintaining performance and reliability.
 
 Contributed to the development of a transparent HTTP encryption proxy service that helps customers achieve PCI DSS
