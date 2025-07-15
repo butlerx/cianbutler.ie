@@ -12,11 +12,11 @@
     { "repo": "gatsby-source-google-spreadsheets", "user": "butlerx" },
     { "repo": "fastify-bookshelfjs", "user": "butlerx" },
     { "repo": "docs-old", "user": "redbrick" },
+    { "repo": "jetlag", "user": "butlerx" },
     { "repo": "invbeertory", "user": "butlerx" },
     { "repo": "good_stv", "user": "redbrick" },
     { "repo": "rb-ldap", "user": "redbrick" },
     { "repo": "git-emoji", "user": "butlerx" },
-    { "repo": "jetlag", "user": "butlerx" },
     { "repo": "asciify", "user": "butlerx" }
   ],
   "contributions": [
@@ -24,7 +24,7 @@
       "repo": {
         "url": "https://github.com/webpro-nl/knip",
         "name": "knip",
-        "stars": 8497
+        "stars": 8506
       },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
