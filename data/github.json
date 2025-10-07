@@ -22,9 +22,20 @@
   "contributions": [
     {
       "repo": {
+        "url": "https://github.com/butlerx/metrics_ipc_collector",
+        "name": "metrics_ipc_collector",
+        "stars": 0
+      },
+      "title": "Add Support for using a pipe rather then a socket",
+      "url": "https://github.com/butlerx/metrics_ipc_collector/pull/1",
+      "state": "OPEN",
+      "bodyHTML": "<p dir=\"auto\">We need to add support for using a pipe to send metrics rather then a socket between processes.</p>\n<p dir=\"auto\">I couldnt find a nice way to reuse the other interface as the model for communication is to different</p>"
+    },
+    {
+      "repo": {
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
-        "stars": 4309
+        "stars": 4315
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
@@ -35,7 +46,7 @@
       "repo": {
         "url": "https://github.com/webpro-nl/knip",
         "name": "knip",
-        "stars": 9182
+        "stars": 9189
       },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
@@ -46,7 +57,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "Attempt to paralleise the docker build",
       "url": "https://github.com/butlerx/wetty/pull/508",
@@ -57,7 +68,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "remove yarn",
       "url": "https://github.com/butlerx/wetty/pull/507",
@@ -79,7 +90,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "Update development flow to be less confusing",
       "url": "https://github.com/butlerx/wetty/pull/441",
@@ -90,7 +101,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "bump xterm to v5",
       "url": "https://github.com/butlerx/wetty/pull/439",
@@ -101,7 +112,7 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
       "url": "https://github.com/butlerx/wetty/pull/438",
@@ -112,21 +123,10 @@
       "repo": {
         "url": "https://github.com/butlerx/wetty",
         "name": "wetty",
-        "stars": 4961
+        "stars": 4962
       },
       "title": "update codeQL workflow",
       "url": "https://github.com/butlerx/wetty/pull/437",
-      "state": "MERGED",
-      "bodyHTML": ""
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/wetty",
-        "name": "wetty",
-        "stars": 4961
-      },
-      "title": "revert to yarn 1",
-      "url": "https://github.com/butlerx/wetty/pull/421",
       "state": "MERGED",
       "bodyHTML": ""
     }
