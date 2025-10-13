@@ -24,6 +24,6 @@ jobs:
         uses: actionsx/prettier@v3
         with:
           args: --write data
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Rebuild data/github.json
