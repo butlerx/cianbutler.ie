@@ -35,7 +35,7 @@
       "repo": {
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
-        "stars": 4778
+        "stars": 4781
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
@@ -46,7 +46,7 @@
       "repo": {
         "url": "https://github.com/webpro-nl/knip",
         "name": "knip",
-        "stars": 9733
+        "stars": 9737
       },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
