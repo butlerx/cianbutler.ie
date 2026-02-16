@@ -35,7 +35,7 @@
       "repo": {
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
-        "stars": 5049
+        "stars": 5052
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
@@ -46,7 +46,7 @@
       "repo": {
         "url": "https://github.com/webpro-nl/knip",
         "name": "knip",
-        "stars": 10236
+        "stars": 10238
       },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
@@ -79,7 +79,7 @@
       "repo": {
         "url": "https://github.com/ema/pets",
         "name": "pets",
-        "stars": 463
+        "stars": 464
       },
       "title": "Add Support for Arch Pacman package manager",
       "url": "https://github.com/ema/pets/pull/13",
