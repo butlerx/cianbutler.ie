@@ -1,0 +1,15 @@
+.experience {
+  @media print {
+    & .experience-block {
+      break-inside: avoid !important;
+    }
+
+    & .experience-block:nth-child(n + 6) {
+      display: none;
+    }
+  }
+
+  & h3 a {
+    color: var(--text);
+  }
+}

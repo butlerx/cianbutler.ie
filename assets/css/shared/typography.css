@@ -1,0 +1,52 @@
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h1 {
+  margin-block: 1em 0.5em;
+  font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem);
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h2 {
+  margin-block: 1em 0.5em;
+  font-size: clamp(1.35rem, 1.15rem + 1vw, 1.75rem);
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h3 {
+  margin-block: 1em 0.5em;
+  font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h4 {
+  margin-block: 1em 0.5em;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h5 {
+  margin-block: 1em 0.5em;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h6 {
+  margin-block: 1em 0.5em;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+pre,
+code {
+  font-family: inherit;
+  font-size: inherit;
+}

@@ -1,0 +1,22 @@
+{{- $image := .image -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $lazy := .lazy | default true -}}
+{{- $sizes := .sizes | default "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" -}}
+{{- $widths := slice 320 640 960 1280 -}}
+{{- $srcset := slice -}}
+{{- range $widths -}}
+  {{- $resized := $image.Resize (printf "%dx webp" .) -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+{{- end -}}
+{{- $fallback := $image.Resize "640x" -}}
+<img
+  src="{{ $fallback.RelPermalink }}"
+  srcset="{{ delimit $srcset ", " }}"
+  sizes="{{ $sizes }}"
+  alt="{{ $alt }}"
+  width="{{ $fallback.Width }}"
+  height="{{ $fallback.Height }}"
+  {{ if $lazy }}loading="lazy" decoding="async"{{ else }}fetchpriority="high"{{ end }}
+  {{ with $class }}class="{{ . }}"{{ end }}
+/>

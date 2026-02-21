@@ -1,6 +1,5 @@
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=6.0"
@@ -19,13 +18,19 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="{{ .Site.Params.theme }}" />
   <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Resume",
-      "image" : {{ apply .Params.images "absURL" "." }},
-      "name": "{{- if .Params.title -}} {{- .Params.title -}} {{- else -}} {{- .Site.Title }} {{- end -}}"
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "{{ .Permalink | absURL }}",
+      "name": "{{ .Site.Title }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author.name }}"
+      }{{ with .Params.images }},
+      "image": {{ apply . "absURL" "." }}{{ end }}
     }
   </script>
 

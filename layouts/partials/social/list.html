@@ -1,17 +1,15 @@
 <ul class="social">
   {{ range . }}
     <li>
-      <a href="{{ .url }}">
+      <a href="{{ .url }}" aria-label="{{ .network }} link">
         {{ if eq .network "email" }}
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-          <span class="label">{{ .network }}</span>
+          {{ partial "svg-icon" "envelope" }}
         {{ else if eq .network "github" }}
-          <i class="fab fa-{{ .network }}-alt" aria-hidden="true"></i>
-          <span class="label">{{ .network }}</span>
+          {{ partial "svg-icon" "github-alt" }}
         {{ else }}
-          <i class="fab fa-{{ .network }}" aria-hidden="true"></i>
-          <span class="label">{{ .network }}</span>
+          {{ partial "svg-icon" .network }}
         {{ end }}
+        <span class="label">{{ .network }}</span>
       </a>
     </li>
   {{ end }}

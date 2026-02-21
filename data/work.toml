@@ -1,11 +1,28 @@
 title = "Experience"
 
 [[source]]
-position = "Senior SRE"
+position = "Senior Performance SRE"
 company = "Cloudsmith"
 startDate = "2025-02-26"
 website = "https://cloudsmith.com"
-languages = ["Python"]
+languages = [
+  "Rust",
+  "Typescript",
+  "Python",
+  "Terraform",
+  "Clickhouse",
+  "PostgreSQL",
+]
+summary = """
+Senior Performance SRE on the Platform Edge team at Cloudsmith, a software supply chain security company providing
+universal package management. Focused on building and optimising the CDN infrastructure that underpins package
+distribution serving over 110 million requests per day and petabytes of data daily.
+Designed and implemented performance optimisations to accelerate package downloads across the platform, improving
+download throughput and reducing latency for customers consuming packages at scale. Contributed to scaling the
+existing Python monolith to handle increasing traffic demands while maintaining reliability and performance.
+Building core CDN infrastructure as part of the Platform Edge team, developing edge services in Rust to deliver
+fast, reliable package distribution globally.
+"""
 
 [[source]]
 position = "Senior SRE"

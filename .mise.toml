@@ -1,0 +1,105 @@
+[tools]
+go = "latest"
+hugo = "latest"
+"npm:cspell" = "latest"
+"npm:markdownlint-cli" = "latest"
+"npm:prettier" = "latest"
+"npm:stylelint" = "latest"
+
+[settings]
+experimental = true
+lockfile = true
+
+[tasks.build]
+description = "Build Site"
+sources = [
+  "hugo.toml",
+  "assets/**/*",
+  "content/**/*",
+  "data/**/*",
+  "layouts/**/*",
+]
+outputs = ['public/**/*']
+quiet = true
+alias = "b"
+run = """
+echo "🍳 Generating site"
+hugo --gc --minify -d public
+"""
+
+[tasks.serve]
+description = "Run development server in debug mode"
+run = 'hugo server -D -w'
+
+[tasks.clean]
+description = "Clean built site"
+quiet = true
+run = """
+echo "🧹 Cleaning old build"
+rm -rf public resources .hugo_build.lock
+"""
+
+[tasks.update]
+description = "Update themes and modules"
+quiet = true
+run = """
+echo "🛎 Updating Theme"
+hugo mod get -u ./...
+hugo mod tidy
+"""
+
+[tasks.format]
+description = "Format files"
+depends = ["format:go"]
+run = 'prettier --write .'
+
+[tasks."format:check"]
+description = "Check formatting"
+depends = ["format:go:check"]
+run = 'prettier --check .'
+
+[tasks."format:go"]
+description = "Format Go files"
+run = 'gofmt -w .'
+
+[tasks."format:go:check"]
+description = "Check Go formatting"
+run = 'test -z "$(gofmt -l .)"'
+
+[tasks."github-data"]
+description = "Fetch GitHub data for site"
+sources = ["github.go"]
+outputs = ["data/github.json"]
+run = 'go run github.go'
+
+[tasks.lint]
+description = "Run all linters"
+depends = ["lint:markdown", "lint:css"]
+
+[tasks."lint:markdown"]
+description = "Run markdown linter"
+quiet = true
+run = """
+echo "🍜 Testing Markdown"
+markdownlint "content"
+"""
+
+[tasks."lint:css"]
+description = "Run CSS linter"
+quiet = true
+run = """
+echo "🍜 Testing CSS"
+stylelint "assets/css/**/*.css"
+"""
+
+[tasks.spell]
+description = "Check spelling"
+quiet = true
+run = """
+echo "🔤 Checking Spelling"
+cspell "content/**/*.md"
+"""
+
+[tasks.check]
+description = "Run all checks"
+depends = ["format:check", "lint", "spell"]

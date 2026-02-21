@@ -1,4 +1,4 @@
 <div class="avatar">
-  <img src="{{ .Site.BaseURL }}/{{ .Site.Data.info.picture }}" alt="Mug Shot" />
+  {{ partial "responsive-image" (dict "image" (resources.Get .Site.Data.info.picture) "alt" (printf "Photo of %s" .Site.Data.info.name) "sizes" "100px") }}
   {{ .Inner }}
 </div>

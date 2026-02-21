@@ -1,0 +1,7 @@
+{
+  "default": true,
+  // Match prettier's printWidth
+  "MD013": {
+    "line_length": 120,
+  },
+}

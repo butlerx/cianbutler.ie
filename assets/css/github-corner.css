@@ -1,25 +1,23 @@
-@use 'shared/print';
-@use 'shared/colours';
-@use 'shared/screens';
-
 .github-corner {
-  @include print.hidden;
+  @media print {
+    display: none;
+  }
 
-  svg {
+  & svg {
     border: 0;
-    color: colours.$white;
-    fill: colours.$red;
+    color: var(--colour-white);
+    fill: var(--colour-red);
     position: absolute;
     right: 0;
     top: 0;
 
-    .octo-arm {
+    & .octo-arm {
       transform-origin: 130px 106px;
     }
   }
 
   &:hover {
-    .octo-arm {
+    & .octo-arm {
       animation: octocat-wave 560ms ease-in-out;
     }
   }
@@ -42,16 +40,11 @@
   }
 }
 
-@media screen and (max-width: screens.$medium-phone) {
+@media screen and (width <= 846px) {
   .github-corner {
-    .octo-arm {
-      animation: octocat-wave 560ms ease-in-out;
-    }
-
-    &:hover {
-      .octo-arm {
-        animation: none;
-      }
+    & svg {
+      height: 50px;
+      width: 50px;
     }
   }
 }

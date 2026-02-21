@@ -2,7 +2,7 @@
   <meta name="keywords" content="{{ delimit . "," }}">
 {{- end -}}
 
-{{- with .Site.Author.name -}}
+{{- with .Site.Params.author.name -}}
   <meta name="author" content="{{ . }}" />
 {{- end -}}
 
@@ -12,7 +12,6 @@
 {{- end -}}
 {{ template "_internal/opengraph.html" . }}
 
-{{/* Update to use .Params.description if exists */}}
-{{- with .Site.Params.description -}}
+{{- with .Params.description | default .Site.Params.description -}}
   <meta name="description" content="{{ . }}" />
 {{- end -}}

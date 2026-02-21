@@ -1,0 +1,112 @@
+.container {
+  @media print {
+    grid-template-columns: 100% !important;
+    max-width: 100% !important;
+
+    & .markdown-body {
+      margin: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      & h2 {
+        font-size: 1.2em !important;
+      }
+
+      & h3 {
+        font-size: 1em !important;
+        margin: 1em 0 0.8em !important;
+      }
+
+      & p {
+        font-size: 0.8em !important;
+        margin-bottom: 1em !important;
+      }
+
+      & blockquote {
+        border-bottom: 0;
+        border-left: 0.25em solid var(--colour-dark-grey);
+        border-right: 0;
+        border-top: 0;
+        color: var(--colour-heavy-grey);
+        font-size: 1em;
+        padding: 0 1em;
+
+        & h4 {
+          font-size: 0.8em !important;
+        }
+      }
+    }
+  }
+
+  display: grid;
+  gap: 5px 10px;
+  grid-template:
+    'main sidebar' auto
+    'footer footer' auto / 80% 20%;
+
+  @media screen and (width <= 846px) {
+    row-gap: 10px;
+    grid-template:
+      'sidebar'
+      'main'
+      'footer'
+      auto / auto;
+    max-width: 100%;
+  }
+
+  & .markdown-body {
+    @media screen and (width <= 996px) {
+      margin-inline: 0.5em;
+    }
+
+    @media screen and (width <= 846px) {
+      margin-inline: 0.5em;
+      max-width: 100%;
+      padding: 0.5em 1em;
+    }
+
+    @media screen and (width <= 560px) {
+      margin-inline: 0.5em;
+      max-width: 100%;
+      padding: 0.5em;
+    }
+
+    grid-area: main;
+    margin-inline: auto;
+    min-height: 660px;
+    overflow: visible;
+    padding: 40px 16px;
+
+    & .wrapper {
+      margin-inline-start: 4em;
+      padding: 40px 16px;
+
+      @media screen and (width <= 846px) {
+        margin: 0;
+        padding: 0;
+      }
+
+      @media print {
+        padding: 0;
+      }
+
+      & .about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    & > :first-child {
+      margin-top: 0;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+:root {
+  --shadow-border: #7d97ad;
+  --shadow-shadow: rgb(0 0 0 / 0.4%);
+  --shadow-top: rgb(0 0 0 / 16%);
+  --shadow-side: rgb(0 0 0 / 12%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-border: #3b4754;
+    --shadow-shadow: rgb(0 0 0 / 2%);
+    --shadow-top: rgb(0 0 0 / 40%);
+    --shadow-side: rgb(0 0 0 / 30%);
+  }
+}

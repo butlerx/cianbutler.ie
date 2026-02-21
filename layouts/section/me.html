@@ -1,10 +1,9 @@
 {{ define "main" }}
-  <h1 id="{{ urlize .Params.title }}">
-    <div class="avatar">
-      <img src="{{ (resources.Get .Site.Data.info.picture | fingerprint).RelPermalink }}" alt="Mug Shot" />
-      {{ .Site.Data.info.name }}
-    </div>
-  </h1>
+  <div class="avatar">
+    {{ $image := resources.Get .Site.Data.info.picture }}
+    {{ partial "responsive-image" (dict "image" $image "alt" "" "class" "avatar-img" "sizes" "100px" "lazy" false) }}
+  </div>
+  <h1 id="{{ urlize .Params.title }}">{{ .Site.Data.info.name }}</h1>
   {{ with .Site.Data.info.profiles }}
     {{ partial "social/list" . }}
   {{ end }}
@@ -14,7 +13,7 @@
   {{ partial "experience" .Site.Data.work }}
   {{ partial "experience" .Site.Data.education }}
   {{ with "Open Source Projects" }}
-    <h2 id="{{ urlize . }}">{{ humanize . }}</h3>
+    <h2 id="{{ urlize . }}">{{ humanize . }}</h2>
   {{ end }}
   {{ partial "github/repos" .Site.Data.github.pinnedRepos }}
 {{ end }}

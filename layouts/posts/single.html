@@ -4,7 +4,7 @@
       <span class="key">published on</span>
       <span class="value">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
       <br />
-      {{ with .Site.Author.name }}
+      {{ with .Site.Params.author.name }}
         <span class="key">author:</span>
         <span class="value">{{ . }}</span>
         <br />

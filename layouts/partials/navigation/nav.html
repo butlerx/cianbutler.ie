@@ -1,26 +1,29 @@
-<nav class="sidebar" data-spy="affix">
+<nav class="sidebar" aria-label="Main navigation">
   <div class="nav">
     <a
-      class="animation-target{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }} active{{ end }}"
-      href="{{ if eq (add .Site.BaseURL "/") (add .Permalink "") }}#{{ else }}/{{ end }}"
+      class="site-title{{ if .IsHome }} active{{ end }}"
+      href="{{ if .IsHome }}#{{ else }}/{{ end }}"
+      {{ if .IsHome }}aria-current="page"{{ end -}}
     >{{ .Site.Title }}</a>
     {{ $currentPage := . }}
     <ul>
-      {{ range .Site.Menus.main }}
-        <li>
-          <a
-            class="sidebar-nav-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}"
-            href="
-              {{- if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
-                #
-              {{- else -}}
-                {{ $.Site.BaseURL }}{{ urlize .Identifier }}
-              {{- end -}}"
-            >{{ humanize .Name }}</a>
-        </li>
-      {{ end }}
+      {{- range .Site.Menus.main }}
+      <li>
+        <a
+          href="
+            {{- if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+              #
+            {{- else -}}
+              {{ .Identifier | urlize | relURL }}
+            {{- end -}}"
+          {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+            class="active" aria-current="page"
+          {{- end -}}
+        >{{ humanize .Name }}</a>
+      </li>
+      {{- end }}
     </ul>
-    <hr/>
+    <hr />
     {{ partial "navigation/subnav" $ }}
   </div>
 </nav>

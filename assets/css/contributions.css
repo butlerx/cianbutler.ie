@@ -1,0 +1,98 @@
+.contribution-card {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 5em;
+  min-width: 12em;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: var(--colour-heavy-grey);
+  }
+}
+
+.contribution-card-repo {
+  align-items: center;
+  color: var(--colour-blue);
+  display: inline-flex;
+  font-size: 0.7rem;
+  font-weight: 630;
+  gap: 0.3rem;
+
+  & > svg {
+    color: var(--colour-blue);
+    height: 0.85rem;
+    width: 0.85rem;
+  }
+}
+
+.contribution-card-title {
+  color: var(--text-muted);
+  display: -webkit-box;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0.3em 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.contribution-card-footer {
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  font-size: 0.65rem;
+  gap: 0.5em;
+}
+
+.contribution-card-stars {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.2rem;
+
+  & > svg {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+}
+
+.project-element-state-merged,
+.project-element-state-closed,
+.project-element-state-open {
+  align-items: center;
+  border-radius: 2em;
+  display: inline-flex;
+  font-size: 0.6rem;
+  font-weight: 600;
+  gap: 0.2rem;
+  line-height: 1;
+  padding: 2px 8px;
+  white-space: nowrap;
+
+  & > svg {
+    height: 0.55rem;
+    width: 0.55rem;
+  }
+}
+
+.project-element-state-merged {
+  background-color: color-mix(in srgb, var(--colour-purple) 15%, transparent);
+  color: var(--colour-purple);
+}
+
+.project-element-state-closed {
+  background-color: color-mix(in srgb, var(--colour-dark-red) 15%, transparent);
+  color: var(--colour-dark-red);
+}
+
+.project-element-state-open {
+  background-color: color-mix(in srgb, var(--colour-green) 15%, transparent);
+  color: var(--colour-green);
+}

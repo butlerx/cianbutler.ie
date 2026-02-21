@@ -1,11 +1,6 @@
 {{- $image := resources.Get .Site.Data.info.picture -}}
 {{- $favicon := $image.Resize "32x32" -}}
 <link
-  rel="shortcut icon"
-  type="image/x-icon"
-  href="{{ $favicon.RelPermalink }}"
-/>
-<link
   rel="icon"
   type="image/x-icon"
   href="{{ $favicon.RelPermalink }}"

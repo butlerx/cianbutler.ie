@@ -2,17 +2,18 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
   {{ partial "head/header" . }}
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="container">
-      {{ partial "github/corner" . }}
+      {{ partialCached "github/corner" . }}
       {{ partial "navigation/nav" . }}
       <div class="markdown-body">
         <div class="wrapper">
           <section class="about">
-            <main>{{ block "main" . }}{{ end }}</main>
+            <main id="main-content">{{ block "main" . }}{{ end }}</main>
           </section>
         </div>
       </div>
     </div>
-    {{ partial "footer" . }}
+    {{ partialCached "footer" . }}
   </body>
 </html>

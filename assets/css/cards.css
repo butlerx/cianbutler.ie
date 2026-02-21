@@ -1,0 +1,99 @@
+.card-list {
+  display: flex;
+  flex-flow: row wrap;
+
+  & .card-outer {
+    flex: 1 1 20em;
+    margin: 0.5em 1em;
+    max-width: 20em;
+    padding: 0;
+
+    @media screen and (width <= 846px) {
+      width: 100%;
+    }
+
+    @media print {
+      margin-bottom: 0;
+
+      & a::after {
+        content: '';
+      }
+    }
+  }
+}
+
+.repo-card {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 5em;
+  min-width: 12em;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: var(--colour-heavy-grey);
+  }
+}
+
+.repo-card-name {
+  align-items: center;
+  color: var(--colour-blue);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 630;
+  gap: 0.3rem;
+
+  & > svg {
+    color: var(--text-muted);
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+}
+
+.repo-card-description {
+  color: var(--text-muted);
+  display: -webkit-box;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  margin: 0.3em 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.repo-card-footer {
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  font-size: 0.65rem;
+  gap: 1em;
+}
+
+.repo-card-language {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.25rem;
+
+  & > svg {
+    flex-shrink: 0;
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+}
+
+.repo-card-stat {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.2rem;
+
+  & > svg {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+}

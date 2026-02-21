@@ -1,8 +1,9 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Cian Butler"
-pygmentsCodeFences = true
 sectionPagesMenu = "main"
+enableRobotsTXT = true
+enableGitInfo = true
 
 [pagination]
 disableAliases = false
@@ -40,3 +41,8 @@ tag = "tags"
 changefreq = "monthly"
 filename = "sitemap.xml"
 priority = 0.5
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

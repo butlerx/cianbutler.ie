@@ -1,0 +1,22 @@
+.footer {
+  @media print {
+    display: none;
+  }
+
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  grid-area: footer;
+  justify-content: center;
+  padding-bottom: 1em;
+
+  & a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}

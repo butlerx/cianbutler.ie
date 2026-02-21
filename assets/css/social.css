@@ -1,0 +1,114 @@
+.social {
+  list-style: none;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+
+  @media print {
+    margin-bottom: 0.5em !important;
+  }
+
+  & a {
+    display: block;
+    margin: 0 1px 0 0;
+    padding: 10px 12px;
+    text-decoration: none;
+
+    @media print {
+      margin: 0;
+      padding: 0.5em 0.75em;
+    }
+
+    & .label {
+      border-radius: 0.25em;
+      color: var(--colour-blue);
+      display: inline;
+      font-family: var(--font-regular);
+      font-size: 75%;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.2em 0.6em 0.3em;
+      text-align: center;
+      vertical-align: baseline;
+      white-space: nowrap;
+
+      @media print {
+        margin-left: 0.5em !important;
+      }
+    }
+  }
+
+  & svg {
+    height: 1em;
+    width: auto;
+    vertical-align: -0.125em;
+  }
+
+  & > li {
+    display: inline-flex;
+
+    &:last-child {
+      & a {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+
+  & .social-icon-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.333em;
+    width: 2.5em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--colour-heavy-grey);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--colour-blue);
+    }
+  }
+
+  & .social-icon-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+
+    & svg {
+      height: 1em;
+      width: auto;
+    }
+  }
+
+  & .social-icon-fg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #fff;
+
+    & svg {
+      height: 1em;
+      width: auto;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}

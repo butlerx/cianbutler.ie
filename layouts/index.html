@@ -1,26 +1,26 @@
 {{ define "main" }}
   <div class="avatar">
-    <img src="{{ (resources.Get .Site.Data.info.picture | fingerprint).RelPermalink }}" alt="Mug Shot" />
+      {{ partial "responsive-image" (dict "image" (resources.Get .Site.Data.info.picture) "alt" (printf "Photo of %s" .Site.Data.info.name) "lazy" false "sizes" "100px" "class" "") }}
   </div>
-  <h3>
+  <h1>
     My Name is <strong>{{ .Site.Data.info.name }}</strong>, I'm a {{
     .Params.job }}.
-  </h3>
-  <h3>{{ .Params.blurb | markdownify }}.</h3>
-  <h3>
+  </h1>
+  <p>{{ .Params.blurb | markdownify }}.</p>
+  <p>
     {{ .Params.project_link | markdownify }}<a href="/projects/">
       projects</a
     >.
-  </h3>
-  <h3>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</h3>
+  </p>
+  <p>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</p>
   {{ .Content }}
-  <h3>
+  <p>
     Contact me at
     <a href="https://{{ .Site.Params.mastodonHost }}/@{{ .Site.Params.mastodonUser }}"
       >@{{ .Site.Params.mastodonUser }}@{{ .Site.Params.mastodonHost }}</a
     >
     or by <a href="mailto:{{ .Site.Params.email }}">email</a>.
-  </h3>
+  </p>
   {{ with .Site.Data.info.profiles }}
     {{ partial "social/icons" . }}
   {{ end }}

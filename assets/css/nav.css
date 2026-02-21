@@ -1,0 +1,118 @@
+/* ===== Desktop: fixed vertical nav in right sidebar ===== */
+.sidebar {
+  grid-area: sidebar;
+  margin-top: 64px;
+  text-align: inherit;
+}
+
+.sidebar a {
+  color: var(--colour-heavy-grey) !important;
+}
+
+.sidebar .nav > .site-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 20px 8px;
+  text-decoration: none;
+}
+
+.sidebar .nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar .nav li a {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 20px 4px;
+}
+
+.sidebar .nav li a:focus,
+.sidebar .nav li a:hover {
+  background-color: transparent;
+  border-left: 1px solid var(--colour-black);
+  color: var(--colour-black);
+  padding-left: 19px;
+  text-decoration: none;
+}
+
+.sidebar .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .nav ul > li {
+  margin-left: 1em;
+}
+
+.sidebar .nav hr {
+  margin: 4px;
+}
+
+/* ===== Mobile: horizontal nav bar across top ===== */
+@media screen and (width <= 846px) {
+  .sidebar {
+    margin-top: 0;
+  }
+
+  .sidebar .nav {
+    align-items: center;
+    border-bottom: 1px solid var(--colour-light-grey);
+    flex-flow: row nowrap;
+    gap: 0;
+    padding: 8px 12px;
+    position: static;
+  }
+
+  .sidebar .nav hr,
+  .sidebar .nav > nav {
+    display: none;
+  }
+
+  .sidebar .nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .sidebar .nav ul > li {
+    margin-left: 0;
+  }
+
+  .sidebar .nav li a {
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .sidebar .nav li a:focus,
+  .sidebar .nav li a:hover {
+    border-left: none;
+    padding-left: 10px;
+    text-decoration: underline;
+  }
+
+  .sidebar .nav > .site-title {
+    font-size: 14px;
+    padding: 4px 10px 4px 0;
+    white-space: nowrap;
+  }
+}
+
+/* ===== Small phone tweaks ===== */
+@media screen and (width <= 560px) {
+  .sidebar .nav li a {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+/* ===== Print ===== */
+@media print {
+  .sidebar {
+    display: none;
+  }
+}

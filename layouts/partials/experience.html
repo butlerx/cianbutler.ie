@@ -1,5 +1,5 @@
 <div class="experience">
-  <h2 id="{{ urlize .title }}">{{ humanize .title }}</h3>
+  <h2 id="{{ urlize .title }}">{{ humanize .title }}</h2>
   {{ range sort .source "startDate" "desc"}}
     <div class="experience-block">
       {{ if isset  . "company" }}

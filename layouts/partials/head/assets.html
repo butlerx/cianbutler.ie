@@ -1,34 +1,38 @@
-{{ $options := dict "transpiler" "dartsass" "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true }}
-{{ $style := resources.Get "scss/main.scss" | css.Sass $options | resources.Fingerprint "sha512" }}
+{{ $colours := resources.Get "css/shared/colours.css" }}
+{{ $fonts := resources.Get "css/shared/fonts.css" }}
+{{ $shadows := resources.Get "css/shared/shadows.css" }}
+{{ $typography := resources.Get "css/shared/typography.css" }}
+{{ $avatar := resources.Get "css/avatar.css" }}
+{{ $cards := resources.Get "css/cards.css" }}
+{{ $contributions := resources.Get "css/contributions.css" }}
+{{ $experience := resources.Get "css/experience.css" }}
+{{ $footer := resources.Get "css/footer.css" }}
+{{ $githubCorner := resources.Get "css/github-corner.css" }}
+{{ $layout := resources.Get "css/layout.css" }}
+{{ $nav := resources.Get "css/nav.css" }}
+{{ $social := resources.Get "css/social.css" }}
+{{ $excerpt := resources.Get "css/posts/excerpt.css" }}
+{{ $post := resources.Get "css/posts/post.css" }}
+{{ $main := resources.Get "css/main.css" }}
+{{ $style := slice $colours $fonts $shadows $typography $avatar $cards $contributions $experience $footer $githubCorner $layout $nav $social $excerpt $post $main | resources.Concat "css/bundle.css" | minify | fingerprint "sha512" }}
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+  crossorigin
+/>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Source+Serif+4&family=Source+Code+Pro:wght@300;400;500&display=swap"
+/>
 <link
   rel="stylesheet"
   href="{{ $style.RelPermalink }}"
   type="text/css"
-  {{/* integrity="{{ $style.Data.Integrity }}" */}}
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700"
-  type="text/css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
-  integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA=="
+  integrity="{{ $style.Data.Integrity }}"
   crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css"
-  integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css"
-  integrity="sha512-jQqzj2vHVxA/yCojT8pVZjKGOe9UmoYvnOuM/2sQ110vxiajBU+4WkyRs1ODMmd4AfntwUEV4J+VfM6DkfjLRg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
 />
