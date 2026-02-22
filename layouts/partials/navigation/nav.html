@@ -1,26 +1,32 @@
 <nav class="sidebar" aria-label="Main navigation">
   <div class="nav">
     <a
-      class="site-title{{ if .IsHome }} active{{ end }}"
-      href="{{ if .IsHome }}#{{ else }}/{{ end }}"
+      class="site-title{{ if .IsHome }}active{{ end }}"
+      href="{{ if .IsHome }}
+        #
+      {{ else }}
+        /
+      {{ end }}"
       {{ if .IsHome }}aria-current="page"{{ end -}}
-    >{{ .Site.Title }}</a>
+      >{{ .Site.Title }}</a
+    >
     {{ $currentPage := . }}
     <ul>
       {{- range .Site.Menus.main }}
-      <li>
-        <a
-          href="
+        <li>
+          <a
+            href="
             {{- if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
               #
             {{- else -}}
               {{ .Identifier | urlize | relURL }}
             {{- end -}}"
-          {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
-            class="active" aria-current="page"
-          {{- end -}}
-        >{{ humanize .Name }}</a>
-      </li>
+            {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) -}}
+              class="active" aria-current="page"
+            {{- end -}}
+            >{{ humanize .Name }}</a
+          >
+        </li>
       {{- end }}
     </ul>
     <hr />

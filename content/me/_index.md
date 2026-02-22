@@ -1,5 +1,6 @@
 ---
 title: 'Me'
+description: 'Cian Butler — resume, work experience, education, and open source projects.'
 tags: ['cv', 'CV', 'resume', 'me']
 menu:
   - experience

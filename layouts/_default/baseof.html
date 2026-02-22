@@ -1,5 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!doctype html>
+<html
+  lang="{{ with .Site.LanguageCode }}
+    {{ . }}
+  {{ else }}
+    en-US
+  {{ end }}"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   {{ partial "head/header" . }}
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>

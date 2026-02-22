@@ -1,5 +1,6 @@
 ---
 title: 'Projects'
+description: 'Open source projects and recent contributions by Cian Butler.'
 categories: ['projects']
 tags: ['projects']
 menu:

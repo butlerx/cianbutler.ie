@@ -1,14 +1,17 @@
 [tools]
 go = "latest"
+golangci-lint = "latest"
 hugo = "latest"
+node = "lts"
 "npm:cspell" = "latest"
 "npm:markdownlint-cli" = "latest"
-"npm:prettier" = "latest"
-"npm:stylelint" = "latest"
 
 [settings]
 experimental = true
 lockfile = true
+
+[hooks]
+enter = 'npm install'
 
 [tasks.build]
 description = "Build Site"
@@ -27,9 +30,9 @@ echo "🍳 Generating site"
 hugo --gc --minify -d public
 """
 
-[tasks.serve]
-description = "Run development server in debug mode"
-run = 'hugo server -D -w'
+[tasks.check]
+description = "Run all checks"
+depends = ["format:check", "lint", "spell"]
 
 [tasks.clean]
 description = "Clean built site"
@@ -42,12 +45,12 @@ rm -rf public resources .hugo_build.lock
 [tasks.format]
 description = "Format files"
 depends = ["format:go"]
-run = 'prettier --write .'
+run = 'npx prettier --write .'
 
 [tasks."format:check"]
 description = "Check formatting"
 depends = ["format:go:check"]
-run = 'prettier --check .'
+run = 'npx prettier --check .'
 
 [tasks."format:go"]
 description = "Format Go files"
@@ -61,11 +64,23 @@ run = 'test -z "$(gofmt -l .)"'
 description = "Fetch GitHub data for site"
 sources = ["github.go"]
 outputs = ["data/github.json"]
-run = 'go run github.go'
+run = 'go run github.go -user butlerx -output data/github.json'
 
 [tasks.lint]
 description = "Run all linters"
-depends = ["lint:markdown", "lint:css"]
+depends = ["lint:css", "lint:go", "lint:markdown"]
+
+[tasks."lint:css"]
+description = "Run CSS linter"
+quiet = true
+run = """
+echo "🍜 Testing CSS"
+npx stylelint "assets/css/**/*.css"
+"""
+
+[tasks."lint:go"]
+description = "Run Go linter"
+run = "golangci-lint run --timeout 5m github.go"
 
 [tasks."lint:markdown"]
 description = "Run markdown linter"
@@ -75,13 +90,9 @@ echo "🍜 Testing Markdown"
 markdownlint "content"
 """
 
-[tasks."lint:css"]
-description = "Run CSS linter"
-quiet = true
-run = """
-echo "🍜 Testing CSS"
-stylelint "assets/css/**/*.css"
-"""
+[tasks.serve]
+description = "Run development server in debug mode"
+run = 'hugo server -D -w'
 
 [tasks.spell]
 description = "Check spelling"
@@ -90,7 +101,3 @@ run = """
 echo "🔤 Checking Spelling"
 cspell "content/**/*.md"
 """
-
-[tasks.check]
-description = "Run all checks"
-depends = ["format:check", "lint", "spell"]

@@ -1,7 +1,7 @@
 <ul class="social">
   {{ range . }}
     <li>
-      <a href="{{ .url }}" aria-label="{{ .network }} link">
+      <a href="{{ .url }}" rel="me" aria-label="{{ .network }} link">
         {{ if eq .network "email" }}
           {{ partial "svg-icon" "envelope" }}
         {{ else if eq .network "github" }}

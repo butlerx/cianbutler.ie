@@ -1,25 +1,23 @@
 {{ define "main" }}
   <div class="avatar">
-      {{ partial "responsive-image" (dict "image" (resources.Get .Site.Data.info.picture) "alt" (printf "Photo of %s" .Site.Data.info.name) "lazy" false "sizes" "100px" "class" "") }}
+    {{ partial "responsive-image" (dict "image" (resources.Get .Site.Data.info.picture) "alt" (printf "Photo of %s" .Site.Data.info.name) "lazy" false "sizes" "100px" "class" "") }}
   </div>
-  <h1>
-    My Name is <strong>{{ .Site.Data.info.name }}</strong>, I'm a {{
-    .Params.job }}.
-  </h1>
+  <h1>My Name is <strong>{{ .Site.Data.info.name }}</strong>, I'm a {{ .Params.job }}.</h1>
   <p>{{ .Params.blurb | markdownify }}.</p>
-  <p>
-    {{ .Params.project_link | markdownify }}<a href="/projects/">
-      projects</a
-    >.
-  </p>
+  <p>{{ .Params.project_link | markdownify }}<a href="/projects/"> projects</a>.</p>
   <p>{{ .Params.resume_link | markdownify }}<a href="/me"> resume</a>.</p>
   {{ .Content }}
   <p>
     Contact me at
-    <a href="https://{{ .Site.Params.mastodonHost }}/@{{ .Site.Params.mastodonUser }}"
-      >@{{ .Site.Params.mastodonUser }}@{{ .Site.Params.mastodonHost }}</a
-    >
-    or by <a href="mailto:{{ .Site.Params.email }}">email</a>.
+    {{- range .Site.Data.info.profiles }}
+      {{- if eq .network "mastodon" }}
+        <a href="{{ .url }}" rel="me">{{ replaceRE `https?://` "" .url }}</a>
+      {{- end }}
+    {{- end }}
+    or by
+    {{- range .Site.Data.info.profiles }}
+      {{- if eq .network "email" }}<a href="{{ .url }}">email</a>{{- end }}
+    {{- end }}.
   </p>
   {{ with .Site.Data.info.profiles }}
     {{ partial "social/icons" . }}

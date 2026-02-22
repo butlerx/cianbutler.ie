@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://cianbutler.ie/"
 languageCode = "en-us"
 title = "Cian Butler"
 sectionPagesMenu = "main"
@@ -23,11 +23,7 @@ notAlternative = "true"
 
 [params]
 description = "Open Source Developer and SRE"
-email = "butlerx@notthe.cloud"
 repo = "butlerx/cianbutler.ie"
-mastodonUser = "butlerx"
-mastodonHost = "mastodon.ie"
-title = "Cian Butler, SRE"
 theme = "#e7e7e7"
 
 [params.author]
@@ -41,8 +37,3 @@ tag = "tags"
 changefreq = "monthly"
 filename = "sitemap.xml"
 priority = 0.5
-
-[markup]
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true

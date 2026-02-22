@@ -1,7 +1,5 @@
 name = "Cian Butler"
 picture = "images/me.jpg"
-email = "butlerx@notthe.cloud"
-website = "cianbutler.ie"
 summary = """
 I'm an open source developer. I'm familiar with distributed systems, and using
 micro services to build web platforms and event processing pipelines.
@@ -22,8 +20,8 @@ languages = [
   "Puppet",
   "Python",
   "Rust",
-  "SCSS",
   "TypeScript",
+  "Terraform",
 ]
 
 [location]

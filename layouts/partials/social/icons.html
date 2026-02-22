@@ -1,16 +1,16 @@
 <div class="about-icons">
   {{ range . }}
-  <a href="{{ .url }}" rel="me" class="social-icon-link" aria-label="{{ .network }} link">
-    <span class="social-icon-bg">
-      {{ partial "svg-icon" "circle" }}
-    </span>
-    <span class="social-icon-fg">
-      {{ if eq .network "email" }}
-        {{ partial "svg-icon" "envelope" }}
-      {{ else }}
-        {{ partial "svg-icon" .network }}
-      {{ end }}
-    </span>
-  </a>
+    <a href="{{ .url }}" rel="me" class="social-icon-link" aria-label="{{ .network }} link">
+      <span class="social-icon-bg">
+        {{ partial "svg-icon" "circle" }}
+      </span>
+      <span class="social-icon-fg">
+        {{ if eq .network "email" }}
+          {{ partial "svg-icon" "envelope" }}
+        {{ else }}
+          {{ partial "svg-icon" .network }}
+        {{ end }}
+      </span>
+    </a>
   {{ end }}
 </div>

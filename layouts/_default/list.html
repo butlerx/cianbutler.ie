@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ range (.Paginator 4).Pages }}
-    {{ .Render "li"}}
+    {{ .Render "li" }}
   {{ end }}
   {{ partial "pagination" . }}
 {{ end }}

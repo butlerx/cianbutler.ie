@@ -17,6 +17,10 @@
   alt="{{ $alt }}"
   width="{{ $fallback.Width }}"
   height="{{ $fallback.Height }}"
-  {{ if $lazy }}loading="lazy" decoding="async"{{ else }}fetchpriority="high"{{ end }}
+  {{ if $lazy }}
+    loading="lazy" decoding="async"
+  {{ else }}
+    fetchpriority="high"
+  {{ end }}
   {{ with $class }}class="{{ . }}"{{ end }}
 />

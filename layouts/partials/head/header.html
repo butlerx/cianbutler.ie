@@ -1,47 +1,112 @@
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=6.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0" />
 
   {{ partial "head/assets" . }}
 
-  <link rel="canonical" href="{{ .Permalink | absURL }}">
+
+  <link rel="canonical" href="{{ .Permalink | absURL }}" />
   <link rel="manifest" href="{{ absURL "manifest.json" }}" />
   {{ with  .OutputFormats.Get "rss" -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
   {{ end -}}
 
+  {{- range .Site.Data.info.profiles }}
+    {{- if eq .network "mastodon" }}
+      <link rel="me" href="{{ .url }}" />
+    {{- end }}
+  {{- end }}
+  {{- if not .IsPage }}
+    {{- if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+      <meta name="robots" content="noindex, follow" />
+    {{- end }}
+
+  {{- end }}
+
   {{ partial "head/icons" . }}
+
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="{{ .Site.Params.theme }}" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+  {{- if .IsPage }}
+    {{- if eq .Section "posts" }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ .Title }}",
+      "url": "{{ .Permalink }}",
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+      {{- with .Lastmod }}
+      "dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",
+      {{- end }}
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author.name }}",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author.name }}"
+      },
+      "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}"
+      {{- with .Params.tags }},
+      "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}"{{ $t }}"{{ end }}]
+      {{- end }}
+    }
+  </script>
+    {{- else }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "{{ .Permalink }}",
+      "name": "{{ .Title }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author.name }}"
+      }
+    }
+  </script>
+    {{- end }}
+  {{- else }}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "url": "{{ .Permalink | absURL }}",
+      "url": "{{ .Site.BaseURL }}",
       "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
       "author": {
         "@type": "Person",
-        "name": "{{ .Site.Params.author.name }}"
-      }{{ with .Params.images }},
-      "image": {{ apply . "absURL" "." }}{{ end }}
+        "name": "{{ .Site.Params.author.name }}",
+        "url": "{{ .Site.BaseURL }}",
+        "sameAs": [
+          {{- range $i, $p := .Site.Data.info.profiles }}{{ if $p.url }}{{ if $i }}, {{ end }}"{{ $p.url }}"{{ end }}{{ end }}
+        ]
+      }
     }
   </script>
+  {{- end }}
+
 
   <title>
     {{- $isHomePage := eq .Title .Site.Title -}}
     {{- with .Params.heading -}}
       {{- . -}}
     {{- else -}}
-      {{- .Title -}}{{- if eq $isHomePage false }} | {{ .Site.Title }}{{ end -}}
+      {{- .Title -}}{{- if $isHomePage }}
+        |
+        {{ .Site.Params.description }}
+      {{ else if eq $isHomePage false }}
+        |
+        {{ .Site.Title }}
+      {{ end -}}
     {{- end -}}
   </title>
   <meta name="theme-color" content="{{ .Site.Params.theme }}" />
-  {{ partial "head/social" .}}
+  {{ partial "head/social" . }}
 </head>

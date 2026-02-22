@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!doctype html>
+<html
+  lang="{{ with .Site.LanguageCode }}
+    {{ . }}
+  {{ else }}
+    en-US
+  {{ end }}"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <link rel="canonical" href="{{ .Permalink | absURL }}">
+    <link rel="canonical" href="{{ .Permalink | absURL }}" />
     {{ partial "head/icons" . }}
     <title>
       {{- with .Params.heading -}}
@@ -16,10 +20,21 @@
         {{- .Title -}}
       {{- end -}}
     </title>
-    <meta name="theme-color" content="{{- with .Params.theme -}}{{- . -}}{{- else -}}{{ .Site.Params.theme }}{{- end -}}" />
+    <meta
+      name="theme-color"
+      content="{{- with .Params.theme -}}
+        {{- . -}}
+      {{- else -}}
+        {{ .Site.Params.theme }}
+      {{- end -}}"
+    />
     <meta
       name="description"
-      content="{{- with .Params.description -}}{{- . -}}{{- else -}}{{ .Site.Params.description -}}{{- end -}}"
+      content="{{- with .Params.description -}}
+        {{- . -}}
+      {{- else -}}
+        {{ .Site.Params.description -}}
+      {{- end -}}"
     />
     <link rel="manifest" href="{{ absURL "manifest.json" }}" />
 

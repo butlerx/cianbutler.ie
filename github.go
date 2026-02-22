@@ -1,22 +1,16 @@
-//go:build ignore
-
 package main
 
 import (
 	"bytes"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
 )
 
-const (
-	path       = "data/github.json"
-	githubUser = "butlerx"
-	graphqlURL = "https://api.github.com/graphql"
-)
-
+const graphqlURL = "https://api.github.com/graphql"
 const query = `query (
   $author: String = ""
   $userFirst: Int = 0
@@ -191,65 +185,101 @@ type output struct {
 }
 
 func main() {
-	token := os.Getenv("GH_TOKEN")
-	if token == "" {
-		fmt.Fprintln(os.Stderr, "GH_TOKEN environment variable is required")
+	if err := run(); err != nil {
+		fmt.Fprintf(os.Stderr, "error: %v\n", err)
 		os.Exit(1)
 	}
+}
 
+type config struct {
+	outputPath string
+	user       string
+}
+
+func parseFlags() config {
+	var cfg config
+	flag.StringVar(&cfg.outputPath, "output", "data/github.json", "output file path")
+	flag.StringVar(&cfg.user, "user", "butlerx", "GitHub username")
+	flag.Parse()
+	return cfg
+}
+
+func run() error {
+	cfg := parseFlags()
+
+	token := os.Getenv("GH_TOKEN")
+	if token == "" {
+		return fmt.Errorf("GH_TOKEN environment variable is required")
+	}
+
+	gqlResp, err := fetchGitHubData(token, cfg.user)
+	if err != nil {
+		return fmt.Errorf("fetching github data: %w", err)
+	}
+
+	out := buildOutput(gqlResp)
+
+	if err = writeJSONToFile(cfg.outputPath, out); err != nil {
+		return fmt.Errorf("writing output to %s: %w", cfg.outputPath, err)
+	}
+	return nil
+}
+
+func fetchGitHubData(token, user string) (*graphQLResponse, error) {
 	reqBody := graphQLRequest{
 		Query: query,
 		Variables: map[string]any{
-			"author":      githubUser,
+			"author":      user,
 			"userFirst":   10,
 			"searchFirst": 10,
-			"q":           fmt.Sprintf("author:%s type:pr is:public", githubUser),
+			"q":           fmt.Sprintf("author:%s type:pr is:public", user),
 		},
 	}
 
 	bodyBytes, err := json.Marshal(reqBody)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to marshal request: %v\n", err)
-		os.Exit(1)
+		return nil, fmt.Errorf("marshalling request: %w", err)
 	}
 
 	req, err := http.NewRequest(http.MethodPost, graphqlURL, bytes.NewReader(bodyBytes))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to create request: %v\n", err)
-		os.Exit(1)
+		return nil, fmt.Errorf("creating request: %w", err)
 	}
 	req.Header.Set("Authorization", "token "+token)
 	req.Header.Set("Content-Type", "application/json")
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "request failed: %v\n", err)
-		os.Exit(1)
+		return nil, fmt.Errorf("executing request: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if cerr := resp.Body.Close(); cerr != nil {
+			fmt.Fprintf(os.Stderr, "warning: closing response body: %v\n", cerr)
+		}
+	}()
 
 	respBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to read response: %v\n", err)
-		os.Exit(1)
+		return nil, fmt.Errorf("reading response body: %w", err)
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		fmt.Fprintf(os.Stderr, "GitHub API returned %d: %s\n", resp.StatusCode, respBody)
-		os.Exit(1)
+		return nil, fmt.Errorf("GitHub API returned %d: %s", resp.StatusCode, respBody)
 	}
 
 	var gqlResp graphQLResponse
-	if err := json.Unmarshal(respBody, &gqlResp); err != nil {
-		fmt.Fprintf(os.Stderr, "failed to parse response: %v\n", err)
-		os.Exit(1)
+	if err = json.Unmarshal(respBody, &gqlResp); err != nil {
+		return nil, fmt.Errorf("parsing response: %w", err)
 	}
 
 	if len(gqlResp.Errors) > 0 {
-		fmt.Fprintf(os.Stderr, "GraphQL error: %s\n", gqlResp.Errors[0].Message)
-		os.Exit(1)
+		return nil, fmt.Errorf("GraphQL error: %s", gqlResp.Errors[0].Message)
 	}
 
+	return &gqlResp, nil
+}
+
+func buildOutput(gqlResp *graphQLResponse) output {
 	pinnedRepos := make([]repoEntry, 0, len(gqlResp.Data.RepositoryOwner.PinnedItems.Nodes))
 	for _, n := range gqlResp.Data.RepositoryOwner.PinnedItems.Nodes {
 		if n.IsPrivate {
@@ -289,22 +319,23 @@ func main() {
 		})
 	}
 
-	out := output{
+	return output{
 		PinnedRepos:   pinnedRepos,
 		Repos:         repos,
 		Contributions: contributions,
 	}
+}
 
+func writeJSONToFile(filename string, out output) error {
 	outBytes, err := json.Marshal(out)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to marshal output: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("marshalling output: %w", err)
 	}
 
-	if err := os.WriteFile(path, outBytes, 0o644); err != nil {
-		fmt.Fprintf(os.Stderr, "failed to write %s: %v\n", path, err)
-		os.Exit(1)
+	if err = os.WriteFile(filename, outBytes, 0o644); err != nil {
+		return fmt.Errorf("writing file %s: %w", filename, err)
 	}
 
-	fmt.Printf("Written to %s\n", path)
+	fmt.Printf("Written to %s\n", filename)
+	return nil
 }

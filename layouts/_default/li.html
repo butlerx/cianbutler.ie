@@ -6,7 +6,9 @@
   </h2>
   <div class="meta">
     <span class="key">published on</span>
-    <span class="value">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+    <span class="value"
+      ><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span
+    >
     {{ with .Site.Params.author.name }}
       <span class="key">author:</span>
       <span class="value">{{ . }}</span>
@@ -14,9 +16,7 @@
   </div>
   <section class="article">
     {{- with .Params.description -}}{{- . | markdownify -}}{{- else -}}{{- .Summary -}}{{- end -}}
-    <a href="{{ .Permalink }}">
-      Read more<span class="sr-only">: {{ .Title }}</span>
-    </a>
+    <a href="{{ .Permalink }}"> Read more<span class="sr-only">: {{ .Title }}</span> </a>
   </section>
   <hr />
 </article>

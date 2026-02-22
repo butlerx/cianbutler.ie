@@ -4,3 +4,10 @@ proseWrap = "always"
 printWidth = 120
 endOfLine = "lf"
 tabWidth = 2
+plugins = ["prettier-plugin-go-template"]
+
+[[overrides]]
+files = ["layouts/**/*.html"]
+
+  [overrides.options]
+  parser = "go-template"
