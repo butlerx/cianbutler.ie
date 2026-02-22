@@ -9,10 +9,6 @@ tags:
   - Rust
   - Python
   - Performance
-audio: []
-images: []
-series: []
-videos: []
 ---
 
 I gave a talk at [FOSDEM 2026](https://fosdem.org/2026/) in the
@@ -30,8 +26,4 @@ benefits the entire community.
 
 [Slides](https://butlerx.github.io/presentation/slides/rust-building-performance-critical-python-apps/#/)
 
-<video controls preload="metadata" width="100%">
-  <source src="https://video.fosdem.org/2026/ub2252a/RCFALN-rust-building-performance-critical-python-apps.av1.webm" type="video/webm; codecs=av01.0.08M.08">
-  <source src="https://video.fosdem.org/2026/ub2252a/RCFALN-rust-building-performance-critical-python-apps.mp4" type="video/mp4">
-  Your browser does not support the video element.
-</video>
+{{< fosdem-video year="2026" room="ub2252a" title="RCFALN-rust-building-performance-critical-python-apps" >}}

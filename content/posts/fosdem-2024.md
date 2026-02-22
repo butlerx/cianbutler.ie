@@ -9,10 +9,6 @@ tags:
   - Enclaves
   - Confidential Computing
   - Security
-audio: []
-images: []
-series: []
-videos: []
 ---
 
 I gave a talk at [FOSDEM 2024](https://archive.fosdem.org/2024/) in the
@@ -30,8 +26,4 @@ Secure Enclave without the engineering overhead to leverage fully attestable con
 
 [Slides](https://butlerx.github.io/presentation/slides/EnclavesInProd/#/)
 
-<video controls preload="metadata" width="100%">
-  <source src="https://video.fosdem.org/2024/h2214/fosdem-2024-2317-the-ups-and-downs-of-running-enclaves-in-production.av1.webm" type="video/webm; codecs=av01.0.08M.08">
-  <source src="https://video.fosdem.org/2024/h2214/fosdem-2024-2317-the-ups-and-downs-of-running-enclaves-in-production.mp4" type="video/mp4">
-  Your browser does not support the video element.
-</video>
+{{< fosdem-video year="2024" room="h2214" title="fosdem-2024-2317-the-ups-and-downs-of-running-enclaves-in-production" >}}

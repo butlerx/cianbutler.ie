@@ -3,35 +3,58 @@
 ![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/butlerx/cianbutler.ie/blob/master/LICENSE.md)
 
-A Hugo static site to display past work experience and projects I've worked on.
+My personal site — a [Hugo](https://gohugo.io/) static site for work experience, projects, blog posts, and open source
+contributions. Fuelled entirely by coffee and stubbornness.
 
-# Installation
+## Prerequisites
 
-Install [mise](https://mise.jdx.dev/) then run `mise run build` to install dependencies and build the site.
+Install [mise](https://mise.jdx.dev/) and it'll handle the rest (Hugo, Go, linters, formatters — the whole lot).
 
-# Usage
+## Getting Started
 
-## Development
+```sh
+mise run build   # install deps + build the site
+mise run serve   # dev server at localhost:1313 with live reload (includes drafts)
+```
 
-To preview the site run `mise run serve` then open a browser and navigate to `localhost:1313`. The site will live reload
-based on any changes.
+## Available Tasks
 
-## Publish
-
-To build the site for deployment run `mise run build`, the site will be output to `public` folder. This can then be
-served from any hosting. The site is auto deployed using cloudflare hosting.
+| Task                    | What it does                                     |
+| ----------------------- | ------------------------------------------------ |
+| `mise run build` (`b`)  | Build the site to `public/`                      |
+| `mise run serve`        | Dev server with live reload and draft posts      |
+| `mise run clean`        | Nuke the old build artifacts                     |
+| `mise run format`       | Format everything (Prettier + gofmt)             |
+| `mise run format:check` | Check formatting without writing changes         |
+| `mise run lint`         | Run all linters (Markdown + CSS)                 |
+| `mise run spell`        | Spell check the content                          |
+| `mise run check`        | Run the full suite: format check + lint + spell  |
+| `mise run github-data`  | Fetch GitHub data (needs `GH_TOKEN` — see below) |
 
 ## Content
 
-All pages content sections can be edited from `./content`. These files are simple markdown with front-matter yaml.
+All page content lives in `./content` as Markdown with front-matter. Easy to edit, hard to mess up.
 
-A portion of the content is stored in `data` such as `work.yaml`, and `education.yaml`. The text in the yaml files are
-treated as markdown and rendered out in to the templates.
+Structured data like work history and education is stored in `data/` as TOML files:
 
-The Social links can be found in `data/info.yaml`.
+- `data/work.toml` — work experience
+- `data/education.toml` — education
+- `data/info.toml` — social links, bio, skills, and other personal info
 
-## Github
+The text in those TOML files gets treated as Markdown and rendered into the templates.
 
-A portion of the site uses Github as a source for rendering templates. Given it is not possible to render graphql data
-from hugo, `github.go` exists. `github.go` is a Go script to etl data from github's graphql api for use in hugo. Run
-`mise run github-data` to fetch the latest data.
+## GitHub Data
+
+A chunk of the site pulls live data from GitHub — pinned repos, top repositories, and open source contributions. Since
+Hugo can't talk to GraphQL APIs on its own, `github.go` exists to bridge the gap. It fetches data from GitHub's GraphQL
+API and writes it to `data/github.json` for Hugo to pick up.
+
+```sh
+GH_TOKEN=$(gh auth token) mise run github-data
+```
+
+Assumes you're already logged in with `gh auth login`.
+
+## Deployment
+
+The site auto-deploys via Cloudflare Pages. Push to main and it takes care of itself.

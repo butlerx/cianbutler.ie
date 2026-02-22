@@ -39,15 +39,6 @@ echo "🧹 Cleaning old build"
 rm -rf public resources .hugo_build.lock
 """
 
-[tasks.update]
-description = "Update themes and modules"
-quiet = true
-run = """
-echo "🛎 Updating Theme"
-hugo mod get -u ./...
-hugo mod tidy
-"""
-
 [tasks.format]
 description = "Format files"
 depends = ["format:go"]

@@ -6,10 +6,6 @@ description: Notes and thoughts from FOSDEM 2019
 tags:
   - FOSDEM
   - Notes
-audio: []
-images: []
-series: []
-videos: []
 ---
 
 FOSDEM took place over 2 days and contained a staggering amount of talks, with over 408 hours of content and 600

@@ -6,10 +6,6 @@ description: Why you need to lock versions
 tags:
   - Docker
   - PostgrSQL
-audio: []
-images: []
-series: []
-videos: []
 ---
 
 ## Why you need to lock versions
