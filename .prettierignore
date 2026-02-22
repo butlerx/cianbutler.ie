@@ -7,3 +7,6 @@ layouts/_default/index.json
 
 # Triggers prettier-plugin-go-template bug (invalid root node)
 layouts/partials/experience.html
+
+# TOML files are formatted by taplo
+*.toml

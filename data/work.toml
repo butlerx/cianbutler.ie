@@ -5,14 +5,7 @@ position = "Senior Performance SRE"
 company = "Cloudsmith"
 startDate = "2025-02-26"
 website = "https://cloudsmith.com"
-languages = [
-  "Rust",
-  "Typescript",
-  "Python",
-  "Terraform",
-  "Clickhouse",
-  "PostgreSQL",
-]
+languages = ["Rust", "Typescript", "Python", "Terraform", "Clickhouse", "PostgreSQL"]
 summary = """
 Senior Performance SRE on the Platform Edge team at Cloudsmith, a software supply chain security company providing
 universal package management. Focused on building and optimising the CDN infrastructure that underpins package
@@ -30,15 +23,7 @@ company = "Evervault"
 startDate = "2022-12-05"
 endDate = "2025-01-28"
 website = "https://evervault.com"
-languages = [
-  "Rust",
-  "Typescript",
-  "Postgresql",
-  "Go",
-  "ElasticSearch",
-  "Clickhouse",
-  "Terraform",
-]
+languages = ["Rust", "Typescript", "Postgresql", "Go", "ElasticSearch", "Clickhouse", "Terraform"]
 summary = """
 As the lead Site Reliability Engineer at a security-focused startup, I contribute to the design and implementation of
 critical infrastructure and services that enable secure payment processing and data protection.
@@ -105,16 +90,7 @@ company = "CoderDojo Foundation (Raspberry Pi Foundation)"
 startDate = "2017-06-10"
 endDate = "2018-01-10"
 website = "https://coderdojo.com"
-languages = [
-  "AWS",
-  "Docker",
-  "Graphite",
-  "Kubernetes",
-  "Linux",
-  "Node.js",
-  "PostgreSQL",
-  "Python",
-]
+languages = ["AWS", "Docker", "Graphite", "Kubernetes", "Linux", "Node.js", "PostgreSQL", "Python"]
 summary = """
 Site Reliability Engineer at Raspberry Pi Foundation, supporting the CoderDojo community platform that enables youth
 coding education worldwide. Led significant infrastructure modernisation efforts while contributing to educational
@@ -154,15 +130,7 @@ company = "CoderDojo Foundation"
 website = "https://coderdojo.com"
 startDate = "2016-04-06"
 endDate = "2016-10-06"
-languages = [
-  "AWS",
-  "Angular.js",
-  "Docker",
-  "Linux",
-  "NGINX",
-  "Node.js",
-  "PostgreSQL",
-]
+languages = ["AWS", "Angular.js", "Docker", "Linux", "NGINX", "Node.js", "PostgreSQL"]
 summary = """
 Software Engineering Intern at CoderDojo, contributing to the development of the Zen platform that supports a global
 community of volunteer coding mentors. As part of a small, dynamic team, worked across the full stack to enhance the

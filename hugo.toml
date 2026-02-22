@@ -1,14 +1,14 @@
-baseURL = "https://cianbutler.ie/"
-languageCode = "en-us"
-title = "Cian Butler"
+baseURL          = "https://cianbutler.ie/"
+languageCode     = "en-us"
+title            = "Cian Butler"
 sectionPagesMenu = "main"
-enableRobotsTXT = true
-enableGitInfo = true
+enableRobotsTXT  = true
+enableGitInfo    = true
 
 [pagination]
 disableAliases = false
-pagerSize = 5
-path = 'page'
+pagerSize      = 5
+path           = 'page'
 
 [outputs]
 home = ["HTML", "RSS", "MANIFEST"]
@@ -16,24 +16,24 @@ page = ["HTML"]
 
 [outputFormats]
 [outputFormats.manifest]
-name = "manifest"
-baseName = "manifest"
-mediaType = "application/json"
+name           = "manifest"
+baseName       = "manifest"
+mediaType      = "application/json"
 notAlternative = "true"
 
 [params]
 description = "Open Source Developer and SRE"
-repo = "butlerx/cianbutler.ie"
-theme = "#e7e7e7"
+repo        = "butlerx/cianbutler.ie"
+theme       = "#e7e7e7"
 
 [params.author]
 name = "Cian Butler"
 
 [taxonomies]
 series = "series"
-tag = "tags"
+tag    = "tags"
 
 [sitemap]
 changefreq = "monthly"
-filename = "sitemap.xml"
-priority = 0.5
+filename   = "sitemap.xml"
+priority   = 0.5

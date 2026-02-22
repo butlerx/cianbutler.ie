@@ -25,24 +25,24 @@ languages = [
 ]
 
 [location]
-city = "Dublin"
+city        = "Dublin"
 countryCode = "IE"
-region = "Dublin"
+region      = "Dublin"
 
 [[profiles]]
-network = "github"
+network  = "github"
 username = "butlerx"
-url = "https://github.com/butlerx"
+url      = "https://github.com/butlerx"
 
 [[profiles]]
-network = "linkedin"
+network  = "linkedin"
 username = "butlerx"
-url = "https://ie.linkedin.com/in/butlerx"
+url      = "https://ie.linkedin.com/in/butlerx"
 
 [[profiles]]
 network = "email"
-url = "mailto:butlerx@notthe.cloud"
+url     = "mailto:butlerx@notthe.cloud"
 
 [[profiles]]
 network = "mastodon"
-url = "https://mastodon.ie/@butlerx"
+url     = "https://mastodon.ie/@butlerx"

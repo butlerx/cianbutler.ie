@@ -6,20 +6,7 @@ institution = "Dublin City University"
 area = "Software Engineering"
 startDate = "2013-09-30"
 endDate = "2018-10-01"
-languages = [
-  "C++",
-  "Java",
-  "JavaCC",
-  "Prolog",
-  "Haskell",
-  "Bash",
-  "MySQL",
-  "R",
-  "HTML",
-  "CSS",
-  "MIPS",
-  "Assembly",
-]
+languages = ["C++", "Java", "JavaCC", "Prolog", "Haskell", "Bash", "MySQL", "R", "HTML", "CSS", "MIPS", "Assembly"]
 summary = """
 Completed a comprehensive software engineering degree with strong emphasis on practical application and theoretical
 foundations.
