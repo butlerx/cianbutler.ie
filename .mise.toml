@@ -104,3 +104,20 @@ run = """
 echo "🔤 Checking Spelling"
 cspell "content/**/*.md"
 """
+
+[tasks."optimize-images"]
+description = "Convert JPG/PNG images to WebP"
+quiet = true
+run = '''
+echo "🖼️ Converting images to WebP"
+find content assets -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) | while read img; do
+  webp="${img%.*}.webp"
+  if cwebp -q 80 "$img" -o "$webp" 2>/dev/null; then
+    rm "$img"
+    echo "✓ $(basename "$img") -> $(basename "$webp")"
+  else
+    echo "✗ FAILED: $img"
+  fi
+done
+echo "⚠️  Remember to update any references from .jpg/.jpeg/.png to .webp"
+'''

@@ -43,7 +43,7 @@ The talk walked through many of the women who built the internet and modern comp
 and wrote a 28-page document that contained the first assembly language. Her research also laid the groundwork for
 neural networks used in animal recognition.
 
-![Slide about women as the original human computers](./women-in-tech-human-computers.jpg)
+![Slide about women as the original human computers](./women-in-tech-human-computers.webp)
 
 **Mary Jackson** was one of NASA's human computers at Langley and became NASA's first Black female engineer.
 
@@ -56,23 +56,23 @@ wrote WHOIS and participated in the birth of domain names.
 **Radia Perlman** — inventor of the Spanning Tree Protocol (STP), which made the World Wide Web possible. She did it so
 fast she had time to write a poem about it.
 
-![Radia Perlman's poem about the Spanning Tree Protocol](./radia-perlman-spanning-tree-poem.jpg)
+![Radia Perlman's poem about the Spanning Tree Protocol](./radia-perlman-spanning-tree-poem.webp)
 
 Rapid Spanning Tree Protocol and Multiple Spanning Tree Protocol are just extensions of STP.
 
 The talk also covered a dubious 2000 study claiming to show girls are less interested in maths and science — boys looked
 at objects, girls at faces, and researchers drew wild conclusions from that.
 
-![Slide about the flawed 2000 study on gender and maths](./gender-maths-flawed-study.jpg)
+![Slide about the flawed 2000 study on gender and maths](./gender-maths-flawed-study.webp)
 
-![Slide debunking the study's methodology](./gender-study-debunked.jpg)
+![Slide debunking the study's methodology](./gender-study-debunked.webp)
 
 The numbers were rubbish, but the media widely shared them despite academics saying the results couldn't be replicated.
 As the speaker put it: "I'm not good at maths" does not equal "I'm not interested in maths."
 
 ### [Rust for Linux](https://fosdem.org/2025/schedule/event/fosdem-2025-6507-rust-for-linux/) — [Miguel Ojeda](https://fosdem.org/2025/schedule/speaker/miguel_ojeda/)
 
-![Rust for Linux title slide](./rust-for-linux-title.jpg)
+![Rust for Linux title slide](./rust-for-linux-title.webp)
 
 Rust is currently used for drivers in the Linux kernel: Phy, Null block, DRM panic screen QR code, and Android Binder.
 NVMe and GPS drivers are upstream.
@@ -80,9 +80,9 @@ NVMe and GPS drivers are upstream.
 C and C++ are inherently unsafe. Rust is memory-safe, and the hope is it will reduce the number of logic bugs in kernel
 code.
 
-![Timeline of Rust for Linux](./rust-for-linux-timeline.jpg)
+![Timeline of Rust for Linux](./rust-for-linux-timeline.webp)
 
-![Rust for Linux team overview](./rust-for-linux-team.jpg)
+![Rust for Linux team overview](./rust-for-linux-team.webp)
 
 An overview of the timeline and the team behind the project. On the GCC front, gccrs is a new frontend for Rust in GCC,
 with planned full Rust support.
@@ -110,7 +110,7 @@ Red Hat, Samsung, and Google all have multiple developers dedicated to Rust for 
 The uutils/coreutils project: 530 contributors, 1.3k forks, 18k stars, 499 of 617 tests passing in the GNU coreutils
 test suite. They're production-ready and support a lot of platforms, including WASM.
 
-![Platform support for uutils coreutils](./uutils-coreutils-platforms.jpg)
+![Platform support for uutils coreutils](./uutils-coreutils-platforms.webp)
 
 Rust is great for security, parallelism, and performance — and it's not about the license. It's very portable: write
 once, run everywhere. Great ecosystem. Roughly 6× speed improvement. You can use Rust's tooling to profile and debug
@@ -133,12 +133,12 @@ representing the value's type and an offset structure for position in the subtyp
 The **Dynamic** data type is the same as Variant but without needing to specify subtypes in advance. Remaining values
 are stored as `<datatype_type><value>`, with a small query-time cost. This solves challenge 1.
 
-![JSON data type configuration in ClickHouse](./clickhouse-json-config.jpg)
+![JSON data type configuration in ClickHouse](./clickhouse-json-config.webp)
 
 The JSON type can be configured with max paths as sub-columns, max types per path, paths that should always be stored as
 sub-columns, and paths to exclude.
 
-![ClickHouse JSON benchmarks](./clickhouse-json-benchmarks.jpg)
+![ClickHouse JSON benchmarks](./clickhouse-json-benchmarks.webp)
 
 Performance claims: 10× faster than Elasticsearch, 4000× faster than DuckDB and MongoDB, 5000× faster than Postgres.
 
@@ -170,9 +170,9 @@ injected through the build system, hidden using test files and values. It was on
 A walkthrough of the hack and how it got in, then a discussion of **Supply Graph** — a tool to capture and trace compile
 commands through the build process.
 
-![Supply Graph capture of compile commands](./supply-graph-compile-commands.jpeg)
+![Supply Graph capture of compile commands](./supply-graph-compile-commands.webp)
 
-![Supply Graph limitations](./supply-graph-limitations.jpeg)
+![Supply Graph limitations](./supply-graph-limitations.webp)
 
 Limitations include flaky traceability, code generation, Perl scripts generating ASM, and protobuf.
 
@@ -249,7 +249,7 @@ Low cardinality support means millions of series are easily handled with horizon
 Challenges: SQL is not PromQL (though arguably that's a good thing), it can seem complex for small data volumes
 (debatable — it works well at all scales), and it's not a turnkey solution — it's just a storage engine.
 
-![Overview of ClickHouse observability integrations](./clickhouse-observability-integrations.jpg)
+![Overview of ClickHouse observability integrations](./clickhouse-observability-integrations.webp)
 
 Turnkey solutions built on ClickHouse: SigNoz, Coroot, qryn, and HyperDX.
 
@@ -261,4 +261,4 @@ Prometheus-compatible endpoints. Uses materialised views to manage data querying
 
 ClickHouse also supports bloom filters for full-text search and ZSTD compression.
 
-![ClickHouse observability architecture](./clickhouse-observability-architecture.jpg)
+![ClickHouse observability architecture](./clickhouse-observability-architecture.webp)

@@ -33,9 +33,9 @@ The shift to LLMOps has brought a paradigm change, and people are forgetting abo
 boring data fundamentals are more important than ever. Garbage in, garbage out. There's a proliferation of custom,
 non-standard API wrappers for models, and little to no monitoring in many deployments.
 
-![Slide on the evolution of MLOps architectures](mlops-architecture-evolution.jpg)
+![Slide on the evolution of MLOps architectures](mlops-architecture-evolution.webp)
 
-![Slide on the current state of LLMOps challenges](llmops-challenges.jpg)
+![Slide on the current state of LLMOps challenges](llmops-challenges.webp)
 
 Looking ahead: we'll ship faster, observability will improve, and the subsidies will stop — which will force everyone to
 get serious about efficiency.
@@ -49,19 +49,19 @@ Crusoe.ai is a "neocloud" built specifically for training LLMs. The hardware dem
 heat, better cooling. Traditional data centres can't provide what's needed, so they're building near wind and solar
 farms, close to energy parks.
 
-![Slide on neocloud infrastructure requirements](neocloud-infrastructure.jpg)
+![Slide on neocloud infrastructure requirements](neocloud-infrastructure.webp)
 
 The classic "cattle, not pets" mantra applies, but with a twist: these aren't your $40 cattle. These are racehorses and
 A5 Wagyu beef cattle. You can't just let them die and spin up replacements. Racehorses make crappy work hours, and cheap
 compute makes terrible LLM training clusters.
 
-![Slide on the cattle-vs-pets analogy for AI hardware](ai-cattle-vs-pets.jpg)
+![Slide on the cattle-vs-pets analogy for AI hardware](ai-cattle-vs-pets.webp)
 
 Sources of failure are everywhere: NICs getting overloaded, no control over user workloads, running at the bleeding edge
 of kernel features with unique bugs that are hard to upgrade around. Optics run hotter, HCAs overheat and throw PCIe
 resets, and cables that are too long get bent and break.
 
-![Slide listing sources of failure in AI clusters](ai-cluster-failure-sources.jpg)
+![Slide listing sources of failure in AI clusters](ai-cluster-failure-sources.webp)
 
 ### ACK to the Future: TCP in 2025
 
@@ -88,9 +88,9 @@ IPv6 usage fluctuates around 50%, and France is at 85%. GitHub still doesn't sup
 Two kinds of caches: private (browser) and public (CDN and friends). The talk opened with an overview of cache-control
 headers and Wikimedia's architecture — two CDN layers (upload and text) built on HAProxy and Varnish.
 
-![Slide showing an overview of cache-control headers](cache-control-headers.jpg)
+![Slide showing an overview of cache-control headers](cache-control-headers.webp)
 
-![Slide showing Wikimedia's CDN architecture](wikimedia-cdn-architecture.jpg)
+![Slide showing Wikimedia's CDN architecture](wikimedia-cdn-architecture.webp)
 
 Cache hit rates vary by region, and what's popular depends on location. About twenty percent of the content accounts for
 the majority of traffic. Application-level caching comes in two flavours: in-memory (fast, limited, volatile — hashmaps
@@ -99,7 +99,7 @@ and the like) and external caches (slower, scalable, resilient).
 The problem is that current systems are optimised for human traffic patterns — organic patterns built to bend rather
 than break.
 
-![Slide on organic traffic patterns versus bot traffic](organic-vs-bot-traffic.jpeg)
+![Slide on organic traffic patterns versus bot traffic](organic-vs-bot-traffic.webp)
 
 LLM crawlers and agents are increasing global web traffic dramatically. They're not just fetching HTML — they want media
 and all the metadata too. They don't play nice: ignoring robots.txt, impersonating other LLMs, humans, and other bots,
@@ -139,7 +139,7 @@ reliable. The practical advice? Just pay someone to deal with it.
 > Linhua Tang and Jayaganesh Kalyanasundaram, Huawei Ireland Research Center —
 > [HyperRouter: Lessons Learnt from Building an L4 Load Balancing Service](https://www.usenix.org/conference/srecon25emea/presentation/tang)
 
-![Slide showing the HyperRouter architecture overview](hyperrouter-architecture.jpg)
+![Slide showing the HyperRouter architecture overview](hyperrouter-architecture.webp)
 
 HyperRouter is a multi-tenanted software load balancer. Huawei uses Orion for L7 (TLS termination, HTTP header/body
 parsing, security policies, response transformation), but Orion isn't resilient to node failures or scale-up/down
@@ -149,17 +149,17 @@ hashing, connection tracking, and direct server return to reduce egress overhead
 The objectives: high performance close to line-rate, high scalability for Huawei Cloud's billions of concurrent TCP
 connections, high reliability with zero expected downtime, and future-proofing for evolving needs.
 
-![Slide on HyperRouter design objectives](hyperrouter-design-objectives.jpg)
+![Slide on HyperRouter design objectives](hyperrouter-design-objectives.webp)
 
 The control plane is peer-to-peer with eventually consistent configuration. Every node holds all the data, connected via
 bidirectional gRPC. They formally verified the P2P communication protocol.
 
-![Slide on the P2P control plane architecture](hyperrouter-p2p-control-plane.jpg)
+![Slide on the P2P control plane architecture](hyperrouter-p2p-control-plane.webp)
 
 Shuffle sharding isolates the blast radius. They defined critical user journeys to determine what to observe, built
 traces around those journeys, and can now see real-world request performance with per-component metrics.
 
-![Slide on observability through critical user journeys](hyperrouter-observability.jpg)
+![Slide on observability through critical user journeys](hyperrouter-observability.webp)
 
 ### SRE for AI and AI for SRE
 
@@ -181,7 +181,7 @@ platforms for performance, cost, and availability. Context caching is load-beari
 large text payloads back and forth. The systems aren't stateful, but they're not stateless either, thanks to caching and
 long-lived requests (up to 10 minutes).
 
-![Slide from Todd Underwood's talk on SRE challenges at Anthropic](anthropic-sre-challenges.jpg)
+![Slide from Todd Underwood's talk on SRE challenges at Anthropic](anthropic-sre-challenges.webp)
 
 **Bug #1:** Hard to detect — only 0.8% of requests affected, different symptoms on different platforms,
 traffic-dependent. Hard to troubleshoot — quality evals didn't show degradation, and privacy policies restricted access
@@ -241,28 +241,28 @@ What is performance? Latency (time to serve a request), capacity (sustained max 
 economically you process a request). Little's Law ties them together: `L = λ × W` — the number of active requests equals
 the arrival rate times the latency per request.
 
-![Slide explaining Little's Law and its application to performance](littles-law-performance.jpg)
+![Slide explaining Little's Law and its application to performance](littles-law-performance.webp)
 
 Theory in practice: latency grows as load grows. GitHub created a performance team to build efficient systems at scale.
 CPU utilisation and latency are heavily linked. They analyse performance by CPU family and instance type, sending
 production traffic to an isolated performance testing environment for real-user metrics — essentially canaries for
 performance testing.
 
-![Slide showing the performance testing canary setup](performance-testing-canary.jpg)
+![Slide showing the performance testing canary setup](performance-testing-canary.webp)
 
 CPU metrics come from the host via `/proc/stat` and `/sys/devices/system/cpu`: total CPU idle/busy time, per-core
 utilisation, and per-core current frequency.
 
-![Slide listing CPU metric sources from the Linux kernel](cpu-metric-sources.jpg)
+![Slide listing CPU metric sources from the Linux kernel](cpu-metric-sources.webp)
 
 The experiment: route moderate production traffic to a dedicated node, establish a baseline, maintain steady RPS, then
 increase CPU utilisation on the host using `stress-ng`.
 
-![Slide showing the experimental setup for CPU stress testing](cpu-stress-test-setup.jpg)
+![Slide showing the experimental setup for CPU stress testing](cpu-stress-test-setup.webp)
 
-![Slide showing results of CPU frequency under load](cpu-frequency-under-load.jpg)
+![Slide showing results of CPU frequency under load](cpu-frequency-under-load.webp)
 
-![Slide showing the relationship between CPU utilisation and frequency](cpu-utilisation-vs-frequency.jpg)
+![Slide showing the relationship between CPU utilisation and frequency](cpu-utilisation-vs-frequency.webp)
 
 CPU drops frequency in response to sustained work, which paradoxically causes reported utilisation to drop.
 Hyper-threading eventually plateaus — threads compete for resources, further dropping utilisation. When load average
@@ -282,7 +282,7 @@ the knee point. Select a threshold that maximises efficiency while staying withi
 Thinking in queues. Queues are everywhere, and queuing is non-linear — it's not intuitive. Queues occur even when
 there's enough average capacity, because of high variance in arrival rates and service times.
 
-![Slide introducing queuing theory fundamentals](queuing-theory-fundamentals.jpg)
+![Slide introducing queuing theory fundamentals](queuing-theory-fundamentals.webp)
 
 The golden signals through a queuing theory lens: latency is service time plus waiting time (utilisation drives waiting
 time, and the coefficient of variation is a leading indicator); traffic as arrival rate (λ) is the demand driver; errors
@@ -291,7 +291,7 @@ are a symptom of overload; and saturation is high utilisation.
 Little's Law again: `L = λ × W`. A worked example: arrival rate of 180 req/s, average service time of 50 ms, four server
 pods.
 
-![Slide working through a Little's Law capacity example](littles-law-capacity-example.jpg)
+![Slide working through a Little's Law capacity example](littles-law-capacity-example.webp)
 
 ρ = (180 × 0.05) / 4 = 2.25 — anything above 1 means queuing. Scaling to 8 pods gives ρ = 1.25, still over 1. You need
 10 pods to get ρ = 0.95 and eliminate the queue.
@@ -299,13 +299,13 @@ pods.
 The Universal Scalability Law models how throughput changes with concurrency, accounting for contention and coherency
 overhead.
 
-![Slide showing the Universal Scalability Law formula](universal-scalability-law.jpg)
+![Slide showing the Universal Scalability Law formula](universal-scalability-law.webp)
 
-![Slide illustrating contention in the USL model](usl-contention.jpg)
+![Slide illustrating contention in the USL model](usl-contention.webp)
 
-![Slide illustrating coherency overhead in the USL model](usl-coherency-overhead.jpg)
+![Slide illustrating coherency overhead in the USL model](usl-coherency-overhead.webp)
 
-![Slide showing combined USL effects on throughput](usl-combined-effects.jpg)
+![Slide showing combined USL effects on throughput](usl-combined-effects.webp)
 
 Limitations: noisy real-world data, distributed systems that are hard to model as aggregate functions, async and
 event-driven architectures that resist modelling, a coherency factor that assumes 1:1 coordination, systems that behave
@@ -314,4 +314,4 @@ differently at scale, noisy neighbours in multi-tenant environments, and rate li
 Pitfalls: garbage in, garbage out; don't extrapolate too far into the future; maximum throughput is often not the actual
 goal.
 
-![Slide summarising queuing theory and USL key takeaways](queuing-theory-takeaways.jpg)
+![Slide summarising queuing theory and USL key takeaways](queuing-theory-takeaways.webp)

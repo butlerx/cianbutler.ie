@@ -26,7 +26,7 @@ written cherry-picking the best of the best from Google. It was not a prescripti
 considered an SRE. This sentiment was not shared at the time of release and unsurprisingly this has caused some
 friction.
 
-![image of a tweet asking google to apologise for the SRE book](./image4.png)
+![image of a tweet asking google to apologise for the SRE book](./image4.webp)
 
 ### Amsterdam
 
@@ -35,9 +35,9 @@ Completely coincidentally, this year's Call of Duty launch had a level in Amster
 
 So of course we had to go visit the area for lunch, and because most of the restaurants happened to be in the area.
 
-![The Oude Church in Amsterdam](./image8.png)
+![The Oude Church in Amsterdam](./image8.webp)
 
-![Square in front of the Oude Church in Amsterdam](./image11.png)
+![Square in front of the Oude Church in Amsterdam](./image11.webp)
 
 (Captain Price is cropped out of the right for operational security.)
 
@@ -140,7 +140,7 @@ Engineers need to be at a level of fluency in their problem domains to communica
 experience, it's not something that can be bought. People will build fluency to their level of necessity, once their
 needs are met progress will stop.
 
-![Andrew on stage with a slide saying "SRE Fluency is not translating old to new but the ability to express any context like a native"](./image36.jpg)
+![Andrew on stage with a slide saying "SRE Fluency is not translating old to new but the ability to express any context like a native"](./image36.webp)
 
 The language of our domains allows us to effectively communicate with each other. The more fluent we are in these shared
 languages the easier it will be for us to share our problems and learnings with one another.
@@ -154,7 +154,7 @@ Takeaway from this talk is "Good SRE copy. Great SRE steal".
 There are some pretty important points here such that anyone who has any control over their own work should watch it. If
 you are oncall or control oncall, it can be considered a must watch.
 
-![doc standing on stage with a slide saying "the Fetishisation of incident response"](./image32.jpg)
+![doc standing on stage with a slide saying "the Fetishisation of incident response"](./image32.webp)
 
 One of the core points is how as engineers, the reward for good work is simply more work. In a general sense, you want
 to be doing different work next year than you are doing today - because you have automated away today's work enough that
@@ -190,7 +190,7 @@ working, but those that are failing are for a subset of users. Those users will 
 you think the app is functioning fine. Similarly a single 1000 minute outage will impact users much differently than
 1000 1 minute outages depending on your application.
 
-![A slide about SLO measurement showing how aggregation hides information](./image31.png)
+![A slide about SLO measurement showing how aggregation hides information](./image31.webp)
 
 Asking if SLO/SLIs are good is the wrong question. They are purely a tool, providing information around the questions
 you ask of them. You should match your tool to the problem, don't start with the tool and match the problem.
@@ -233,7 +233,7 @@ A story from Google talking about how they used distributed tracing to track dow
 system. During investigation into the reliability of their Maps service they discovered specific calls from a service on
 the critical path was hitting a service with unreliable 9s.
 
-![A drawing showing an overview of the risky systems they found](./image19.png)
+![A drawing showing an overview of the risky systems they found](./image19.webp)
 
 Once they discovered this they managed to rework the call path to use a more reliable service. They found multiple other
 occurrences of this using tracing and eventually remediated them all with a combination of migrating to more reliable
@@ -246,7 +246,7 @@ services, making calls optional, or deprecating the services.
 This talk was eerily similar to the issues we've encountered in our logs stack. Everyone encounters the same problems
 sooner or later. Collecting and storing 100% of the data can be very expensive for high traffic services.
 
-![A brief and incomplete history of logging at Spotify slide](./image33.png)
+![A brief and incomplete history of logging at Spotify slide](./image33.webp)
 
 Spotify initially used FluentD to ship logs from their containers on GKE into GCP's log storage solution, GCL. Once they
 hit >1700 namespaces things started to go south and FluentD was maxed out. Resulting in delayed or simply dropped logs,
@@ -289,7 +289,7 @@ needs to do it as the new person will not know what they don't know.
 Transparency matters too. Failing clearly and obviously will help your engineers who should be focused on adding value
 not trying to figure out how to log in to system X.
 
-![A slide from the Life after The Chocolate Factory talk about code reflecting the organisation](./image29.png)
+![A slide from the Life after The Chocolate Factory talk about code reflecting the organisation](./image29.webp)
 
 Code reflects the organisation, and the organisation reflects Jira. Yes, the Jira hate was a continual theme throughout,
 however a number of good points were made on how it has an outsized impact on projects.
@@ -312,7 +312,7 @@ Similar generations will have built up similar habits. This is even more pronoun
 are applied as entire blocks of knowledge can be lost as there will be no need to transfer them as the tasks get
 automated away.
 
-![A slide about superhero culture and its negative impacts on team resilience](./image28.png)
+![A slide about superhero culture and its negative impacts on team resilience](./image28.webp)
 
 Superhero culture is a serious problem. The superheroes pick up more work. Work hard. Define the direction. This can
 unwillingly prevent growth of the team or organisation. Worse, when these heroes eventually move on the gap left behind
@@ -330,7 +330,7 @@ bring to the company.
 
 SRE is having an identity crisis. There is a lot of ritual without reason. Just because is not a reason to do.
 
-![A slide from the What SRE Could Be talk about systems reliability engineering](./image25.png)
+![A slide from the What SRE Could Be talk about systems reliability engineering](./image25.webp)
 
 The talk progresses through the underlying concepts of systems design, and how standardised problems and the building
 blocks which progress comes from.
@@ -385,7 +385,7 @@ actually implement them everywhere, something I agree with.
 This talk was about the large outage on 4th Oct 2021 where everything Facebook related went offline for a number of
 hours.
 
-![A slide from the Facebook outage talk showing the scope of the incident](./image16.png)
+![A slide from the Facebook outage talk showing the scope of the incident](./image16.webp)
 
 While the underlying cause of the routers draining incorrectly wasn't covered well, there are a number of learning
 points in the talk. They had never anticipated that they would lose all access to all data centres like this which led
@@ -412,7 +412,7 @@ How we present a narrative and a story that people will want to read.
 
 Laura's talk was a well constructed case for using storytelling techniques in incident reports.
 
-![An image of Laura on stage with a slide saying the TL;DR of the talk](./image7.jpg)
+![An image of Laura on stage with a slide saying the TL;DR of the talk](./image7.webp)
 
 Started with explaining the value of written incident reports. Nothing to argue about here. A written artefact allows us
 to:
@@ -431,7 +431,7 @@ process.
 
 "Cookie Cutters are for cookies, not for learning".
 
-![An incident report template with lots of cookies on it](./image2.png)
+![An incident report template with lots of cookies on it](./image2.webp)
 
 No one truly likes filling out forms or templates. They are daunting and people end up rushing to fill them and tick
 boxes. This results in the learnings gained from them being very shallow (5 whys for example). Stories on the other side
@@ -439,7 +439,7 @@ are powerful, they provide reference. A good incident report should be like a de
 
 Example of a bad incident report:
 
-![An incident report for Jurassic Park](./image5.png)
+![An incident report for Jurassic Park](./image5.webp)
 
 "Some people died"
 
@@ -447,7 +447,7 @@ Examples of good incident reports:
 
 - "[Firefox got broken"](https://www.thevoid.community/incident-detail?recordId=recvyAB3m0Tb3WrQl)
 
-![A slide overview of the Firefox outage from January 13 2022](./image22.png)
+![A slide overview of the Firefox outage from January 13 2022](./image22.webp)
 
 - [GitLab: the consul update that never happened](https://www.thevoid.community/incident-detail?recordId=rece2q3JoUpPqxSzL)
 
@@ -486,7 +486,7 @@ Craft - or how to do all of this. A bit of practical advice:
 - Avoid confusing or obscure cultural references and metaphors.
 - "Your incident report is not a sales pitch!" Be humble, be honest, write for your fellow engineer.
 
-![A slide listing a TL;DR of what to do](./image34.png)
+![A slide listing a TL;DR of what to do](./image34.webp)
 
 Pay attention to style!
 
@@ -512,7 +512,7 @@ From Demonware alumni Benjamin Pannell.
 
 The Azure Resource Manager experienced a 35 hour outage.
 
-![A slide from the Azure Resource Manager outage deep dive](./image17.png)
+![A slide from the Azure Resource Manager outage deep dive](./image17.webp)
 
 The outage was triggered by updating a legacy component in the Azure Resource Manager service. This change was
 introduced in December but not actually rolled out until January — interesting effect here, engineers had lost most of
@@ -542,7 +542,7 @@ One big takeaway from the talk is that the more senior person is rarely the one 
 focus on trying to find the most skilled and experienced person possible, but teams benefit from diversity in skill
 sets. And there is a lot of work that doesn't require years upon years of experience.
 
-![A slide from the Passing the Torch talk about building an SRE graduate program](./image13.png)
+![A slide from the Passing the Torch talk about building an SRE graduate program](./image13.webp)
 
 Pythian - the company the speaker works at - decided to set up an SRE graduate program to expand the pool of candidates
 that could look at hiring. They see it as very cost-effective as grads are cheaper than seniors which can offset the
@@ -592,7 +592,7 @@ process.
 It started off talking through some made up examples, walking through the five whys, getting good conclusions and then
 everyone dies. Repeatedly.
 
-![A slide from the root cause analysis talk showing how five whys can lead to absurd conclusions](./image1.png)
+![A slide from the root cause analysis talk showing how five whys can lead to absurd conclusions](./image1.webp)
 
 When you go far enough down the chain - the root cause of every outage is the big bang. What we need to do is separate
 the environment from the system when we ask questions.
@@ -612,7 +612,7 @@ stop a lot of serious events from ever becoming serious events by doing this.
 Emily does a live review of the two incident reports from the events that occurred in the dinosaur themed amusement park
 based on Isla Nublar. She talks about how SRE can learn from the failures to avoid failure in our own systems.
 
-![A slide from the Jurassic Park incident review talk](./image30.jpg)
+![A slide from the Jurassic Park incident review talk](./image30.webp)
 
 The talk goes into how despite how similar the incidents may appear, we can see what lessons were learnt in the years
 between each event and how the park strived to learn from their mistakes.
@@ -620,12 +620,12 @@ between each event and how the park strived to learn from their mistakes.
 Each time we respond to an incident we are different from the us that responded to the last incident. We can take what
 we learnt or did in a previous incident as tools into future ones.
 
-![A slide comparing how each incident response is different from the last](./image14.jpg)
+![A slide comparing how each incident response is different from the last](./image14.webp)
 
 Repeat problems in large socially complex systems don't really exist. Even if the system itself doesn't change, the
 surrounding bits do.
 
-![A slide about how repeat problems in complex systems don't truly exist](./image20.png)
+![A slide about how repeat problems in complex systems don't truly exist](./image20.webp)
 
 ## Thursday, 27 October
 
@@ -638,7 +638,7 @@ types of things. While the arguments hold for some functions, they did almost di
 
 "Reliability isn't the most important thing to everything."
 
-![A slide from the SRE in Enterprise talk about reliability as a feature](./image6.png)
+![A slide from the SRE in Enterprise talk about reliability as a feature](./image6.webp)
 
 There is likely a strong bias going on into some of their research here that might be skewing the results. Other talks
 had highlighted how reliability for a startup can be very different from reliability for an established company.
@@ -649,7 +649,7 @@ Section 4 talked about how to build a platform of capabilities, which is improve
 There are many lessons anyone dealing with platforms can learn, especially around how to expand and get other teams
 along the adoption path.
 
-![A slide about building a platform of capabilities and expanding adoption](./image10.png)
+![A slide about building a platform of capabilities and expanding adoption](./image10.webp)
 
 A core SRE principle is gradual change. SRE is dynamic and evolves over time. What works today will need some changes to
 stay working tomorrow.
@@ -665,7 +665,7 @@ Instead of unified theory, this was more of a history lesson that covered the bi
 Like in other talks, the Google SRE book was picked on due to its missing premise and how when it launched, people
 thought this is how it was, not the aspirational goal to work towards.
 
-![A slide from the Unified Theory of SRE talk about the history of site reliability engineering](./image24.png)
+![A slide from the Unified Theory of SRE talk about the history of site reliability engineering](./image24.webp)
 
 Startups have to know the difference between future-proofing and over-engineering, like in other companies, but with
 startups the difference is a lot more pronounced as the company may not exist when the future comes around. In a
@@ -704,7 +704,7 @@ system really showed. Some of the designs would start to break down in the milli
 are not worth consideration. The concept of moving what to cache to a different level, and using different keys that
 change based on the user data is a good one.
 
-![A slide from the caching talk about applying functional programming concepts to system design](./image15.png)
+![A slide from the caching talk about applying functional programming concepts to system design](./image15.webp)
 
 ### Over Nine Billion Dollars of SRE Lessons - the James Webb Space Telescope
 
@@ -758,12 +758,12 @@ One premise put forward was that all large systems are essentially stateful. You
 it are just a component of the system and there is state held in other parts. This is how contention starts creeping in
 causing latency increases.
 
-![A slide from The Math of Scalability about contention and latency at large scale](./image26.png)
+![A slide from The Math of Scalability about contention and latency at large scale](./image26.webp)
 
 As the scale increases, combined failures can quickly snowball. Your latency increases bring timeouts, which brings
 retries, which brings more load, which brings more timeouts...
 
-![A slide showing how latency increases lead to cascading failures with timeouts and retries](./image27.jpg)
+![A slide showing how latency increases lead to cascading failures with timeouts and retries](./image27.webp)
 
 The ending part of the talk covers how to actually deal with this through some (IMO) badly named concepts. At its core
 it was sharding to separate traffic or requests to spread the load.
@@ -776,7 +776,7 @@ There be scary dragons down the stacks. John talks about some of the issues he's
 platforms over the years and why we should all be scared. John tells the legends of why firmwares are never updated, why
 you can never upstream a change and change takes time.
 
-![A slide quoting node dev "#YOLO" and von Moltke "One does not improvise the deployment of millions"](./image18.png)
+![A slide quoting node dev "#YOLO" and von Moltke "One does not improvise the deployment of millions"](./image18.webp)
 
 The talk also covered a very valid point where teams fall into a trap from their own lack of support. Customers think,
 why bother logging a bug if they aren't going to fix it anyway, leading the team to think they are awesome as no one
@@ -793,13 +793,13 @@ Does it Matter? No\*
 Todd Underwood is an SRE for Google's Machine Learning platform gives a live reenactment of his attempt to have Google's
 AI (played by Niall Murphy) write him a talk on why ML matters.
 
-![An image of Niall and Todd acting out Todd's conversation with the AI](./image9.jpg)
+![An image of Niall and Todd acting out Todd's conversation with the AI](./image9.webp)
 
 Todd then goes on to talk about what SRE'ing in an ML world might look like. He discusses a number of the challenges
 facing engineers that are going to run ML in production, including difficulty measuring successes and the dangers in
 data sensitivity a Model faces.
 
-![A slide showing the hype cycle for AI in 2022](./image21.png)
+![A slide showing the hype cycle for AI in 2022](./image21.webp)
 
 [jwst]: #over-nine-billion-dollars-of-sre-lessons---the-james-webb-space-telescope
 [passing-torch]: #passing-the-torch---building-a-new-grad-program-to-mentor-the-next-generation-of-sre
