@@ -14,6 +14,10 @@ jobs:
       - uses: actions/checkout@v6
       - uses: jdx/mise-action@v2
       - run: npm install
+      - name: Install git-emoji
+        run: |-
+          wget https://raw.githubusercontent.com/butlerx/git-emoji/master/hooks/commit-msg -O .git/hooks/commit-msg
+          chmod +x .git/hooks/commit-msg
       - name: Build data/github.json
         run: mise run github-data
         env:
