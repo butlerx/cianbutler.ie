@@ -16,7 +16,7 @@
     {{- end }}
     or by
     {{- range .Site.Data.info.profiles }}
-      {{- if eq .network "email" }}<a href="{{ .url }}">email</a>{{- end }}
+      {{ if eq .network "email" }}<a href="{{ .url }}">email</a>{{- end }}
     {{- end }}.
   </p>
   {{ with .Site.Data.info.profiles }}
