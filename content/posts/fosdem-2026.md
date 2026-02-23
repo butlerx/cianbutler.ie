@@ -1,7 +1,6 @@
 ---
 title: 'FOSDEM 2026: Building performance-critical Python tools with Rust'
 date: 2026-02-01T13:00:00+01:00
-author: butlerx
 description:
   My talk at FOSDEM 2026 on building performance-critical Python tools with Rust, lessons from production at Cloudsmith
 tags:

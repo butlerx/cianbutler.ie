@@ -9,21 +9,20 @@ tags:
 
 ## Introduction
 
-At the start of October i attended, along with many other SREs, SREcon 2022 EMEA in Amsterdam.
+At the start of October I attended, along with many other SREs, SREcon 2022 EMEA in Amsterdam.
 
-This post is some notes and references from the talks i attended. I suggest watching the actual talks to actually
-understand and learn from.
+This post is some notes and references from the talks I attended. I suggest watching the actual talks to truly
+understand and learn from them.
 
 ### Conference Theme
 
 SREcon 2022 had a theme of
-["What could SRE be?"](https://www.usenix.org/conference/srecon22emea/call-for-participation). The Conference committee
-wanted to encourage a "forward-looking" conversations. This was in the hope to try to help establish a pathway forward
-for the industry. But true to form you cant look forward with out looking at where we are currently and where we came
-from.
+["What could SRE be?"](https://www.usenix.org/conference/srecon22emea/call-for-participation). The conference committee
+wanted to encourage "forward-looking" conversations. This was in the hope of helping establish a pathway forward for the
+industry. But true to form, you can't look forward without looking at where we are currently and where we came from.
 
-The re-occurring message that every speaker decided to also bring was that of the SRE book being aspirational. It was
-written cherry-picking the best of the best from google. It was not a prescriptive guide that everyone must follow to be
+The recurring message that every speaker decided to also bring was that of the SRE book being aspirational. It was
+written cherry-picking the best of the best from Google. It was not a prescriptive guide that everyone must follow to be
 considered an SRE. This sentiment was not shared at the time of release and unsurprisingly this has caused some
 friction.
 
@@ -31,8 +30,8 @@ friction.
 
 ### Amsterdam
 
-Completely coincidentally, this year's Call of Duty launch has a level in Amsterdam - see the
-[Walk through](https://www.youtube.com/watch?v=X_LlSR6-ibA).
+Completely coincidentally, this year's Call of Duty launch had a level in Amsterdam — see the
+[walkthrough](https://www.youtube.com/watch?v=X_LlSR6-ibA).
 
 So of course we had to go visit the area for lunch, and because most of the restaurants happened to be in the area.
 
@@ -71,9 +70,9 @@ operate in incidents or on call as this can block others from learning critical 
 - [Passing the Torch - Building a New Grad Program to Mentor the Next Generation of SRE][passing-torch] - for anyone
   involved in onboarding or mentorship, especially those with junior level or interns. It covers many areas that are
   just assumed knowledge that people in their first jobs rarely have.
-- [SRE as She Is Spoke](#sre-as-she-is-spoke) - "Good SRE copy. Great SRE steal".
-- [Break Free of the Template: Incident Writeups They Want to Read][break-free] - Incident Write ups should be a
-  learning opportunity not box ticking. People should enjoy reading them.
+- [SRE as She Is Spoke](#sre-as-she-is-spoke) - "Good SRE copy. Great SRE steal". [Break Free of the Template: Incident
+  Writeups They Want to Read][break-free] - Incident writeups should be a learning opportunity not box ticking. People
+  should enjoy reading them.
 
 ### Table of Contents
 
@@ -104,29 +103,29 @@ incomplete pieces of knowledge in our head and to gain a full understanding of o
 knowledge across multiple different domains and people.
 
 In incidents, small, seemingly meaningless things can combine together to result in bad things happening. There was a
-good walk through of a Netflix outage where a migration removed a small wait state resulting in an outage. The user who
+good walkthrough of a Netflix outage where a migration removed a small wait state resulting in an outage. The user who
 had originally added the wait had left so the knowledge behind the wait was lost. I'm not sure why there wasn't a
 comment on the wait and it wasn't mentioned either.
 
-The ability to recall what we know is key and can be gained from storytelling about incidents. Create detailed vivid
-incidents reports, ask targeted questions to draw out what you've not shared.
+The ability to recall what we know is key and can be gained from storytelling about incidents. Create detailed, vivid
+incident reports, ask targeted questions to draw out what you've not shared.
 
 SREs, and engineers in general, all have different knowledge and experience. This colours how people will see a system
-or incident meaning everyone's via will be partial and incomplete. Working together we can build up a more complete view
-of the system. Important as people generally don't know how they know things, especially during incidents.
+or incident meaning everyone's view will be partial and incomplete. Working together we can build up a more complete
+view of the system. Important as people generally don't know how they know things, especially during incidents.
 
 The last part of the talk covered making changes in the organisation and how just because you are an expert in your
-field does not mean you can make changes in it. Management are finite local so can and will only pay attention to so
-much given the limited hours in the day. It also means proximity tends to play an outside impact on this. Think those
+field does not mean you can make changes in it. Management are finite and local so can and will only pay attention to so
+much given the limited hours in the day. It also means proximity tends to play an outsized impact on this. Think those
 who shout the loudest get listened to.
 
-Related to this is the implicit incentives that organisations place on things. OKRs will directly influence where people
-focus their efforts however some things do follow on to a point. If your system isn't reliable "enough", the OKRs won't
-matter. But if you don't do the OKRs, the reliability won't matter either.
+Related to this are the implicit incentives that organisations place on things. OKRs will directly influence where
+people focus their efforts, however some things do follow on to a point. If your system isn't reliable "enough", the
+OKRs won't matter. But if you don't do the OKRs, the reliability won't matter either.
 
-The talk ended by looping back towards organisational knowledge and how by increasing reliability you end up with few
+The talk ended by looping back towards organisational knowledge and how by increasing reliability you end up with fewer
 incidents, and these incidents will trend to being more complex. This will leave people less prepared to deal with them
-just from lack of experience. Ops is a muscle. Over abstractions can lead to this muscle weakening, and the obvious
+just from lack of experience. Ops is a muscle. Over-abstractions can lead to this muscle weakening, and the obvious
 realities are the hardest to see, it's our jobs as SRE to surface them.
 
 ### SRE as She Is Spoke
@@ -134,19 +133,19 @@ realities are the hardest to see, it's our jobs as SRE to surface them.
 > [Andrew Clay Shafer](https://www.usenix.org/conference/srecon22emea/presentation/shafer)
 
 There is power in language and the narratives we tell. The language we choose to use shapes how we think about problems.
-If we don't use clear language to communicate a problem people will never truly understand the problem and when
-engineers implement a solution without understanding it will unsurprisingly fail.
+If we don't use clear language to communicate a problem, people will never truly understand it, and when engineers
+implement a solution without understanding it will unsurprisingly fail.
 
-Engineers need to be at a level of fluency in their problem domains to communicate effectively. This fluency that comes
-from experience, it's not something that can be bought. People will build fluency to their level of necessity, once
-their needs are met progress will stop.
+Engineers need to be at a level of fluency in their problem domains to communicate effectively. This fluency comes from
+experience, it's not something that can be bought. People will build fluency to their level of necessity, once their
+needs are met progress will stop.
 
 ![Andrew on stage with a slide saying "SRE Fluency is not translating old to new but the ability to express any context like a native"](./image36.jpg)
 
-The Language of our domains allow us to effectively communicate with each other. The more fluent we are in these shared
+The language of our domains allows us to effectively communicate with each other. The more fluent we are in these shared
 languages the easier it will be for us to share our problems and learnings with one another.
 
-Take away from this talk is "Good SRE copy. Great SRE steal"
+Takeaway from this talk is "Good SRE copy. Great SRE steal".
 
 ### Oncall: An Equal Opportunity Waste of Time
 
@@ -162,7 +161,7 @@ to be doing different work next year than you are doing today - because you have
 it is no longer a concern.
 
 Combined together, this leads to a very strong balancing act around the type of work you should be taking on and how it
-fits into core SRE principals.
+fits into core SRE principles.
 
 From the oncall perspective itself, remembering that there is a difference between a waste of time and a bad idea.
 Oncall does cause impact, to your timelines, your team, your coworkers, your own sanity, and that impact is generally a
@@ -172,7 +171,7 @@ fix it.
 
 The balancing act continues when staffing oncall as well. Oncall itself shouldn't be scary, however if the team is well
 run, removing tasks and changing the general nature of responsibilities over time, each new oncaller will have a
-different experience and will know different, if not also less things. As 90% solutions can remove a task from oncall
+different experience and will know different, if not also fewer, things. As 90% solutions can remove a task from oncall
 leaving only the awkward edge cases, it is important to understand this is fine, prepare the runbooks and escalation
 paths for when required. You want to aim for something manageable, not easy.
 
@@ -180,7 +179,7 @@ paths for when required. You want to aim for something manageable, not easy.
 
 > [Štěpán Davidovič, Google](https://www.usenix.org/conference/srecon22emea/presentation/davidovic)
 
-A standing room only talk which gave some obvious in highsight views on SLO and reliability measuring. So obvious, most
+A standing room only talk which gave some obvious in hindsight views on SLO and reliability measuring. So obvious, most
 people fall into the same pitfalls.
 
 It covered how reliability is a lagging indicator, monitoring what has happened, not what will happen or even what is
@@ -230,7 +229,7 @@ this set up they simplified their deployment pipeline and made their engineers m
 
 > [Theo Klein, Google LLC](https://www.usenix.org/conference/srecon22emea/presentation/klein)
 
-A story from google talking about how they used distributed tracing to track down unintended dependencies in their
+A story from Google talking about how they used distributed tracing to track down unintended dependencies in their
 system. During investigation into the reliability of their Maps service they discovered specific calls from a service on
 the critical path was hitting a service with unreliable 9s.
 
@@ -238,7 +237,7 @@ the critical path was hitting a service with unreliable 9s.
 
 Once they discovered this they managed to rework the call path to use a more reliable service. They found multiple other
 occurrences of this using tracing and eventually remediated them all with a combination of migrating to more reliable
-service, making calls optionals or deprecating the services
+services, making calls optional, or deprecating the services.
 
 ### How We Implemented High Throughput Logging at Spotify
 
@@ -247,15 +246,15 @@ service, making calls optionals or deprecating the services
 This talk was eerily similar to the issues we've encountered in our logs stack. Everyone encounters the same problems
 sooner or later. Collecting and storing 100% of the data can be very expensive for high traffic services.
 
-![A brief and incomplete history of logging at spotify slide](./image33.png)
+![A brief and incomplete history of logging at Spotify slide](./image33.png)
 
 Spotify initially used FluentD to ship logs from their containers on GKE into GCP's log storage solution, GCL. Once they
 hit >1700 namespaces things started to go south and FluentD was maxed out. Resulting in delayed or simply dropped logs,
-they did not really have a clear picture of how much data was being lost (which became important later)
+they did not really have a clear picture of how much data was being lost (which became important later).
 
 Migrating to the more performant, multithreaded FluentBit resulted in much more efficient log shipping.
 
-It was not without its problems, however
+It was not without its problems, however:
 
 - OOM issues with some versions of FluentBit
 - Limit of 256 outputs
@@ -283,30 +282,30 @@ It is a truly amazing intro. No words other than just watch it.
 
 There are lessons to be had from the larger companies. While they do have hundreds or thousands of people following
 their processes like onboarding, you too can follow and update it. As a new user, small things that don't work are a new
-level of painful. Onboarders should not have to tweak or configure things to get the initial bits setup. To achieve this
-it is important for continuous improvement, feeding back everything to the documentation. It is likely the mentor needs
-to do it as the new person will not know what they don't know.
+level of painful. Onboarders should not have to tweak or configure things to get the initial bits set up. To achieve
+this it is important for continuous improvement, feeding back everything to the documentation. It is likely the mentor
+needs to do it as the new person will not know what they don't know.
 
 Transparency matters too. Failing clearly and obviously will help your engineers who should be focused on adding value
-not trying to figure out how to login to system X.
+not trying to figure out how to log in to system X.
 
 ![A slide from the Life after The Chocolate Factory talk about code reflecting the organisation](./image29.png)
 
-Code reflects the organisation, and the organisation reflects Jira. Yes the Jira hate was a continual theme throughout
+Code reflects the organisation, and the organisation reflects Jira. Yes, the Jira hate was a continual theme throughout,
 however a number of good points were made on how it has an outsized impact on projects.
 
 ### Is Our Team as Resilient as Our Systems?
 
 > [Effie Mouzeli, Wikimedia Foundation.](https://www.usenix.org/conference/srecon22emea/presentation/mouzeli)
 
-We tend to build resistant systems, where the loss of a node is routine, but rarely apply this to teams. Some of it is
+We tend to build resilient systems, where the loss of a node is routine, but rarely apply this to teams. Some of it is
 down to the scale of the team itself, and some to the incremental cost of adding more people. The talk covers how the
 hero culture that exists at times directly impacts this, creating a low bus factor.
 
 Right from the onboarding process, teams and organisations tend to create a feedback loop where more experienced people
 get more experienced and newer people struggle to catch up. The different skill levels and backgrounds mean an engineer
 will experience the process differently but we would rarely go improve the process to help account for the difference.
-Lots of time we turn the gaps into tribal knowledge, sharing the undocumented bits via word of mouth.
+Lots of the time we turn the gaps into tribal knowledge, sharing the undocumented bits via word of mouth.
 
 On more established teams, you will start to see generational gaps between the people who joined at different times.
 Similar generations will have built up similar habits. This is even more pronounced when normal automation principles
@@ -315,7 +314,7 @@ automated away.
 
 ![A slide about superhero culture and its negative impacts on team resilience](./image28.png)
 
-Superhero culture is a serious problem. The superheros pick up more work. Work hard. Define the direction. This can
+Superhero culture is a serious problem. The superheroes pick up more work. Work hard. Define the direction. This can
 unwillingly prevent growth of the team or organisation. Worse, when these heroes eventually move on the gap left behind
 can be giant. Instead of simply looking for a single person to replace them, you might realistically be looking for 2 or
 3 people just to make up the skill sets.
@@ -334,9 +333,9 @@ SRE is having an identity crisis. There is a lot of ritual without reason. Just 
 ![A slide from the What SRE Could Be talk about systems reliability engineering](./image25.png)
 
 The talk progresses through the underlying concepts of systems design, and how standardised problems and the building
-block which progress comes from.
+blocks which progress comes from.
 
-While the industry can standardise, there are slight differences in every system - different quirks so cookie cutter
+While the industry can standardise, there are slight differences in every system — different quirks so cookie-cutter
 solutions will rarely be drop-in. This is more important in the context of dynamic systems. They have a moving state and
 may not be the same next week as they are this week.
 
@@ -353,7 +352,7 @@ problem from a different view.
 
 These systems models can then be used for risk analysis and to fill in the gaps our current data models have.
 
-Some book recommendations from the talk
+Some book recommendations from the talk:
 
 - Handbook of systems thinking methods.
 - Thinking in systems
@@ -365,11 +364,11 @@ Some book recommendations from the talk
 
 > [Alex Hidalgo, Nobl9](https://www.usenix.org/conference/srecon22emea/presentation/hidalgo)
 
-Alex's talk is almost like therapy for any non FAANG engineer in the industry. It covers what people think SRE is and
-what is not. Truth is SRE is and do a Lot of things.
+Alex's talk is almost like therapy for any non-FAANG engineer in the industry. It covers what people think SRE is and
+what it is not. Truth is, SRE is and does a lot of things.
 
 You shouldn't feel bad for not being the newest or fastest. Your solution could be the best solution for your situation.
-However this doesn't mean you shouldn't still try to improve.
+However, this doesn't mean you shouldn't still try to improve.
 
 While we always see the behemoth that the FAANGs are, if you add up all the engineers across all the companies, FAANGs
 are less than 1% of the industry now. Yet they have had an outsized impact, and not all of it good. They can still be a
@@ -383,7 +382,7 @@ actually implement them everywhere, something I agree with.
 
 > [Francois Richard, Meta](https://www.usenix.org/conference/srecon22emea/presentation/janardhan)
 
-This talk was about the large outage on 4th Oct 2021 where everything Facebook related went off line for a number of
+This talk was about the large outage on 4th Oct 2021 where everything Facebook related went offline for a number of
 hours.
 
 ![A slide from the Facebook outage talk showing the scope of the incident](./image16.png)
@@ -396,7 +395,7 @@ disappeared when all the DNS servers fell off the internet.
 
 COVID had helped lower the scale of the outage as they had implemented different DEFCONs switches which let them reduce
 the load across the stack when they restarted the traffic. Because of the longer outage, things like caches started
-going cold meaning the load was a lot higher on start up.
+going cold meaning the load was a lot higher on startup.
 
 They did talk about the blameless culture which let the original engineer come forward when the outage started, saying
 it could have been their command to check capacity. Although they refused to confirm the person still works at Meta so
@@ -419,7 +418,7 @@ Started with explaining the value of written incident reports. Nothing to argue 
 to:
 
 - Share knowledge and context
-- Help org Understand and adapt
+- Help org understand and adapt
 - Encourages reflection
 - Long term store of knowledge
 - Good for on-boarding!
@@ -432,19 +431,19 @@ process.
 
 "Cookie Cutters are for cookies, not for learning".
 
-![A Incident report template with lots of cookies on it](./image2.png)
+![An incident report template with lots of cookies on it](./image2.png)
 
 No one truly likes filling out forms or templates. They are daunting and people end up rushing to fill them and tick
 boxes. This results in the learnings gained from them being very shallow (5 whys for example). Stories on the other side
 are powerful, they provide reference. A good incident report should be like a detective story.
 
-Example for bad Incident Report:
+Example of a bad incident report:
 
 ![An incident report for Jurassic Park](./image5.png)
 
 "Some people died"
 
-Examples of good Incident Report:
+Examples of good incident reports:
 
 - "[Firefox got broken"](https://www.thevoid.community/incident-detail?recordId=recvyAB3m0Tb3WrQl)
 
@@ -464,7 +463,7 @@ Example: [Gocardless: outage 25 October 2020](https://www.thevoid.community/inci
 
 Be visual.
 
-A picture is worth 1000 words. They reinforce the text, helping the reader to understand. An Image will add pacing to
+A picture is worth 1000 words. They reinforce the text, helping the reader to understand. An image will add pacing to
 the report, breaking up the wall of text and adding texture while helping to keep the reader interested. Don't limit
 yourself to architecture diagrams, use anything to tell the story, graphs, seq diagrams, closed loops etc.
 
@@ -473,15 +472,14 @@ Examples:
 - [Honeycomb, the 20 fires of September](https://www.thevoid.community/incident-detail?recordId=recNS1b8Fz4K6UF5V)
 - [Slack, the case of the recursive revolvers](https://www.thevoid.community/incident-detail?recordId=recLF8nnVGqFHXATN)
 
-Give good analysis If the incident report is the story, the analysis is the moral of the story. Sharing analysis and
+Give good analysis. If the incident report is the story, the analysis is the moral of the story. Sharing analysis and
 lessons learned is a satisfying way to wrap up the incident report. It creates a feeling of resolution.
 
 Craft - or how to do all of this. A bit of practical advice:
 
 - Create something that people read and enjoy.
 - Titles: a title helps your reader to remember and reference. Think of it like the index for your brain.
-- Use simple and clear language.
-- It's not an Academic paper, don't be too formal - or too informal.
+- Use simple and clear language. It's not an academic paper, don't be too formal - or too informal.
 - Avoid walls of text - break it up with headings.
 - Use sentence rhythm: use a few shorter sentences, then pace it with one longer sentence.
 - Use a consistent tense - just past tense is fine.
@@ -510,14 +508,14 @@ Final comment from the speaker - Put effort only into gnarly, interesting incide
 
 > [Benjamin Pannell and Brendan Burns, Microsoft.](https://www.usenix.org/conference/srecon22emea/presentation/pannell)
 
-From Demonware Alumni Benjamin Pannell.
+From Demonware alumni Benjamin Pannell.
 
 The Azure Resource Manager experienced a 35 hour outage.
 
 ![A slide from the Azure Resource Manager outage deep dive](./image17.png)
 
-The outage was triggered by updating a legacy component in the azure resource manager service. This change was
-introduced in December but not actually rolled out until January - interesting effect here, engineers had lost most of
+The outage was triggered by updating a legacy component in the Azure Resource Manager service. This change was
+introduced in December but not actually rolled out until January — interesting effect here, engineers had lost most of
 the context around the change by the time it went to prod.
 
 At the same time, a new type of worker (vNext) was deployed. Having multiple changes in play simultaneously made it hard
@@ -532,7 +530,7 @@ talk. While the talk could use some additional graphs to highlight these points,
 
 The failure was all around the poison pill job which kept locking up and crashing workers, making the system seem like
 it was slowing down rather than showing increased error rates. And as the workers were processing multiple job types,
-including other types that could be processed correct, the monitoring showed the workers healthy.
+including other types that could be processed correctly, the monitoring showed the workers healthy.
 
 ### Passing the Torch - Building a New Grad Program to Mentor the Next Generation of SRE
 
@@ -547,15 +545,15 @@ sets. And there is a lot of work that doesn't require years upon years of experi
 ![A slide from the Passing the Torch talk about building an SRE graduate program](./image13.png)
 
 Pythian - the company the speaker works at - decided to set up an SRE graduate program to expand the pool of candidates
-that could look at hiring. They see it as very cost effective as grads are cheaper than seniors which can offset the
+that could look at hiring. They see it as very cost-effective as grads are cheaper than seniors which can offset the
 time required from the seniors.
 
-Similarly any improvements for the grads in the on-boarding and training will also benefit other future senior SRE that
+Similarly, any improvements for the grads in the onboarding and training will also benefit other future senior SREs that
 join the team, as well as help level up the people doing the mentoring.
 
-The pitfalls they went through for the new grads is a good watch for anyone involved in on-boarding of junior engineers
+The pitfalls they went through for the new grads is a good watch for anyone involved in onboarding of junior engineers
 or interns as it covers all the areas you just assume a new start has, but doesn't. Seemingly simple things like Jira or
-Google Workspace can all be new. It may even be the first time they've done a technical interview
+Google Workspace can all be new. It may even be the first time they've done a technical interview.
 
 A key lesson was to hire with a growth mindset and critical thinking, something that applies at all levels and areas.
 Technology changes, and even in areas where someone has experience, your company's experience will usually be somewhat
@@ -563,7 +561,7 @@ different so raw experience rarely matters. Being able and willing to learn new 
 
 The interview process should focus on evaluating the foundational technology rather than specific knowledge.
 
-The Speaker goes on to talk about what they found best to focus on when on-boarding and growing their graduates. They
+The speaker goes on to talk about what they found best to focus on when onboarding and growing their graduates. They
 brought them to conferences, like SRECON, ensured they got hands-on experience and helped them to learn the philosophies
 and histories of SREs. The graduates learned rapidly, given they'd just spent 4 years learning, and seemingly excelled
 in this structure.
@@ -576,7 +574,7 @@ If you already read the
 [Slack Blogpost on DNSSEC outage](https://slack.engineering/what-happened-during-slacks-dnssec-rollout/), you won't
 learn anything new from the talk.
 
-Some main points
+Some main points:
 
 - It is always DNS, even when it isn't.
 - DNSSEC is hard, seemingly by design.
@@ -611,7 +609,7 @@ stop a lot of serious events from ever becoming serious events by doing this.
 
 > [Emily Ruppe, Jeli.io](https://www.usenix.org/conference/srecon22emea/presentation/ruppe)
 
-Emily does a Live review of the 2 Incident reports from the events that occurred in the dinosaur themed amusement park
+Emily does a live review of the two incident reports from the events that occurred in the dinosaur themed amusement park
 based on Isla Nublar. She talks about how SRE can learn from the failures to avoid failure in our own systems.
 
 ![A slide from the Jurassic Park incident review talk](./image30.jpg)
@@ -619,8 +617,8 @@ based on Isla Nublar. She talks about how SRE can learn from the failures to avo
 The talk goes into how despite how similar the incidents may appear, we can see what lessons were learnt in the years
 between each event and how the park strived to learn from their mistakes.
 
-Each time we respond to an incident we are different to the us that responded to the last incident. We can take what we
-learnt or did in a previous incident as tools into future ones.
+Each time we respond to an incident we are different from the us that responded to the last incident. We can take what
+we learnt or did in a previous incident as tools into future ones.
 
 ![A slide comparing how each incident response is different from the last](./image14.jpg)
 
@@ -635,7 +633,7 @@ surrounding bits do.
 
 > [Steve McGhee and James Brookbank, Google Cloud](https://www.usenix.org/conference/srecon22emea/presentation/mcghee)
 
-Talk raised a premise that for things like noc's, removing it just means you end up with a shadow version, doing similar
+Talk raised a premise that for things like NOCs, removing it just means you end up with a shadow version, doing similar
 types of things. While the arguments hold for some functions, they did almost disprove some of it later on.
 
 "Reliability isn't the most important thing to everything."
@@ -656,7 +654,7 @@ along the adoption path.
 A core SRE principle is gradual change. SRE is dynamic and evolves over time. What works today will need some changes to
 stay working tomorrow.
 
-FAANG-type companies operate at the bleeding edges - the rest of us have simpler needs.
+FAANG-type companies operate at the bleeding edges — the rest of us have simpler needs.
 
 ### Unified Theory of SRE
 
@@ -669,11 +667,11 @@ thought this is how it was, not the aspirational goal to work towards.
 
 ![A slide from the Unified Theory of SRE talk about the history of site reliability engineering](./image24.png)
 
-Startups have to know the difference between future proofing and over engineering, like in other companies, but with
+Startups have to know the difference between future-proofing and over-engineering, like in other companies, but with
 startups the difference is a lot more pronounced as the company may not exist when the future comes around. In a
 startup, velocity can be more important than resilience.
 
-> Q: Are SLO's relevant for a startup?
+> Q: Are SLOs relevant for a startup?
 
 A: Yes if they define value for the product.
 
@@ -687,17 +685,17 @@ complex or hottest tech of the day.
 Related: [boringtechnology.club](https://boringtechnology.club/)
 
 The talk ended with an unanswered question that many teams face: For oncall, what does a healthy rota look like when you
-don't have enough people.
+don't have enough people?
 
 ### Caching Entire Systems without Invalidation
 
 > [Peter Sperl, Bloomberg](https://www.usenix.org/conference/srecon22emea/presentation/sperl)
 
 This is definitely a more developer focused talk rather than ops as the changes involved were all in code design. The
-speaker goes into how to take Functional programming concepts and apply them to system design to build a more resilient
+speaker goes into how to take functional programming concepts and apply them to system design to build a more resilient
 system.
 
-Cache invalidation is one of the harder problems in computing, the speaker suggests never invalidating the cache. They
+Cache invalidation is one of the harder problems in computing; the speaker suggests never invalidating the cache. They
 talk about splitting state out from a method to create pure functions which can be run once and cached forever. In
 effect defining boundaries in the system with state and without state, to allow for better caching.
 
@@ -712,21 +710,21 @@ change based on the user data is a good one.
 
 > [Robert Barron, IBM](https://www.usenix.org/conference/srecon22emea/presentation/barron)
 
-This is the talk that could explain SRE principals to your mother, or maybe just your manager? Also Lego models, so hide
+This is the talk that could explain SRE principles to your mother, or maybe just your manager? Also Lego models, so hide
 your wallet ahead of time.
 
-The core SRE principals have their basis in systems designs and are applicable outside of pure software systems.
+The core SRE principles have their basis in systems design and are applicable outside of pure software systems.
 
 It covers how the principles were applied to the design, build, launch and operation of the James Webb Space Telescope,
 over the more than 20 year project lifespan thus far.
 
 More than that, there are some very understandable examples of how SLO/SLAs were applied to the operation and the design
-factors that allows it to achieve that.
+factors that allow it to achieve that.
 
 Better yet was the explanation of how 100% reliability is rarely the real goal, even for systems that may seem life
 critical on the face of it.
 
-As an example, Robert shared how the International Space Stations oxygen systems do not have a 100% uptime design goal,
+As an example, Robert shared how the International Space Station's oxygen systems do not have a 100% uptime design goal,
 across all of the systems combined. Even though humans need oxygen to survive, the larger system of the ISS has enough
 redundancy built in that this isn't a true requirement.
 

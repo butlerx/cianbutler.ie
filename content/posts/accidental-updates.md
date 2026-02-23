@@ -1,7 +1,6 @@
 ---
 title: Accidental updates
 date: 2018-04-02T21:11:41+01:00
-author: butlerx
 description: Why you need to lock versions
 tags:
   - Docker

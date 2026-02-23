@@ -1,7 +1,6 @@
 ---
 title: 'FOSDEM 2024: The ups and downs of running enclaves in production'
 date: 2024-02-04T14:55:00+01:00
-author: butlerx
 description:
   My talk at FOSDEM 2024 on running enclaves in production, lessons from scaling confidential computing at Evervault
 tags:

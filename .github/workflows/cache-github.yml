@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: jdx/mise-action@v2
+      - run: npm install
       - name: Build data/github.json
         run: mise run github-data
         env:
