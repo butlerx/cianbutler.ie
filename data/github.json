@@ -44,7 +44,7 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4300,
+      "stars": 4299,
       "forks": 843,
       "language": { "name": "Python", "color": "#3572A5" }
     }
