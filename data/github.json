@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5187,
-      "forks": 751,
+      "stars": 5188,
+      "forks": 752,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -37,7 +37,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10011,
-      "forks": 1119,
+      "forks": 1118,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -54,8 +54,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5187,
-      "forks": 751,
+      "stars": 5188,
+      "forks": 752,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -157,21 +157,21 @@
       "bodyHTML": "\u003cp dir=\"auto\"\u003eAddresses \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"3149554282\" data-permission-text=\"Title is private\" data-url=\"https://github.com/emmett-framework/granian/issues/610\" data-hovercard-type=\"issue\" data-hovercard-url=\"/emmett-framework/granian/issues/610/hovercard\" href=\"https://github.com/emmett-framework/granian/issues/610\"\u003e#610\u003c/a\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eAdd an IPC metric reporter and collector\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003euses the \u003ccode class=\"notranslate\"\u003einterprocess\u003c/code\u003e crate to get cross platform support\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAdded prometheus endpoint for exposing metrics\u003c/li\u003e\n\u003cli\u003euses the \u003ccode class=\"notranslate\"\u003etokio-metrics\u003c/code\u003e crate to expose tokio metric\u003c/li\u003e\n\u003cli\u003eAdded the Following metrics\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_number_workers\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_worker_started_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_worker_stopped_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_requests_processed_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_python_call_latency\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_http_responses_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_requests_processed_total\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eNote\u003c/strong\u003e: I'm not familiar enough with granian to know how to capture all the metrics listed in the issue, so pointers on where to collect those metrics from would be appreciated\u003c/p\u003e\n\u003cp dir=\"auto\"\u003eExample of prom endpoint\u003c/p\u003e\n\u003cdiv class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"# TYPE granian_total_busy_duration counter\ngranian_total_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_total_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_min_busy_duration The minimum amount of time a worker thread was busy\n# TYPE granian_min_busy_duration counter\ngranian_min_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_min_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_connections_total Total number of connections established by each worker since startup\n# TYPE granian_connections_total counter\ngranian_connections_total{worker_id=\u0026quot;2\u0026quot;} 1\n\n# HELP granian_requests_processed_total Total count of HTTP requests processed by each worker since startup\n# TYPE granian_requests_processed_total counter\ngranian_requests_processed_total{method=\u0026quot;GET\u0026quot;,path=\u0026quot;/\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\n# HELP granian_http_responses_total Counter of HTTP responses grouped by status code per worker\n# TYPE granian_http_responses_total counter\ngranian_http_responses_total{status_code=\u0026quot;2xx\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\n# HELP granian_max_busy_duration The maximum amount of time a worker thread was busy\n# TYPE granian_max_busy_duration counter\ngranian_max_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_max_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_worker_started_total Total number of workers started since the application started\n# TYPE granian_worker_started_total counter\ngranian_worker_started_total 2\n\n# HELP granian_number_workers Current number of active workers in the Granian application\n# TYPE granian_number_workers gauge\ngranian_number_workers 2\n\n# HELP granian_global_queue_depth The number of tasks currently scheduled in the runtime's global queue\n# TYPE granian_global_queue_depth gauge\ngranian_global_queue_depth{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_global_queue_depth{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_min_park_count The minimum number of times any worker thread parked\n# TYPE granian_min_park_count gauge\ngranian_min_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_min_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_total_park_count The number of times worker threads parked\n# TYPE granian_total_park_count gauge\ngranian_total_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_total_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_max_park_count The number of times worker threads parked\n# TYPE granian_max_park_count gauge\ngranian_max_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_max_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_workers_count The number of worker threads used by the runtime\n# TYPE granian_workers_count gauge\ngranian_workers_count{worker_id=\u0026quot;1\u0026quot;} 1\ngranian_workers_count{worker_id=\u0026quot;2\u0026quot;} 1\n\n# HELP granian_python_call_latency Time spent executing Python application code within each worker, measured in seconds\n# TYPE granian_python_call_latency summary\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0\u0026quot;} 0.000135375\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.5\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.9\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.95\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.99\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.999\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;1\u0026quot;} 0.000391375\ngranian_python_call_latency_sum{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 0.000674875\ngranian_python_call_latency_count{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\"\u003e\u003cpre lang=\"#\" class=\"notranslate\"\u003e\u003ccode class=\"notranslate\"\u003e# TYPE granian_total_busy_duration counter\ngranian_total_busy_duration{worker_id=\"2\"} 0\ngranian_total_busy_duration{worker_id=\"1\"} 0\n\n# HELP granian_min_busy_duration The minimum amount of time a worker thread was busy\n# TYPE granian_min_busy_duration counter\ngranian_min_busy_duration{worker_id=\"2\"} 0\ngranian_min_busy_duration{worker_id=\"1\"} 0\n\n# HELP granian_connections_total Total number of connections established by each worker since startup\n# TYPE granian_connections_total counter\ngranian_connections_total{worker_id=\"2\"} 1\n\n# HELP granian_requests_processed_total Total count of HTTP requests processed by each worker since startup\n# TYPE granian_requests_processed_total counter\ngranian_requests_processed_total{method=\"GET\",path=\"/\",worker_id=\"2\"} 3\n\n# HELP granian_http_responses_total Counter of HTTP responses grouped by status code per worker\n# TYPE granian_http_responses_total counter\ngranian_http_responses_total{status_code=\"2xx\",worker_id=\"2\"} 3\n\n# HELP granian_max_busy_duration The maximum amount of time a worker thread was busy\n# TYPE granian_max_busy_duration counter\ngranian_max_busy_duration{worker_id=\"1\"} 0\ngranian_max_busy_duration{worker_id=\"2\"} 0\n\n# HELP granian_worker_started_total Total number of workers started since the application started\n# TYPE granian_worker_started_total counter\ngranian_worker_started_total 2\n\n# HELP granian_number_workers Current number of active workers in the Granian application\n# TYPE granian_number_workers gauge\ngranian_number_workers 2\n\n# HELP granian_global_queue_depth The number of tasks currently scheduled in the runtime's global queue\n# TYPE granian_global_queue_depth gauge\ngranian_global_queue_depth{worker_id=\"2\"} 0\ngranian_global_queue_depth{worker_id=\"1\"} 0\n\n# HELP granian_min_park_count The minimum number of times any worker thread parked\n# TYPE granian_min_park_count gauge\ngranian_min_park_count{worker_id=\"1\"} 0\ngranian_min_park_count{worker_id=\"2\"} 0\n\n# HELP granian_total_park_count The number of times worker threads parked\n# TYPE granian_total_park_count gauge\ngranian_total_park_count{worker_id=\"1\"} 0\ngranian_total_park_count{worker_id=\"2\"} 0\n\n# HELP granian_max_park_count The number of times worker threads parked\n# TYPE granian_max_park_count gauge\ngranian_max_park_count{worker_id=\"1\"} 0\ngranian_max_park_count{worker_id=\"2\"} 0\n\n# HELP granian_workers_count The number of worker threads used by the runtime\n# TYPE granian_workers_count gauge\ngranian_workers_count{worker_id=\"1\"} 1\ngranian_workers_count{worker_id=\"2\"} 1\n\n# HELP granian_python_call_latency Time spent executing Python application code within each worker, measured in seconds\n# TYPE granian_python_call_latency summary\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0\"} 0.000135375\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.5\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.9\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.95\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.99\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.999\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"1\"} 0.000391375\ngranian_python_call_latency_sum{status=\"200\",worker_id=\"2\"} 0.000674875\ngranian_python_call_latency_count{status=\"200\",worker_id=\"2\"} 3\n\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e"
     },
     {
-      "repo": { "url": "https://github.com/webpro-nl/knip", "name": "knip", "owner": "webpro-nl", "stars": 10559 },
+      "repo": { "url": "https://github.com/webpro-nl/knip", "name": "knip", "owner": "webpro-nl", "stars": 10565 },
       "title": "Skip indexing into a gh action if its not an array",
       "url": "https://github.com/webpro-nl/knip/pull/827",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eSkip checking a github action step if its not an array as its possibly a templated string.\u003cbr\u003e\nIn gh actions a valid config is \u003ccode class=\"notranslate\"\u003e${{ toJSON(steps) }}\u003c/code\u003e which breaks the plugins parsing. if we see a string we should just skip those steps\u003c/p\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "Attempt to paralleise the docker build",
       "url": "https://github.com/butlerx/wetty/pull/508",
       "state": "CLOSED",
       "bodyHTML": ""
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "remove yarn",
       "url": "https://github.com/butlerx/wetty/pull/507",
       "state": "MERGED",
@@ -185,28 +185,28 @@
       "bodyHTML": "\u003cp dir=\"auto\"\u003eAdding Support for using with arch machines\u003c/p\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "Update development flow to be less confusing",
       "url": "https://github.com/butlerx/wetty/pull/441",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eclose issue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1369023421\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/432\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/432/hovercard\" href=\"https://github.com/butlerx/wetty/issues/432\"\u003e#432\u003c/a\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003euse \u003ccode class=\"notranslate\"\u003esnowpack build --watch\u003c/code\u003e rather then \u003ccode class=\"notranslate\"\u003esnowpack dev\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eUpdate \u003ccode class=\"notranslate\"\u003edocs/developments.md\u003c/code\u003e to reflect the acutal development\u003cbr\u003e\nenvironment\u003c/li\u003e\n\u003c/ul\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "bump xterm to v5",
       "url": "https://github.com/butlerx/wetty/pull/439",
       "state": "MERGED",
       "bodyHTML": ""
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
       "url": "https://github.com/butlerx/wetty/pull/438",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eclosses \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1367426926\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/428\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/428/hovercard\" href=\"https://github.com/butlerx/wetty/issues/428\"\u003e#428\u003c/a\u003e\u003c/p\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5187 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5188 },
       "title": "update codeQL workflow",
       "url": "https://github.com/butlerx/wetty/pull/437",
       "state": "MERGED",
