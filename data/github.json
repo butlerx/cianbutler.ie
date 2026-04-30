@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5254,
+      "stars": 5255,
       "forks": 752,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 13989,
+      "stars": 13988,
       "forks": 1484,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,8 +36,8 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10048,
-      "forks": 1120,
+      "stars": 10053,
+      "forks": 1121,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4310,
-      "forks": 854,
+      "forks": 853,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,7 +54,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5254,
+      "stars": 5255,
       "forks": 752,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -149,7 +149,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5310
+        "stars": 5311
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
@@ -157,65 +157,60 @@
       "bodyHTML": "\u003cp dir=\"auto\"\u003eAddresses \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"3149554282\" data-permission-text=\"Title is private\" data-url=\"https://github.com/emmett-framework/granian/issues/610\" data-hovercard-type=\"issue\" data-hovercard-url=\"/emmett-framework/granian/issues/610/hovercard\" href=\"https://github.com/emmett-framework/granian/issues/610\"\u003e#610\u003c/a\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eAdd an IPC metric reporter and collector\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003euses the \u003ccode class=\"notranslate\"\u003einterprocess\u003c/code\u003e crate to get cross platform support\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAdded prometheus endpoint for exposing metrics\u003c/li\u003e\n\u003cli\u003euses the \u003ccode class=\"notranslate\"\u003etokio-metrics\u003c/code\u003e crate to expose tokio metric\u003c/li\u003e\n\u003cli\u003eAdded the Following metrics\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_number_workers\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_worker_started_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_worker_stopped_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_requests_processed_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_python_call_latency\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_http_responses_total\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003egranian_requests_processed_total\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eNote\u003c/strong\u003e: I'm not familiar enough with granian to know how to capture all the metrics listed in the issue, so pointers on where to collect those metrics from would be appreciated\u003c/p\u003e\n\u003cp dir=\"auto\"\u003eExample of prom endpoint\u003c/p\u003e\n\u003cdiv class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"# TYPE granian_total_busy_duration counter\ngranian_total_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_total_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_min_busy_duration The minimum amount of time a worker thread was busy\n# TYPE granian_min_busy_duration counter\ngranian_min_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_min_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_connections_total Total number of connections established by each worker since startup\n# TYPE granian_connections_total counter\ngranian_connections_total{worker_id=\u0026quot;2\u0026quot;} 1\n\n# HELP granian_requests_processed_total Total count of HTTP requests processed by each worker since startup\n# TYPE granian_requests_processed_total counter\ngranian_requests_processed_total{method=\u0026quot;GET\u0026quot;,path=\u0026quot;/\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\n# HELP granian_http_responses_total Counter of HTTP responses grouped by status code per worker\n# TYPE granian_http_responses_total counter\ngranian_http_responses_total{status_code=\u0026quot;2xx\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\n# HELP granian_max_busy_duration The maximum amount of time a worker thread was busy\n# TYPE granian_max_busy_duration counter\ngranian_max_busy_duration{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_max_busy_duration{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_worker_started_total Total number of workers started since the application started\n# TYPE granian_worker_started_total counter\ngranian_worker_started_total 2\n\n# HELP granian_number_workers Current number of active workers in the Granian application\n# TYPE granian_number_workers gauge\ngranian_number_workers 2\n\n# HELP granian_global_queue_depth The number of tasks currently scheduled in the runtime's global queue\n# TYPE granian_global_queue_depth gauge\ngranian_global_queue_depth{worker_id=\u0026quot;2\u0026quot;} 0\ngranian_global_queue_depth{worker_id=\u0026quot;1\u0026quot;} 0\n\n# HELP granian_min_park_count The minimum number of times any worker thread parked\n# TYPE granian_min_park_count gauge\ngranian_min_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_min_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_total_park_count The number of times worker threads parked\n# TYPE granian_total_park_count gauge\ngranian_total_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_total_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_max_park_count The number of times worker threads parked\n# TYPE granian_max_park_count gauge\ngranian_max_park_count{worker_id=\u0026quot;1\u0026quot;} 0\ngranian_max_park_count{worker_id=\u0026quot;2\u0026quot;} 0\n\n# HELP granian_workers_count The number of worker threads used by the runtime\n# TYPE granian_workers_count gauge\ngranian_workers_count{worker_id=\u0026quot;1\u0026quot;} 1\ngranian_workers_count{worker_id=\u0026quot;2\u0026quot;} 1\n\n# HELP granian_python_call_latency Time spent executing Python application code within each worker, measured in seconds\n# TYPE granian_python_call_latency summary\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0\u0026quot;} 0.000135375\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.5\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.9\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.95\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.99\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;0.999\u0026quot;} 0.00014811818813720976\ngranian_python_call_latency{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;,quantile=\u0026quot;1\u0026quot;} 0.000391375\ngranian_python_call_latency_sum{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 0.000674875\ngranian_python_call_latency_count{status=\u0026quot;200\u0026quot;,worker_id=\u0026quot;2\u0026quot;} 3\n\"\u003e\u003cpre lang=\"#\" class=\"notranslate\"\u003e\u003ccode class=\"notranslate\"\u003e# TYPE granian_total_busy_duration counter\ngranian_total_busy_duration{worker_id=\"2\"} 0\ngranian_total_busy_duration{worker_id=\"1\"} 0\n\n# HELP granian_min_busy_duration The minimum amount of time a worker thread was busy\n# TYPE granian_min_busy_duration counter\ngranian_min_busy_duration{worker_id=\"2\"} 0\ngranian_min_busy_duration{worker_id=\"1\"} 0\n\n# HELP granian_connections_total Total number of connections established by each worker since startup\n# TYPE granian_connections_total counter\ngranian_connections_total{worker_id=\"2\"} 1\n\n# HELP granian_requests_processed_total Total count of HTTP requests processed by each worker since startup\n# TYPE granian_requests_processed_total counter\ngranian_requests_processed_total{method=\"GET\",path=\"/\",worker_id=\"2\"} 3\n\n# HELP granian_http_responses_total Counter of HTTP responses grouped by status code per worker\n# TYPE granian_http_responses_total counter\ngranian_http_responses_total{status_code=\"2xx\",worker_id=\"2\"} 3\n\n# HELP granian_max_busy_duration The maximum amount of time a worker thread was busy\n# TYPE granian_max_busy_duration counter\ngranian_max_busy_duration{worker_id=\"1\"} 0\ngranian_max_busy_duration{worker_id=\"2\"} 0\n\n# HELP granian_worker_started_total Total number of workers started since the application started\n# TYPE granian_worker_started_total counter\ngranian_worker_started_total 2\n\n# HELP granian_number_workers Current number of active workers in the Granian application\n# TYPE granian_number_workers gauge\ngranian_number_workers 2\n\n# HELP granian_global_queue_depth The number of tasks currently scheduled in the runtime's global queue\n# TYPE granian_global_queue_depth gauge\ngranian_global_queue_depth{worker_id=\"2\"} 0\ngranian_global_queue_depth{worker_id=\"1\"} 0\n\n# HELP granian_min_park_count The minimum number of times any worker thread parked\n# TYPE granian_min_park_count gauge\ngranian_min_park_count{worker_id=\"1\"} 0\ngranian_min_park_count{worker_id=\"2\"} 0\n\n# HELP granian_total_park_count The number of times worker threads parked\n# TYPE granian_total_park_count gauge\ngranian_total_park_count{worker_id=\"1\"} 0\ngranian_total_park_count{worker_id=\"2\"} 0\n\n# HELP granian_max_park_count The number of times worker threads parked\n# TYPE granian_max_park_count gauge\ngranian_max_park_count{worker_id=\"1\"} 0\ngranian_max_park_count{worker_id=\"2\"} 0\n\n# HELP granian_workers_count The number of worker threads used by the runtime\n# TYPE granian_workers_count gauge\ngranian_workers_count{worker_id=\"1\"} 1\ngranian_workers_count{worker_id=\"2\"} 1\n\n# HELP granian_python_call_latency Time spent executing Python application code within each worker, measured in seconds\n# TYPE granian_python_call_latency summary\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0\"} 0.000135375\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.5\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.9\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.95\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.99\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"0.999\"} 0.00014811818813720976\ngranian_python_call_latency{status=\"200\",worker_id=\"2\",quantile=\"1\"} 0.000391375\ngranian_python_call_latency_sum{status=\"200\",worker_id=\"2\"} 0.000674875\ngranian_python_call_latency_count{status=\"200\",worker_id=\"2\"} 3\n\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
+      "repo": { "url": "https://github.com/webpro-nl/knip", "name": "knip", "owner": "webpro-nl", "stars": 11131 },
+      "title": "Skip indexing into a gh action if its not an array",
+      "url": "https://github.com/webpro-nl/knip/pull/827",
+      "state": "MERGED",
+      "bodyHTML": "\u003cp dir=\"auto\"\u003eSkip checking a github action step if its not an array as its possibly a templated string.\u003cbr\u003e\nIn gh actions a valid config is \u003ccode class=\"notranslate\"\u003e${{ toJSON(steps) }}\u003c/code\u003e which breaks the plugins parsing. if we see a string we should just skip those steps\u003c/p\u003e"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
+      "title": "Attempt to paralleise the docker build",
+      "url": "https://github.com/butlerx/wetty/pull/508",
+      "state": "CLOSED",
+      "bodyHTML": ""
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
+      "title": "remove yarn",
+      "url": "https://github.com/butlerx/wetty/pull/507",
+      "state": "MERGED",
+      "bodyHTML": "\u003cp dir=\"auto\"\u003e\u003cspan class=\"issue-keyword tooltipped tooltipped-se\" aria-label=\"This pull request closes issue #492.\"\u003eclose\u003c/span\u003e \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1864026761\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/492\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/492/hovercard\" href=\"https://github.com/butlerx/wetty/issues/492\"\u003e#492\u003c/a\u003e\u003c/p\u003e"
+    },
+    {
+      "repo": { "url": "https://github.com/ema/pets", "name": "pets", "owner": "ema", "stars": 462 },
+      "title": "Add Support for Arch Pacman package manager",
+      "url": "https://github.com/ema/pets/pull/13",
+      "state": "MERGED",
+      "bodyHTML": "\u003cp dir=\"auto\"\u003eAdding Support for using with arch machines\u003c/p\u003e"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
       "title": "Update development flow to be less confusing",
       "url": "https://github.com/butlerx/wetty/pull/441",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eclose issue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1369023421\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/432\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/432/hovercard\" href=\"https://github.com/butlerx/wetty/issues/432\"\u003e#432\u003c/a\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003euse \u003ccode class=\"notranslate\"\u003esnowpack build --watch\u003c/code\u003e rather then \u003ccode class=\"notranslate\"\u003esnowpack dev\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eUpdate \u003ccode class=\"notranslate\"\u003edocs/developments.md\u003c/code\u003e to reflect the acutal development\u003cbr\u003e\nenvironment\u003c/li\u003e\n\u003c/ul\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
       "title": "bump xterm to v5",
       "url": "https://github.com/butlerx/wetty/pull/439",
       "state": "MERGED",
       "bodyHTML": ""
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
       "title": "Issue: 428. Remove Postinsatll hook for yarn global installs",
       "url": "https://github.com/butlerx/wetty/pull/438",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eclosses \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1367426926\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/428\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/428/hovercard\" href=\"https://github.com/butlerx/wetty/issues/428\"\u003e#428\u003c/a\u003e\u003c/p\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5255 },
       "title": "update codeQL workflow",
       "url": "https://github.com/butlerx/wetty/pull/437",
       "state": "MERGED",
       "bodyHTML": ""
-    },
-    {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
-      "title": "ARM support",
-      "url": "https://github.com/butlerx/wetty/pull/419",
-      "state": "MERGED",
-      "bodyHTML": "\u003cp dir=\"auto\"\u003eissue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1111580091\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/375\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/375/hovercard\" href=\"https://github.com/butlerx/wetty/issues/375\"\u003e#375\u003c/a\u003e: Build multiple versions of docker containers for different platforms\u003c/p\u003e\n\u003cp dir=\"auto\"\u003eSee \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1119648384\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/379\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/379/hovercard\" href=\"https://github.com/butlerx/wetty/pull/379\"\u003e#379\u003c/a\u003e for reference\u003c/p\u003e"
-    },
-    {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
-      "title": "docker wf",
-      "url": "https://github.com/butlerx/wetty/pull/413",
-      "state": "CLOSED",
-      "bodyHTML": "\u003cul dir=\"auto\"\u003e\n\u003cli\u003eBump vm2 from 3.9.3 to 3.9.5 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1030456303\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/362\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/362/hovercard\" href=\"https://github.com/butlerx/wetty/pull/362\"\u003e#362\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eformat documentation (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1034120020\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/363\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/363/hovercard\" href=\"https://github.com/butlerx/wetty/pull/363\"\u003e#363\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eConsistent WeTTY/wetty capitalization. (Upstream \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1017449198\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/360\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/360/hovercard\" href=\"https://github.com/butlerx/wetty/issues/360\"\u003e#360\u003c/a\u003e) (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1040499936\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/364\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/364/hovercard\" href=\"https://github.com/butlerx/wetty/pull/364\"\u003e#364\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eissue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1069583186\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/366\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/366/hovercard\" href=\"https://github.com/butlerx/wetty/issues/366\"\u003e#366\u003c/a\u003e: auto push docker images to dockerhub\u003c/li\u003e\n\u003cli\u003ebuild latest docker image\u003c/li\u003e\n\u003cli\u003eattempt to pusblish to github package\u003c/li\u003e\n\u003cli\u003eRelease 2.1.2\u003c/li\u003e\n\u003cli\u003echange default entry point to yarn start\u003c/li\u003e\n\u003cli\u003eissue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"851582041\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/333\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/333/hovercard\" href=\"https://github.com/butlerx/wetty/issues/333\"\u003e#333\u003c/a\u003e: clear old terminal on start\u003c/li\u003e\n\u003cli\u003eCheck env version before spawning pty\u003c/li\u003e\n\u003cli\u003eincrease time for when tickets marked as stale\u003c/li\u003e\n\u003cli\u003eRelease 2.1.3\u003c/li\u003e\n\u003cli\u003efix release workflow\u003c/li\u003e\n\u003cli\u003eissue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"935443408\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/346\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/346/hovercard\" href=\"https://github.com/butlerx/wetty/issues/346\"\u003e#346\u003c/a\u003e: bundle configs in npm package\u003c/li\u003e\n\u003cli\u003eissue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1088848537\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/372\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/372/hovercard\" href=\"https://github.com/butlerx/wetty/issues/372\"\u003e#372\u003c/a\u003e: resize term on resize event\u003c/li\u003e\n\u003cli\u003eIssue 365: allow host to be specified from http host headers\u003c/li\u003e\n\u003cli\u003eRelease 2.2.0\u003c/li\u003e\n\u003cli\u003eManually parse package.json to ensure version is always available\u003c/li\u003e\n\u003cli\u003eIssue \u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1077096231\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/368\" data-hovercard-type=\"issue\" data-hovercard-url=\"/butlerx/wetty/issues/368/hovercard\" href=\"https://github.com/butlerx/wetty/issues/368\"\u003e#368\u003c/a\u003e: fix allow i frame flag\u003c/li\u003e\n\u003cli\u003eRelease 2.2.1\u003c/li\u003e\n\u003cli\u003eAdd ability to set log level and move http logs to level http\u003c/li\u003e\n\u003cli\u003eRelease 2.3.0\u003c/li\u003e\n\u003cli\u003efix typo in publish workflow\u003c/li\u003e\n\u003cli\u003eadd prometheus metrics endpoint\u003c/li\u003e\n\u003cli\u003eadd metric for number of active connections\u003c/li\u003e\n\u003cli\u003etime http requests\u003c/li\u003e\n\u003cli\u003exframe-disabled\u003c/li\u003e\n\u003cli\u003eBump vm2 from 3.9.5 to 3.9.7\u003c/li\u003e\n\u003cli\u003eupgrade dependencies\u003c/li\u003e\n\u003cli\u003efix type errors\u003c/li\u003e\n\u003cli\u003eupdate socket.io  version\u003c/li\u003e\n\u003cli\u003eRelease 2.4.0\u003c/li\u003e\n\u003cli\u003eRather then -\u0026gt; Rather than\u003c/li\u003e\n\u003cli\u003eFix download bug\u003c/li\u003e\n\u003cli\u003eBump minimist from 1.2.5 to 1.2.6\u003c/li\u003e\n\u003cli\u003eRelease 2.4.1\u003c/li\u003e\n\u003cli\u003eBump semver-regex from 3.1.3 to 3.1.4\u003c/li\u003e\n\u003cli\u003eBump jsdom from 15.2.1 to 16.5.0\u003c/li\u003e\n\u003cli\u003eescape special chars in username: \u003ccode class=\"notranslate\"\u003e- . \\ @\u003c/code\u003e (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1320381416\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/406\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/406/hovercard\" href=\"https://github.com/butlerx/wetty/pull/406\"\u003e#406\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003efix lint warnings\u003c/li\u003e\n\u003cli\u003eupdate docker build\u003c/li\u003e\n\u003cli\u003eBump cirrus-actions/rebase from 1.2 to 1.7 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1325441294\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/412\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/412/hovercard\" href=\"https://github.com/butlerx/wetty/pull/412\"\u003e#412\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eBump pascalgn/npm-publish-action from 1.3.8 to 1.3.9 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1325441252\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/411\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/411/hovercard\" href=\"https://github.com/butlerx/wetty/pull/411\"\u003e#411\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eBump actions/checkout from 2 to 3 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1325441202\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/410\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/410/hovercard\" href=\"https://github.com/butlerx/wetty/pull/410\"\u003e#410\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eBump actions/stale from 3 to 5 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1325441145\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/409\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/409/hovercard\" href=\"https://github.com/butlerx/wetty/pull/409\"\u003e#409\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eBump docker/login-action from 1 to 2 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1325441079\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/408\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/408/hovercard\" href=\"https://github.com/butlerx/wetty/pull/408\"\u003e#408\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eupdate lock file\u003c/li\u003e\n\u003cli\u003efix docker workflow if statement\u003c/li\u003e\n\u003c/ul\u003e"
-    },
-    {
-      "repo": {
-        "url": "https://github.com/grafana/helm-charts",
-        "name": "helm-charts",
-        "owner": "grafana",
-        "stars": 1985
-      },
-      "title": "[grafana] Add `livenessProbe` to grafana image renderer",
-      "url": "https://github.com/grafana/helm-charts/pull/724",
-      "state": "MERGED",
-      "bodyHTML": "\u003cp dir=\"auto\"\u003eSigned-off-by: butlerx \u003ca href=\"mailto:butlerx@notthe.cloud\"\u003ebutlerx@notthe.cloud\u003c/a\u003e\u003c/p\u003e"
-    },
-    {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5254 },
-      "title": "fmt",
-      "url": "https://github.com/butlerx/wetty/pull/359",
-      "state": "MERGED",
-      "bodyHTML": "\u003cul dir=\"auto\"\u003e\n\u003cli\u003eBump nth-check from 2.0.0 to 2.0.1 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1004898507\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/357\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/357/hovercard\" href=\"https://github.com/butlerx/wetty/pull/357\"\u003e#357\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003eBump semver-regex from 3.1.2 to 3.1.3 (\u003ca class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1001623974\" data-permission-text=\"Title is private\" data-url=\"https://github.com/butlerx/wetty/issues/353\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/butlerx/wetty/pull/353/hovercard\" href=\"https://github.com/butlerx/wetty/pull/353\"\u003e#353\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003erun formatting on client config\u003c/li\u003e\n\u003c/ul\u003e"
     }
   ]
 }
