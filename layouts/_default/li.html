@@ -15,7 +15,11 @@
     {{ end }}
   </div>
   <section class="article">
-    {{- with .Params.description -}}{{- . | markdownify -}}{{- else -}}{{- .Summary -}}{{- end -}}
+    {{- with .Params.description -}}
+      {{- . | markdownify -}}
+    {{- else -}}
+      {{- .Summary -}}
+    {{- end -}}
     <a href="{{ .Permalink }}"> Read more<span class="sr-only">: {{ .Title }}</span> </a>
   </section>
   <hr />
