@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5351,
-      "forks": 762,
+      "forks": 761,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10115,
+      "stars": 10116,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4343,
-      "forks": 865,
+      "stars": 4344,
+      "forks": 866,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -55,7 +55,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5351,
-      "forks": 762,
+      "forks": 761,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -175,7 +175,7 @@
         "url": "https://github.com/hashicorp/terraform-provider-aws",
         "name": "terraform-provider-aws",
         "owner": "hashicorp",
-        "stars": 10995
+        "stars": 10998
       },
       "title": "chore: sync the repo with the iduffy work we are using",
       "url": "https://github.com/hashicorp/terraform-provider-aws/pull/48690",
@@ -220,7 +220,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5494
+        "stars": 5495
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
