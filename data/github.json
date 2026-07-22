@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5351,
-      "forks": 761,
+      "stars": 5352,
+      "forks": 763,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,8 +20,8 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14014,
-      "forks": 1480,
+      "stars": 14016,
+      "forks": 1481,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -37,14 +37,14 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10116,
-      "forks": 1123,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4344,
+      "stars": 4346,
       "forks": 866,
       "language": { "name": "Python", "color": "#3572A5" }
     }
@@ -54,8 +54,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5351,
-      "forks": 761,
+      "stars": 5352,
+      "forks": 763,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -133,14 +133,14 @@
   ],
   "contributions": [
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5351 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5352 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eReplaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible \u003ccode class=\"notranslate\"\u003estart()\u003c/code\u003e / \u003ccode class=\"notranslate\"\u003edecorateServerWithSsh()\u003c/code\u003e API. \u003ccode class=\"notranslate\"\u003emise\u003c/code\u003e manages the mixed Rust + Node.js toolchain.\u003c/p\u003e\n\u003ch2 dir=\"auto\"\u003eRust crate (\u003ccode class=\"notranslate\"\u003ecrates/wetty-server/\u003c/code\u003e)\u003c/h2\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003eapp.rs\u003c/code\u003e\u003c/strong\u003e — axum \u003ccode class=\"notranslate\"\u003eRouter\u003c/code\u003e with tower middleware: \u003ccode class=\"notranslate\"\u003eSecurityLayer\u003c/code\u003e (CSP/X-Frame-Options), \u003ccode class=\"notranslate\"\u003eCompressionLayer\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003eServeDir\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003eTraceLayer\u003c/code\u003e, prometheus \u003ccode class=\"notranslate\"\u003e/metrics\u003c/code\u003e route\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003esocket.rs\u003c/code\u003e\u003c/strong\u003e — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003epty.rs\u003c/code\u003e\u003c/strong\u003e — portable-pty spawner bridged to tokio channels; uses \u003ccode class=\"notranslate\"\u003ert.enter()\u003c/code\u003e so \u003ccode class=\"notranslate\"\u003etokio::spawn\u003c/code\u003e works correctly from OS threads\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003eflowcontrol.rs\u003c/code\u003e\u003c/strong\u003e — port of \u003ccode class=\"notranslate\"\u003eTinyBuffer\u003c/code\u003e (2 ms / 512 KiB flush) + \u003ccode class=\"notranslate\"\u003eFlowControlServer\u003c/code\u003e low/high watermark\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003ecommand.rs\u003c/code\u003e\u003c/strong\u003e — SSH command builder mirroring \u003ccode class=\"notranslate\"\u003esrc/server/command/\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003essl.rs\u003c/code\u003e\u003c/strong\u003e — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003elib.rs\u003c/code\u003e\u003c/strong\u003e — napi bindings behind optional \u003ccode class=\"notranslate\"\u003enode-binding\u003c/code\u003e feature so \u003ccode class=\"notranslate\"\u003ecargo test\u003c/code\u003e links without Node.js\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 dir=\"auto\"\u003eTypeScript shim\u003c/h2\u003e\n\u003cp dir=\"auto\"\u003e\u003ccode class=\"notranslate\"\u003esrc/server.ts\u003c/code\u003e becomes a thin wrapper — same exported signatures, delegates to the \u003ccode class=\"notranslate\"\u003e.node\u003c/code\u003e addon:\u003c/p\u003e\n\u003cdiv class=\"highlight highlight-source-ts notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"import addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\"\u003e\u003cpre class=\"notranslate\"\u003e\u003cspan class=\"pl-k\"\u003eimport\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003eaddon\u003c/span\u003e \u003cspan class=\"pl-k\"\u003efrom\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e'../build/wetty_server.node'\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e;\u003c/span\u003e\n\u003cspan class=\"pl-k\"\u003eexport\u003c/span\u003e \u003cspan class=\"pl-k\"\u003econst\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003estart\u003c/span\u003e: \u003cspan class=\"pl-k\"\u003etypeof\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003eaddon\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e.\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003estart\u003c/span\u003e \u003cspan class=\"pl-c1\"\u003e=\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003eaddon\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e.\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003estart\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e;\u003c/span\u003e\n\u003cspan class=\"pl-k\"\u003eexport\u003c/span\u003e \u003cspan class=\"pl-k\"\u003econst\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003edecorateServerWithSsh\u003c/span\u003e: \u003cspan class=\"pl-k\"\u003etypeof\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003eaddon\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e.\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003edecorateServerWithSsh\u003c/span\u003e \u003cspan class=\"pl-c1\"\u003e=\u003c/span\u003e \u003cspan class=\"pl-s1\"\u003eaddon\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e.\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003edecorateServerWithSsh\u003c/span\u003e\u003cspan class=\"pl-kos\"\u003e;\u003c/span\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eBreaking:\u003c/strong\u003e return type changes from \u003ccode class=\"notranslate\"\u003ePromise\u0026lt;SocketIO.Server\u0026gt;\u003c/code\u003e to \u003ccode class=\"notranslate\"\u003ePromise\u0026lt;ServerHandle\u0026gt;\u003c/code\u003e. Callers that interact with the returned server instance will need to adapt.\u003c/p\u003e\n\u003ch2 dir=\"auto\"\u003eToolchain \u0026amp; build\u003c/h2\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003e.mise.toml\u003c/code\u003e\u003c/strong\u003e — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines \u003ccode class=\"notranslate\"\u003ebuild\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003etest\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003elint\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003echeck:rust\u003c/code\u003e tasks\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ccode class=\"notranslate\"\u003escripts/copy-addon.sh\u003c/code\u003e\u003c/strong\u003e — single source of truth for copying \u003ccode class=\"notranslate\"\u003e.so\u003c/code\u003e/\u003ccode class=\"notranslate\"\u003e.dylib\u003c/code\u003e/\u003ccode class=\"notranslate\"\u003e.dll\u003c/code\u003e → \u003ccode class=\"notranslate\"\u003ebuild/wetty_server.node\u003c/code\u003e; referenced by mise, \u003ccode class=\"notranslate\"\u003ebuild.js\u003c/code\u003e, and the \u003ccode class=\"notranslate\"\u003ebuild:rust\u003c/code\u003e npm script\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCI\u003c/strong\u003e — replaced \u003ccode class=\"notranslate\"\u003eactions/setup-node\u003c/code\u003e + \u003ccode class=\"notranslate\"\u003epnpm/action-setup\u003c/code\u003e with \u003ccode class=\"notranslate\"\u003ejdx/mise-action@v2\u003c/code\u003e; added \u003ccode class=\"notranslate\"\u003ecargo test\u003c/code\u003e step\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 dir=\"auto\"\u003eTests\u003c/h2\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e48 Rust unit tests across all modules\u003c/li\u003e\n\u003cli\u003e10 HTTP integration tests (\u003ccode class=\"notranslate\"\u003etests/app_test.rs\u003c/code\u003e) — routes, security headers, redirect behaviour\u003c/li\u003e\n\u003cli\u003e3 TLS integration tests (\u003ccode class=\"notranslate\"\u003etests/ssl_test.rs\u003c/code\u003e)\u003c/li\u003e\n\u003cli\u003e\u003ccode class=\"notranslate\"\u003esrc/server.spec.ts\u003c/code\u003e — TypeScript smoke tests for the shim\u003c/li\u003e\n\u003c/ul\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5351 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5352 },
       "title": "Harden disconnect overlay by rendering reason as plain text",
       "url": "https://github.com/butlerx/wetty/pull/635",
       "state": "MERGED",
@@ -183,21 +183,21 @@
       "bodyHTML": "\u003cp dir=\"auto\"\u003eWe are on ians fork and need to make changes so moving into our org\u003c/p\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5351 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5352 },
       "title": "fix: Docker CLI flag forwarding in runtime image",
       "url": "https://github.com/butlerx/wetty/pull/600",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eRecent \u003ccode class=\"notranslate\"\u003ewettyoss/wetty\u003c/code\u003e Docker images (notably \u003ccode class=\"notranslate\"\u003ev3.0.2\u003c/code\u003e) fail on startup when flags are passed via \u003ccode class=\"notranslate\"\u003edocker run\u003c/code\u003e/Compose (\u003ccode class=\"notranslate\"\u003enode: bad option: --ssh-host...\u003c/code\u003e). The container command was being interpreted by Node’s default entrypoint instead of WeTTY’s CLI.\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eRoot cause\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eDocker runtime inherited the Node base image entrypoint, so CLI flags provided to the container were treated as Node runtime flags.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eChange\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eUpdated the WeTTY runtime image startup to execute WeTTY directly as container entrypoint.\u003c/li\u003e\n\u003cli\u003eThis makes container arguments flow to \u003ccode class=\"notranslate\"\u003ebuild/main.js\u003c/code\u003e (yargs parser) as intended.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eBehavior impact\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eRestores support for flags passed in \u003ccode class=\"notranslate\"\u003ecommand\u003c/code\u003e/container args (e.g. \u003ccode class=\"notranslate\"\u003e--ssh-host\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003e--ssh-port\u003c/code\u003e) without restart loops.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"highlight highlight-source-dockerfile notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"- CMD [\u0026quot;pnpm\u0026quot;, \u0026quot;start\u0026quot;]\n+ ENTRYPOINT [\u0026quot;node\u0026quot;, \u0026quot;./build/main.js\u0026quot;]\"\u003e\u003cpre class=\"notranslate\"\u003e- CMD [\u003cspan class=\"pl-s\"\u003e\"pnpm\"\u003c/span\u003e, \u003cspan class=\"pl-s\"\u003e\"start\"\u003c/span\u003e]\n+ ENTRYPOINT [\u003cspan class=\"pl-s\"\u003e\"node\"\u003c/span\u003e, \u003cspan class=\"pl-s\"\u003e\"./build/main.js\"\u003c/span\u003e]\u003c/pre\u003e\u003c/div\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5351 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5352 },
       "title": "docs: align configuration docs with current runtime defaults",
       "url": "https://github.com/butlerx/wetty/pull/598",
       "state": "MERGED",
       "bodyHTML": "\u003cp dir=\"auto\"\u003eThe docs still described \u003ccode class=\"notranslate\"\u003e/wetty\u003c/code\u003e-based defaults, while runtime defaults now serve from \u003ccode class=\"notranslate\"\u003e/\u003c/code\u003e. This updates user-facing and API docs so defaults, examples, and proxy guidance match current behavior.\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eDefault base path and URL examples\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eUpdated docs that implied \u003ccode class=\"notranslate\"\u003e/wetty\u003c/code\u003e as default to \u003ccode class=\"notranslate\"\u003e/\u003c/code\u003e.\u003c/li\u003e\n\u003cli\u003eRewrote example URLs to use root-based defaults (\u003ccode class=\"notranslate\"\u003ehttp://host:3000\u003c/code\u003e, \u003ccode class=\"notranslate\"\u003e/ssh/\u0026lt;username\u0026gt;\u003c/code\u003e).\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eAPI defaults accuracy\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eCorrected \u003ccode class=\"notranslate\"\u003eserverConf.base\u003c/code\u003e default to \u003ccode class=\"notranslate\"\u003e'/'\u003c/code\u003e.\u003c/li\u003e\n\u003cli\u003eCorrected \u003ccode class=\"notranslate\"\u003eserverConf.title\u003c/code\u003e default to \u003ccode class=\"notranslate\"\u003e'WeTTY - The Web Terminal Emulator'\u003c/code\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp dir=\"auto\"\u003e\u003cstrong\u003eProxy docs clarity\u003c/strong\u003e\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eClarified that \u003ccode class=\"notranslate\"\u003e/wetty\u003c/code\u003e is a non-default prefixed base path used when explicitly configured (for nginx/apache setups), not the built-in default.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"highlight highlight-text-md notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"- | [serverConf.base]  | `string` | `'/wetty/'` |\n+ | [serverConf.base]  | `string` | `'/'`       |\n\n- http://yourserver:3000/wetty/ssh/\u0026lt;username\u0026gt;\n+ http://yourserver:3000/ssh/\u0026lt;username\u0026gt;\"\u003e\u003cpre class=\"notranslate\"\u003e\u003cspan class=\"pl-v\"\u003e-\u003c/span\u003e \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e[\u003c/span\u003eserverConf.base\u003cspan class=\"pl-s\"\u003e]\u003c/span\u003e  \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003estring\u003c/span\u003e\u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003e'/wetty/'\u003c/span\u003e\u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e\n\u003cspan class=\"pl-v\"\u003e+\u003c/span\u003e \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e[\u003c/span\u003eserverConf.base\u003cspan class=\"pl-s\"\u003e]\u003c/span\u003e  \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003estring\u003c/span\u003e\u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e \u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e\u003cspan class=\"pl-c1\"\u003e'/'\u003c/span\u003e\u003cspan class=\"pl-s\"\u003e`\u003c/span\u003e       \u003cspan class=\"pl-ml\"\u003e|\u003c/span\u003e\n\n\u003cspan class=\"pl-v\"\u003e-\u003c/span\u003e \u003cspan class=\"pl-corl\"\u003ehttp://yourserver:3000/wetty/ssh/\u003c/span\u003e\u0026lt;\u003cspan class=\"pl-ent\"\u003eusername\u003c/span\u003e\u0026gt;\n\u003cspan class=\"pl-v\"\u003e+\u003c/span\u003e \u003cspan class=\"pl-corl\"\u003ehttp://yourserver:3000/ssh/\u003c/span\u003e\u0026lt;\u003cspan class=\"pl-ent\"\u003eusername\u003c/span\u003e\u0026gt;\u003c/pre\u003e\u003c/div\u003e"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5351 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5352 },
       "title": "fix: Potential fix for code scanning alert no. 6: Server-side URL redirect",
       "url": "https://github.com/butlerx/wetty/pull/597",
       "state": "MERGED",
@@ -220,7 +220,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5495
+        "stars": 5500
       },
       "title": "Expose runtime metrics",
       "url": "https://github.com/emmett-framework/granian/pull/657",
