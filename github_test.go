@@ -9,6 +9,9 @@ func TestBuildContributions(t *testing.T) {
 	events := []publicEvent{
 		{
 			Type: "PushEvent",
+			Repo: struct {
+				Name string `json:"name"`
+			}{Name: "unexpected/should-not-be-read"},
 		},
 		{
 			Type: "PullRequestEvent",
