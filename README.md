@@ -46,8 +46,8 @@ The text in those TOML files gets treated as Markdown and rendered into the temp
 ## GitHub Data
 
 A chunk of the site pulls live data from GitHub — pinned repos, top repositories, and open source contributions. Since
-Hugo can't talk to GraphQL APIs on its own, `github.go` exists to bridge the gap. It fetches data from GitHub's GraphQL
-API and writes it to `data/github.json` for Hugo to pick up.
+Hugo can't talk to GitHub APIs on its own, `github.go` exists to bridge the gap. It fetches repository data from
+GitHub's GraphQL API, contribution data from the REST API, and writes it to `data/github.json` for Hugo to pick up.
 
 ```sh
 GH_TOKEN=$(gh auth token) mise run github-data
