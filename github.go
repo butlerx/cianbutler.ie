@@ -8,14 +8,14 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 )
 
 const graphqlURL = "https://api.github.com/graphql"
+const restURL = "https://api.github.com"
 const query = `query (
   $author: String = ""
   $userFirst: Int = 0
-  $searchFirst: Int = 0
-  $q: String = ""
 ) {
   user(login: $author) {
     repositories(
@@ -34,26 +34,6 @@ const query = `query (
         }
         owner {
           login
-        }
-      }
-    }
-  }
-  search(query: $q, type: ISSUE, first: $searchFirst) {
-    nodes {
-      ... on PullRequest {
-        title
-        url
-        state
-        bodyHTML
-        repository {
-          stargazers {
-            totalCount
-          }
-          repoUrl: url
-          name
-          owner {
-            login
-          }
         }
       }
     }
@@ -107,24 +87,6 @@ type graphQLResponse struct {
 				} `json:"nodes"`
 			} `json:"repositories"`
 		} `json:"user"`
-		Search struct {
-			Nodes []struct {
-				Title      string `json:"title"`
-				URL        string `json:"url"`
-				State      string `json:"state"`
-				BodyHTML   string `json:"bodyHTML"`
-				Repository struct {
-					RepoURL string `json:"repoUrl"`
-					Name    string `json:"name"`
-					Owner   struct {
-						Login string `json:"login"`
-					} `json:"owner"`
-					Stargazers struct {
-						TotalCount int `json:"totalCount"`
-					} `json:"stargazers"`
-				} `json:"repository"`
-			} `json:"nodes"`
-		} `json:"search"`
 		RepositoryOwner struct {
 			PinnedItems struct {
 				Nodes []struct {
@@ -196,6 +158,22 @@ type config struct {
 	user       string
 }
 
+type publicEvent struct {
+	Type string `json:"type"`
+	Repo struct {
+		Name string `json:"name"`
+	} `json:"repo"`
+	Payload struct {
+		PullRequest struct {
+			Title    string `json:"title"`
+			HTMLURL  string `json:"html_url"`
+			State    string `json:"state"`
+			Body     string `json:"body"`
+			MergedAt string `json:"merged_at"`
+		} `json:"pull_request"`
+	} `json:"payload"`
+}
+
 func parseFlags() config {
 	var cfg config
 	flag.StringVar(&cfg.outputPath, "output", "data/github.json", "output file path")
@@ -217,7 +195,12 @@ func run() error {
 		return fmt.Errorf("fetching github data: %w", err)
 	}
 
-	out := buildOutput(gqlResp)
+	contributions, err := fetchContributions(token, cfg.user, 10)
+	if err != nil {
+		return fmt.Errorf("fetching contributions: %w", err)
+	}
+
+	out := buildOutput(gqlResp, contributions)
 
 	if err = writeJSONToFile(cfg.outputPath, out); err != nil {
 		return fmt.Errorf("writing output to %s: %w", cfg.outputPath, err)
@@ -229,10 +212,8 @@ func fetchGitHubData(token, user string) (*graphQLResponse, error) {
 	reqBody := graphQLRequest{
 		Query: query,
 		Variables: map[string]any{
-			"author":      user,
-			"userFirst":   10,
-			"searchFirst": 10,
-			"q":           fmt.Sprintf("author:%s type:pr is:public", user),
+			"author":    user,
+			"userFirst": 10,
 		},
 	}
 
@@ -279,7 +260,159 @@ func fetchGitHubData(token, user string) (*graphQLResponse, error) {
 	return &gqlResp, nil
 }
 
-func buildOutput(gqlResp *graphQLResponse) output {
+func fetchContributions(token, user string, limit int) ([]contributionEntry, error) {
+	events, err := fetchPublicEvents(token, user, 100)
+	if err != nil {
+		return nil, err
+	}
+
+	repoCache := make(map[string]contributionRepo)
+	repoLookup := func(fullName string) (contributionRepo, error) {
+		if repo, ok := repoCache[fullName]; ok {
+			return repo, nil
+		}
+
+		repo, lookupErr := fetchRepoDetails(token, fullName)
+		if lookupErr != nil {
+			return contributionRepo{}, lookupErr
+		}
+
+		repoCache[fullName] = repo
+		return repo, nil
+	}
+
+	return buildContributions(events, repoLookup, limit)
+}
+
+func fetchPublicEvents(token, user string, perPage int) ([]publicEvent, error) {
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("%s/users/%s/events/public?per_page=%d", restURL, user, perPage), nil)
+	if err != nil {
+		return nil, fmt.Errorf("creating public events request: %w", err)
+	}
+
+	events := make([]publicEvent, 0)
+	if err = doGitHubRequest(token, req, &events); err != nil {
+		return nil, fmt.Errorf("fetching public events: %w", err)
+	}
+
+	return events, nil
+}
+
+func fetchRepoDetails(token, fullName string) (contributionRepo, error) {
+	owner, repoName, ok := strings.Cut(fullName, "/")
+	if !ok || owner == "" || repoName == "" {
+		return contributionRepo{}, fmt.Errorf("invalid repository name %q", fullName)
+	}
+
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("%s/repos/%s/%s", restURL, owner, repoName), nil)
+	if err != nil {
+		return contributionRepo{}, fmt.Errorf("creating repo details request: %w", err)
+	}
+
+	var repoResp struct {
+		HTMLURL        string `json:"html_url"`
+		StargazerCount int    `json:"stargazers_count"`
+	}
+	if err = doGitHubRequest(token, req, &repoResp); err != nil {
+		return contributionRepo{}, fmt.Errorf("fetching repo details for %s: %w", fullName, err)
+	}
+
+	url := repoResp.HTMLURL
+	if url == "" {
+		url = fmt.Sprintf("https://github.com/%s", fullName)
+	}
+
+	return contributionRepo{
+		URL:   url,
+		Name:  repoName,
+		Owner: owner,
+		Stars: repoResp.StargazerCount,
+	}, nil
+}
+
+func doGitHubRequest(token string, req *http.Request, target any) error {
+	req.Header.Set("Accept", "application/vnd.github+json")
+	req.Header.Set("Authorization", "token "+token)
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return fmt.Errorf("executing request: %w", err)
+	}
+	defer func() {
+		if cerr := resp.Body.Close(); cerr != nil {
+			fmt.Fprintf(os.Stderr, "warning: closing response body: %v\n", cerr)
+		}
+	}()
+
+	respBody, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return fmt.Errorf("reading response body: %w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("GitHub API returned %d: %s", resp.StatusCode, respBody)
+	}
+
+	if err = json.Unmarshal(respBody, target); err != nil {
+		return fmt.Errorf("parsing response: %w", err)
+	}
+
+	return nil
+}
+
+func buildContributions(
+	events []publicEvent,
+	repoLookup func(fullName string) (contributionRepo, error),
+	limit int,
+) ([]contributionEntry, error) {
+	contributions := make([]contributionEntry, 0, limit)
+	seen := make(map[string]struct{}, limit)
+
+	for _, event := range events {
+		if event.Type != "PullRequestEvent" {
+			continue
+		}
+
+		pr := event.Payload.PullRequest
+		if pr.HTMLURL == "" || pr.Title == "" || event.Repo.Name == "" {
+			continue
+		}
+
+		if _, ok := seen[pr.HTMLURL]; ok {
+			continue
+		}
+
+		repo, err := repoLookup(event.Repo.Name)
+		if err != nil {
+			return nil, err
+		}
+
+		contributions = append(contributions, contributionEntry{
+			Repo:     repo,
+			Title:    pr.Title,
+			URL:      pr.HTMLURL,
+			State:    normalizeContributionState(pr.State, pr.MergedAt),
+			BodyHTML: pr.Body,
+		})
+		seen[pr.HTMLURL] = struct{}{}
+
+		if len(contributions) == limit {
+			break
+		}
+	}
+
+	return contributions, nil
+}
+
+func normalizeContributionState(state, mergedAt string) string {
+	if mergedAt != "" {
+		return "MERGED"
+	}
+
+	return strings.ToUpper(state)
+}
+
+func buildOutput(gqlResp *graphQLResponse, contributions []contributionEntry) output {
 	pinnedRepos := make([]repoEntry, 0, len(gqlResp.Data.RepositoryOwner.PinnedItems.Nodes))
 	for _, n := range gqlResp.Data.RepositoryOwner.PinnedItems.Nodes {
 		if n.IsPrivate {
@@ -301,22 +434,6 @@ func buildOutput(gqlResp *graphQLResponse) output {
 			}
 			repos = append(repos, entry)
 		}
-	}
-
-	contributions := make([]contributionEntry, 0, len(gqlResp.Data.Search.Nodes))
-	for _, n := range gqlResp.Data.Search.Nodes {
-		contributions = append(contributions, contributionEntry{
-			Repo: contributionRepo{
-				URL:   n.Repository.RepoURL,
-				Name:  n.Repository.Name,
-				Owner: n.Repository.Owner.Login,
-				Stars: n.Repository.Stargazers.TotalCount,
-			},
-			Title:    n.Title,
-			URL:      n.URL,
-			State:    n.State,
-			BodyHTML: n.BodyHTML,
-		})
 	}
 
 	return output{
