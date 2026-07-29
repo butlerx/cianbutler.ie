@@ -21,7 +21,7 @@ jobs:
       - name: Build data/github.json
         run: mise run github-data
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
       - name: Format data
         run: mise run format
       - uses: stefanzweifel/git-auto-commit-action@v7
