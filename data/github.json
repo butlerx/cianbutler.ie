@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14014,
+      "stars": 14015,
       "forks": 1483,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10118,
+      "stars": 10119,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
