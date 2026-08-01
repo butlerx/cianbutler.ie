@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10121,
+      "stars": 10124,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -70,7 +70,7 @@
       "repo": "jetlag",
       "user": "butlerx",
       "description": "An unofficial investigation book web app for tracking your notes and investigations while playing Jet Lag: The Game Hide and Seek home edition.",
-      "stars": 17,
+      "stars": 18,
       "forks": 2,
       "language": { "name": "Rust", "color": "#dea584" }
     },
