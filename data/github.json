@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10124,
+      "stars": 10123,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4352,
-      "forks": 868,
+      "forks": 869,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
