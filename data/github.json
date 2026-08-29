@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14017,
+      "stars": 14018,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
