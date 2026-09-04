@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14020,
+      "stars": 14019,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4366,
-      "forks": 874,
+      "forks": 875,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
