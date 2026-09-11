@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5430,
-      "forks": 768,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -36,15 +36,15 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10139,
-      "forks": 1123,
+      "stars": 10140,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4370,
+      "stars": 4371,
       "forks": 875,
       "language": { "name": "Python", "color": "#3572A5" }
     }
@@ -55,7 +55,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5430,
-      "forks": 768,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
