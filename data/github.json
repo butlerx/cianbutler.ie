@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5435,
+      "stars": 5436,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14016,
+      "stars": 14017,
       "forks": 1484,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10142,
+      "stars": 10144,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4373,
-      "forks": 875,
+      "stars": 4375,
+      "forks": 876,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,7 +54,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5435,
+      "stars": 5436,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
