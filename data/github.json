@@ -117,7 +117,7 @@
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2522,
+      "stars": 2521,
       "forks": 421,
       "language": { "name": "Ruby", "color": "#701516" }
     },
@@ -220,88 +220,88 @@
   ],
   "commits": [
     {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "6f953efdb4975a1a732b5143a937e34092d5f9d5",
-      "message": ":flashlight: feat: show complete GitHub activity",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/6f953efdb4975a1a732b5143a937e34092d5f9d5",
-      "date": "2026-09-27T08:41:19Z"
-    },
-    {
-      "repo": "butlerx/dotfiles",
-      "sha": "8c497744bf5db04ef053807a795888d411fca4cf",
-      "message": "Shit code!",
-      "url": "https://github.com/butlerx/dotfiles/commit/8c497744bf5db04ef053807a795888d411fca4cf",
-      "date": "2026-09-27T07:57:53Z"
+      "repo": "butlerx/wetty",
+      "sha": "5cc2ef5b319ac116415d4854c5eb4b23da570d3e",
+      "message": "fix(security): quote SSH working directory paths",
+      "url": "https://github.com/butlerx/wetty/commit/5cc2ef5b319ac116415d4854c5eb4b23da570d3e",
+      "date": "2026-09-27T09:35:48Z"
     },
     {
       "repo": "butlerx/wetty",
-      "sha": "60c7463fdcdda6d37e317514a652787d1b424550",
-      "message": "ci(deps): bump the codeql group with 3 updates (#694)",
-      "url": "https://github.com/butlerx/wetty/commit/60c7463fdcdda6d37e317514a652787d1b424550",
-      "date": "2026-09-25T10:02:00Z"
+      "sha": "c08325460a6cc17c06cedb0ec52be48a1dabe2d2",
+      "message": "test: return promise from download callback stub",
+      "url": "https://github.com/butlerx/wetty/commit/c08325460a6cc17c06cedb0ec52be48a1dabe2d2",
+      "date": "2026-09-27T09:19:56Z"
     },
     {
       "repo": "butlerx/wetty",
+      "sha": "d73f2c0c6c02cf9134028508e8d2f5f1c92c20c6",
+      "message": "fix(security): validate Socket.IO request origins",
+      "url": "https://github.com/butlerx/wetty/commit/d73f2c0c6c02cf9134028508e8d2f5f1c92c20c6",
+      "date": "2026-09-27T09:19:31Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "a9b62d94c15b7b1dee4e64895637c1a7ab0b7b37",
+      "message": "feat: make Socket.IO ping interval/timeout configurable (#677)",
+      "url": "https://github.com/butlerx/wetty/commit/a9b62d94c15b7b1dee4e64895637c1a7ab0b7b37",
+      "date": "2026-09-27T08:56:27Z"
+    },
+    {
+      "repo": "vilpter/wetty",
+      "sha": "7bd49f208c1a0b5096e677680a959bbf7c794e94",
+      "message": "Merge branch 'main' into feat/configurable-socketio-ping-timing",
+      "url": "https://github.com/vilpter/wetty/commit/7bd49f208c1a0b5096e677680a959bbf7c794e94",
+      "date": "2026-09-27T08:48:33Z"
+    },
+    {
+      "repo": "vilpter/wetty",
       "sha": "81669badafe04c565873af6b823cf12d201168a0",
       "message": "ci(deps): bump the docker group with 3 updates (#693)",
-      "url": "https://github.com/butlerx/wetty/commit/81669badafe04c565873af6b823cf12d201168a0",
+      "url": "https://github.com/vilpter/wetty/commit/81669badafe04c565873af6b823cf12d201168a0",
       "date": "2026-09-25T10:03:41Z"
     },
     {
-      "repo": "butlerx/flighty-wall",
-      "sha": "5600060266c9963deaad18d761ead78b88a7e08e",
-      "message": "Merge pull request #1 from butlerx/dependabot/github_actions/rust-lang/crates-io-auth-action-4920f0933d6c80323414a03df1731d6678d52a1b",
-      "url": "https://github.com/butlerx/flighty-wall/commit/5600060266c9963deaad18d761ead78b88a7e08e",
-      "date": "2026-09-23T12:56:43Z"
+      "repo": "vilpter/wetty",
+      "sha": "60c7463fdcdda6d37e317514a652787d1b424550",
+      "message": "ci(deps): bump the codeql group with 3 updates (#694)",
+      "url": "https://github.com/vilpter/wetty/commit/60c7463fdcdda6d37e317514a652787d1b424550",
+      "date": "2026-09-25T10:02:00Z"
     },
     {
-      "repo": "butlerx/flighty-wall",
-      "sha": "1eae7f23d3d10b58900066a828d53ac0c94eecd3",
-      "message": "Merge pull request #3 from butlerx/dependabot/cargo/jsonwebtoken-10.3.0",
-      "url": "https://github.com/butlerx/flighty-wall/commit/1eae7f23d3d10b58900066a828d53ac0c94eecd3",
-      "date": "2026-09-23T13:00:26Z"
+      "repo": "vilpter/wetty",
+      "sha": "74a35a0e74081406ba1615b1452e7eb1ce73403a",
+      "message": "ci(deps): bump the codeql group with 3 updates (#690)",
+      "url": "https://github.com/vilpter/wetty/commit/74a35a0e74081406ba1615b1452e7eb1ce73403a",
+      "date": "2026-09-21T09:23:38Z"
     },
     {
-      "repo": "butlerx/flighty-wall",
-      "sha": "d140ab661aa45b52296f9950afaf14872be7839a",
-      "message": "fix: pick a crypto provider for jsonwebtoken 10",
-      "url": "https://github.com/butlerx/flighty-wall/commit/d140ab661aa45b52296f9950afaf14872be7839a",
-      "date": "2026-09-23T12:57:29Z"
+      "repo": "vilpter/wetty",
+      "sha": "37e79dac15e1cc0c7bcbf2f91843b8ba0bb99807",
+      "message": "ci(deps): bump pnpm/action-setup from 6.0.10 to 6.1.0 (#691)",
+      "url": "https://github.com/vilpter/wetty/commit/37e79dac15e1cc0c7bcbf2f91843b8ba0bb99807",
+      "date": "2026-09-21T09:23:18Z"
     },
     {
-      "repo": "butlerx/flighty-wall",
-      "sha": "d314e88a591d4560b92b4213ac39968a5a7aa4c6",
-      "message": "chore(deps): bump jsonwebtoken from 9.3.1 to 10.3.0",
-      "url": "https://github.com/butlerx/flighty-wall/commit/d314e88a591d4560b92b4213ac39968a5a7aa4c6",
-      "date": "2026-09-23T12:49:41Z"
+      "repo": "vilpter/wetty",
+      "sha": "e1d5f2a974242faa3796f7fc7d91f24fbfc4dc13",
+      "message": "fix: keep the SSH password out of the debug log (#686)",
+      "url": "https://github.com/vilpter/wetty/commit/e1d5f2a974242faa3796f7fc7d91f24fbfc4dc13",
+      "date": "2026-09-21T09:17:27Z"
     },
     {
-      "repo": "butlerx/flighty-wall",
-      "sha": "6e43abf99019812c17c912d2e1ba3723a56fbdd6",
-      "message": "docs: drop the build-progress table from the README",
-      "url": "https://github.com/butlerx/flighty-wall/commit/6e43abf99019812c17c912d2e1ba3723a56fbdd6",
-      "date": "2026-09-23T12:42:44Z"
+      "repo": "vilpter/wetty",
+      "sha": "9c87b46c09d965839a1f5674eebe8bedce0ca51f",
+      "message": "ci(deps): bump docker/setup-qemu-action from 4.2.0 to 4.3.0 in the docker group (#688)",
+      "url": "https://github.com/vilpter/wetty/commit/9c87b46c09d965839a1f5674eebe8bedce0ca51f",
+      "date": "2026-09-12T08:42:26Z"
     },
     {
-      "repo": "butlerx/jellyfin-utils",
-      "sha": "7a5b6fc6e5c5e29b0d16e217fbb294e0450b59c7",
-      "message": "feat(user): add per-user watched report; fix flaky item pagination",
-      "url": "https://github.com/butlerx/jellyfin-utils/commit/7a5b6fc6e5c5e29b0d16e217fbb294e0450b59c7",
-      "date": "2026-09-23T14:44:14Z"
-    },
-    {
-      "repo": "butlerx/flighty-wall",
-      "sha": "ed101f97b5ac125a48d0f3f30173de74bb367894",
-      "message": "Merge pull request #6 from butlerx/dependabot/cargo/toml-1.1.6spec-1.1.0",
-      "url": "https://github.com/butlerx/flighty-wall/commit/ed101f97b5ac125a48d0f3f30173de74bb367894",
-      "date": "2026-09-23T12:56:01Z"
-    },
-    {
-      "repo": "butlerx/flighty-wall",
-      "sha": "2ef97a4a11acb5242c1ed7a339172ae4e787ecf0",
-      "message": "chore(deps): bump toml from 0.8.23 to 1.1.6+spec-1.1.0",
-      "url": "https://github.com/butlerx/flighty-wall/commit/2ef97a4a11acb5242c1ed7a339172ae4e787ecf0",
-      "date": "2026-09-23T12:49:51Z"
+      "repo": "vilpter/wetty",
+      "sha": "06cc0b7d5d7c3f5698b2e487d0b8b922459ee0d6",
+      "message": "fix: validate client resize payload before resizing the PTY (#685)",
+      "url": "https://github.com/vilpter/wetty/commit/06cc0b7d5d7c3f5698b2e487d0b8b922459ee0d6",
+      "date": "2026-09-09T07:37:42Z"
     }
   ],
   "contributions": [
