@@ -52,7 +52,8 @@
   gap: 0.5em;
 }
 
-.contribution-card-stars {
+.contribution-card-stars,
+.commit-card-meta {
   align-items: center;
   display: inline-flex;
   gap: 0.2rem;

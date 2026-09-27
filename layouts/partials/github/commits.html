@@ -1,0 +1,22 @@
+<div class="card-list">
+  {{ range . }}
+    <div class="card-outer">
+      <a href="{{ .url }}" class="contribution-card" rel="noopener noreferrer">
+        <span class="contribution-card-repo">
+          {{ partial "svg-icon" "github" }}
+          {{ .repo }}
+        </span>
+        <span class="contribution-card-title">{{ .message }}</span>
+        <span class="contribution-card-footer">
+          <span class="commit-card-meta">
+            {{ partial "svg-icon" "code-branch" }}
+            {{ substr .sha 0 7 }}
+          </span>
+          {{ with .date }}
+            <time datetime="{{ . }}">{{ time.Format "2 Jan 2006" . }}</time>
+          {{ end }}
+        </span>
+      </a>
+    </div>
+  {{ end }}
+</div>

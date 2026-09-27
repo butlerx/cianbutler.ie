@@ -44,12 +44,52 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4376,
+      "stars": 4377,
       "forks": 877,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
   "repos": [
+    {
+      "repo": "nvm",
+      "user": "nvm-sh",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "stars": 95194,
+      "forks": 10475,
+      "language": { "name": "Shell", "color": "#89e051" }
+    },
+    {
+      "repo": "fastify",
+      "user": "fastify",
+      "description": "Fast and low overhead web framework, for Node.js",
+      "stars": 37203,
+      "forks": 3040,
+      "language": { "name": "JavaScript", "color": "#f1e05a" }
+    },
+    {
+      "repo": "ale",
+      "user": "dense-analysis",
+      "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
+      "stars": 14019,
+      "forks": 1484,
+      "language": { "name": "Vim Script", "color": "#199f4b" }
+    },
+    {
+      "repo": "knip",
+      "user": "webpro-nl",
+      "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
+      "stars": 12355,
+      "forks": 501,
+      "language": { "name": "TypeScript", "color": "#3178c6" }
+    },
+    {
+      "repo": "codimd",
+      "user": "hackmdio",
+      "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
+      "stars": 10152,
+      "forks": 1122,
+      "language": { "name": "JavaScript", "color": "#f1e05a" }
+    },
     {
       "repo": "wetty",
       "user": "butlerx",
@@ -57,6 +97,109 @@
       "stars": 5449,
       "forks": 768,
       "language": { "name": "TypeScript", "color": "#3178c6" }
+    },
+    {
+      "repo": "prometheus",
+      "user": "vegasbrianc",
+      "description": "A docker-compose stack for Prometheus monitoring",
+      "stars": 4562,
+      "forks": 1528
+    },
+    {
+      "repo": "client_python",
+      "user": "prometheus",
+      "description": "Prometheus instrumentation library for Python applications",
+      "stars": 4377,
+      "forks": 877,
+      "language": { "name": "Python", "color": "#3572A5" }
+    },
+    {
+      "repo": "chromebrew",
+      "user": "chromebrew",
+      "description": "Package manager for Chrome OS",
+      "stars": 2522,
+      "forks": 421,
+      "language": { "name": "Ruby", "color": "#701516" }
+    },
+    {
+      "repo": "helm-charts",
+      "user": "grafana",
+      "description": "",
+      "stars": 2008,
+      "forks": 2470,
+      "language": { "name": "Go Template", "color": "#00ADD8" }
+    },
+    {
+      "repo": "grafanalib",
+      "user": "weaveworks",
+      "description": "Python library for building Grafana dashboards",
+      "stars": 1976,
+      "forks": 322,
+      "language": { "name": "Python", "color": "#3572A5" }
+    },
+    {
+      "repo": "hacktoberfest-checker",
+      "user": "jenkoian",
+      "description": "🎃 Check how you're doing in hacktoberfest",
+      "stars": 754,
+      "forks": 358,
+      "language": { "name": "JavaScript", "color": "#f1e05a" }
+    },
+    {
+      "repo": "pets",
+      "user": "ema",
+      "description": "A configuration management system for Pets, not Cattle",
+      "stars": 463,
+      "forks": 8,
+      "language": { "name": "Go", "color": "#00ADD8" }
+    },
+    {
+      "repo": "MastodonToTwitter",
+      "user": "AmauryCarrade",
+      "description": "Mastodon \u003c-\u003e Twitter cross-poster.",
+      "stars": 249,
+      "forks": 36,
+      "language": { "name": "Python", "color": "#3572A5" }
+    },
+    {
+      "repo": "scripts",
+      "user": "weechat",
+      "description": "Official scripts for WeeChat.",
+      "stars": 241,
+      "forks": 243,
+      "language": { "name": "Python", "color": "#3572A5" }
+    },
+    {
+      "repo": "hawkeye",
+      "user": "fast",
+      "description": "Simple license header checker and formatter, in multiple distribution forms.",
+      "stars": 186,
+      "forks": 23,
+      "language": { "name": "Rust", "color": "#dea584" }
+    },
+    {
+      "repo": "hexo-pdf",
+      "user": "superalsrk",
+      "description": "Hexo tag for embeded pdf",
+      "stars": 160,
+      "forks": 15,
+      "language": { "name": "JavaScript", "color": "#f1e05a" }
+    },
+    {
+      "repo": "go-discord-irc",
+      "user": "qaisjp",
+      "description": "The Discord and IRC bridge with puppets! An IRC user is created for each Discord user, messages from IRC seamlessly appear on Discord, and Discord mentions are automagically converted to and from IRC.",
+      "stars": 125,
+      "forks": 37,
+      "language": { "name": "Go", "color": "#00ADD8" }
+    },
+    {
+      "repo": "invig",
+      "user": "kvz",
+      "description": "🌿 Invig automatically converts ES5 \u0026 CoffeeScript codebases to ES6 with Aligned JavaScript Standard Style",
+      "stars": 62,
+      "forks": 3,
+      "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "gatsby-source-google-spreadsheets",
@@ -67,69 +210,119 @@
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
-      "repo": "jetlag",
-      "user": "butlerx",
-      "description": "An unofficial investigation book web app for tracking your notes and investigations while playing Jet Lag: The Game Hide and Seek home edition.",
-      "stars": 19,
-      "forks": 2,
-      "language": { "name": "Rust", "color": "#dea584" }
-    },
-    {
-      "repo": "fastify-bookshelfjs",
-      "user": "butlerx",
-      "description": "bookshelfjs plugin for fastify",
-      "stars": 8,
-      "forks": 2,
+      "repo": "seneca-user",
+      "user": "senecajs",
+      "description": "User account business logic (Seneca microservice component)",
+      "stars": 21,
+      "forks": 32,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
-    },
-    {
-      "repo": "asciify",
-      "user": "butlerx",
-      "description": "img -\u003e ascii convertor",
-      "stars": 6,
-      "forks": 1,
-      "language": { "name": "Go", "color": "#00ADD8" }
-    },
-    {
-      "repo": "docs-old",
-      "user": "redbrick",
-      "description": "redbrick docs",
-      "stars": 6,
-      "forks": 17,
-      "language": { "name": "Makefile", "color": "#427819" }
-    },
-    {
-      "repo": "invbeertory",
-      "user": "butlerx",
-      "description": "Inventory display for beer stock",
-      "stars": 4,
-      "forks": 2,
-      "language": { "name": "Rust", "color": "#dea584" }
-    },
-    {
-      "repo": "good_stv",
-      "user": "redbrick",
-      "description": "A good single transferable vote utility.",
-      "stars": 4,
-      "forks": 3,
-      "language": { "name": "Rust", "color": "#dea584" }
-    },
-    {
-      "repo": "rb-ldap",
-      "user": "redbrick",
-      "description": "Application for interaction and account manipulation of ldap",
-      "stars": 4,
-      "forks": 3,
-      "language": { "name": "Go", "color": "#00ADD8" }
-    },
-    {
-      "repo": "git-emoji",
-      "user": "butlerx",
-      "description": "add random emoji to git commit",
-      "stars": 4,
-      "forks": 0,
-      "language": { "name": "Shell", "color": "#89e051" }
     }
   ],
-  "contributions": []
+  "commits": [
+    {
+      "repo": "butlerx/dotfiles",
+      "sha": "8c497744bf5db04ef053807a795888d411fca4cf",
+      "message": "Shit code!",
+      "url": "https://github.com/butlerx/dotfiles/commit/8c497744bf5db04ef053807a795888d411fca4cf",
+      "date": "2026-09-27T07:57:53Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "60c7463fdcdda6d37e317514a652787d1b424550",
+      "message": "ci(deps): bump the codeql group with 3 updates (#694)",
+      "url": "https://github.com/butlerx/wetty/commit/60c7463fdcdda6d37e317514a652787d1b424550",
+      "date": "2026-09-25T10:02:00Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "81669badafe04c565873af6b823cf12d201168a0",
+      "message": "ci(deps): bump the docker group with 3 updates (#693)",
+      "url": "https://github.com/butlerx/wetty/commit/81669badafe04c565873af6b823cf12d201168a0",
+      "date": "2026-09-25T10:03:41Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "5600060266c9963deaad18d761ead78b88a7e08e",
+      "message": "Merge pull request #1 from butlerx/dependabot/github_actions/rust-lang/crates-io-auth-action-4920f0933d6c80323414a03df1731d6678d52a1b",
+      "url": "https://github.com/butlerx/flighty-wall/commit/5600060266c9963deaad18d761ead78b88a7e08e",
+      "date": "2026-09-23T12:56:43Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "1eae7f23d3d10b58900066a828d53ac0c94eecd3",
+      "message": "Merge pull request #3 from butlerx/dependabot/cargo/jsonwebtoken-10.3.0",
+      "url": "https://github.com/butlerx/flighty-wall/commit/1eae7f23d3d10b58900066a828d53ac0c94eecd3",
+      "date": "2026-09-23T13:00:26Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "d140ab661aa45b52296f9950afaf14872be7839a",
+      "message": "fix: pick a crypto provider for jsonwebtoken 10",
+      "url": "https://github.com/butlerx/flighty-wall/commit/d140ab661aa45b52296f9950afaf14872be7839a",
+      "date": "2026-09-23T12:57:29Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "d314e88a591d4560b92b4213ac39968a5a7aa4c6",
+      "message": "chore(deps): bump jsonwebtoken from 9.3.1 to 10.3.0",
+      "url": "https://github.com/butlerx/flighty-wall/commit/d314e88a591d4560b92b4213ac39968a5a7aa4c6",
+      "date": "2026-09-23T12:49:41Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "6e43abf99019812c17c912d2e1ba3723a56fbdd6",
+      "message": "docs: drop the build-progress table from the README",
+      "url": "https://github.com/butlerx/flighty-wall/commit/6e43abf99019812c17c912d2e1ba3723a56fbdd6",
+      "date": "2026-09-23T12:42:44Z"
+    },
+    {
+      "repo": "butlerx/jellyfin-utils",
+      "sha": "7a5b6fc6e5c5e29b0d16e217fbb294e0450b59c7",
+      "message": "feat(user): add per-user watched report; fix flaky item pagination",
+      "url": "https://github.com/butlerx/jellyfin-utils/commit/7a5b6fc6e5c5e29b0d16e217fbb294e0450b59c7",
+      "date": "2026-09-23T14:44:14Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "ed101f97b5ac125a48d0f3f30173de74bb367894",
+      "message": "Merge pull request #6 from butlerx/dependabot/cargo/toml-1.1.6spec-1.1.0",
+      "url": "https://github.com/butlerx/flighty-wall/commit/ed101f97b5ac125a48d0f3f30173de74bb367894",
+      "date": "2026-09-23T12:56:01Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "2ef97a4a11acb5242c1ed7a339172ae4e787ecf0",
+      "message": "chore(deps): bump toml from 0.8.23 to 1.1.6+spec-1.1.0",
+      "url": "https://github.com/butlerx/flighty-wall/commit/2ef97a4a11acb5242c1ed7a339172ae4e787ecf0",
+      "date": "2026-09-23T12:49:51Z"
+    },
+    {
+      "repo": "butlerx/flighty-wall",
+      "sha": "4522cd07bb271b7ff95ce95dbf072f097eef0ea7",
+      "message": "Merge pull request #2 from butlerx/dependabot/cargo/rustix-1.1.4",
+      "url": "https://github.com/butlerx/flighty-wall/commit/4522cd07bb271b7ff95ce95dbf072f097eef0ea7",
+      "date": "2026-09-23T12:55:57Z"
+    }
+  ],
+  "contributions": [
+    {
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5449 },
+      "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
+      "url": "https://github.com/butlerx/wetty/pull/636",
+      "state": "OPEN",
+      "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/pets-configurator",
+        "name": "pets-configurator",
+        "owner": "butlerx",
+        "stars": 1
+      },
+      "title": "fix: detect homebrew casks as installed",
+      "url": "https://github.com/butlerx/pets-configurator/pull/36",
+      "state": "MERGED",
+      "bodyHTML": "`Package::is_installed` only ran `brew list --formula -1 \u003cname\u003e`, which never matches a cask. A cask-only package is therefore reported missing on every run and queued for reinstall, so `--check` can never reach \"in sync\".\n\nInstallation and validation were already fine — `brew install \u003cname\u003e` resolves casks, and `brew info -q \u003cname\u003e` exits 0 for them — so only the installed check needed changing. It now falls back to `brew list --cask -1 \u003cname\u003e` when the formula lookup misses.\n\nFound with a dotfiles repo declaring `package=firefox` and `package=ghostty`, both installed as casks: `pets --check sync` reported `PACKAGE_INSTALL: brew install firefox ghostty` on every run. With this patch the same repo reports `configuration is in sync`.\n\nNo new test: the existing package tests assert against whatever the machine has installed (`wget` present, `lynx` absent on macOS), so a positive cask assertion would be flaky on CI runners that have no casks. `cargo test` passes (140), fmt and clippy clean."
+    }
+  ]
 }

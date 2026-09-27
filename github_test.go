@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"testing"
+	"time"
 )
 
 func TestNormalizeContributionState(t *testing.T) {
@@ -278,6 +279,42 @@ func TestBuildOutput(t *testing.T) {
 		}
 	})
 
+	t.Run("includes repositories with commit contributions", func(t *testing.T) {
+		const payload = `{
+			"data": {
+				"user": {
+					"repositories": {"nodes": []},
+					"contributionsCollection": {
+						"commitContributionsByRepository": [
+							{
+								"repository": {
+									"name": "hawkeye",
+									"description": "Find high-risk code",
+									"isPrivate": false,
+									"stargazerCount": 186,
+									"forkCount": 12,
+									"owner": {"login": "fast"}
+								}
+							}
+						]
+					}
+				}
+			}
+		}`
+		resp := &graphQLResponse{}
+		if err := json.Unmarshal([]byte(payload), resp); err != nil {
+			t.Fatalf("unmarshal GraphQL response: %v", err)
+		}
+
+		out := buildOutput(resp, nil)
+		if len(out.Repos) != 1 {
+			t.Fatalf("expected 1 contributed repo, got %d", len(out.Repos))
+		}
+		if out.Repos[0].User != "fast" || out.Repos[0].Repo != "hawkeye" {
+			t.Errorf("expected fast/hawkeye, got %s/%s", out.Repos[0].User, out.Repos[0].Repo)
+		}
+	})
+
 	t.Run("includes contributions in output", func(t *testing.T) {
 		resp := &graphQLResponse{}
 		contributions := []contributionEntry{
@@ -299,6 +336,41 @@ func TestBuildOutput(t *testing.T) {
 			t.Errorf("expected 'Fix bug', got %s", out.Contributions[0].Title)
 		}
 	})
+}
+
+func TestBuildOpenContributions(t *testing.T) {
+	items := []pullRequestSearchItem{
+		{
+			Title:         "Open external contribution",
+			HTMLURL:       "https://github.com/example/project/pull/42",
+			State:         "open",
+			Body:          "Still in review.",
+			RepositoryURL: "https://api.github.com/repos/example/project",
+			UpdatedAt:     "2026-09-20T12:00:00Z",
+		},
+		{
+			Title:         "Stale contribution",
+			HTMLURL:       "https://github.com/example/project/pull/7",
+			State:         "open",
+			RepositoryURL: "https://api.github.com/repos/example/project",
+			UpdatedAt:     "2025-01-01T12:00:00Z",
+		},
+	}
+
+	updatedAfter := time.Date(2026, 3, 31, 0, 0, 0, 0, time.UTC)
+	contributions, err := buildOpenContributions(items, mockRepoLookup, updatedAfter, 10)
+	if err != nil {
+		t.Fatalf("build open contributions: %v", err)
+	}
+	if len(contributions) != 1 {
+		t.Fatalf("expected 1 contribution, got %d", len(contributions))
+	}
+	if contributions[0].State != "OPEN" {
+		t.Errorf("expected OPEN, got %s", contributions[0].State)
+	}
+	if contributions[0].Repo.Owner != "example" {
+		t.Errorf("expected external repository owner, got %s", contributions[0].Repo.Owner)
+	}
 }
 
 func TestBuildContributions(t *testing.T) {
@@ -470,6 +542,126 @@ func TestBuildContributions(t *testing.T) {
 	})
 }
 
+func TestHydratePullRequestEvents(t *testing.T) {
+	const payload = `[
+		{
+			"type": "PullRequestEvent",
+			"repo": {"name": "butlerx/pets-configurator"},
+			"payload": {
+				"pull_request": {
+					"url": "https://api.github.com/repos/butlerx/pets-configurator/pulls/36",
+					"id": 4584398650,
+					"number": 36
+				}
+			}
+		}
+	]`
+
+	var events []publicEvent
+	if err := json.Unmarshal([]byte(payload), &events); err != nil {
+		t.Fatalf("unmarshal event payload: %v", err)
+	}
+
+	lookupCalls := 0
+	hydrated, err := hydratePullRequestEvents(events, func(apiURL string) (pullRequestDetails, error) {
+		lookupCalls++
+		if apiURL != "https://api.github.com/repos/butlerx/pets-configurator/pulls/36" {
+			t.Fatalf("unexpected pull request URL: %s", apiURL)
+		}
+		return pullRequestDetails{
+			Title:    "Fix Homebrew cask detection",
+			HTMLURL:  "https://github.com/butlerx/pets-configurator/pull/36",
+			State:    "closed",
+			Body:     "Fixes cask detection.",
+			MergedAt: "2026-09-20T14:17:10Z",
+		}, nil
+	})
+	if err != nil {
+		t.Fatalf("hydrate events: %v", err)
+	}
+	if lookupCalls != 1 {
+		t.Fatalf("expected 1 pull request lookup, got %d", lookupCalls)
+	}
+	if hydrated[0].Payload.PullRequest.Title != "Fix Homebrew cask detection" {
+		t.Errorf("expected hydrated title, got %q", hydrated[0].Payload.PullRequest.Title)
+	}
+	if hydrated[0].Payload.PullRequest.HTMLURL != "https://github.com/butlerx/pets-configurator/pull/36" {
+		t.Errorf("expected hydrated HTML URL, got %q", hydrated[0].Payload.PullRequest.HTMLURL)
+	}
+	if hydrated[0].Payload.PullRequest.MergedAt == "" {
+		t.Error("expected merged timestamp")
+	}
+}
+
+func TestBuildRecentCommits(t *testing.T) {
+	const payload = `[
+		{
+			"type": "PushEvent",
+			"repo": {"name": "example/project"},
+			"payload": {
+				"before": "1111111111111111111111111111111111111111",
+				"head": "3333333333333333333333333333333333333333",
+				"ref": "refs/heads/main"
+			}
+		}
+	]`
+
+	var events []publicEvent
+	if err := json.Unmarshal([]byte(payload), &events); err != nil {
+		t.Fatalf("unmarshal push event payload: %v", err)
+	}
+
+	commits, err := buildRecentCommits(events, func(repo, before, head string) ([]commitDetails, error) {
+		if repo != "example/project" {
+			t.Fatalf("unexpected repo: %s", repo)
+		}
+		return []commitDetails{
+			makeCommitDetails("2222222222222222222222222222222222222222", "Older commit", "2026-09-26T10:00:00Z"),
+			makeCommitDetails("3333333333333333333333333333333333333333", "Newest commit\n\nDetails", "2026-09-26T11:00:00Z"),
+		}, nil
+	}, 10)
+	if err != nil {
+		t.Fatalf("build recent commits: %v", err)
+	}
+	if len(commits) != 2 {
+		t.Fatalf("expected 2 commits, got %d", len(commits))
+	}
+	if commits[0].SHA != "3333333333333333333333333333333333333333" {
+		t.Errorf("expected newest commit first, got %s", commits[0].SHA)
+	}
+	if commits[0].Message != "Newest commit" {
+		t.Errorf("expected first line of commit message, got %q", commits[0].Message)
+	}
+	if commits[0].Repo != "example/project" {
+		t.Errorf("expected example/project, got %q", commits[0].Repo)
+	}
+}
+
+func TestMergeRecentProjects(t *testing.T) {
+	recent := []repoEntry{
+		{User: "example", Repo: "shared", Stars: 20},
+		{User: "butlerx", Repo: "owned", Stars: 5},
+	}
+	existing := []repoEntry{
+		{User: "butlerx", Repo: "owned", Stars: 5, Language: &repoLanguage{Name: "Go", Color: "#00ADD8"}},
+		{User: "butlerx", Repo: "another", Stars: 10},
+	}
+
+	got := mergeRecentProjects(recent, existing, 3)
+	if len(got) != 3 {
+		t.Fatalf("expected 3 projects, got %d", len(got))
+	}
+	want := []string{"example/shared", "butlerx/another", "butlerx/owned"}
+	for i, project := range got {
+		if fullName := project.User + "/" + project.Repo; fullName != want[i] {
+			t.Errorf("project %d = %q, want %q", i, fullName, want[i])
+		}
+	}
+	if got[2].Language == nil || got[2].Language.Name != "Go" {
+		t.Error("expected owned project metadata to be preserved")
+	}
+}
+
 func TestRepoEntryJSON(t *testing.T) {
 	t.Run("marshals with language", func(t *testing.T) {
 		entry := repoEntry{
@@ -567,6 +759,9 @@ func TestOutputJSON(t *testing.T) {
 			{Repo: "repo1", User: "butlerx", Stars: 100},
 			{Repo: "repo2", User: "butlerx", Stars: 75},
 		},
+		Commits: []commitEntry{
+			{Repo: "butlerx/repo1", SHA: "abc123", Message: "Fix bug", URL: "https://github.com/butlerx/repo1/commit/abc123"},
+		},
 		Contributions: []contributionEntry{
 			{
 				Repo:  contributionRepo{Name: "external", Owner: "other"},
@@ -592,40 +787,34 @@ func TestOutputJSON(t *testing.T) {
 	if len(decoded.Repos) != 2 {
 		t.Errorf("expected 2 repos, got %d", len(decoded.Repos))
 	}
+	if len(decoded.Commits) != 1 {
+		t.Errorf("expected 1 commit, got %d", len(decoded.Commits))
+	}
 	if len(decoded.Contributions) != 1 {
 		t.Errorf("expected 1 contribution, got %d", len(decoded.Contributions))
 	}
 }
 
-func makePREvent(repoName, title, url, state, mergedAt string) publicEvent {
-	return publicEvent{
-		Type: "PullRequestEvent",
-		Repo: struct {
-			Name string `json:"name"`
-		}{Name: repoName},
-		Payload: struct {
-			PullRequest struct {
-				Title    string `json:"title"`
-				HTMLURL  string `json:"html_url"`
-				State    string `json:"state"`
-				Body     string `json:"body"`
-				MergedAt string `json:"merged_at"`
-			} `json:"pull_request"`
-		}{
-			PullRequest: struct {
-				Title    string `json:"title"`
-				HTMLURL  string `json:"html_url"`
-				State    string `json:"state"`
-				Body     string `json:"body"`
-				MergedAt string `json:"merged_at"`
-			}{
-				Title:    title,
-				HTMLURL:  url,
-				State:    state,
-				MergedAt: mergedAt,
-			},
-		},
+func makeCommitDetails(sha, message, date string) commitDetails {
+	details := commitDetails{
+		SHA:     sha,
+		HTMLURL: "https://github.com/example/project/commit/" + sha,
 	}
+	details.Commit.Message = message
+	details.Commit.Author.Date = date
+	return details
+}
+
+func makePREvent(repoName, title, url, state, mergedAt string) publicEvent {
+	event := publicEvent{Type: "PullRequestEvent"}
+	event.Repo.Name = repoName
+	event.Payload.PullRequest = pullRequestDetails{
+		Title:    title,
+		HTMLURL:  url,
+		State:    state,
+		MergedAt: mergedAt,
+	}
+	return event
 }
 
 func mockRepoLookup(fullName string) (contributionRepo, error) {

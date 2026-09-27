@@ -1,17 +1,22 @@
 ---
 title: 'Projects'
-description: 'Open source projects and recent contributions by Cian Butler.'
+description: 'Open source projects, commits, and recent contributions by Cian Butler.'
 categories: ['projects']
 tags: ['projects']
 menu:
-  - 'Recent projects'
+  - 'Top projects'
+  - 'Recent commits'
   - 'Recent contributions'
 ---
 
-{{< section "Recent projects" >}}
+{{< section "Top projects" >}}
 
 {{< repos >}}
 
 {{< section "Recent contributions" >}}
 
 {{< contributions >}}
+
+{{< section "Recent commits" >}}
+
+{{< commits >}}
