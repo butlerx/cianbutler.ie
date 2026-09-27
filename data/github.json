@@ -220,6 +220,13 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "6f953efdb4975a1a732b5143a937e34092d5f9d5",
+      "message": ":flashlight: feat: show complete GitHub activity",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/6f953efdb4975a1a732b5143a937e34092d5f9d5",
+      "date": "2026-09-27T08:41:19Z"
+    },
+    {
       "repo": "butlerx/dotfiles",
       "sha": "8c497744bf5db04ef053807a795888d411fca4cf",
       "message": "Shit code!",
@@ -295,13 +302,6 @@
       "message": "chore(deps): bump toml from 0.8.23 to 1.1.6+spec-1.1.0",
       "url": "https://github.com/butlerx/flighty-wall/commit/2ef97a4a11acb5242c1ed7a339172ae4e787ecf0",
       "date": "2026-09-23T12:49:51Z"
-    },
-    {
-      "repo": "butlerx/flighty-wall",
-      "sha": "4522cd07bb271b7ff95ce95dbf072f097eef0ea7",
-      "message": "Merge pull request #2 from butlerx/dependabot/cargo/rustix-1.1.4",
-      "url": "https://github.com/butlerx/flighty-wall/commit/4522cd07bb271b7ff95ce95dbf072f097eef0ea7",
-      "date": "2026-09-23T12:55:57Z"
     }
   ],
   "contributions": [
