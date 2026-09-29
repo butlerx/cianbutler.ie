@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5450,
-      "forks": 768,
+      "stars": 5447,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14018,
       "forks": 1484,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -44,7 +44,7 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4375,
+      "stars": 4376,
       "forks": 877,
       "language": { "name": "Python", "color": "#3572A5" }
     }
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95202,
-      "forks": 10476,
+      "stars": 95212,
+      "forks": 10478,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37206,
-      "forks": 3044,
+      "stars": 37210,
+      "forks": 3047,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14018,
       "forks": 1484,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12363,
-      "forks": 501,
+      "stars": 12373,
+      "forks": 504,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -94,22 +94,22 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5450,
-      "forks": 768,
+      "stars": 5447,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4562,
+      "stars": 4561,
       "forks": 1527
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4375,
+      "stars": 4376,
       "forks": 877,
       "language": { "name": "Python", "color": "#3572A5" }
     },
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2008,
-      "forks": 2470,
+      "forks": 2471,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,6 +220,27 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/wetty",
+      "sha": "4302f3ce4111e803be49519c5a9d82459595e4c3",
+      "message": "fix(security): accept same-origin polling without Origin",
+      "url": "https://github.com/butlerx/wetty/commit/4302f3ce4111e803be49519c5a9d82459595e4c3",
+      "date": "2026-09-29T06:38:18Z"
+    },
+    {
+      "repo": "butlerx/presentation",
+      "sha": "e5fa08be2835fc07169984627634eb098d74c703",
+      "message": "Bump prettier from 3.9.7 to 3.9.9 (#41)",
+      "url": "https://github.com/butlerx/presentation/commit/e5fa08be2835fc07169984627634eb098d74c703",
+      "date": "2026-09-28T09:51:49Z"
+    },
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "716d20d5e7cb9f431d019a32c23b31eeda7b3db2",
+      "message": "build(deps): bump clap_complete from 4.6.9 to 4.6.11 (#44)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/716d20d5e7cb9f431d019a32c23b31eeda7b3db2",
+      "date": "2026-09-28T09:51:22Z"
+    },
+    {
       "repo": "butlerx/pets-configurator",
       "sha": "4191b892079b8f4e473230e7c8d5b7f636e53d3b",
       "message": "build(deps): bump clap from 4.6.6 to 4.6.7 (#43)",
@@ -281,32 +302,11 @@
       "message": "chore(main): release 0.4.0 (#2)",
       "url": "https://github.com/butlerx/metrics_ipc_collector/commit/9fcd1ea261bf4ce0973c6a0d74752f66d1fa4bac",
       "date": "2026-09-27T12:36:55Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "6bf08a9eb0be5ef404bab8b12a0815f0e23c4313",
-      "message": "build(deps): update metrics-exporter-prometheus requirement (#4)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/6bf08a9eb0be5ef404bab8b12a0815f0e23c4313",
-      "date": "2026-09-27T12:33:13Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "aba218d924b23b65368876c67a1acb6bbff1793b",
-      "message": "build(deps): bump dtolnay/rust-toolchain (#5)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/aba218d924b23b65368876c67a1acb6bbff1793b",
-      "date": "2026-09-27T12:31:12Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "a6fca689d7bd67ecee01e3fb42dd961c5637894f",
-      "message": "Merge pull request #3 from butlerx/dependabot/github_actions/rust-lang/crates-io-auth-action-4920f0933d6c80323414a03df1731d6678d52a1b",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/a6fca689d7bd67ecee01e3fb42dd961c5637894f",
-      "date": "2026-09-27T12:28:52Z"
     }
   ],
   "contributions": [
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5450 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5447 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
