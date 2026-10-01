@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5448,
+      "stars": 5452,
       "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10153,
+      "stars": 10155,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4378,
-      "forks": 878,
+      "stars": 4379,
+      "forks": 879,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95220,
-      "forks": 10478,
+      "stars": 95227,
+      "forks": 10480,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37212,
-      "forks": 3042,
+      "stars": 37215,
+      "forks": 3045,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12382,
-      "forks": 506,
+      "stars": 12387,
+      "forks": 509,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10153,
+      "stars": 10155,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5448,
+      "stars": 5452,
       "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -103,14 +103,14 @@
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
       "stars": 4561,
-      "forks": 1526
+      "forks": 1525
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4378,
-      "forks": 878,
+      "stars": 4379,
+      "forks": 879,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2009,
-      "forks": 2470,
+      "forks": 2468,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -221,6 +221,13 @@
   "commits": [
     {
       "repo": "butlerx/metrics_ipc_collector",
+      "sha": "fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
+      "message": "build(deps): bump rust-lang/crates-io-auth-action (#7)",
+      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
+      "date": "2026-09-29T19:57:26Z"
+    },
+    {
+      "repo": "butlerx/metrics_ipc_collector",
       "sha": "4a0561258fde0dd683743dddb84154abdc5cffff",
       "message": "fix: send counters as increments and arbitrate replaced senders",
       "url": "https://github.com/butlerx/metrics_ipc_collector/commit/4a0561258fde0dd683743dddb84154abdc5cffff",
@@ -295,13 +302,6 @@
       "message": "build(deps): bump clap_complete from 4.6.9 to 4.6.11 (#44)",
       "url": "https://github.com/butlerx/pets-configurator/commit/716d20d5e7cb9f431d019a32c23b31eeda7b3db2",
       "date": "2026-09-28T09:51:22Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "4191b892079b8f4e473230e7c8d5b7f636e53d3b",
-      "message": "build(deps): bump clap from 4.6.6 to 4.6.7 (#43)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/4191b892079b8f4e473230e7c8d5b7f636e53d3b",
-      "date": "2026-09-28T09:54:32Z"
     }
   ],
   "contributions": [
@@ -318,7 +318,7 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5448 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5452 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
@@ -335,6 +335,18 @@
       "url": "https://github.com/butlerx/metrics_ipc_collector/pull/1",
       "state": "MERGED",
       "bodyHTML": "We need to add support for using a pipe to send metrics rather then a socket between processes.\n\nI couldnt find a nice way to reuse the other interface as the model for communication is to different\n"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/pets-configurator",
+        "name": "pets-configurator",
+        "owner": "butlerx",
+        "stars": 1
+      },
+      "title": "fix: detect homebrew casks as installed",
+      "url": "https://github.com/butlerx/pets-configurator/pull/36",
+      "state": "MERGED",
+      "bodyHTML": "`Package::is_installed` only ran `brew list --formula -1 \u003cname\u003e`, which never matches a cask. A cask-only package is therefore reported missing on every run and queued for reinstall, so `--check` can never reach \"in sync\".\n\nInstallation and validation were already fine — `brew install \u003cname\u003e` resolves casks, and `brew info -q \u003cname\u003e` exits 0 for them — so only the installed check needed changing. It now falls back to `brew list --cask -1 \u003cname\u003e` when the formula lookup misses.\n\nFound with a dotfiles repo declaring `package=firefox` and `package=ghostty`, both installed as casks: `pets --check sync` reported `PACKAGE_INSTALL: brew install firefox ghostty` on every run. With this patch the same repo reports `configuration is in sync`.\n\nNo new test: the existing package tests assert against whatever the machine has installed (`wget` present, `lynx` absent on macOS), so a positive cask assertion would be flaky on CI runners that have no casks. `cargo test` passes (140), fmt and clippy clean."
     }
   ]
 }
