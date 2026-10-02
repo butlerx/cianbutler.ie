@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95227,
-      "forks": 10480,
+      "stars": 95236,
+      "forks": 10484,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37215,
-      "forks": 3045,
+      "stars": 37220,
+      "forks": 3043,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12387,
-      "forks": 509,
+      "stars": 12397,
+      "forks": 511,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -110,7 +110,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4379,
-      "forks": 879,
+      "forks": 880,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -173,7 +173,7 @@
       "repo": "hawkeye",
       "user": "fast",
       "description": "Simple license header checker and formatter, in multiple distribution forms.",
-      "stars": 186,
+      "stars": 187,
       "forks": 23,
       "language": { "name": "Rust", "color": "#dea584" }
     },
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5680
+        "stars": 5681
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
