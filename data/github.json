@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5454,
+      "stars": 5453,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,8 +54,8 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95258,
-      "forks": 10485,
+      "stars": 95264,
+      "forks": 10487,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
@@ -63,7 +63,7 @@
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
       "stars": 37232,
-      "forks": 3047,
+      "forks": 3046,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12403,
-      "forks": 516,
+      "stars": 12408,
+      "forks": 515,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5454,
+      "stars": 5453,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -102,7 +102,7 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4561,
+      "stars": 4562,
       "forks": 1525
     },
     {
@@ -126,14 +126,14 @@
       "user": "grafana",
       "description": "",
       "stars": 2010,
-      "forks": 2469,
+      "forks": 2470,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
       "repo": "grafanalib",
       "user": "weaveworks",
       "description": "Python library for building Grafana dashboards",
-      "stars": 1977,
+      "stars": 1978,
       "forks": 322,
       "language": { "name": "Python", "color": "#3572A5" }
     },
@@ -149,7 +149,7 @@
       "repo": "pets",
       "user": "ema",
       "description": "A configuration management system for Pets, not Cattle",
-      "stars": 463,
+      "stars": 464,
       "forks": 8,
       "language": { "name": "Go", "color": "#00ADD8" }
     },
@@ -174,7 +174,7 @@
       "user": "fast",
       "description": "Simple license header checker and formatter, in multiple distribution forms.",
       "stars": 187,
-      "forks": 23,
+      "forks": 22,
       "language": { "name": "Rust", "color": "#dea584" }
     },
     {
@@ -219,6 +219,27 @@
     }
   ],
   "commits": [
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "bf2dc856dea5024b44db03e9bffea25d2bd498c5",
+      "message": "build(deps): bump thiserror from 2.0.20 to 2.0.21 (#46)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/bf2dc856dea5024b44db03e9bffea25d2bd498c5",
+      "date": "2026-10-05T09:48:13Z"
+    },
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "5e25d29be61e64251f18158f3922bb902fa7daaf",
+      "message": "build(deps): bump dtolnay/rust-toolchain from 02cb101ec7c40f2c49e1d9714d64511d8e1b74de to 7e38f4b43b4db5c8dd498af069a4f6196df1d067 (#47)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/5e25d29be61e64251f18158f3922bb902fa7daaf",
+      "date": "2026-10-05T09:48:04Z"
+    },
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "afa0f3a79a1d67414db8413c88abdad30ef3bca7",
+      "message": "build(deps): bump rust-lang/crates-io-auth-action from 4920f0933d6c80323414a03df1731d6678d52a1b to 9c067fc5d5c254b33978fed918cb50c032549d0e (#45)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/afa0f3a79a1d67414db8413c88abdad30ef3bca7",
+      "date": "2026-10-05T09:47:52Z"
+    },
     {
       "repo": "butlerx/metrics_ipc_collector",
       "sha": "fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
@@ -281,27 +302,6 @@
       "message": "fix: add allow-missing-origin optional switch (#696)",
       "url": "https://github.com/butlerx/wetty/commit/15f2bdb4e0d1804aca9541ee45861ef242338d9a",
       "date": "2026-09-29T10:33:35Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "4302f3ce4111e803be49519c5a9d82459595e4c3",
-      "message": "fix(security): accept same-origin polling without Origin",
-      "url": "https://github.com/butlerx/wetty/commit/4302f3ce4111e803be49519c5a9d82459595e4c3",
-      "date": "2026-09-29T06:38:18Z"
-    },
-    {
-      "repo": "butlerx/presentation",
-      "sha": "e5fa08be2835fc07169984627634eb098d74c703",
-      "message": "Bump prettier from 3.9.7 to 3.9.9 (#41)",
-      "url": "https://github.com/butlerx/presentation/commit/e5fa08be2835fc07169984627634eb098d74c703",
-      "date": "2026-09-28T09:51:49Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "716d20d5e7cb9f431d019a32c23b31eeda7b3db2",
-      "message": "build(deps): bump clap_complete from 4.6.9 to 4.6.11 (#44)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/716d20d5e7cb9f431d019a32c23b31eeda7b3db2",
-      "date": "2026-09-28T09:51:22Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5683
+        "stars": 5682
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -318,11 +318,18 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5454 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
+      "title": "fix(security)!: pin browser origins and bound HTTP metrics",
+      "url": "https://github.com/butlerx/wetty/pull/698",
+      "state": "MERGED",
+      "bodyHTML": "## Summary\n\nBrowser terminal connections now require explicitly trusted origins, and unauthenticated requests cannot create unlimited HTTP metric series. These fixes ship together as a breaking security release.\n\nSocket.IO no longer derives trusted origins from request Host or forwarded headers. Same-origin polling without an Origin header requires both browser Fetch Metadata and a Host pinned to the configured allowlist. The existing missing-Origin opt-in remains available, with an explicit warning that it bypasses that protection.\n\nHTTP counters and histograms use five fixed route families, seven common methods plus `OTHER`, and grouped status codes. Usernames, asset names, unknown paths and query strings are never retained as labels. Metrics scrapes are excluded.\n\n## Migration\n\nEvery deployment must configure a nonempty HTTP(S) origin allowlist, including localhost:\n\n```sh\nwetty --allowed-origin http://localhost:3000\n# For a reverse proxy, use the public origin instead:\nwetty --allowed-origin https://terminal.example.com\n```\n\n`ALLOWEDORIGINS` and `server.allowedOrigins` provide the same configuration. Do not include the base path. Sample configs, Docker examples, CLI help and deployment docs are updated. Invalid or missing configuration fails before listening, with an actionable error.\n\n## Verification\n\n- All 73 tests pass, including regression coverage for both Socket.IO transports, missing-Origin requests, malformed origins, CLI errors and all four HTTP metrics.\n- TypeScript, ESLint, production build and active LSP checks pass.\n- Production-build probes accept a configured origin and reject attacker-controlled Host/Origin and missing-Origin variants. The SSH counter retains one series across 100 distinct usernames.\n\nBREAKING CHANGE: deployments must explicitly configure at least one trusted browser origin before starting WeTTY. Localhost, listen addresses and request-derived origins are no longer implicitly trusted.\n\n---\n\n[![Compound Engineering](https://img.shields.io/badge/Built_with-Compound_Engineering-6366f1)](https://github.com/EveryInc/compound-engineering-plugin)\n"
     },
     {
       "repo": {
