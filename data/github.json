@@ -54,8 +54,8 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95264,
-      "forks": 10487,
+      "stars": 95266,
+      "forks": 10486,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
@@ -63,7 +63,7 @@
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
       "stars": 37232,
-      "forks": 3046,
+      "forks": 3047,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12408,
+      "stars": 12407,
       "forks": 515,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -220,6 +220,13 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/wetty",
+      "sha": "20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
+      "message": "ci(deps): bump the codeql group with 3 updates (#697)",
+      "url": "https://github.com/butlerx/wetty/commit/20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
+      "date": "2026-10-05T10:06:08Z"
+    },
+    {
       "repo": "butlerx/pets-configurator",
       "sha": "bf2dc856dea5024b44db03e9bffea25d2bd498c5",
       "message": "build(deps): bump thiserror from 2.0.20 to 2.0.21 (#46)",
@@ -295,13 +302,6 @@
       "message": "feat: reconnect, sender labels, handle caching and internal metrics",
       "url": "https://github.com/butlerx/metrics_ipc_collector/commit/686f84b07c9ad5f880a8e3823614a28931e6b468",
       "date": "2026-09-29T19:35:54Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "15f2bdb4e0d1804aca9541ee45861ef242338d9a",
-      "message": "fix: add allow-missing-origin optional switch (#696)",
-      "url": "https://github.com/butlerx/wetty/commit/15f2bdb4e0d1804aca9541ee45861ef242338d9a",
-      "date": "2026-09-29T10:33:35Z"
     }
   ],
   "contributions": [
