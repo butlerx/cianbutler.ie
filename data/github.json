@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5453,
+      "stars": 5459,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95266,
-      "forks": 10486,
+      "stars": 95275,
+      "forks": 10488,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37232,
-      "forks": 3047,
+      "stars": 37233,
+      "forks": 3052,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12407,
+      "stars": 12412,
       "forks": 515,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5453,
+      "stars": 5459,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2010,
-      "forks": 2470,
+      "forks": 2471,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,6 +220,13 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "877d237150949c0c32c59f7707703140f8a3b103",
+      "message": "Bump jdx/mise-action from 4.3.0 to 5.0.1 (#21)",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/877d237150949c0c32c59f7707703140f8a3b103",
+      "date": "2026-10-05T14:58:13Z"
+    },
+    {
       "repo": "butlerx/wetty",
       "sha": "20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
       "message": "ci(deps): bump the codeql group with 3 updates (#697)",
@@ -295,13 +302,6 @@
       "message": "chore(main): release 0.5.0 (#8)",
       "url": "https://github.com/butlerx/metrics_ipc_collector/commit/3b99f1a41798adb0063ca15205872ff6a925ce87",
       "date": "2026-09-29T19:59:23Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "686f84b07c9ad5f880a8e3823614a28931e6b468",
-      "message": "feat: reconnect, sender labels, handle caching and internal metrics",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/686f84b07c9ad5f880a8e3823614a28931e6b468",
-      "date": "2026-09-29T19:35:54Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5682
+        "stars": 5685
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -318,14 +318,14 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5459 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5459 },
       "title": "fix(security)!: pin browser origins and bound HTTP metrics",
       "url": "https://github.com/butlerx/wetty/pull/698",
       "state": "MERGED",
