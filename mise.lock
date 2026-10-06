@@ -157,13 +157,13 @@ url = "https://nodejs.org/dist/v24.16.0/node-v24.16.0-win-x64.zip"
 
 [[tools."npm:cspell"]]
 version = "10.0.1"
-aube = { path = ".mise/locks/npm-cspell/10.0.1", digest = "sha256:a54096afd894fe240edb11e46f442a0cec3fd23d403740140397b4558ac526aa" }
+aube = { path = ".mise/locks/npm-cspell/10.0.1", digest = "sha256:9e4284fd4dda9a16dac37fd22b7b0596585cfa8a3188b44b34faae6d87721c1e" }
 backend = "npm:cspell"
 specifiers = ["latest"]
 
 [[tools."npm:markdownlint-cli"]]
 version = "0.48.0"
-aube = { path = ".mise/locks/npm-markdownlint-cli/0.48.0", digest = "sha256:adc0e092352f6395055eb53493dd35601e69168e8e4f084debea5224492cb195" }
+aube = { path = ".mise/locks/npm-markdownlint-cli/0.48.0", digest = "sha256:a1a8982a1f932107a2004ad96b5cb02b2462a41fdc5a3f13633362b5c3119e5c" }
 backend = "npm:markdownlint-cli"
 specifiers = ["latest"]
 
