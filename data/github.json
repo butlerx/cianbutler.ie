@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5459,
-      "forks": 770,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
+      "stars": 10156,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95275,
-      "forks": 10488,
+      "stars": 95282,
+      "forks": 10486,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37233,
-      "forks": 3052,
+      "stars": 37238,
+      "forks": 3053,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12412,
-      "forks": 515,
+      "stars": 12414,
+      "forks": 516,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
+      "stars": 10156,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,14 +95,14 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5459,
-      "forks": 770,
+      "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4562,
+      "stars": 4561,
       "forks": 1525
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2010,
-      "forks": 2471,
+      "forks": 2470,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,6 +220,27 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/wetty",
+      "sha": "08e8abdacffccc6ba165abc915d1df8f2753e7a1",
+      "message": "fix(security)!: pin browser origins and bound HTTP metrics",
+      "url": "https://github.com/butlerx/wetty/commit/08e8abdacffccc6ba165abc915d1df8f2753e7a1",
+      "date": "2026-10-05T10:05:07Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "b6b156b3dbb528a586d9367e7ed82c18865a2834",
+      "message": "style: align config formatting with locked prettier",
+      "url": "https://github.com/butlerx/wetty/commit/b6b156b3dbb528a586d9367e7ed82c18865a2834",
+      "date": "2026-10-05T09:58:33Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "4bf0b32305f1ea7caad9734020bc19d15eb28a60",
+      "message": ":wavy_dash: fix(ci): preserve mise lock sidecars",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/4bf0b32305f1ea7caad9734020bc19d15eb28a60",
+      "date": "2026-10-06T13:47:23Z"
+    },
+    {
       "repo": "butlerx/cianbutler.ie",
       "sha": "877d237150949c0c32c59f7707703140f8a3b103",
       "message": "Bump jdx/mise-action from 4.3.0 to 5.0.1 (#21)",
@@ -281,27 +302,6 @@
       "message": "fix: separate recorder counters per process and stop sockets promptly",
       "url": "https://github.com/butlerx/metrics_ipc_collector/commit/017a6c3e09296ad48ff8922b87b4bfb435fcac29",
       "date": "2026-09-29T19:50:27Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "9cfecb5a8fa9d6cc1771174ae55d3183ff2108e3",
-      "message": "feat!: version the wire format and make socket addresses explicit",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/9cfecb5a8fa9d6cc1771174ae55d3183ff2108e3",
-      "date": "2026-09-29T19:18:28Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "fdb5dc2b57ec47421cca297f2e25abd23db99a63",
-      "message": "feat!: harden IPC framing and extend collector and recorder APIs",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/fdb5dc2b57ec47421cca297f2e25abd23db99a63",
-      "date": "2026-09-29T18:55:36Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "3b99f1a41798adb0063ca15205872ff6a925ce87",
-      "message": "chore(main): release 0.5.0 (#8)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/3b99f1a41798adb0063ca15205872ff6a925ce87",
-      "date": "2026-09-29T19:59:23Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5685
+        "stars": 5688
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
