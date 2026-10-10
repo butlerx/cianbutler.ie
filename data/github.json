@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5460,
-      "forks": 769,
+      "forks": 767,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,8 +20,8 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14020,
-      "forks": 1486,
+      "stars": 14018,
+      "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4381,
-      "forks": 884,
+      "stars": 4380,
+      "forks": 886,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,39 +54,39 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95293,
-      "forks": 10489,
+      "stars": 95294,
+      "forks": 10490,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37239,
-      "forks": 3060,
+      "stars": 37245,
+      "forks": 3059,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14020,
-      "forks": 1486,
+      "stars": 14018,
+      "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12426,
-      "forks": 517,
+      "stars": 12429,
+      "forks": 518,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,7 +95,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5460,
-      "forks": 769,
+      "forks": 767,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -109,16 +109,16 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4381,
-      "forks": 884,
+      "stars": 4380,
+      "forks": 886,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2521,
-      "forks": 421,
+      "stars": 2522,
+      "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2011,
-      "forks": 2469,
+      "forks": 2470,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -221,6 +221,13 @@
   "commits": [
     {
       "repo": "butlerx/dotfiles",
+      "sha": "9d29df484fdfcc014e247cf8bc12db871032d9d1",
+      "message": "Rush B!",
+      "url": "https://github.com/butlerx/dotfiles/commit/9d29df484fdfcc014e247cf8bc12db871032d9d1",
+      "date": "2026-10-08T12:54:07Z"
+    },
+    {
+      "repo": "butlerx/dotfiles",
       "sha": "9284632bce33a1212ddc77bc44bd754cfcf143c4",
       "message": "Todo!!!",
       "url": "https://github.com/butlerx/dotfiles/commit/9284632bce33a1212ddc77bc44bd754cfcf143c4",
@@ -281,13 +288,6 @@
       "message": "build(deps): bump rust-lang/crates-io-auth-action from 4920f0933d6c80323414a03df1731d6678d52a1b to 9c067fc5d5c254b33978fed918cb50c032549d0e (#45)",
       "url": "https://github.com/butlerx/pets-configurator/commit/afa0f3a79a1d67414db8413c88abdad30ef3bca7",
       "date": "2026-10-05T09:47:52Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
-      "message": "build(deps): bump rust-lang/crates-io-auth-action (#7)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
-      "date": "2026-09-29T19:57:26Z"
     }
   ],
   "contributions": [
@@ -296,7 +296,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5693
+        "stars": 5694
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
