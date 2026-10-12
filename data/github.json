@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5461,
-      "forks": 767,
+      "forks": 766,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95299,
-      "forks": 10490,
+      "stars": 95320,
+      "forks": 10493,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37257,
-      "forks": 3059,
+      "stars": 37264,
+      "forks": 3061,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
+      "stars": 14020,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12433,
-      "forks": 518,
+      "stars": 12437,
+      "forks": 523,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10154,
+      "stars": 10155,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,7 +95,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5461,
-      "forks": 767,
+      "forks": 766,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -296,7 +296,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5693
+        "stars": 5695
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
