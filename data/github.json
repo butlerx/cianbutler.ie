@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14020,
+      "stars": 14021,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
+      "stars": 10154,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95320,
-      "forks": 10493,
+      "stars": 95331,
+      "forks": 10499,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37264,
-      "forks": 3061,
+      "stars": 37266,
+      "forks": 3062,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14020,
+      "stars": 14021,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12437,
-      "forks": 523,
+      "stars": 12448,
+      "forks": 525,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
+      "stars": 10154,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2011,
-      "forks": 2471,
+      "forks": 2473,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -149,7 +149,7 @@
       "repo": "pets",
       "user": "ema",
       "description": "A configuration management system for Pets, not Cattle",
-      "stars": 464,
+      "stars": 463,
       "forks": 8,
       "language": { "name": "Go", "color": "#00ADD8" }
     },
@@ -219,6 +219,13 @@
     }
   ],
   "commits": [
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "e27019e5c626b57fb118acadb694232ac0a87831",
+      "message": "build(deps): bump j178/prek-action from 3.0.0 to 3.0.1 (#49)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/e27019e5c626b57fb118acadb694232ac0a87831",
+      "date": "2026-10-13T05:27:46Z"
+    },
     {
       "repo": "butlerx/dotfiles",
       "sha": "9d29df484fdfcc014e247cf8bc12db871032d9d1",
