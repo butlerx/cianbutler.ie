@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5463,
-      "forks": 769,
+      "forks": 768,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -21,7 +21,7 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14023,
-      "forks": 1486,
+      "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4382,
-      "forks": 889,
+      "forks": 888,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95356,
-      "forks": 10505,
+      "stars": 95521,
+      "forks": 10528,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37271,
-      "forks": 3064,
+      "stars": 37278,
+      "forks": 3061,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -71,15 +71,15 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14023,
-      "forks": 1486,
+      "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12457,
-      "forks": 526,
+      "stars": 12458,
+      "forks": 527,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -95,7 +95,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5463,
-      "forks": 769,
+      "forks": 768,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -103,14 +103,14 @@
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
       "stars": 4560,
-      "forks": 1523
+      "forks": 1522
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4382,
-      "forks": 889,
+      "forks": 888,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -220,6 +220,13 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "cf084dcfdadddceec3820c91d519e004df9ff236",
+      "message": "Bump jdx/mise-action from 5.0.1 to 5.1.1 (#22)",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/cf084dcfdadddceec3820c91d519e004df9ff236",
+      "date": "2026-10-13T15:20:31Z"
+    },
+    {
       "repo": "butlerx/pets-configurator",
       "sha": "e8f0441b2c75137606457fb006518322befbea61",
       "message": "build(deps): bump dtolnay/rust-toolchain (#48)",
@@ -274,34 +281,6 @@
       "message": "Bump jdx/mise-action from 4.3.0 to 5.0.1 (#21)",
       "url": "https://github.com/butlerx/cianbutler.ie/commit/877d237150949c0c32c59f7707703140f8a3b103",
       "date": "2026-10-05T14:58:13Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
-      "message": "ci(deps): bump the codeql group with 3 updates (#697)",
-      "url": "https://github.com/butlerx/wetty/commit/20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
-      "date": "2026-10-05T10:06:08Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "bf2dc856dea5024b44db03e9bffea25d2bd498c5",
-      "message": "build(deps): bump thiserror from 2.0.20 to 2.0.21 (#46)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/bf2dc856dea5024b44db03e9bffea25d2bd498c5",
-      "date": "2026-10-05T09:48:13Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "5e25d29be61e64251f18158f3922bb902fa7daaf",
-      "message": "build(deps): bump dtolnay/rust-toolchain from 02cb101ec7c40f2c49e1d9714d64511d8e1b74de to 7e38f4b43b4db5c8dd498af069a4f6196df1d067 (#47)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/5e25d29be61e64251f18158f3922bb902fa7daaf",
-      "date": "2026-10-05T09:48:04Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "afa0f3a79a1d67414db8413c88abdad30ef3bca7",
-      "message": "build(deps): bump rust-lang/crates-io-auth-action from 4920f0933d6c80323414a03df1731d6678d52a1b to 9c067fc5d5c254b33978fed918cb50c032549d0e (#45)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/afa0f3a79a1d67414db8413c88abdad30ef3bca7",
-      "date": "2026-10-05T09:47:52Z"
     }
   ],
   "contributions": [
@@ -310,7 +289,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5699
+        "stars": 5702
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
