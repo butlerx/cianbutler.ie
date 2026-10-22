@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14023,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10156,
+      "stars": 10157,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4384,
-      "forks": 898,
+      "stars": 4385,
+      "forks": 901,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95603,
-      "forks": 10581,
+      "stars": 95612,
+      "forks": 10584,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37286,
-      "forks": 3030,
+      "stars": 37282,
+      "forks": 3025,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14023,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12486,
-      "forks": 531,
+      "stars": 12493,
+      "forks": 532,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10156,
+      "stars": 10157,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -109,15 +109,15 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4384,
-      "forks": 898,
+      "stars": 4385,
+      "forks": 901,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2526,
+      "stars": 2527,
       "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2475,
+      "forks": 2474,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -141,8 +141,8 @@
       "repo": "hacktoberfest-checker",
       "user": "jenkoian",
       "description": "🎃 Check how you're doing in hacktoberfest",
-      "stars": 754,
-      "forks": 357,
+      "stars": 755,
+      "forks": 358,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -220,6 +220,20 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/presentation",
+      "sha": "c4e3764f996628cbed20e5ea781489070394c0f0",
+      "message": "Bump markdown-it from 15.0.2 to 15.0.3 (#44)",
+      "url": "https://github.com/butlerx/presentation/commit/c4e3764f996628cbed20e5ea781489070394c0f0",
+      "date": "2026-10-19T09:12:54Z"
+    },
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "3c1bd11d3a2559e816c12ae794523fbbd16eb68e",
+      "message": "build(deps): bump toml from 1.1.6+spec-1.1.0 to 1.1.8+spec-1.1.0 (#51)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/3c1bd11d3a2559e816c12ae794523fbbd16eb68e",
+      "date": "2026-10-19T09:14:30Z"
+    },
+    {
       "repo": "butlerx/cianbutler.ie",
       "sha": "772639f8be937248c29f23695eae1f098c1dc934",
       "message": "Bump jdx/mise-action from 5.1.1 to 5.2.0 (#23)",
@@ -288,20 +302,6 @@
       "message": "ci(deps): bump the codeql group with 3 updates (#702)",
       "url": "https://github.com/butlerx/wetty/commit/9d5b1a84759d7dd1cfa2148ef66958a20d366248",
       "date": "2026-10-16T09:02:48Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "11cda5f01c1bc4f1629dd1d6ee65e75fb0d719a0",
-      "message": "ci: prevent Docker action timeouts",
-      "url": "https://github.com/butlerx/wetty/commit/11cda5f01c1bc4f1629dd1d6ee65e75fb0d719a0",
-      "date": "2026-10-16T10:06:45Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "b28e1ce3d0a9a84ed23e26116939c18dbfef693d",
-      "message": "Fix/windows tui rendering (#700)",
-      "url": "https://github.com/butlerx/wetty/commit/b28e1ce3d0a9a84ed23e26116939c18dbfef693d",
-      "date": "2026-10-14T10:19:12Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5723
+        "stars": 5731
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
