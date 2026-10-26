@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5474,
+      "stars": 5475,
       "forks": 772,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14023,
+      "stars": 14024,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -44,7 +44,7 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4387,
+      "stars": 4385,
       "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     }
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95644,
-      "forks": 10574,
+      "stars": 95658,
+      "forks": 10586,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37298,
-      "forks": 3021,
+      "stars": 37303,
+      "forks": 3025,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14023,
+      "stars": 14024,
       "forks": 1485,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12511,
-      "forks": 537,
+      "stars": 12520,
+      "forks": 539,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5474,
+      "stars": 5475,
       "forks": 772,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -103,13 +103,13 @@
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
       "stars": 4559,
-      "forks": 1521
+      "forks": 1520
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4387,
+      "stars": 4385,
       "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     },
@@ -220,88 +220,88 @@
   ],
   "commits": [
     {
-      "repo": "butlerx/wetty",
-      "sha": "019c456ee35e016bac960325d828289bff692e92",
-      "message": "feat(client): desktop notifications with blinking favicon (#709)",
-      "url": "https://github.com/butlerx/wetty/commit/019c456ee35e016bac960325d828289bff692e92",
-      "date": "2026-10-24T14:53:09Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "1d7fe1049b143c1387edee4bdbe7e6e48cd0d9eb",
-      "message": "chore(deps): bump the commitlint group across 1 directory with 2 updates (#707)",
-      "url": "https://github.com/butlerx/wetty/commit/1d7fe1049b143c1387edee4bdbe7e6e48cd0d9eb",
-      "date": "2026-10-23T08:39:47Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "261d51c744ce9d6a170163fd17fb02146644501b",
-      "message": "chore(deps): bump the eslint group across 1 directory with 2 updates (#706)",
-      "url": "https://github.com/butlerx/wetty/commit/261d51c744ce9d6a170163fd17fb02146644501b",
-      "date": "2026-10-23T08:48:18Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "926e59713bc2f040fddad05fb0efb9dcb7f2eecf",
-      "message": "ci(deps): bump the codeql group with 3 updates (#708)",
-      "url": "https://github.com/butlerx/wetty/commit/926e59713bc2f040fddad05fb0efb9dcb7f2eecf",
-      "date": "2026-10-23T08:40:38Z"
+      "repo": "butlerx/fosdem-video-downloader",
+      "sha": "6066f71c01be90077c0169762d3fce0a7a01edcb",
+      "message": "chore(main): release 0.2.0 (#5)",
+      "url": "https://github.com/butlerx/fosdem-video-downloader/commit/6066f71c01be90077c0169762d3fce0a7a01edcb",
+      "date": "2026-10-26T08:29:53Z"
     },
     {
       "repo": "butlerx/presentation",
-      "sha": "c4e3764f996628cbed20e5ea781489070394c0f0",
-      "message": "Bump markdown-it from 15.0.2 to 15.0.3 (#44)",
-      "url": "https://github.com/butlerx/presentation/commit/c4e3764f996628cbed20e5ea781489070394c0f0",
-      "date": "2026-10-19T09:12:54Z"
+      "sha": "3d55a657509f11ed08d980ceef6d5be1e8d3b87f",
+      "message": "Bump @11ty/eleventy-img from 7.0.0 to 7.1.1 in the eleventy group (#45)",
+      "url": "https://github.com/butlerx/presentation/commit/3d55a657509f11ed08d980ceef6d5be1e8d3b87f",
+      "date": "2026-10-26T08:23:05Z"
     },
     {
-      "repo": "butlerx/pets-configurator",
-      "sha": "3c1bd11d3a2559e816c12ae794523fbbd16eb68e",
-      "message": "build(deps): bump toml from 1.1.6+spec-1.1.0 to 1.1.8+spec-1.1.0 (#51)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/3c1bd11d3a2559e816c12ae794523fbbd16eb68e",
-      "date": "2026-10-19T09:14:30Z"
+      "repo": "butlerx/fosdem-video-downloader",
+      "sha": "d1f314576d11c2b78890219fdd3c613d905f1173",
+      "message": "Bump rustls from 0.23.43 to 0.23.46 (#6)",
+      "url": "https://github.com/butlerx/fosdem-video-downloader/commit/d1f314576d11c2b78890219fdd3c613d905f1173",
+      "date": "2026-10-26T08:23:17Z"
     },
     {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "772639f8be937248c29f23695eae1f098c1dc934",
-      "message": "Bump jdx/mise-action from 5.1.1 to 5.2.0 (#23)",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/772639f8be937248c29f23695eae1f098c1dc934",
-      "date": "2026-10-19T15:27:07Z"
+      "repo": "butlerx/wetty",
+      "sha": "2f537a514f3fd644e011c57684235d2accf9ac12",
+      "message": "fix(server): bound PTY termination escalation",
+      "url": "https://github.com/butlerx/wetty/commit/2f537a514f3fd644e011c57684235d2accf9ac12",
+      "date": "2026-10-25T13:13:37Z"
     },
     {
-      "repo": "butlerx/dotfiles",
-      "sha": "10a41190bc2c061ca00e6f88f6492d9eeb754a9c",
-      "message": "Now we tell you your browser sucks in your native tongue.",
-      "url": "https://github.com/butlerx/dotfiles/commit/10a41190bc2c061ca00e6f88f6492d9eeb754a9c",
-      "date": "2026-10-19T10:19:22Z"
+      "repo": "butlerx/wetty",
+      "sha": "2a8444392211f182479315ffd6cd168377d44378",
+      "message": "fix: address final reliability review findings",
+      "url": "https://github.com/butlerx/wetty/commit/2a8444392211f182479315ffd6cd168377d44378",
+      "date": "2026-10-25T09:41:57Z"
     },
     {
-      "repo": "butlerx/presentation",
-      "sha": "b011b61a7acdc45aaa8882e77524c57c7359b14b",
-      "message": "Bump the eleventy group across 1 directory with 2 updates (#43)",
-      "url": "https://github.com/butlerx/presentation/commit/b011b61a7acdc45aaa8882e77524c57c7359b14b",
-      "date": "2026-10-19T08:43:31Z"
+      "repo": "butlerx/wetty",
+      "sha": "63f6b42ae57f6a4cae6355748926f1a6549c6453",
+      "message": "refactor(client): add terminal feature entrypoint",
+      "url": "https://github.com/butlerx/wetty/commit/63f6b42ae57f6a4cae6355748926f1a6549c6453",
+      "date": "2026-10-25T08:44:44Z"
     },
     {
-      "repo": "butlerx/presentation",
-      "sha": "f4fdd78b6eb6ac8e91648fc393315b7718a0c3f5",
-      "message": "Bump prettier from 3.9.9 to 3.9.10 (#42)",
-      "url": "https://github.com/butlerx/presentation/commit/f4fdd78b6eb6ac8e91648fc393315b7718a0c3f5",
-      "date": "2026-10-19T08:04:20Z"
+      "repo": "butlerx/wetty",
+      "sha": "24f4f355e00609d6192396933d9812f25ed2461a",
+      "message": "refactor(server): add explicit feature entrypoints",
+      "url": "https://github.com/butlerx/wetty/commit/24f4f355e00609d6192396933d9812f25ed2461a",
+      "date": "2026-10-25T01:17:09Z"
     },
     {
-      "repo": "butlerx/pets-configurator",
-      "sha": "44dba5e06e173f263c20afc43dbc4fd3e431637f",
-      "message": "build(deps): bump dtolnay/rust-toolchain from e2a55d2ffb04f378e9626c28d38b36d230d1e12f to 683b588c487a69d01f6c6ddf40f036ff682cc2c8 (#50)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/44dba5e06e173f263c20afc43dbc4fd3e431637f",
-      "date": "2026-10-19T09:15:34Z"
+      "repo": "butlerx/wetty",
+      "sha": "6c231efcf870e0e9cc904d3eb11b12da72162895",
+      "message": "refactor(server): clarify module ownership",
+      "url": "https://github.com/butlerx/wetty/commit/6c231efcf870e0e9cc904d3eb11b12da72162895",
+      "date": "2026-10-24T21:32:24Z"
     },
     {
-      "repo": "butlerx/dotfiles",
-      "sha": "0710e45e01a737ada001b87779d8b0d2c8e2423a",
-      "message": "DNS_PROBE_FINISHED_NXDOMAIN",
-      "url": "https://github.com/butlerx/dotfiles/commit/0710e45e01a737ada001b87779d8b0d2c8e2423a",
-      "date": "2026-10-19T10:04:19Z"
+      "repo": "butlerx/wetty",
+      "sha": "6240cb68f626954925e9671079da4eea34d2d10b",
+      "message": "refactor(client): type the configuration editor",
+      "url": "https://github.com/butlerx/wetty/commit/6240cb68f626954925e9671079da4eea34d2d10b",
+      "date": "2026-10-24T21:12:41Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "05e8249c416f5beecd99fb36cc3077f289baee3f",
+      "message": "refactor(client): relocate configuration editor sources",
+      "url": "https://github.com/butlerx/wetty/commit/05e8249c416f5beecd99fb36cc3077f289baee3f",
+      "date": "2026-10-24T14:32:33Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "6bd70fc1ef7774fed9b96760c99c5fa77740c92a",
+      "message": "fix(client): secure editor message channel",
+      "url": "https://github.com/butlerx/wetty/commit/6bd70fc1ef7774fed9b96760c99c5fa77740c92a",
+      "date": "2026-10-24T14:21:27Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "93a430b847299f0aee726f541f7c884ad80928b9",
+      "message": "feat(protocol): type and validate socket events",
+      "url": "https://github.com/butlerx/wetty/commit/93a430b847299f0aee726f541f7c884ad80928b9",
+      "date": "2026-10-24T14:11:39Z"
     }
   ],
   "contributions": [
@@ -318,21 +318,21 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5474 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5475 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5474 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5475 },
       "title": "Allow the generated initial-plan commit in commitlint",
       "url": "https://github.com/butlerx/wetty/pull/710",
       "state": "CLOSED",
       "bodyHTML": "The Lint Commits job rejected the generated `Initial plan` commit because it does not follow Conventional Commits. Add a narrow exception for that exact message while retaining the existing rules for all other commits.\n\n- **Commitlint:** Ignore only `Initial plan`:\n  ```js\n  ignores: [(message) =\u003e message === 'Initial plan'],\n  ```"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5474 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5475 },
       "title": "fix(security)!: pin browser origins and bound HTTP metrics",
       "url": "https://github.com/butlerx/wetty/pull/698",
       "state": "MERGED",
