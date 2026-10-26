@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4385,
-      "forks": 904,
+      "forks": 905,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95658,
-      "forks": 10586,
+      "stars": 95662,
+      "forks": 10597,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37303,
-      "forks": 3025,
+      "stars": 37304,
+      "forks": 3028,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12520,
-      "forks": 539,
+      "stars": 12524,
+      "forks": 538,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -110,7 +110,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4385,
-      "forks": 904,
+      "forks": 905,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2475,
+      "forks": 2474,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -166,7 +166,7 @@
       "user": "weechat",
       "description": "Official scripts for WeeChat.",
       "stars": 242,
-      "forks": 241,
+      "forks": 242,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5743
+        "stars": 5746
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
