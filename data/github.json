@@ -21,7 +21,7 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14024,
-      "forks": 1485,
+      "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -37,7 +37,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10158,
-      "forks": 1123,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95662,
-      "forks": 10597,
+      "stars": 95672,
+      "forks": 10610,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37304,
-      "forks": 3028,
+      "stars": 37306,
+      "forks": 3029,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -71,15 +71,15 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14024,
-      "forks": 1485,
+      "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12524,
-      "forks": 538,
+      "stars": 12530,
+      "forks": 539,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -87,7 +87,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10158,
-      "forks": 1123,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -102,7 +102,7 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4559,
+      "stars": 4558,
       "forks": 1520
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2474,
+      "forks": 2475,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -158,7 +158,7 @@
       "user": "AmauryCarrade",
       "description": "Mastodon \u003c-\u003e Twitter cross-poster.",
       "stars": 248,
-      "forks": 36,
+      "forks": 35,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -219,6 +219,13 @@
     }
   ],
   "commits": [
+    {
+      "repo": "butlerx/pets-configurator",
+      "sha": "62df1f345a7f67040c5a899920229459ffca2930",
+      "message": "build(deps): bump j178/prek-action from 3.0.1 to 3.0.2 (#52)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/62df1f345a7f67040c5a899920229459ffca2930",
+      "date": "2026-10-26T09:06:12Z"
+    },
     {
       "repo": "butlerx/fosdem-video-downloader",
       "sha": "6066f71c01be90077c0169762d3fce0a7a01edcb",
@@ -295,13 +302,6 @@
       "message": "fix(client): secure editor message channel",
       "url": "https://github.com/butlerx/wetty/commit/6bd70fc1ef7774fed9b96760c99c5fa77740c92a",
       "date": "2026-10-24T14:21:27Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "93a430b847299f0aee726f541f7c884ad80928b9",
-      "message": "feat(protocol): type and validate socket events",
-      "url": "https://github.com/butlerx/wetty/commit/93a430b847299f0aee726f541f7c884ad80928b9",
-      "date": "2026-10-24T14:11:39Z"
     }
   ],
   "contributions": [
