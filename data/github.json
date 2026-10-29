@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5478,
-      "forks": 771,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
+      "stars": 14023,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10158,
+      "stars": 10159,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4384,
-      "forks": 905,
+      "stars": 4385,
+      "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95686,
-      "forks": 10629,
+      "stars": 95703,
+      "forks": 10652,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37313,
-      "forks": 3028,
+      "stars": 37318,
+      "forks": 3032,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
+      "stars": 14023,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,15 +78,15 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12538,
-      "forks": 539,
+      "stars": 12548,
+      "forks": 540,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10158,
+      "stars": 10159,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,7 +95,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5478,
-      "forks": 771,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -109,8 +109,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4384,
-      "forks": 905,
+      "stars": 4385,
+      "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -220,6 +220,20 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/dotfiles",
+      "sha": "3f9854108fabc430ce4f8cd904d1c5794171f635",
+      "message": "Shit code!",
+      "url": "https://github.com/butlerx/dotfiles/commit/3f9854108fabc430ce4f8cd904d1c5794171f635",
+      "date": "2026-10-28T12:14:12Z"
+    },
+    {
+      "repo": "butlerx/dotfiles",
+      "sha": "ab8993b18d5f7fb11abe5a809d8cb3e6ae93d106",
+      "message": "more ignored words",
+      "url": "https://github.com/butlerx/dotfiles/commit/ab8993b18d5f7fb11abe5a809d8cb3e6ae93d106",
+      "date": "2026-10-28T12:02:04Z"
+    },
+    {
       "repo": "butlerx/cianbutler.ie",
       "sha": "8fb3b9ab67a03374270008246a4e199ec99218bf",
       "message": "Bump jdx/mise-action from 5.2.0 to 5.2.2 (#24)",
@@ -288,20 +302,6 @@
       "message": "refactor(server): clarify module ownership",
       "url": "https://github.com/butlerx/wetty/commit/6c231efcf870e0e9cc904d3eb11b12da72162895",
       "date": "2026-10-24T21:32:24Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "6240cb68f626954925e9671079da4eea34d2d10b",
-      "message": "refactor(client): type the configuration editor",
-      "url": "https://github.com/butlerx/wetty/commit/6240cb68f626954925e9671079da4eea34d2d10b",
-      "date": "2026-10-24T21:12:41Z"
-    },
-    {
-      "repo": "butlerx/wetty",
-      "sha": "05e8249c416f5beecd99fb36cc3077f289baee3f",
-      "message": "refactor(client): relocate configuration editor sources",
-      "url": "https://github.com/butlerx/wetty/commit/05e8249c416f5beecd99fb36cc3077f289baee3f",
-      "date": "2026-10-24T14:32:33Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5754
+        "stars": 5758
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
