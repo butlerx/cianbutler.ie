@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95714,
-      "forks": 10678,
+      "stars": 95718,
+      "forks": 10692,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37325,
-      "forks": 3034,
+      "stars": 37332,
+      "forks": 3036,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12556,
-      "forks": 543,
+      "stars": 12557,
+      "forks": 544,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -118,7 +118,7 @@
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
       "stars": 2531,
-      "forks": 422,
+      "forks": 421,
       "language": { "name": "Ruby", "color": "#701516" }
     },
     {
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5759
+        "stars": 5762
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
