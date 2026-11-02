@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5479,
-      "forks": 771,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10162,
+      "stars": 10161,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,8 +54,8 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95737,
-      "forks": 10733,
+      "stars": 95738,
+      "forks": 10734,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12574,
+      "stars": 12576,
       "forks": 544,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10162,
+      "stars": 10161,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,14 +95,14 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5479,
-      "forks": 771,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4558,
+      "stars": 4557,
       "forks": 1518
     },
     {
@@ -118,7 +118,7 @@
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
       "stars": 2531,
-      "forks": 421,
+      "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
     {
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5763
+        "stars": 5764
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
