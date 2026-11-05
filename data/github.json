@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14023,
+      "stars": 14024,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10160,
+      "stars": 10161,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,7 +54,7 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95756,
+      "stars": 95765,
       "forks": 10713,
       "language": { "name": "Shell", "color": "#89e051" }
     },
@@ -62,15 +62,15 @@
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37340,
-      "forks": 3041,
+      "stars": 37350,
+      "forks": 3042,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14023,
+      "stars": 14024,
       "forks": 1486,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12599,
+      "stars": 12607,
       "forks": 544,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10160,
+      "stars": 10161,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -126,15 +126,15 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2479,
+      "forks": 2480,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
       "repo": "grafanalib",
       "user": "weaveworks",
       "description": "Python library for building Grafana dashboards",
-      "stars": 1979,
-      "forks": 320,
+      "stars": 1980,
+      "forks": 321,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -281,27 +281,6 @@
       "message": "Bump jdx/mise-action from 5.2.0 to 5.2.2 (#24)",
       "url": "https://github.com/butlerx/cianbutler.ie/commit/8fb3b9ab67a03374270008246a4e199ec99218bf",
       "date": "2026-10-26T14:59:29Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "62df1f345a7f67040c5a899920229459ffca2930",
-      "message": "build(deps): bump j178/prek-action from 3.0.1 to 3.0.2 (#52)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/62df1f345a7f67040c5a899920229459ffca2930",
-      "date": "2026-10-26T09:06:12Z"
-    },
-    {
-      "repo": "butlerx/fosdem-video-downloader",
-      "sha": "6066f71c01be90077c0169762d3fce0a7a01edcb",
-      "message": "chore(main): release 0.2.0 (#5)",
-      "url": "https://github.com/butlerx/fosdem-video-downloader/commit/6066f71c01be90077c0169762d3fce0a7a01edcb",
-      "date": "2026-10-26T08:29:53Z"
-    },
-    {
-      "repo": "butlerx/presentation",
-      "sha": "3d55a657509f11ed08d980ceef6d5be1e8d3b87f",
-      "message": "Bump @11ty/eleventy-img from 7.0.0 to 7.1.1 in the eleventy group (#45)",
-      "url": "https://github.com/butlerx/presentation/commit/3d55a657509f11ed08d980ceef6d5be1e8d3b87f",
-      "date": "2026-10-26T08:23:05Z"
     }
   ],
   "contributions": [
@@ -310,7 +289,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5766
+        "stars": 5765
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -330,13 +309,6 @@
       "url": "https://github.com/butlerx/wetty/pull/710",
       "state": "CLOSED",
       "bodyHTML": "The Lint Commits job rejected the generated `Initial plan` commit because it does not follow Conventional Commits. Add a narrow exception for that exact message while retaining the existing rules for all other commits.\n\n- **Commitlint:** Ignore only `Initial plan`:\n  ```js\n  ignores: [(message) =\u003e message === 'Initial plan'],\n  ```"
-    },
-    {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5479 },
-      "title": "fix(security)!: pin browser origins and bound HTTP metrics",
-      "url": "https://github.com/butlerx/wetty/pull/698",
-      "state": "MERGED",
-      "bodyHTML": "## Summary\n\nBrowser terminal connections now require explicitly trusted origins, and unauthenticated requests cannot create unlimited HTTP metric series. These fixes ship together as a breaking security release.\n\nSocket.IO no longer derives trusted origins from request Host or forwarded headers. Same-origin polling without an Origin header requires both browser Fetch Metadata and a Host pinned to the configured allowlist. The existing missing-Origin opt-in remains available, with an explicit warning that it bypasses that protection.\n\nHTTP counters and histograms use five fixed route families, seven common methods plus `OTHER`, and grouped status codes. Usernames, asset names, unknown paths and query strings are never retained as labels. Metrics scrapes are excluded.\n\n## Migration\n\nEvery deployment must configure a nonempty HTTP(S) origin allowlist, including localhost:\n\n```sh\nwetty --allowed-origin http://localhost:3000\n# For a reverse proxy, use the public origin instead:\nwetty --allowed-origin https://terminal.example.com\n```\n\n`ALLOWEDORIGINS` and `server.allowedOrigins` provide the same configuration. Do not include the base path. Sample configs, Docker examples, CLI help and deployment docs are updated. Invalid or missing configuration fails before listening, with an actionable error.\n\n## Verification\n\n- All 73 tests pass, including regression coverage for both Socket.IO transports, missing-Origin requests, malformed origins, CLI errors and all four HTTP metrics.\n- TypeScript, ESLint, production build and active LSP checks pass.\n- Production-build probes accept a configured origin and reject attacker-controlled Host/Origin and missing-Origin variants. The SSH counter retains one series across 100 distinct usernames.\n\nBREAKING CHANGE: deployments must explicitly configure at least one trusted browser origin before starting WeTTY. Localhost, listen addresses and request-derived origins are no longer implicitly trusted.\n\n---\n\n[![Compound Engineering](https://img.shields.io/badge/Built_with-Compound_Engineering-6366f1)](https://github.com/EveryInc/compound-engineering-plugin)\n"
     }
   ]
 }
