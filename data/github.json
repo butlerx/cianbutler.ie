@@ -5,7 +5,7 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5479,
-      "forks": 770,
+      "forks": 771,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,8 +20,8 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
-      "forks": 1486,
+      "stars": 14025,
+      "forks": 1487,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10161,
+      "stars": 10163,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,39 +54,39 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95765,
-      "forks": 10713,
+      "stars": 95766,
+      "forks": 10717,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37350,
-      "forks": 3042,
+      "stars": 37362,
+      "forks": 3044,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
-      "forks": 1486,
+      "stars": 14025,
+      "forks": 1487,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12607,
-      "forks": 544,
+      "stars": 12613,
+      "forks": 545,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10161,
+      "stars": 10163,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -95,14 +95,14 @@
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
       "stars": 5479,
-      "forks": 770,
+      "forks": 771,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4556,
+      "stars": 4557,
       "forks": 1518
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2480,
+      "forks": 2482,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,6 +220,41 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/wetty",
+      "sha": "482f11a1c3e0d3ac4a404e62883114dcaeeb9bef",
+      "message": "chore(deps): bump sass from 1.106.1 to 1.107.0 (#719)",
+      "url": "https://github.com/butlerx/wetty/commit/482f11a1c3e0d3ac4a404e62883114dcaeeb9bef",
+      "date": "2026-11-06T08:15:08Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "33dbc5e8faf75118cc3c6359815abaef945fefde",
+      "message": "chore(deps): bump all-contributors-cli from 6.26.1 to 7.0.0 (#722)",
+      "url": "https://github.com/butlerx/wetty/commit/33dbc5e8faf75118cc3c6359815abaef945fefde",
+      "date": "2026-11-06T08:15:27Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "d672249e65d79070a4da9321f89d58b7d9568b7b",
+      "message": "chore(deps): bump mocha from 12.0.0-rc.5 to 12.0.3 (#716)",
+      "url": "https://github.com/butlerx/wetty/commit/d672249e65d79070a4da9321f89d58b7d9568b7b",
+      "date": "2026-11-06T08:15:52Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "e3f7224a2470f2304e43f81096c4e631467b40ed",
+      "message": "chore(deps): bump the typescript group across 1 directory with 3 updates (#720)",
+      "url": "https://github.com/butlerx/wetty/commit/e3f7224a2470f2304e43f81096c4e631467b40ed",
+      "date": "2026-11-06T08:14:44Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "241d0eb35f961d400b6c7722391591ed238abe38",
+      "message": "chore(deps): bump the types group across 1 directory with 2 updates (#721)",
+      "url": "https://github.com/butlerx/wetty/commit/241d0eb35f961d400b6c7722391591ed238abe38",
+      "date": "2026-11-06T08:10:45Z"
+    },
+    {
       "repo": "butlerx/pets-configurator",
       "sha": "85791717852fa0bb0942add051f5671380f82c23",
       "message": "build(deps): bump j178/prek-action from 3.0.2 to 3.1.0 (#53)",
@@ -267,20 +302,6 @@
       "message": "Shit code!",
       "url": "https://github.com/butlerx/dotfiles/commit/3f9854108fabc430ce4f8cd904d1c5794171f635",
       "date": "2026-10-28T12:14:12Z"
-    },
-    {
-      "repo": "butlerx/dotfiles",
-      "sha": "ab8993b18d5f7fb11abe5a809d8cb3e6ae93d106",
-      "message": "more ignored words",
-      "url": "https://github.com/butlerx/dotfiles/commit/ab8993b18d5f7fb11abe5a809d8cb3e6ae93d106",
-      "date": "2026-10-28T12:02:04Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "8fb3b9ab67a03374270008246a4e199ec99218bf",
-      "message": "Bump jdx/mise-action from 5.2.0 to 5.2.2 (#24)",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/8fb3b9ab67a03374270008246a4e199ec99218bf",
-      "date": "2026-10-26T14:59:29Z"
     }
   ],
   "contributions": [
@@ -289,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5765
+        "stars": 5768
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
