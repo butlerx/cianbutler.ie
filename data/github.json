@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14024,
       "forks": 1487,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -37,7 +37,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10163,
-      "forks": 1123,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95766,
-      "forks": 10717,
+      "stars": 95767,
+      "forks": 10721,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37362,
-      "forks": 3044,
+      "stars": 37375,
+      "forks": 3049,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14024,
       "forks": 1487,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12613,
-      "forks": 545,
+      "stars": 12621,
+      "forks": 548,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -87,7 +87,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10163,
-      "forks": 1123,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -173,7 +173,7 @@
       "repo": "hawkeye",
       "user": "fast",
       "description": "Simple license header checker and formatter, in multiple distribution forms.",
-      "stars": 187,
+      "stars": 188,
       "forks": 23,
       "language": { "name": "Rust", "color": "#dea584" }
     },
@@ -288,20 +288,6 @@
       "message": "Revert \"git please work\"",
       "url": "https://github.com/butlerx/dotfiles/commit/c407dfc0bf56a9d9807acb25135a413c4c429e98",
       "date": "2026-11-02T08:17:05Z"
-    },
-    {
-      "repo": "butlerx/dotfiles",
-      "sha": "9c69492c2c558fb4fba3d169e621f8589a7a318a",
-      "message": "Here be Dragons",
-      "url": "https://github.com/butlerx/dotfiles/commit/9c69492c2c558fb4fba3d169e621f8589a7a318a",
-      "date": "2026-10-29T07:59:40Z"
-    },
-    {
-      "repo": "butlerx/dotfiles",
-      "sha": "3f9854108fabc430ce4f8cd904d1c5794171f635",
-      "message": "Shit code!",
-      "url": "https://github.com/butlerx/dotfiles/commit/3f9854108fabc430ce4f8cd904d1c5794171f635",
-      "date": "2026-10-28T12:14:12Z"
     }
   ],
   "contributions": [
