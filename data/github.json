@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5479,
-      "forks": 771,
+      "stars": 5480,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,8 +20,8 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
-      "forks": 1487,
+      "stars": 14026,
+      "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -37,7 +37,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10163,
-      "forks": 1122,
+      "forks": 1121,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4385,
-      "forks": 903,
+      "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,24 +54,24 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95766,
-      "forks": 10720,
+      "stars": 95773,
+      "forks": 10721,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37374,
-      "forks": 3050,
+      "stars": 37379,
+      "forks": 3053,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14024,
-      "forks": 1487,
+      "stars": 14026,
+      "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -87,15 +87,15 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10163,
-      "forks": 1122,
+      "forks": 1121,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5479,
-      "forks": 771,
+      "stars": 5480,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -110,7 +110,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4385,
-      "forks": 903,
+      "forks": 904,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2482,
+      "forks": 2483,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -182,7 +182,7 @@
       "user": "superalsrk",
       "description": "Hexo tag for embeded pdf",
       "stars": 160,
-      "forks": 15,
+      "forks": 14,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -219,6 +219,41 @@
     }
   ],
   "commits": [
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "f1848e1c6b94af88ecb99218e67020314cd7191e",
+      "message": "Fix clippy lints flagged by newer toolchain",
+      "url": "https://github.com/butlerx/jetlag/commit/f1848e1c6b94af88ecb99218e67020314cd7191e",
+      "date": "2026-11-09T09:44:13Z"
+    },
+    {
+      "repo": "butlerx/presentation",
+      "sha": "66bd2ccf6044ca561b311140e6475ff451ada1af",
+      "message": "Bump @11ty/eleventy from 3.1.7 to 3.1.8 in the eleventy group (#46)",
+      "url": "https://github.com/butlerx/presentation/commit/66bd2ccf6044ca561b311140e6475ff451ada1af",
+      "date": "2026-11-09T09:07:40Z"
+    },
+    {
+      "repo": "butlerx/dotfiles",
+      "sha": "45babc961583a45e076a99cca4a66e6a93eed545",
+      "message": "Updated framework to the lattest version",
+      "url": "https://github.com/butlerx/dotfiles/commit/45babc961583a45e076a99cca4a66e6a93eed545",
+      "date": "2026-11-08T17:41:07Z"
+    },
+    {
+      "repo": "butlerx/dotfiles",
+      "sha": "27d1ad469a1157ad04b6a64eb884b50d1516b2fe",
+      "message": "Add wger workout manager on artemis",
+      "url": "https://github.com/butlerx/dotfiles/commit/27d1ad469a1157ad04b6a64eb884b50d1516b2fe",
+      "date": "2026-11-08T17:38:07Z"
+    },
+    {
+      "repo": "butlerx/dotfiles",
+      "sha": "7588d2767c493d3b0d0b17b300696aa5e7b76479",
+      "message": "I must sleep... it's working... in just three hours...",
+      "url": "https://github.com/butlerx/dotfiles/commit/7588d2767c493d3b0d0b17b300696aa5e7b76479",
+      "date": "2026-11-01T16:45:00Z"
+    },
     {
       "repo": "butlerx/wetty",
       "sha": "482f11a1c3e0d3ac4a404e62883114dcaeeb9bef",
@@ -267,36 +302,22 @@
       "message": "build(deps): bump rust-lang/crates-io-auth-action from 9c067fc5d5c254b33978fed918cb50c032549d0e to d6b091a10d7f9b30e4c05478289e94fb309882c5 (#55)",
       "url": "https://github.com/butlerx/pets-configurator/commit/a53d02b20e4c9ca639292a6f8629e194f1f2c173",
       "date": "2026-11-02T15:57:52Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "9fffbb692aacf33a73ea2bb4b06da12f693e82d2",
-      "message": "build(deps): bump similar from 3.2.0 to 3.2.1 (#54)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/9fffbb692aacf33a73ea2bb4b06da12f693e82d2",
-      "date": "2026-11-02T15:58:00Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "7c214ab0fe8b4b7aa6241c25692fee37c9d1486a",
-      "message": "Bump jdx/mise-action from 5.2.2 to 5.2.4 (#25)",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/7c214ab0fe8b4b7aa6241c25692fee37c9d1486a",
-      "date": "2026-11-02T15:58:53Z"
-    },
-    {
-      "repo": "butlerx/dotfiles",
-      "sha": "c407dfc0bf56a9d9807acb25135a413c4c429e98",
-      "message": "Revert \"git please work\"",
-      "url": "https://github.com/butlerx/dotfiles/commit/c407dfc0bf56a9d9807acb25135a413c4c429e98",
-      "date": "2026-11-02T08:17:05Z"
     }
   ],
   "contributions": [
+    {
+      "repo": { "url": "https://github.com/butlerx/jetlag", "name": "jetlag", "owner": "butlerx", "stars": 19 },
+      "title": "Add metric distances with a miles/kilometres toggle",
+      "url": "https://github.com/butlerx/jetlag/pull/6",
+      "state": "OPEN",
+      "bodyHTML": "Closes #2\n\n## What\n- Miles / Kilometres toggle under the navbar. The choice persists in localStorage (`settings.units`, outside the `gameNotes.` prefix, so Clear Game and Export don't touch it).\n- Metric labels for Radar, Thermometer, Tentacles distances and the Photos cards that mention feet/miles.\n- `game_modes.toml` gains optional `label_metric`, `description_metric` and `distance_metric`; `build.rs` generates them. Anything without a metric value falls back to the default label.\n- Tentacles heading no longer reads \"1 Miles\".\n\n## Metric values\nFrom the community [unit conversion card](https://i.redd.it/a2vpmrwyo0le1.png) (r/JetLagTheGame):\n\n| Mode | Metric |\n|---|---|\n| Radar | 400 m, 800 m, 1.6 km, 4.8 km, 8 km, 16 km, 40 km, 80 km, 160 km |\n| Thermometer | 800 m, 4.8 km, 16 km, 80 km |\n| Tentacles | 1.6 km, 24 km |\n| Photos | 1.5 m (5 ft, not on the card), 800 m of streets traced |\n\n## Testing\n- `cargo clippy --target wasm32-unknown-unknown`: no new warnings.\n- Not yet checked in a browser.\n"
+    },
     {
       "repo": {
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5769
+        "stars": 5771
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -304,14 +325,14 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5479 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5480 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5479 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5480 },
       "title": "Allow the generated initial-plan commit in commitlint",
       "url": "https://github.com/butlerx/wetty/pull/710",
       "state": "CLOSED",
