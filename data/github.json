@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14026,
+      "stars": 14025,
       "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4386,
-      "forks": 904,
+      "forks": 903,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95921,
-      "forks": 10754,
+      "stars": 96097,
+      "forks": 10763,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37412,
-      "forks": 3056,
+      "stars": 37414,
+      "forks": 3059,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14026,
+      "stars": 14025,
       "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12650,
-      "forks": 548,
+      "stars": 12668,
+      "forks": 550,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -102,7 +102,7 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4556,
+      "stars": 4555,
       "forks": 1518
     },
     {
@@ -110,7 +110,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4386,
-      "forks": 904,
+      "forks": 903,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2013,
-      "forks": 2487,
+      "forks": 2486,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -278,18 +278,11 @@
   ],
   "contributions": [
     {
-      "repo": { "url": "https://github.com/butlerx/jetlag", "name": "jetlag", "owner": "butlerx", "stars": 19 },
-      "title": "Add metric distances with a miles/kilometres toggle",
-      "url": "https://github.com/butlerx/jetlag/pull/6",
-      "state": "OPEN",
-      "bodyHTML": "Closes #2\n\n## What\n- Miles / Kilometres toggle under the navbar. The choice persists in localStorage (`settings.units`, outside the `gameNotes.` prefix, so Clear Game and Export don't touch it).\n- Metric labels for Radar, Thermometer, Tentacles distances and the Photos cards that mention feet/miles.\n- `game_modes.toml` gains optional `label_metric`, `description_metric` and `distance_metric`; `build.rs` generates them. Anything without a metric value falls back to the default label.\n- Tentacles heading no longer reads \"1 Miles\".\n\n## Metric values\nFrom the community [unit conversion card](https://i.redd.it/a2vpmrwyo0le1.png) (r/JetLagTheGame):\n\n| Mode | Metric |\n|---|---|\n| Radar | 400 m, 800 m, 1.6 km, 4.8 km, 8 km, 16 km, 40 km, 80 km, 160 km |\n| Thermometer | 800 m, 4.8 km, 16 km, 80 km |\n| Tentacles | 1.6 km, 24 km |\n| Photos | 1.5 m (5 ft, not on the card), 800 m of streets traced |\n\n## Testing\n- `cargo clippy --target wasm32-unknown-unknown`: no new warnings.\n- Not yet checked in a browser.\n"
-    },
-    {
       "repo": {
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5780
+        "stars": 5784
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -302,6 +295,13 @@
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/jetlag", "name": "jetlag", "owner": "butlerx", "stars": 19 },
+      "title": "Add metric distances with a miles/kilometres toggle",
+      "url": "https://github.com/butlerx/jetlag/pull/6",
+      "state": "MERGED",
+      "bodyHTML": "Closes #2\n\n## What\n- Miles / Kilometres toggle under the navbar. The choice persists in localStorage (`settings.units`, outside the `gameNotes.` prefix, so Clear Game and Export don't touch it).\n- Metric labels for Radar, Thermometer, Tentacles distances and the Photos cards that mention feet/miles.\n- `game_modes.toml` gains optional `label_metric`, `description_metric` and `distance_metric`; `build.rs` generates them. Anything without a metric value falls back to the default label.\n- Tentacles heading no longer reads \"1 Miles\".\n\n## Metric values\nFrom the community [unit conversion card](https://i.redd.it/a2vpmrwyo0le1.png) (r/JetLagTheGame):\n\n| Mode | Metric |\n|---|---|\n| Radar | 400 m, 800 m, 1.6 km, 4.8 km, 8 km, 16 km, 40 km, 80 km, 160 km |\n| Thermometer | 800 m, 4.8 km, 16 km, 80 km |\n| Tentacles | 1.6 km, 24 km |\n| Photos | 1.5 m (5 ft, not on the card), 800 m of streets traced |\n\n## Testing\n- `cargo clippy --target wasm32-unknown-unknown`: no new warnings.\n- Not yet checked in a browser.\n"
     },
     {
       "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5483 },
