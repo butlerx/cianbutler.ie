@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5483,
+      "stars": 5485,
       "forks": 771,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -20,7 +20,7 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14026,
       "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10163,
+      "stars": 10164,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,23 +54,23 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96097,
-      "forks": 10763,
+      "stars": 96105,
+      "forks": 10761,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37414,
-      "forks": 3059,
+      "stars": 37416,
+      "forks": 3056,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14025,
+      "stars": 14026,
       "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12668,
+      "stars": 12672,
       "forks": 550,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10163,
+      "stars": 10164,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5483,
+      "stars": 5485,
       "forks": 771,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -103,7 +103,7 @@
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
       "stars": 4555,
-      "forks": 1518
+      "forks": 1517
     },
     {
       "repo": "client_python",
@@ -117,7 +117,7 @@
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2531,
+      "stars": 2532,
       "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
@@ -282,7 +282,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5784
+        "stars": 5785
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -290,7 +290,7 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5483 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5485 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
@@ -304,7 +304,7 @@
       "bodyHTML": "Closes #2\n\n## What\n- Miles / Kilometres toggle under the navbar. The choice persists in localStorage (`settings.units`, outside the `gameNotes.` prefix, so Clear Game and Export don't touch it).\n- Metric labels for Radar, Thermometer, Tentacles distances and the Photos cards that mention feet/miles.\n- `game_modes.toml` gains optional `label_metric`, `description_metric` and `distance_metric`; `build.rs` generates them. Anything without a metric value falls back to the default label.\n- Tentacles heading no longer reads \"1 Miles\".\n\n## Metric values\nFrom the community [unit conversion card](https://i.redd.it/a2vpmrwyo0le1.png) (r/JetLagTheGame):\n\n| Mode | Metric |\n|---|---|\n| Radar | 400 m, 800 m, 1.6 km, 4.8 km, 8 km, 16 km, 40 km, 80 km, 160 km |\n| Thermometer | 800 m, 4.8 km, 16 km, 80 km |\n| Tentacles | 1.6 km, 24 km |\n| Photos | 1.5 m (5 ft, not on the card), 800 m of streets traced |\n\n## Testing\n- `cargo clippy --target wasm32-unknown-unknown`: no new warnings.\n- Not yet checked in a browser.\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5483 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5485 },
       "title": "Allow the generated initial-plan commit in commitlint",
       "url": "https://github.com/butlerx/wetty/pull/710",
       "state": "CLOSED",
