@@ -3,7 +3,7 @@
 toml-version = "v1.0.0"
 
 [files]
-exclude = ["**/*.lock"]
+exclude = ["**/*.lock", "**/.golangci.toml"]
 
 [format.rules]
 group-blank-lines-limit         = 2
