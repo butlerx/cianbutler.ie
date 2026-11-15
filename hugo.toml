@@ -8,7 +8,7 @@ enableGitInfo    = true
 [pagination]
 disableAliases = false
 pagerSize      = 5
-path           = 'page'
+path           = "page"
 
 [outputs]
 home = ["HTML", "RSS", "MANIFEST"]
