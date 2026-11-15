@@ -32,12 +32,7 @@ force-err-cuddling = true
 ignore-names = ["ok", "err", "i", "id", "iv"]
 
 [linters.settings.depguard.rules.main]
-allow = [
-  "$gostd",
-  "github.com/evervault/evervault-go",
-  "github.com/hf/nitrite",
-  "github.com/stretchr/testify/assert"
-]
+allow = ["$gostd", "github.com/evervault/evervault-go", "github.com/hf/nitrite", "github.com/stretchr/testify/assert"]
 
 [linters.settings.wrapcheck]
 ignore-package-globs = ["github.com/evervault/*"]

@@ -1,3 +1,8 @@
+# tombi lint is off for this file: the bundled Hugo schema rejects the `tag` taxonomy key, which Hugo
+# requires (removing it drops all /tags/ pages). Formatting still applies.
+#:tombi lint.disabled = true
+
+
 baseURL          = "https://cianbutler.ie/"
 languageCode     = "en-us"
 title            = "Cian Butler"
@@ -19,7 +24,7 @@ page = ["HTML"]
 name           = "manifest"
 baseName       = "manifest"
 mediaType      = "application/json"
-notAlternative = "true"
+notAlternative = true
 
 [params]
 description = "Open Source Developer and SRE"

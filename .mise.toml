@@ -7,7 +7,7 @@ node                   = "lts"
 "npm:markdownlint-cli" = "latest"
 prek                   = "latest"
 shellcheck             = "latest"
-tombi                  = "1.2.4"   # matches tombi-pre-commit rev in prek.toml
+tombi                  = "1.11.2"  # matches tombi-pre-commit rev in prek.toml
 zizmor                 = "latest"
 
 [settings]
@@ -19,13 +19,7 @@ enter = "npm install"
 
 [tasks.build]
 description = "Build Site"
-sources     = [
-  "hugo.toml",
-  "assets/**/*",
-  "content/**/*",
-  "data/**/*",
-  "layouts/**/*"
-]
+sources     = ["hugo.toml", "assets/**/*", "content/**/*", "data/**/*", "layouts/**/*"]
 outputs     = ["public/**/*"]
 quiet       = true
 alias       = "b"
