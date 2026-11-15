@@ -306,25 +306,6 @@
   ],
   "contributions": [
     {
-      "repo": { "url": "https://github.com/butlerx/recipes", "name": "recipes", "owner": "butlerx", "stars": 1 },
-      "title": "build: install wrangler with mise",
-      "url": "https://github.com/butlerx/recipes/pull/5",
-      "state": "OPEN",
-      "bodyHTML": "Adds `npm:wrangler` to `.mise.toml` (locked in `mise.lock`), so Cloudflare Pages commands use the repo's pinned version instead of a global install.\n\nAlso adds `mise run preview`, which builds the site and serves `public/` with the Pages runtime (`wrangler pages dev`).\n\nDeploys are unchanged: Cloudflare's git integration still builds and deploys this site."
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/invbeertory",
-        "name": "invbeertory",
-        "owner": "butlerx",
-        "stars": 4
-      },
-      "title": "ci: standardise tooling and CI",
-      "url": "https://github.com/butlerx/invbeertory/pull/54",
-      "state": "OPEN",
-      "bodyHTML": "## Summary\n\nStandardises the tooling for this Yew site with the shared glypher setup. It is a website deployed to Cloudflare Pages, so there is no release-please and no release binaries; the existing push-to-main deploy is kept.\n\n- `.mise.toml`: prek, tombi (pinned 1.2.5), zizmor, shellcheck, cargo-nextest, cargo-audit, trunk, wasm-bindgen-cli, yew-fmt. Tasks: `build`, `test`, `lint`, `lint:fix`, `format`, `format:check`, `audit`, `check`, `check:actions`, `hooks`, `clean`.\n- `prek.toml`: converted from `.pre-commit-config.yaml`-style hooks (none existed) to the glypher set: pre-commit-hooks, tombi, actionlint, yamlfmt, zizmor, rust fmt/clippy, conventional commits, plus a local yew-fmt hook.\n- `.github/workflows/ci.yml`: new. Pre-commit (prek), test, and build jobs.\n- `.github/workflows/deploy.yml`: existing deploy kept. Actions SHA-pinned, `persist-credentials: false`, `permissions: contents: read`. `actions-rs/toolchain` swapped for `dtolnay/rust-toolchain` (same SHA as glypher). The `rustup target add` step is folded into the toolchain step.\n- `.github/dependabot.yml`: cargo and github-actions, weekly, 7-day cooldown.\n- Shared `.editorconfig`, `.yamlfmt.yaml`, `tombi.toml`, `.prettierrc.toml` (replaces `.prettierrc.js`).\n- `Cargo.toml`: shared clippy lint table (pedantic, `unsafe_code` denied).\n- Source: rustfmt and yew-fmt applied, plus the pedantic and default clippy findings fixed (mechanical). Three chart modules allow `dead_code` with a TODO to burn down.\n- `index.html`: favicon path changed from `/images/icon.png` to `images/icon.png`. The absolute path made `trunk build` fail with the current trunk.\n\n## Manual steps\n\n- `cloudflare/pages-action@v1` is not SHA-pinned. The repo could not be resolved to a commit from this environment (404 via API and git), so the step carries `# zizmor: ignore[unpinned-uses]`. Pin it once a SHA is available, or consider moving to `cloudflare/wrangler-action`.\n- No repo settings required.\n\n## Notes\n\n- Empty `src/components/hero.rs` and `info.rs` are one-newline files after rustfmt; the EOF fixer is excluded for them so the hooks settle.\n- Clippy `dead_code` warnings under `--all-targets` in `charts/{line,radar,xy}.rs` are allowed with a TODO (pre-existing).\n"
-    },
-    {
       "repo": {
         "url": "https://github.com/butlerx/advent-of-code",
         "name": "advent-of-code",
@@ -354,6 +335,25 @@
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/recipes", "name": "recipes", "owner": "butlerx", "stars": 1 },
+      "title": "build: install wrangler with mise",
+      "url": "https://github.com/butlerx/recipes/pull/5",
+      "state": "MERGED",
+      "bodyHTML": "Adds `npm:wrangler` to `.mise.toml` (locked in `mise.lock`), so Cloudflare Pages commands use the repo's pinned version instead of a global install.\n\nAlso adds `mise run preview`, which builds the site and serves `public/` with the Pages runtime (`wrangler pages dev`).\n\nDeploys are unchanged: Cloudflare's git integration still builds and deploys this site."
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/invbeertory",
+        "name": "invbeertory",
+        "owner": "butlerx",
+        "stars": 4
+      },
+      "title": "ci: standardise tooling and CI",
+      "url": "https://github.com/butlerx/invbeertory/pull/54",
+      "state": "MERGED",
+      "bodyHTML": "## Summary\n\nStandardises the tooling for this Yew site with the shared glypher setup. It is a website deployed to Cloudflare Pages, so there is no release-please and no release binaries; the existing push-to-main deploy is kept.\n\n- `.mise.toml`: prek, tombi (pinned 1.2.5), zizmor, shellcheck, cargo-nextest, cargo-audit, trunk, wasm-bindgen-cli, yew-fmt. Tasks: `build`, `test`, `lint`, `lint:fix`, `format`, `format:check`, `audit`, `check`, `check:actions`, `hooks`, `clean`.\n- `prek.toml`: converted from `.pre-commit-config.yaml`-style hooks (none existed) to the glypher set: pre-commit-hooks, tombi, actionlint, yamlfmt, zizmor, rust fmt/clippy, conventional commits, plus a local yew-fmt hook.\n- `.github/workflows/ci.yml`: new. Pre-commit (prek), test, and build jobs.\n- `.github/workflows/deploy.yml`: existing deploy kept. Actions SHA-pinned, `persist-credentials: false`, `permissions: contents: read`. `actions-rs/toolchain` swapped for `dtolnay/rust-toolchain` (same SHA as glypher). The `rustup target add` step is folded into the toolchain step.\n- `.github/dependabot.yml`: cargo and github-actions, weekly, 7-day cooldown.\n- Shared `.editorconfig`, `.yamlfmt.yaml`, `tombi.toml`, `.prettierrc.toml` (replaces `.prettierrc.js`).\n- `Cargo.toml`: shared clippy lint table (pedantic, `unsafe_code` denied).\n- Source: rustfmt and yew-fmt applied, plus the pedantic and default clippy findings fixed (mechanical). Three chart modules allow `dead_code` with a TODO to burn down.\n- `index.html`: favicon path changed from `/images/icon.png` to `images/icon.png`. The absolute path made `trunk build` fail with the current trunk.\n\n## Manual steps\n\n- `cloudflare/pages-action@v1` is not SHA-pinned. The repo could not be resolved to a commit from this environment (404 via API and git), so the step carries `# zizmor: ignore[unpinned-uses]`. Pin it once a SHA is available, or consider moving to `cloudflare/wrangler-action`.\n- No repo settings required.\n\n## Notes\n\n- Empty `src/components/hero.rs` and `info.rs` are one-newline files after rustfmt; the EOF fixer is excluded for them so the hooks settle.\n- Clippy `dead_code` warnings under `--all-targets` in `charts/{line,radar,xy}.rs` are allowed with a TODO (pre-existing).\n"
     },
     {
       "repo": {
