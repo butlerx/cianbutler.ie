@@ -5,34 +5,63 @@ hugo                   = "latest"
 node                   = "lts"
 "npm:cspell"           = "latest"
 "npm:markdownlint-cli" = "latest"
-taplo                  = "latest"
+prek                   = "latest"
+shellcheck             = "latest"
+tombi                  = "1.2.4"   # matches tombi-pre-commit rev in prek.toml
+zizmor                 = "latest"
 
 [settings]
 experimental = true
 lockfile     = true
 
 [hooks]
-enter = 'npm install'
+enter = "npm install"
 
 [tasks.build]
 description = "Build Site"
-sources = ["hugo.toml", "assets/**/*", "content/**/*", "data/**/*", "layouts/**/*"]
-outputs = ['public/**/*']
-quiet = true
-alias = "b"
-run = """
+sources     = [
+  "hugo.toml",
+  "assets/**/*",
+  "content/**/*",
+  "data/**/*",
+  "layouts/**/*"
+]
+outputs     = ["public/**/*"]
+quiet       = true
+alias       = "b"
+run         = """
 echo "🍳 Generating site"
 hugo --gc --minify -d public
 """
 
 [tasks.check]
 description = "Run all checks"
-depends     = ["format:check", "lint", "spell"]
+depends     = ["format:check", "lint", "spell", "test", "check:actions"]
+
+[tasks.test]
+description = "Run Go tests"
+run         = "go test ./..."
+
+[tasks.hooks]
+description = "Install the prek git hooks"
+run         = "prek install --install-hooks --hook-type pre-commit --hook-type commit-msg"
+
+[tasks."lint:fix"]
+description = "Fix lint issues"
+run         = [
+  'npx stylelint --fix "assets/css/**/*.css"',
+  "markdownlint --fix content",
+  "golangci-lint run --fix --timeout 5m github.go",
+]
+
+[tasks."check:actions"]
+description = "Lint GitHub Actions workflows"
+run         = "zizmor --no-progress .github"
 
 [tasks.clean]
 description = "Clean built site"
-quiet = true
-run = """
+quiet       = true
+run         = """
 echo "🧹 Cleaning old build"
 rm -rf public resources .hugo_build.lock
 """
@@ -40,16 +69,16 @@ rm -rf public resources .hugo_build.lock
 [tasks.format]
 description = "Format files"
 depends     = ["format:go", "format:toml"]
-run         = 'npx prettier --write .'
+run         = "npx prettier --write ."
 
 [tasks."format:check"]
 description = "Check formatting"
 depends     = ["format:go:check", "format:toml:check"]
-run         = 'npx prettier --check .'
+run         = "npx prettier --check ."
 
 [tasks."format:go"]
 description = "Format Go files"
-run         = 'gofmt -w .'
+run         = "gofmt -w ."
 
 [tasks."format:go:check"]
 description = "Check Go formatting"
@@ -57,17 +86,17 @@ run         = 'test -z "$(gofmt -l .)"'
 
 [tasks."format:toml"]
 description = "Format TOML files"
-run         = 'taplo format'
+run         = "tombi format"
 
 [tasks."format:toml:check"]
 description = "Check TOML formatting"
-run         = 'taplo format --check'
+run         = "tombi format --check"
 
 [tasks."github-data"]
 description = "Fetch GitHub data for site"
 sources     = ["github.go"]
 outputs     = ["data/github.json"]
-run         = 'go run github.go -user butlerx -output data/github.json'
+run         = "go run github.go -user butlerx -output data/github.json"
 
 [tasks.lint]
 description = "Run all linters"
@@ -75,8 +104,8 @@ depends     = ["lint:css", "lint:go", "lint:markdown"]
 
 [tasks."lint:css"]
 description = "Run CSS linter"
-quiet = true
-run = """
+quiet       = true
+run         = """
 echo "🍜 Testing CSS"
 npx stylelint "assets/css/**/*.css"
 """
@@ -87,28 +116,28 @@ run         = "golangci-lint run --timeout 5m github.go"
 
 [tasks."lint:markdown"]
 description = "Run markdown linter"
-quiet = true
-run = """
+quiet       = true
+run         = """
 echo "🍜 Testing Markdown"
 markdownlint "content"
 """
 
 [tasks.serve]
 description = "Run development server in debug mode"
-run         = 'hugo server -D -w'
+run         = "hugo server -D -w"
 
 [tasks.spell]
 description = "Check spelling"
-quiet = true
-run = """
+quiet       = true
+run         = """
 echo "🔤 Checking Spelling"
 cspell "content/**/*.md"
 """
 
 [tasks."optimize-images"]
 description = "Convert JPG/PNG images to WebP"
-quiet = true
-run = '''
+quiet       = true
+run         = '''
 echo "🖼️ Converting images to WebP"
 find content assets -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) | while read img; do
   webp="${img%.*}.webp"
