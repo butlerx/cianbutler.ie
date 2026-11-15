@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5453,
-      "forks": 770,
+      "stars": 5486,
+      "forks": 772,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -20,8 +20,8 @@
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
-      "forks": 1486,
+      "stars": 14026,
+      "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -36,16 +36,16 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
-      "forks": 1123,
+      "stars": 10163,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4380,
-      "forks": 882,
+      "stars": 4386,
+      "forks": 903,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,95 +54,95 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 95266,
-      "forks": 10486,
+      "stars": 96122,
+      "forks": 10767,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37232,
-      "forks": 3047,
+      "stars": 37420,
+      "forks": 3074,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "ale",
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
-      "stars": 14019,
-      "forks": 1486,
+      "stars": 14026,
+      "forks": 1488,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12407,
-      "forks": 515,
+      "stars": 12675,
+      "forks": 553,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10155,
-      "forks": 1123,
+      "stars": 10163,
+      "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5453,
-      "forks": 770,
+      "stars": 5486,
+      "forks": 772,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4562,
-      "forks": 1525
+      "stars": 4555,
+      "forks": 1517
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4380,
-      "forks": 882,
+      "stars": 4386,
+      "forks": 903,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2520,
-      "forks": 421,
+      "stars": 2532,
+      "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
     {
       "repo": "helm-charts",
       "user": "grafana",
       "description": "",
-      "stars": 2010,
-      "forks": 2470,
+      "stars": 2013,
+      "forks": 2486,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
       "repo": "grafanalib",
       "user": "weaveworks",
       "description": "Python library for building Grafana dashboards",
-      "stars": 1978,
-      "forks": 322,
+      "stars": 1980,
+      "forks": 320,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "hacktoberfest-checker",
       "user": "jenkoian",
       "description": "🎃 Check how you're doing in hacktoberfest",
-      "stars": 754,
-      "forks": 357,
+      "stars": 755,
+      "forks": 358,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -157,24 +157,24 @@
       "repo": "MastodonToTwitter",
       "user": "AmauryCarrade",
       "description": "Mastodon \u003c-\u003e Twitter cross-poster.",
-      "stars": 249,
-      "forks": 36,
+      "stars": 248,
+      "forks": 35,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "scripts",
       "user": "weechat",
       "description": "Official scripts for WeeChat.",
-      "stars": 241,
-      "forks": 242,
+      "stars": 242,
+      "forks": 243,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
       "repo": "hawkeye",
       "user": "fast",
       "description": "Simple license header checker and formatter, in multiple distribution forms.",
-      "stars": 187,
-      "forks": 22,
+      "stars": 188,
+      "forks": 23,
       "language": { "name": "Rust", "color": "#dea584" }
     },
     {
@@ -182,7 +182,7 @@
       "user": "superalsrk",
       "description": "Hexo tag for embeded pdf",
       "stars": 160,
-      "forks": 15,
+      "forks": 14,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -220,116 +220,135 @@
   ],
   "commits": [
     {
-      "repo": "butlerx/wetty",
-      "sha": "20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
-      "message": "ci(deps): bump the codeql group with 3 updates (#697)",
-      "url": "https://github.com/butlerx/wetty/commit/20acdcd4fc6a21916644e4dcfd9d2ecc862a4e53",
-      "date": "2026-10-05T10:06:08Z"
+      "repo": "butlerx/asciify",
+      "sha": "b8c3d34a833f5e65feb93e864c8700aabb92a26c",
+      "message": "style: apply prek formatter output to goreleaser and prek config",
+      "url": "https://github.com/butlerx/asciify/commit/b8c3d34a833f5e65feb93e864c8700aabb92a26c",
+      "date": "2026-11-15T08:41:26Z"
+    },
+    {
+      "repo": "butlerx/asciify",
+      "sha": "d99034aa600383a98081638a18292a4d043d5fa7",
+      "message": "build: pin tombi to the prek hook version",
+      "url": "https://github.com/butlerx/asciify/commit/d99034aa600383a98081638a18292a4d043d5fa7",
+      "date": "2026-11-15T08:41:26Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "53356872e6b9f77766bca08c65bccd40394f1e63",
+      "message": "build(deps): upgrade crates to latest",
+      "url": "https://github.com/butlerx/jetlag/commit/53356872e6b9f77766bca08c65bccd40394f1e63",
+      "date": "2026-11-15T08:16:58Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "c2c3ee47b02c8b6c28e7f4abdd9c0438cbbe28c5",
+      "message": "ci: manage tooling, tasks and CI with mise; add prek hooks (#8)",
+      "url": "https://github.com/butlerx/jetlag/commit/c2c3ee47b02c8b6c28e7f4abdd9c0438cbbe28c5",
+      "date": "2026-11-15T08:21:09Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "ecca18425bf91f4adf08763b79a24ecffe1426f8",
+      "message": "ci: run all CI and common tasks through mise and add prek hooks",
+      "url": "https://github.com/butlerx/jetlag/commit/ecca18425bf91f4adf08763b79a24ecffe1426f8",
+      "date": "2026-11-15T07:51:02Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "f22c731d37ef6c832e3f7950f8e710d8a88d559f",
+      "message": "ci: run all CI and common tasks through mise and add prek hooks",
+      "url": "https://github.com/butlerx/jetlag/commit/f22c731d37ef6c832e3f7950f8e710d8a88d559f",
+      "date": "2026-11-15T07:51:02Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "2f8c1f09d94dae080a1ac343c5e853ff0d512400",
+      "message": "Align mise setup with wrk_graphs",
+      "url": "https://github.com/butlerx/jetlag/commit/2f8c1f09d94dae080a1ac343c5e853ff0d512400",
+      "date": "2026-11-15T07:40:58Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "a3b238842d1107aa0ca498f96096cc6f3bf2de82",
+      "message": "Use official metric distances and stop serving stale builds (#7)",
+      "url": "https://github.com/butlerx/jetlag/commit/a3b238842d1107aa0ca498f96096cc6f3bf2de82",
+      "date": "2026-11-15T07:36:07Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "3e804f60594efc07e6a6381f4ba9dc918353236e",
+      "message": "Add metric distances with a miles/kilometres toggle (#6)",
+      "url": "https://github.com/butlerx/jetlag/commit/3e804f60594efc07e6a6381f4ba9dc918353236e",
+      "date": "2026-11-12T13:05:33Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "614e5d9b3c325ff660a36a64d29df32f97da2c79",
+      "message": "Bump jdx/mise-action from 5.2.4 to 5.2.7 (#26)",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/614e5d9b3c325ff660a36a64d29df32f97da2c79",
+      "date": "2026-11-09T14:18:50Z"
     },
     {
       "repo": "butlerx/pets-configurator",
-      "sha": "bf2dc856dea5024b44db03e9bffea25d2bd498c5",
-      "message": "build(deps): bump thiserror from 2.0.20 to 2.0.21 (#46)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/bf2dc856dea5024b44db03e9bffea25d2bd498c5",
-      "date": "2026-10-05T09:48:13Z"
+      "sha": "7ffcf250eb75ec5d88731ae95af797e47f87daf2",
+      "message": "build(deps): bump log from 0.4.34 to 0.4.35 (#58)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/7ffcf250eb75ec5d88731ae95af797e47f87daf2",
+      "date": "2026-11-09T09:07:46Z"
     },
     {
       "repo": "butlerx/pets-configurator",
-      "sha": "5e25d29be61e64251f18158f3922bb902fa7daaf",
-      "message": "build(deps): bump dtolnay/rust-toolchain from 02cb101ec7c40f2c49e1d9714d64511d8e1b74de to 7e38f4b43b4db5c8dd498af069a4f6196df1d067 (#47)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/5e25d29be61e64251f18158f3922bb902fa7daaf",
-      "date": "2026-10-05T09:48:04Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "afa0f3a79a1d67414db8413c88abdad30ef3bca7",
-      "message": "build(deps): bump rust-lang/crates-io-auth-action from 4920f0933d6c80323414a03df1731d6678d52a1b to 9c067fc5d5c254b33978fed918cb50c032549d0e (#45)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/afa0f3a79a1d67414db8413c88abdad30ef3bca7",
-      "date": "2026-10-05T09:47:52Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
-      "message": "build(deps): bump rust-lang/crates-io-auth-action (#7)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/fd7606f9e2544b70ef5b9fdf6a6d657392e15ef4",
-      "date": "2026-09-29T19:57:26Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "4a0561258fde0dd683743dddb84154abdc5cffff",
-      "message": "fix: send counters as increments and arbitrate replaced senders",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/4a0561258fde0dd683743dddb84154abdc5cffff",
-      "date": "2026-09-29T20:31:36Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "37750d4ea360ee8053801070061186427a8db6d9",
-      "message": "chore(main): release 0.5.1 (#9)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/37750d4ea360ee8053801070061186427a8db6d9",
-      "date": "2026-09-29T20:44:13Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "017a6c3e09296ad48ff8922b87b4bfb435fcac29",
-      "message": "fix: separate recorder counters per process and stop sockets promptly",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/017a6c3e09296ad48ff8922b87b4bfb435fcac29",
-      "date": "2026-09-29T19:50:27Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "9cfecb5a8fa9d6cc1771174ae55d3183ff2108e3",
-      "message": "feat!: version the wire format and make socket addresses explicit",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/9cfecb5a8fa9d6cc1771174ae55d3183ff2108e3",
-      "date": "2026-09-29T19:18:28Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "fdb5dc2b57ec47421cca297f2e25abd23db99a63",
-      "message": "feat!: harden IPC framing and extend collector and recorder APIs",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/fdb5dc2b57ec47421cca297f2e25abd23db99a63",
-      "date": "2026-09-29T18:55:36Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "3b99f1a41798adb0063ca15205872ff6a925ce87",
-      "message": "chore(main): release 0.5.0 (#8)",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/3b99f1a41798adb0063ca15205872ff6a925ce87",
-      "date": "2026-09-29T19:59:23Z"
-    },
-    {
-      "repo": "butlerx/metrics_ipc_collector",
-      "sha": "686f84b07c9ad5f880a8e3823614a28931e6b468",
-      "message": "feat: reconnect, sender labels, handle caching and internal metrics",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/commit/686f84b07c9ad5f880a8e3823614a28931e6b468",
-      "date": "2026-09-29T19:35:54Z"
+      "sha": "3f1683b8c192c709e00a7fd66463a1838c587c89",
+      "message": "build(deps): bump rust-lang/crates-io-auth-action from d6b091a10d7f9b30e4c05478289e94fb309882c5 to dc10531605597d48d51c6d1005a2b3861698940b (#57)",
+      "url": "https://github.com/butlerx/pets-configurator/commit/3f1683b8c192c709e00a7fd66463a1838c587c89",
+      "date": "2026-11-09T09:07:59Z"
     }
   ],
   "contributions": [
     {
+      "repo": { "url": "https://github.com/butlerx/wrk-graphs", "name": "wrk-graphs", "owner": "butlerx", "stars": 0 },
+      "title": "ci: standardise tooling and CI",
+      "url": "https://github.com/butlerx/wrk-graphs/pull/3",
+      "state": "OPEN",
+      "bodyHTML": "## Summary\n\nBrings the tooling in line with the shared setup. This is a Yew site deployed to GitHub Pages, so no release-please and no release binaries. The existing Pages deploy workflow is kept.\n\n- `.mise.toml`: add prek and shellcheck (actionlint), pin tombi to 1.2.5 so `mise run format` and prek agree, and add a `hooks` task. Format tasks use `find` so yew-fmt covers nested `src` files.\n- `prek.toml`: converted from `.pre-commit-config.yaml` (deleted). Shared hook set and revs. The local yew-fmt hook is kept, and rustfmt and clippy move to doublify.\n- `.github/workflows/test.yml`: new `pre-commit` job (mise-action and prek-action). The test job is unchanged.\n- `.github/workflows/deploy.yml`: only the repository name in the build step is quoted (actionlint SC2086). Otherwise unchanged. Already SHA-pinned with least-privilege permissions.\n- `.editorconfig`, `tombi.toml`: shared versions.\n- `.github/dependabot.yml`: new, cargo and github-actions, weekly, 7-day cooldown.\n- `Cargo.toml`: shared clippy lint table (pedantic, `unsafe_code` denied). The existing `unwrap_used` and `expect_used` denies are kept.\n- Source: `assert!(x.is_empty())` on collections becomes `assert_eq!(x.len(), 0)`, plus a few small clippy fixes, all mechanical.\n\n## Manual steps\n\nNone.\n\n## Verification\n\n- `prek run --all-files` clean on two consecutive runs.\n- `cargo clippy --all-targets --all-features -- -D warnings` clean.\n- `cargo test --all-features`: 124 passed.\n- `mise run build wrk-graphs` (the deploy's production build) succeeds.\n"
+    },
+    {
       "repo": {
-        "url": "https://github.com/emmett-framework/granian",
-        "name": "granian",
-        "owner": "emmett-framework",
-        "stars": 5682
+        "url": "https://github.com/butlerx/SynologyCloudflareDDNS",
+        "name": "SynologyCloudflareDDNS",
+        "owner": "butlerx",
+        "stars": 0
       },
-      "title": "Fix metrics collection inaccuracies and add metrics tests",
-      "url": "https://github.com/emmett-framework/granian/pull/929",
+      "title": "fix: only update the requested hostname and make logging work",
+      "url": "https://github.com/butlerx/SynologyCloudflareDDNS/pull/3",
       "state": "OPEN",
-      "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
+      "bodyHTML": "- Logging calls passed fields as keyword arguments, which stdlib logging\n  rejects with TypeError, so every log line crashed the run. Pass them via\n  `extra=` and derive the reserved-field set from a bare LogRecord.\n- `--log-format json` passed the formatter class instead of an instance.\n- The record lookup filtered by type only, so every A/AAAA record in the\n  zone was rewritten to the new address. Filter by hostname too.\n- Updates forced `proxied: true`; keep the record's proxied and ttl.\n- The hostname was overwritten with the zone name, so a missing record\n  was created at the apex. A missing record also returned 2 before the\n  create path could run. Create it for the requested hostname.\n- Zone detection assumed the zone is the hostname minus its first label.\n  Try each suffix against Cloudflare, most specific first.\n- Failed adds/updates were logged as successful and exited 0.\n- Quote-escaping in the key=value formatter was a no-op.\n\nStacked on #2 (needs its test and lint setup). GitHub retargets this to `master` when #2 merges.\n\n## Tests\nNew: `tests/test_update_records.py` drives `update_records` against an in-memory fake of the Cloudflare client. `tests/test_logger.py` covers both log formats. 13 tests pass on Python 3.8 and 3.13. prek, ruff and ty are clean.\n\nNot tested against the live Cloudflare API."
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
-      "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
-      "url": "https://github.com/butlerx/wetty/pull/636",
+      "repo": {
+        "url": "https://github.com/butlerx/presentation",
+        "name": "presentation",
+        "owner": "butlerx",
+        "stars": 0
+      },
+      "title": "ci: standardise tooling with prek, tombi, zizmor and shared lint configs",
+      "url": "https://github.com/butlerx/presentation/pull/47",
       "state": "OPEN",
-      "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+      "bodyHTML": "## What changed\n\n- `.mise.toml` (new): `node` lts, `pnpm`, `prek`, `shellcheck`, `tombi` (pinned `1.2.4` to match the tombi-pre-commit rev in `prek.toml`), `zizmor`. Tasks: `build`, `test` (smoke build), `format`, `format:check`, `lint` (zizmor), `lint:fix`, `check`, `hooks`, `clean`.\n- `prek.toml` (new): glypher base hooks plus a local `prettier --check` via `pnpm exec`.\n- `.editorconfig`, `.yamlfmt.yaml`, `tombi.toml`, `.prettierrc.toml`: canonical. `.prettierignore` ignores `_site`, `.mise`, `pnpm-lock.yaml` and `node_modules`.\n- `.github/workflows/validate.yml` renamed to `ci.yml`: `pre-commit` (prek-action) and `check` (`mise run check`) jobs. Triggers unchanged (`master`), SHA-pinned, `persist-credentials: false`.\n- `.github/dependabot.yml`: merged. Added weekly cooldown and a 10 PR limit to both entries; existing groups kept.\n- `.github/zizmor.yml` (new): scopes `unpinned-uses` and `artipacked` to `static.yml` only.\n- `mise.lock` added (tracked, as in the other repos).\n- `.github/workflows/static.yml` (the GitHub Pages deploy) is untouched.\n\n## Decisions\n\n- **Canonical prettier config applied, which reflows 19 files.** The repo previously had no prettier config (prettier defaults: printWidth 80, double quotes). The canonical config changes slide markdown wrapping, the CSS/HTML/JS under `content/_includes/`, and two SVGs. This is in its own `style:` commit (`0a2619b`) so it can be dropped if you do not want the reflow. Please check the slides render as before. The build passes.\n- **No release-please, no publish job.** This is a site.\n- **No new Pages workflow.** `static.yml` already deploys to GitHub Pages on push to `master`.\n- **zizmor is scoped to `static.yml`** rather than editing that deploy workflow. The findings are tag-pinned actions and `persist-credentials` in that file. TODO: pin it in a follow-up.\n\n## Manual steps\n\n- Repo settings: the GitHub Pages source must remain \"GitHub Actions\" (unchanged). None otherwise.\n\n## Pre-existing failures\n\n- None left after the style commit. `prek run --all-files`, `mise run check` and `pnpm build` pass.\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5453 },
-      "title": "fix(security)!: pin browser origins and bound HTTP metrics",
-      "url": "https://github.com/butlerx/wetty/pull/698",
-      "state": "MERGED",
-      "bodyHTML": "## Summary\n\nBrowser terminal connections now require explicitly trusted origins, and unauthenticated requests cannot create unlimited HTTP metric series. These fixes ship together as a breaking security release.\n\nSocket.IO no longer derives trusted origins from request Host or forwarded headers. Same-origin polling without an Origin header requires both browser Fetch Metadata and a Host pinned to the configured allowlist. The existing missing-Origin opt-in remains available, with an explicit warning that it bypasses that protection.\n\nHTTP counters and histograms use five fixed route families, seven common methods plus `OTHER`, and grouped status codes. Usernames, asset names, unknown paths and query strings are never retained as labels. Metrics scrapes are excluded.\n\n## Migration\n\nEvery deployment must configure a nonempty HTTP(S) origin allowlist, including localhost:\n\n```sh\nwetty --allowed-origin http://localhost:3000\n# For a reverse proxy, use the public origin instead:\nwetty --allowed-origin https://terminal.example.com\n```\n\n`ALLOWEDORIGINS` and `server.allowedOrigins` provide the same configuration. Do not include the base path. Sample configs, Docker examples, CLI help and deployment docs are updated. Invalid or missing configuration fails before listening, with an actionable error.\n\n## Verification\n\n- All 73 tests pass, including regression coverage for both Socket.IO transports, missing-Origin requests, malformed origins, CLI errors and all four HTTP metrics.\n- TypeScript, ESLint, production build and active LSP checks pass.\n- Production-build probes accept a configured origin and reject attacker-controlled Host/Origin and missing-Origin variants. The SSH counter retains one series across 100 distinct usernames.\n\nBREAKING CHANGE: deployments must explicitly configure at least one trusted browser origin before starting WeTTY. Localhost, listen addresses and request-derived origins are no longer implicitly trusted.\n\n---\n\n[![Compound Engineering](https://img.shields.io/badge/Built_with-Compound_Engineering-6366f1)](https://github.com/EveryInc/compound-engineering-plugin)\n"
+      "repo": { "url": "https://github.com/butlerx/recipes", "name": "recipes", "owner": "butlerx", "stars": 1 },
+      "title": "ci: standardise tooling with prek, tombi, zizmor and shared lint configs",
+      "url": "https://github.com/butlerx/recipes/pull/2",
+      "state": "OPEN",
+      "bodyHTML": "## What changed\n\n- `.mise.toml`: added `shellcheck`, `tombi` (pinned `1.2.4` to match the tombi-pre-commit rev in `prek.toml`), `zizmor`. Added `test` (smoke build), `hooks`, `check:actions`, `format:toml`, `format:toml:check`. `check` runs `test` and `check:actions`. Existing tasks kept.\n- `prek.toml` (replaces `.pre-commit-config.yml`, which is deleted): glypher base hooks, plus the former YAML hooks (JoC0de prettier, markdownlint-cli2 on `content/`, cspell on `content/`) SHA-pinned at the same versions.\n- `.editorconfig`, `.yamlfmt.yaml`, `tombi.toml`: canonical.\n- `.prettierrc.toml`: canonical with `printWidth` kept at 120 (see below).\n- `.prettierignore`: ignores `.mise` (generated mise lock sidecars that prettier cannot parse).\n- `.github/workflows/lint.yml` renamed to `ci.yml`: `pre-commit` (prek-action) and `check` (`mise run check`) jobs, SHA-pinned, `persist-credentials: false`.\n- `.github/dependabot.yml` (new): github-actions and gomod, weekly, 7-day cooldown.\n- `mise.lock` added (tracked, as in the other repos).\n- Separate `style:` commit: tombi formatting of `config.toml` and `wrangler.toml`.\n\n## Decisions\n\n- **printWidth 120, not canonical 100.** At 100, prettier would reflow existing content. 120 also matches `.markdownlint.jsonc` MD013.\n- **No release-please, no publish job.** This is a site.\n- **No new deploy workflow.** The README says deploy is Cloudflare Pages (`wrangler.toml`, `pages_build_output_dir`), not GitHub Pages. Cloudflare's own deploy is unchanged.\n- **Prettier hook kept on the JoC0de repo hook.** It is the repo's existing hook, so it is not duplicated as a local hook.\n\n## Manual steps\n\n- None for the repo itself. Cloudflare Pages keeps deploying from main.\n\n## Pre-existing failures\n\n- None found by `prek run --all-files` or `mise run check` after the `style:` commit.\n"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/jetlag", "name": "jetlag", "owner": "butlerx", "stars": 19 },
+      "title": "ci: standardise tooling",
+      "url": "https://github.com/butlerx/jetlag/pull/11",
+      "state": "OPEN",
+      "bodyHTML": "## Summary\n\nBrings the tooling in line with the shared setup. This is a Yew site deployed to GitHub Pages, so no release-please and no release binaries. The existing Pages deploy workflow is kept.\n\n- `.mise.toml`: tombi pinned to 1.2.5 so `mise run format` and prek agree. Lint and format tasks updated for the renamed hook ids.\n- `prek.toml`: converted from `.pre-commit-config.yaml` (deleted). The shared hook set and revs, the repo's `update` settings, and the local yew-fmt hook are kept. rustfmt and clippy move to doublify.\n- `.editorconfig`, `.yamlfmt.yaml`: shared versions.\n- `.github/dependabot.yml`: new, cargo and github-actions, weekly, 7-day cooldown.\n- `Cargo.toml`: shared clippy lint table (pedantic, `unsafe_code` denied). The only finding was `build.rs`, fixed mechanically.\n\nExisting `ci.yml` and `deploy.yml` are already SHA-pinned with `persist-credentials: false` and least-privilege permissions, so they are unchanged.\n\n## Manual steps\n\nNone. GitHub Pages deploy is unchanged.\n\n## Notes\n\n- `ci:build` (release build) passes locally."
     },
     {
       "repo": {
@@ -338,10 +357,10 @@
         "owner": "butlerx",
         "stars": 0
       },
-      "title": "Add Support for using a pipe rather then a socket",
-      "url": "https://github.com/butlerx/metrics_ipc_collector/pull/1",
-      "state": "MERGED",
-      "bodyHTML": "We need to add support for using a pipe to send metrics rather then a socket between processes.\n\nI couldnt find a nice way to reuse the other interface as the model for communication is to different\n"
+      "title": "ci: standardise tooling configs",
+      "url": "https://github.com/butlerx/metrics_ipc_collector/pull/16",
+      "state": "OPEN",
+      "bodyHTML": "Standardises tooling with the glypher reference setup. This is a crates.io library, so the publish flow is unchanged.\n\n## Changes\n\n- `build:` add `[lints.rust] unsafe_code = \"deny\"`. The existing clippy pedantic table stays. tombi also reflowed the `tokio` dependency line in `Cargo.toml` onto multiple lines (formatting only).\n- `ci:` `.pre-commit-config.yaml` is converted to `prek.toml`. The hooks and SHA revs are the glypher ones. Repo-specific hooks are kept: `check-toml`, and `yamllint --strict`. The local rustfmt and clippy hooks are replaced with doublify/pre-commit-rust. The pre-commit.ci `update:` block (cooldown and freeze) has no prek equivalent, so it is dropped. Dependabot's 7-day cooldown covers the same need.\n- `ci:` `test.yml` is renamed to `ci.yml` and restructured. It has a `pre-commit` job that runs prek, and a `test` job that runs `cargo test --all-features` after it. The fmt and clippy steps moved into prek. The `RUSTFLAGS`/`RUST_BACKTRACE` env is kept.\n- `ci:` `dependabot.yml` is updated with a metrics group and the glypher cooldown and PR limit. `release.yml` pins rust-toolchain and crates-io-auth to the glypher SHAs. The crates-io-auth SHA was different from the other repos for the same `v1.0.5` tag.\n- `chore:` add `.mise.toml` (rust, prek, tombi, zizmor, cargo-binstall, cargo-audit, cargo-nextest; build, test, lint, lint:fix, format, format:check, audit, check, check:actions, hooks), the generated `mise.lock`, `.editorconfig`, and the canonical `.yamlfmt.yaml` and `tombi.toml`. The yamllint line-length setting in `.yamllint.yaml` is kept.\n\n## Validation\n\n- `prek run --all-files` passes. actionlint needs `shellcheck` on PATH, so it was run with `mise x shellcheck@0.11.0`.\n- `cargo test --all-features` passes (22 + 12 + 5 tests).\n- `cargo clippy --all-targets --all-features -- -D warnings` passes with the new lint.\n\n## Manual steps\n\n- Confirm the crates.io trusted publisher for `metrics_ipc_collector` still points at this repo and `release.yml`.\n- Confirm \"Allow GitHub Actions to create and approve pull requests\" is enabled, since release-please needs it.\n- Confirm the pre-commit.ci app is not still enabled on the repo, since `.pre-commit-config.yaml` is gone.\n\n## Pre-existing failures\n\nNone.\n"
     },
     {
       "repo": {
@@ -350,10 +369,41 @@
         "owner": "butlerx",
         "stars": 1
       },
-      "title": "fix: detect homebrew casks as installed",
-      "url": "https://github.com/butlerx/pets-configurator/pull/36",
-      "state": "MERGED",
-      "bodyHTML": "`Package::is_installed` only ran `brew list --formula -1 \u003cname\u003e`, which never matches a cask. A cask-only package is therefore reported missing on every run and queued for reinstall, so `--check` can never reach \"in sync\".\n\nInstallation and validation were already fine — `brew install \u003cname\u003e` resolves casks, and `brew info -q \u003cname\u003e` exits 0 for them — so only the installed check needed changing. It now falls back to `brew list --cask -1 \u003cname\u003e` when the formula lookup misses.\n\nFound with a dotfiles repo declaring `package=firefox` and `package=ghostty`, both installed as casks: `pets --check sync` reported `PACKAGE_INSTALL: brew install firefox ghostty` on every run. With this patch the same repo reports `configuration is in sync`.\n\nNo new test: the existing package tests assert against whatever the machine has installed (`wget` present, `lynx` absent on macOS), so a positive cask assertion would be flaky on CI runners that have no casks. `cargo test` passes (140), fmt and clippy clean."
+      "title": "ci: standardise tooling configs",
+      "url": "https://github.com/butlerx/pets-configurator/pull/59",
+      "state": "OPEN",
+      "bodyHTML": "Standardises tooling with the glypher reference setup. This is a crates.io binary crate, so the publish flow is unchanged.\n\nNote: the local `main` checkout has an uncommitted `[lints.clippy]` block in `Cargo.toml`. This PR is based on the committed `main`, and it adds the same lint block, so that local edit will conflict on the next pull. Drop the local edit before pulling.\n\n## Changes\n\n- `build:` add `[lints.clippy]` (all and pedantic, warn) and `[lints.rust] unsafe_code = \"deny\"`.\n- `style:` rewrite 8 test assertions from `assert!(x.is_empty())` to `assert_eq!(x.len(), 0)` (or `assert_ne!`). The new `assert_is_empty` lint fires on them and would fail `-D warnings`. This commit is test code only.\n- `ci:` `prek.toml` gets the conventional-commit commit-msg hook, which was missing. `ci.yml` and `release.yml` pin `Swatinem/rust-cache` and `rust-lang/crates-io-auth-action` to the glypher SHAs. `dependabot.yml` gets `open-pull-requests-limit`.\n- `chore:` add `.mise.toml` (rust, prek, tombi, zizmor, cargo-binstall, cargo-audit, cargo-nextest; build, build:release, test, lint, lint:fix, format, format:check, audit, check, check:actions, hooks), the generated `mise.lock`, `.editorconfig`, and the canonical `tombi.toml`, which drops the `**/uv.lock` exclude because there is no Python here.\n\nThe existing `prek.toml` hooks, the `.yamlfmt.yaml`, the CI pre-commit and build jobs, and the release-please and publish flow already matched and are unchanged.\n\n## Validation\n\n- `prek run --all-files` passes. actionlint needs `shellcheck` on PATH, so it was run with `mise x shellcheck@0.11.0`.\n- `cargo clippy --all-targets --all-features -- -D warnings` passes.\n- `cargo test --all-features` passes (145 tests).\n\n## Manual steps\n\n- Confirm the crates.io trusted publisher for `pets-configurator` still points at this repo and `release.yml`.\n- Confirm \"Allow GitHub Actions to create and approve pull requests\" is enabled, since release-please needs it.\n\n## Pre-existing failures\n\nNone.\n"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/fosdem-video-downloader",
+        "name": "fosdem-video-downloader",
+        "owner": "butlerx",
+        "stars": 1
+      },
+      "title": "ci: standardise tooling configs",
+      "url": "https://github.com/butlerx/fosdem-video-downloader/pull/7",
+      "state": "OPEN",
+      "bodyHTML": "Standardises tooling with the glypher reference setup. No behaviour change to the crate.\n\n## Changes\n\n- `build:` add `[lints.clippy]` (all and pedantic, warn) and `[lints.rust] unsafe_code = \"deny\"`. The code already passes clippy with `-D warnings`.\n- `ci:` the CI workflow gets a `pre-commit` job that runs `j178/prek-action`, and the `test` job now depends on it. The separate fmt and clippy steps moved into prek. Actions are pinned to the SHAs glypher uses. `dependabot.yml` is added for cargo and github-actions.\n- `ci:` the release workflow pins checkout, rust-toolchain and crates-io-auth to the glypher SHAs. The release-please flow is unchanged.\n- `chore:` add `.mise.toml` (rust, prek, tombi, zizmor, cargo-binstall, cargo-audit, cargo-nextest; tasks build, test, lint, lint:fix, format, format:check, audit, check, check:actions, hooks) and the generated `mise.lock`. Also add `.editorconfig` and `.yamlfmt.yaml`, and replace `tombi.toml` with the canonical version.\n\n`prek.toml` already matched the canonical hooks and was left alone.\n\n## Validation\n\n- `prek run --all-files` passes. actionlint needed `shellcheck` on PATH, so it was run with `mise x shellcheck@0.11.0`.\n- `cargo test --locked` passes.\n- `cargo clippy --all-targets --all-features -- -D warnings` passes with the new lints.\n\n## Manual steps\n\n- Confirm the crates.io trusted publisher for `fosdem-video-downloader` still points at this repo and the `release.yml` workflow. The publish job itself is unchanged.\n- Confirm the repo setting \"Allow GitHub Actions to create and approve pull requests\" is on, since release-please needs it.\n\n## Pre-existing failures\n\nNone.\n"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/hugo-recipes",
+        "name": "hugo-recipes",
+        "owner": "butlerx",
+        "stars": 3
+      },
+      "title": "ci: standardise tooling with prek, tombi, zizmor and shared lint configs",
+      "url": "https://github.com/butlerx/hugo-recipes/pull/1",
+      "state": "OPEN",
+      "bodyHTML": "## What changed\n\n- `.mise.toml`: added `hugo`, `prek`, `shellcheck`, `tombi` (pinned `1.2.4` to match the tombi-pre-commit rev in `prek.toml`), `zizmor`. Replaced `taplo` with `tombi`. Added `hooks`, `check:actions`. `check` now runs `check:actions`. Existing tasks kept.\n- `prek.toml` (new): base hooks at glypher SHAs plus local `prettier --check`.\n- `.editorconfig`, `.yamlfmt.yaml`, `tombi.toml`: canonical. `taplo.toml` removed.\n- `.prettierrc.toml`: canonical plus the existing go-template plugin and `layouts/**/*.html` override. `printWidth` kept at 120 (see below).\n- `.github/workflows/ci.yml`: `pre-commit` (prek-action) and `check` (`mise run check`) jobs, SHA-pinned, `persist-credentials: false`.\n- `.github/dependabot.yml`: github-actions, gomod, npm; weekly, 7-day cooldown.\n- `mise.lock` added (tracked, as in the other repos).\n- Separate `style:` commit: tombi formatting of `exampleSite/hugo.toml`.\n\n## Decisions\n\n- **printWidth 120, not canonical 100.** At 100, prettier would reflow existing content and templates. 120 also matches the repo's content width.\n- **No release-please, no publish job.** This is a Hugo theme, not a published package or a site.\n- **No GitHub Pages workflow.** The repo is a theme with no deploy target.\n- **No `build` or `test` task.** The `exampleSite` build needs a Hugo module setup (`exampleSite` has no `go.mod`, and `HUGO_MODULE_REPLACEMENTS` does not resolve from that directory). Rather than ship a failing task, `check` covers format, lint and workflow linting only. Worth adding a proper smoke build later.\n\n## Manual steps\n\n- None.\n\n## Pre-existing failures\n\n- None found by `prek run --all-files` or `mise run check` after the `style:` commit.\n"
+    },
+    {
+      "repo": { "url": "https://github.com/butlerx/glypher", "name": "glypher", "owner": "butlerx", "stars": 1 },
+      "title": "ci: standardise tooling configs",
+      "url": "https://github.com/butlerx/glypher/pull/20",
+      "state": "OPEN",
+      "bodyHTML": "Brings glypher in line with the canonical shared configs. glypher is the reference repo, so the change is small.\n\n## Changes\n\n- `build:` inherit workspace lints. `[workspace.lints]` now sets `clippy::all` and `clippy::pedantic` to warn and `unsafe_code` to deny. Every member crate (`glypher`, `glypher-cli`, `web`) opts in with `[lints] workspace = true`. The per-crate `#![warn(clippy::pedantic)]` attributes are removed because the workspace lint replaces them. No code changes were needed, and clippy passes with `-D warnings`.\n- `chore:` add `.editorconfig`, and replace `tombi.toml` with the canonical version (adds the TOML 1.0 pin comment).\n\nUnchanged, because they already match: `.mise.toml`, `prek.toml`, `.yamlfmt.yaml`, `.github/dependabot.yml`, the CI, pages and release workflows, and `release-please-config.json`.\n\n## Validation\n\n- `prek run --all-files` passes (tombi, yamlfmt, zizmor, actionlint, fmt, clippy).\n- `cargo test --workspace --all-features` passes.\n- `cargo check -p web --target wasm32-unknown-unknown --all-features` passes.\n\n## Manual steps\n\nNone.\n\n## Pre-existing failures\n\nNone. Cargo prints existing `unused field in workspace.package` and `homepage is redundant` manifest warnings. They predate this PR and are not errors.\n"
     }
   ]
 }
