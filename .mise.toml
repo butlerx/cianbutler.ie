@@ -9,6 +9,7 @@ prek                   = "latest"
 shellcheck             = "latest"
 tombi                  = "1.11.2"  # matches tombi-pre-commit rev in prek.toml
 zizmor                 = "latest"
+"npm:wrangler"         = "latest"
 
 [settings]
 experimental = true
@@ -144,3 +145,8 @@ find content assets -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" 
 done
 echo "⚠️  Remember to update any references from .jpg/.jpeg/.png to .webp"
 '''
+
+[tasks.preview]
+description = "Serve the built site with the Cloudflare Pages runtime"
+depends     = ["build"]
+run         = "wrangler pages dev public"
