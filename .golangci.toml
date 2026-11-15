@@ -1,5 +1,3 @@
-#:tombi lint.disabled = true  # tombi's golangci schema rejects exhaustive "map", which golangci v2 accepts
-
 version = "2"
 
 [linters]
@@ -29,13 +27,7 @@ block-size = 3
 force-err-cuddling = true
 
 [linters.settings.varnamelen]
-ignore-names = ["ok", "err", "i", "id", "iv"]
-
-[linters.settings.depguard.rules.main]
-allow = ["$gostd", "github.com/evervault/evervault-go", "github.com/hf/nitrite", "github.com/stretchr/testify/assert"]
-
-[linters.settings.wrapcheck]
-ignore-package-globs = ["github.com/evervault/*"]
+ignore-names = ["ok", "err", "i", "id"]
 
 [issues]
 fix = true
