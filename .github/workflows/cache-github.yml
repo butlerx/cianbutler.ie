@@ -12,6 +12,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Deploy key is a bypass actor on the default-branch ruleset
+          ssh-key: ${{ secrets.DATA_DEPLOY_KEY }}
       - uses: jdx/mise-action@v5.0.1
       - run: npm install
       - name: Install git-emoji
