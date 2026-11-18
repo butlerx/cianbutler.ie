@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    # Deploy-key pushes retrigger workflows; skip our own data commits
+    paths-ignore:
+      - data/github.json
   schedule:
     - cron: '0 4 * * *'
 jobs:
@@ -12,6 +15,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # zizmor: ignore[artipacked] v7.0.1
+        with:
+          # Deploy key is a bypass actor on the default-branch ruleset
+          ssh-key: ${{ secrets.DATA_DEPLOY_KEY }}
       - uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
       - run: npm install
       - name: Install git-emoji
