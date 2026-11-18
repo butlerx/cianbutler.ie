@@ -1,12 +1,12 @@
 title = "Experience"
 
 [[source]]
-position = "Senior Performance SRE"
-company = "Cloudsmith"
+position  = "Senior Performance SRE"
+company   = "Cloudsmith"
 startDate = "2025-02-26"
-website = "https://cloudsmith.com"
+website   = "https://cloudsmith.com"
 languages = ["Rust", "Typescript", "Python", "Terraform", "Clickhouse", "PostgreSQL"]
-summary = """
+summary   = """
 Senior Performance SRE on the Platform Edge team at Cloudsmith, a software supply chain security company providing
 universal package management. Focused on building and optimising the CDN infrastructure that underpins package
 distribution serving over 110 million requests per day and petabytes of data daily.
@@ -18,13 +18,13 @@ fast, reliable package distribution globally.
 """
 
 [[source]]
-position = "Senior SRE"
-company = "Evervault"
+position  = "Senior SRE"
+company   = "Evervault"
 startDate = "2022-12-05"
-endDate = "2025-01-28"
-website = "https://evervault.com"
+endDate   = "2025-01-28"
+website   = "https://evervault.com"
 languages = ["Rust", "Typescript", "Postgresql", "Go", "ElasticSearch", "Clickhouse", "Terraform"]
-summary = """
+summary   = """
 As the lead Site Reliability Engineer at a security-focused startup, I contribute to the design and implementation of
 critical infrastructure and services that enable secure payment processing and data protection.
 
@@ -44,11 +44,11 @@ tooling that enhance service reliability and team efficiency.
 """
 
 [[source]]
-position = "SRE"
-company = "Demonware"
+position  = "SRE"
+company   = "Demonware"
 startDate = "2019-05-16"
-endDate = "2022-11-28"
-website = "https://demonware.net"
+endDate   = "2022-11-28"
+website   = "https://demonware.net"
 languages = [
   "Docker",
   "Prometheus",
@@ -66,7 +66,7 @@ languages = [
   "Kafka",
   "Go",
 ]
-summary = """
+summary   = """
 Site Reliability Engineer at Demonware, supporting online gaming services for major AAA titles including Call of Duty.
 Progressed through multiple specialised teams, focusing on monitoring, data pipelines, and observability while
 handling massive scale requirements.
@@ -85,13 +85,13 @@ effective practices for learning from and documenting system failures.
 """
 
 [[source]]
-position = "SRE"
-company = "CoderDojo Foundation (Raspberry Pi Foundation)"
+position  = "SRE"
+company   = "CoderDojo Foundation (Raspberry Pi Foundation)"
 startDate = "2017-06-10"
-endDate = "2018-01-10"
-website = "https://coderdojo.com"
+endDate   = "2018-01-10"
+website   = "https://coderdojo.com"
 languages = ["AWS", "Docker", "Graphite", "Kubernetes", "Linux", "Node.js", "PostgreSQL", "Python"]
-summary = """
+summary   = """
 Site Reliability Engineer at Raspberry Pi Foundation, supporting the CoderDojo community platform that enables youth
 coding education worldwide. Led significant infrastructure modernisation efforts while contributing to educational
 technology initiatives.
@@ -110,13 +110,13 @@ educational content and projects with the global CoderDojo and Code Club communi
 """
 
 [[source]]
-position = "Programming Lab Tutor"
-company = "DCU"
-website = "http://dcu.ie"
+position  = "Programming Lab Tutor"
+company   = "DCU"
+website   = "http://dcu.ie"
 startDate = "2016-09-30"
-endDate = "2017-04-22"
+endDate   = "2017-04-22"
 languages = ["CSS", "HTML", "JavaScript", "Python"]
-summary = """
+summary   = """
 Computing Lab Tutor at Dublin City University, providing hands-on programming support to astrophysics students
 developing complex mathematical applications. Guided students through algorithmic problem-solving, programming
 concepts, and best practices in scientific computing. Developed effective techniques for explaining technical
@@ -125,13 +125,13 @@ implementation.
 """
 
 [[source]]
-position = "Technical Intern"
-company = "CoderDojo Foundation"
-website = "https://coderdojo.com"
+position  = "Technical Intern"
+company   = "CoderDojo Foundation"
+website   = "https://coderdojo.com"
 startDate = "2016-04-06"
-endDate = "2016-10-06"
+endDate   = "2016-10-06"
 languages = ["AWS", "Angular.js", "Docker", "Linux", "NGINX", "Node.js", "PostgreSQL"]
-summary = """
+summary   = """
 Software Engineering Intern at CoderDojo, contributing to the development of the Zen platform that supports a global
 community of volunteer coding mentors. As part of a small, dynamic team, worked across the full stack to enhance the
 platform that enables children's coding education worldwide.
@@ -142,11 +142,11 @@ tools like the forums system.
 """
 
 [[source]]
-position = "Webmaster"
-company = "Redbrick"
-website = "http://redbrick.dcu.ie"
+position  = "Webmaster"
+company   = "Redbrick"
+website   = "http://redbrick.dcu.ie"
 startDate = "2016-04-04"
-endDate = "2017-04-06"
+endDate   = "2017-04-06"
 languages = [
   "Apache",
   "BSD",
@@ -161,7 +161,7 @@ languages = [
   "Prometheus",
   "Python",
 ]
-summary = """
+summary   = """
 Served as Webmaster for Redbrick, Dublin City University's Computing Society, managing web infrastructure that
 provided computing services to the student community. As part of a three-person systems team, maintained and enhanced
 a diverse ecosystem of user-facing services.
