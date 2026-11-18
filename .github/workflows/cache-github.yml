@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    # Deploy-key pushes retrigger workflows; skip our own data commits
+    paths-ignore:
+      - data/github.json
   schedule:
     - cron: '0 4 * * *'
 jobs:
