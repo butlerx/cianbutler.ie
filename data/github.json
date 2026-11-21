@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10165,
+      "stars": 10164,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -55,15 +55,15 @@
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
       "stars": 96259,
-      "forks": 10809,
+      "forks": 10731,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37450,
-      "forks": 3178,
+      "stars": 37449,
+      "forks": 3179,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12697,
+      "stars": 12701,
       "forks": 562,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10165,
+      "stars": 10164,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -102,7 +102,7 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4555,
+      "stars": 4554,
       "forks": 1516
     },
     {
@@ -117,7 +117,7 @@
       "repo": "chromebrew",
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
-      "stars": 2533,
+      "stars": 2534,
       "forks": 422,
       "language": { "name": "Ruby", "color": "#701516" }
     },
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2011,
-      "forks": 2491,
+      "forks": 2489,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,6 +220,62 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/tower-telemetry",
+      "sha": "34109fb14cc6e669a95791bb1e50dff8ac7b9ffe",
+      "message": "chore(main): release 0.2.1 (#16)",
+      "url": "https://github.com/butlerx/tower-telemetry/commit/34109fb14cc6e669a95791bb1e50dff8ac7b9ffe",
+      "date": "2026-11-20T21:41:39Z"
+    },
+    {
+      "repo": "butlerx/tower-telemetry",
+      "sha": "da7d752f40dcffaf8b79bdaab4a0bb8b4f72a076",
+      "message": "fix: bound url.scheme and redact credentials in url.query (#15)",
+      "url": "https://github.com/butlerx/tower-telemetry/commit/da7d752f40dcffaf8b79bdaab4a0bb8b4f72a076",
+      "date": "2026-11-20T21:28:38Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "b5807dceb59cfd61034f4feb51d45af2eeafb4df",
+      "message": ":heavy_dollar_sign: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/b5807dceb59cfd61034f4feb51d45af2eeafb4df",
+      "date": "2026-11-19T12:19:03Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "8fc2b71ddeede4a423cca44ae99ae269bf3901da",
+      "message": "chore(deps): bump eslint from 10.13.0 to 10.14.0 in the eslint group",
+      "url": "https://github.com/butlerx/wetty/commit/8fc2b71ddeede4a423cca44ae99ae269bf3901da",
+      "date": "2026-11-20T01:53:15Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "df31cafeee3e6eed6f7d5c3f4f3ff1d74eea521c",
+      "message": "chore(deps): bump the typescript group with 2 updates (#741)",
+      "url": "https://github.com/butlerx/wetty/commit/df31cafeee3e6eed6f7d5c3f4f3ff1d74eea521c",
+      "date": "2026-11-20T10:42:24Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "892f19594d7cd6469424a96edf701c61c641b9c1",
+      "message": "chore(deps): bump globals from 17.13.0 to 17.14.0 (#745)",
+      "url": "https://github.com/butlerx/wetty/commit/892f19594d7cd6469424a96edf701c61c641b9c1",
+      "date": "2026-11-20T10:38:36Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "61f413b49f2751740b115848b7e41a559b22823a",
+      "message": "deps(deps): bump lettre from 0.11.22 to 0.11.23 (#43)",
+      "url": "https://github.com/butlerx/travel-mapper/commit/61f413b49f2751740b115848b7e41a559b22823a",
+      "date": "2026-11-18T15:24:15Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "73b796ebd3b49c1f0a53b314b1ed0e932c602638",
+      "message": "deps(deps): bump thiserror from 2.0.18 to 2.0.21 (#49)",
+      "url": "https://github.com/butlerx/travel-mapper/commit/73b796ebd3b49c1f0a53b314b1ed0e932c602638",
+      "date": "2026-11-18T15:22:29Z"
+    },
+    {
       "repo": "butlerx/travel-mapper",
       "sha": "eceec77998120956cfd43bc30a472dd641196302",
       "message": "deps(deps): bump prost from 0.14.4 to 0.14.5 (#48)",
@@ -246,62 +302,6 @@
       "message": ":heart: Rebuild data/github.json",
       "url": "https://github.com/butlerx/cianbutler.ie/commit/5298cf9ec9bcd7ea3836e1223cd92f568046f8c6",
       "date": "2026-11-18T15:04:55Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "ec078dea5c3129f9e84ac9862a003a67ca7ea4d1",
-      "message": "style: format Cargo.toml",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/ec078dea5c3129f9e84ac9862a003a67ca7ea4d1",
-      "date": "2026-11-18T10:01:56Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "18539208ffd83b8c80f69171a63360eb26fbcd9a",
-      "message": "feat: HTTP client spans and metrics, server.port (#10)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/18539208ffd83b8c80f69171a63360eb26fbcd9a",
-      "date": "2026-11-18T09:40:51Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "d2f02141cd4de12272ff44e3c93d87bb086123e3",
-      "message": ":pager: fix(ci): push github data via deploy key (#31)",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/d2f02141cd4de12272ff44e3c93d87bb086123e3",
-      "date": "2026-11-18T15:03:47Z"
-    },
-    {
-      "repo": "butlerx/travel-mapper",
-      "sha": "768fcecad444294660f5be5e2a14d4647c05bc86",
-      "message": "deps(deps): bump tokio from 1.50.0 to 1.54.1 (#51)",
-      "url": "https://github.com/butlerx/travel-mapper/commit/768fcecad444294660f5be5e2a14d4647c05bc86",
-      "date": "2026-11-18T15:22:13Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "66915e41c1e92921d4290ba8633a9f887e38fb57",
-      "message": "feat: OpenTelemetry messaging metrics and MessagingSpan::run (#11)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/66915e41c1e92921d4290ba8633a9f887e38fb57",
-      "date": "2026-11-18T09:42:45Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "fce2fd142e1500527d9acd748f2dee6e6504d723",
-      "message": "perf!: fewer allocations per request; leave span status unset on success (#14)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/fce2fd142e1500527d9acd748f2dee6e6504d723",
-      "date": "2026-11-18T10:03:36Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "1fecece3154fa0911beacbc0183a1cfb1f1ee890",
-      "message": "perf: inline small hot-path helpers and builder methods (#13)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/1fecece3154fa0911beacbc0183a1cfb1f1ee890",
-      "date": "2026-11-18T09:55:15Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "8177ba593ae67d67cf608dc1edcb1072fd9a1cd4",
-      "message": "feat!: OpenTelemetry metric names, labels and units by default (#7)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/8177ba593ae67d67cf608dc1edcb1072fd9a1cd4",
-      "date": "2026-11-17T07:54:56Z"
     }
   ],
   "contributions": [
@@ -323,6 +323,18 @@
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/tower-telemetry",
+        "name": "tower-telemetry",
+        "owner": "butlerx",
+        "stars": 0
+      },
+      "title": "fix: bound url.scheme and redact credentials in url.query",
+      "url": "https://github.com/butlerx/tower-telemetry/pull/15",
+      "state": "MERGED",
+      "bodyHTML": "## Problem\n\n- **Credentials in server span query strings.** `OtelTraceLayer` recorded the raw query as `url.query`, so a request with `?access_token=...` exported the credential with the span. The client layer already redacted signed-URL parameters in `url.full`, but the server side had no equivalent.\n- **Unbounded `url.scheme` metric series.** `url.scheme` came from `X-Forwarded-Proto`, or from the scheme of an absolute-form request URI, verbatim. The metric label kept any value, so each distinct value sent by an unauthenticated client created a new series.\n- **No way to extend the redacted names.** The built-in list is fixed, so an application whose own parameter names carry credentials couldn't have them redacted.\n\n## Change\n\n- `url.scheme` is `http`, `https` or `_OTHER` on server spans and metric labels, as `http.request.method` already is for methods. The bound lives in `request::scheme`, so spans and metrics agree.\n- `url.query` on the server span keeps parameter names and replaces credential values with `REDACTED`. The server span and the client's `url.full` share one built-in list: `AWSAccessKeyId`, `Signature`, `sig`, `X-Goog-Signature`, `X-Amz-Signature`, `X-Amz-Credential`, `X-Amz-Security-Token`, `access_token`, `refresh_token`, `id_token`, `token`, `api_key` and `client_secret`. Names match case-insensitively. A query with nothing to redact is borrowed, so the common case doesn't allocate.\n\n### Adding names to redact\n\nBoth hooks extend the built-in list and never replace it.\n\n- **Server:** `SpanDecorator::SENSITIVE_QUERY_KEYS`, an associated const that defaults to empty.\n\n  ```rust\n  impl SpanDecorator for ApiKeyDecorator {\n      const SENSITIVE_QUERY_KEYS: \u0026'static [\u0026'static str] = \u0026[\"x-api-key\"];\n  }\n  let layer = OtelTraceLayer::\u003cApiKeyDecorator\u003e::default();\n  ```\n\n- **Client:** `OtelClientTraceLayer::with_redacted_query_keys(keys: \u0026'static [\u0026'static str]) -\u003e RedactingClientTraceLayer`. `OtelClientTraceLayer` is unchanged, so `.layer(OtelClientTraceLayer)` still compiles. The new layer type is what carries the names.\n\n  ```rust\n  let layer = OtelClientTraceLayer::with_redacted_query_keys(\u0026[\"x-api-key\"]);\n  ```\n\nTests cover both hooks, the built-in list still applying with extras present, and case-insensitive matching.\n\n## Behaviour changes to be aware of\n\n- `url.scheme` values other than `http` and `https` now appear as `_OTHER`, on spans and metrics.\n- The client's `url.full` redacts more parameter names than before.\n- The only public additions are `SpanDecorator::SENSITIVE_QUERY_KEYS`, `OtelClientTraceLayer::with_redacted_query_keys` and the `RedactingClientTraceLayer` type. Version and CHANGELOG are untouched; release-please generates the CHANGELOG from commits.\n\n## Not included\n\n- No switch to stop recording the query entirely. Redaction removes credential values; an opt-out would be a further hook for one attribute.\n- Parameter names are matched as sent. A percent-encoded name such as `access%5Ftoken` isn't decoded before matching.\n"
     },
     {
       "repo": {
