@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5486,
+      "stars": 5487,
       "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -44,8 +44,8 @@
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4383,
-      "forks": 908,
+      "stars": 4384,
+      "forks": 909,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96329,
-      "forks": 10729,
+      "stars": 96384,
+      "forks": 10723,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37453,
-      "forks": 3181,
+      "stars": 37454,
+      "forks": 3184,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,8 +78,8 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12704,
-      "forks": 563,
+      "stars": 12708,
+      "forks": 568,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5486,
+      "stars": 5487,
       "forks": 769,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -102,15 +102,15 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4554,
+      "stars": 4553,
       "forks": 1515
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
-      "stars": 4383,
-      "forks": 908,
+      "stars": 4384,
+      "forks": 909,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -118,7 +118,7 @@
       "user": "chromebrew",
       "description": "Package manager for Chrome OS",
       "stars": 2534,
-      "forks": 422,
+      "forks": 421,
       "language": { "name": "Ruby", "color": "#701516" }
     },
     {
@@ -126,7 +126,7 @@
       "user": "grafana",
       "description": "",
       "stars": 2011,
-      "forks": 2490,
+      "forks": 2491,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -220,52 +220,66 @@
   ],
   "commits": [
     {
-      "repo": "butlerx/advent-of-code",
-      "sha": "68289cc169f6681314d0c06bedbb161f09e7888e",
-      "message": "bump depbot config",
-      "url": "https://github.com/butlerx/advent-of-code/commit/68289cc169f6681314d0c06bedbb161f09e7888e",
-      "date": "2026-11-21T12:21:59Z"
+      "repo": "butlerx/tower-telemetry",
+      "sha": "d3f42e7acee339e129d289f9f59d99475cf9f738",
+      "message": "chore(main): release 0.2.2 (#19)",
+      "url": "https://github.com/butlerx/tower-telemetry/commit/d3f42e7acee339e129d289f9f59d99475cf9f738",
+      "date": "2026-11-23T08:57:53Z"
     },
     {
-      "repo": "butlerx/advent-of-code",
-      "sha": "ec89be724c38d4d15e9d76e2f8454ee59e0951fa",
-      "message": "update lints",
-      "url": "https://github.com/butlerx/advent-of-code/commit/ec89be724c38d4d15e9d76e2f8454ee59e0951fa",
-      "date": "2026-11-21T12:18:28Z"
+      "repo": "butlerx/invbeertory",
+      "sha": "ada9b8a896064407ab3dfd1e43b959e7eec8a9c1",
+      "message": "deps(deps): bump serde_json from 1.0.143 to 1.0.154 (#73)",
+      "url": "https://github.com/butlerx/invbeertory/commit/ada9b8a896064407ab3dfd1e43b959e7eec8a9c1",
+      "date": "2026-11-21T08:59:14Z"
+    },
+    {
+      "repo": "butlerx/presentation",
+      "sha": "7f430ba9b3f2166f89cf09db4f35d4c83d82b422",
+      "message": "Bump prettier from 3.9.10 to 3.10.1 (#51)",
+      "url": "https://github.com/butlerx/presentation/commit/7f430ba9b3f2166f89cf09db4f35d4c83d82b422",
+      "date": "2026-11-23T07:02:20Z"
+    },
+    {
+      "repo": "butlerx/git-emoji",
+      "sha": "ef4026bf596228718d337d92d1f2b7051c8ca6ef",
+      "message": "ci(deps): bump jdx/mise-action from 5.2.8 to 5.2.9 (#3)",
+      "url": "https://github.com/butlerx/git-emoji/commit/ef4026bf596228718d337d92d1f2b7051c8ca6ef",
+      "date": "2026-11-23T07:02:11Z"
     },
     {
       "repo": "butlerx/tower-telemetry",
-      "sha": "e8586f2d98dd47f5073d2c5f1995e0a1d40045c0",
-      "message": "fix: keep the forwarded scheme's default port when bounding url.scheme",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/e8586f2d98dd47f5073d2c5f1995e0a1d40045c0",
-      "date": "2026-11-20T21:26:23Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "34109fb14cc6e669a95791bb1e50dff8ac7b9ffe",
-      "message": "chore(main): release 0.2.1 (#16)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/34109fb14cc6e669a95791bb1e50dff8ac7b9ffe",
-      "date": "2026-11-20T21:41:39Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "da7d752f40dcffaf8b79bdaab4a0bb8b4f72a076",
-      "message": "fix: bound url.scheme and redact credentials in url.query (#15)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/da7d752f40dcffaf8b79bdaab4a0bb8b4f72a076",
-      "date": "2026-11-20T21:28:38Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "b5807dceb59cfd61034f4feb51d45af2eeafb4df",
-      "message": ":heavy_dollar_sign: Rebuild data/github.json",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/b5807dceb59cfd61034f4feb51d45af2eeafb4df",
-      "date": "2026-11-19T12:19:03Z"
+      "sha": "2e3b75c4d350be30a6d471b2784c3b193c05c1b5",
+      "message": "feat: let span decorators and client layers add query names to redact",
+      "url": "https://github.com/butlerx/tower-telemetry/commit/2e3b75c4d350be30a6d471b2784c3b193c05c1b5",
+      "date": "2026-11-20T21:17:16Z"
     },
     {
       "repo": "butlerx/wetty",
-      "sha": "8fc2b71ddeede4a423cca44ae99ae269bf3901da",
+      "sha": "2f565c355fbb72699b2d666a87c6c148e38230c9",
       "message": "chore(deps): bump eslint from 10.13.0 to 10.14.0 in the eslint group",
-      "url": "https://github.com/butlerx/wetty/commit/8fc2b71ddeede4a423cca44ae99ae269bf3901da",
+      "url": "https://github.com/butlerx/wetty/commit/2f565c355fbb72699b2d666a87c6c148e38230c9",
+      "date": "2026-11-20T01:53:15Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "43986835e4cfe82b4a67baa14bbc9a2b42b80338",
+      "message": ":slot_machine: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/43986835e4cfe82b4a67baa14bbc9a2b42b80338",
+      "date": "2026-11-20T12:19:38Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "232e517b2f2ab5ef3e838f94f26d9c7977d5e63e",
+      "message": "chore(deps): bump prettier from 3.9.10 to 3.10.1 (#743)",
+      "url": "https://github.com/butlerx/wetty/commit/232e517b2f2ab5ef3e838f94f26d9c7977d5e63e",
+      "date": "2026-11-20T10:41:21Z"
+    },
+    {
+      "repo": "butlerx/wetty",
+      "sha": "6633b748419bf15e745309fa14794379f6b9fa74",
+      "message": "chore(deps): bump eslint from 10.13.0 to 10.14.0 in the eslint group",
+      "url": "https://github.com/butlerx/wetty/commit/6633b748419bf15e745309fa14794379f6b9fa74",
       "date": "2026-11-20T01:53:15Z"
     },
     {
@@ -277,31 +291,17 @@
     },
     {
       "repo": "butlerx/wetty",
-      "sha": "892f19594d7cd6469424a96edf701c61c641b9c1",
-      "message": "chore(deps): bump globals from 17.13.0 to 17.14.0 (#745)",
-      "url": "https://github.com/butlerx/wetty/commit/892f19594d7cd6469424a96edf701c61c641b9c1",
-      "date": "2026-11-20T10:38:36Z"
+      "sha": "ab758c5c9ccd7ff15f0236ace020aaa69f311362",
+      "message": "chore(deps): bump file-type from 22.2.0 to 22.3.0 (#742)",
+      "url": "https://github.com/butlerx/wetty/commit/ab758c5c9ccd7ff15f0236ace020aaa69f311362",
+      "date": "2026-11-20T10:41:48Z"
     },
     {
-      "repo": "butlerx/travel-mapper",
-      "sha": "61f413b49f2751740b115848b7e41a559b22823a",
-      "message": "deps(deps): bump lettre from 0.11.22 to 0.11.23 (#43)",
-      "url": "https://github.com/butlerx/travel-mapper/commit/61f413b49f2751740b115848b7e41a559b22823a",
-      "date": "2026-11-18T15:24:15Z"
-    },
-    {
-      "repo": "butlerx/travel-mapper",
-      "sha": "73b796ebd3b49c1f0a53b314b1ed0e932c602638",
-      "message": "deps(deps): bump thiserror from 2.0.18 to 2.0.21 (#49)",
-      "url": "https://github.com/butlerx/travel-mapper/commit/73b796ebd3b49c1f0a53b314b1ed0e932c602638",
-      "date": "2026-11-18T15:22:29Z"
-    },
-    {
-      "repo": "butlerx/travel-mapper",
-      "sha": "eceec77998120956cfd43bc30a472dd641196302",
-      "message": "deps(deps): bump prost from 0.14.4 to 0.14.5 (#48)",
-      "url": "https://github.com/butlerx/travel-mapper/commit/eceec77998120956cfd43bc30a472dd641196302",
-      "date": "2026-11-18T15:23:44Z"
+      "repo": "butlerx/wetty",
+      "sha": "c52efbd891807c1b23c6190bf45a329b0d95a8fc",
+      "message": "chore(deps): bump sass from 1.106.1 to 1.108.2 (#744)",
+      "url": "https://github.com/butlerx/wetty/commit/c52efbd891807c1b23c6190bf45a329b0d95a8fc",
+      "date": "2026-11-20T10:40:40Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5796
+        "stars": 5797
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -318,11 +318,47 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5486 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5487 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/tower-telemetry",
+        "name": "tower-telemetry",
+        "owner": "butlerx",
+        "stars": 0
+      },
+      "title": "feat!: OpenTelemetry metric names, busy time in seconds, one runtime sampler per process",
+      "url": "https://github.com/butlerx/tower-telemetry/pull/20",
+      "state": "MERGED",
+      "bodyHTML": "## What\n\nAll metrics follow OpenTelemetry naming: dotted names, no unit or `_total` in the name, semantic convention names where they exist. Prometheus with recommended naming adds the suffixes back (`process.cpu.time` → `process_cpu_time_seconds_total`).\n\n- **Process metrics** use the semantic conventions: `process.cpu.time{cpu.mode=user|system}` (split with `getrusage` on Unix), `process.memory.usage`, `process.memory.virtual`, `process.unix.file_descriptor.count` (`process.windows.handle.count` on Windows), `process.thread.count`, `process.uptime`. Two limits not in the conventions, named in their style: `process.memory.virtual.limit`, `process.unix.file_descriptor.limit`.\n- **Runtime metrics** are named `tokio.runtime.*` in the same style.\n- **Units**: seconds, bytes, 0–1 ratios and counts, everywhere. Integer counters (`process.cpu.time`, `tokio.runtime.worker.busy.time`) keep an exact total and record whole seconds; the error is at most 1 s per `rate()` window.\n- **One runtime sampler per process**: `export_runtime_metrics()` returns `None` while one is running, since a second would double-count or overwrite the counters and the metrics have no runtime label. A new one can start once the first stops.\n- Tests fail if a process or runtime metric has no description or isn't named in its OpenTelemetry namespace.\n\n## Breaking (against 0.2.2)\n\nProcess metrics, released in 0.2.2:\n\n| Before | After |\n| --- | --- |\n| `process_cpu_seconds_total` | `process.cpu.time{cpu.mode}` |\n| `process_resident_memory_bytes` | `process.memory.usage` |\n| `process_virtual_memory_bytes` | `process.memory.virtual` |\n| `process_virtual_memory_max_bytes` | `process.memory.virtual.limit` |\n| `process_open_fds` | `process.unix.file_descriptor.count` / `process.windows.handle.count` |\n| `process_max_fds` | `process.unix.file_descriptor.limit` |\n| `process_threads` | `process.thread.count` |\n| `process_start_time_seconds` | `process.uptime` (seconds since start) |\n\nRuntime metrics:\n\n| Before | After |\n| --- | --- |\n| `tokio_runtime_workers` | `tokio.runtime.worker.count` |\n| `tokio_runtime_live_tasks` | `tokio.runtime.task.count` |\n| `tokio_runtime_global_queue_depth` | `tokio.runtime.global_queue.depth` |\n| `tokio_runtime_worker_busy_ratio` (`_max`, `_min`) | `tokio.runtime.worker.utilization` (`.max`, `.min`) |\n| `tokio_runtime_worker_busy_microseconds_total` (µs) | `tokio.runtime.worker.busy.time` (**seconds**) |\n| `tokio_runtime_worker_parks_total` | `tokio.runtime.worker.parks` |\n| `tokio_runtime_poll_duration_mean_seconds` (`_max_`) | `tokio.runtime.poll.duration.mean` (`.max`) |\n| `tokio_runtime_polls_total`, `_steals_total` | `tokio.runtime.worker.polls`, `.steals` |\n| `tokio_runtime_local_queue_depth` (`_max`) | `tokio.runtime.local_queue.depth` (`.max`) |\n| `tokio_runtime_blocking_threads` (`_idle`) | `tokio.runtime.blocking.thread.count` (`.idle.count`) |\n| `tokio_runtime_blocking_queue_depth` | `tokio.runtime.blocking.queue.depth` |\n\n`export_runtime_metrics()` returns `Option\u003cJoinHandle\u003c()\u003e\u003e` instead of `JoinHandle\u003c()\u003e`.\n\nDashboards and alerts on the old names need updating.\n\n## Testing\n\n- `cargo test --locked --all-features`, with and without `RUSTFLAGS=\"--cfg tokio_unstable\"`\n- `cargo clippy --all-features --all-targets`: clean\n- `prek run --all-files`: passes"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/tower-telemetry",
+        "name": "tower-telemetry",
+        "owner": "butlerx",
+        "stars": 0
+      },
+      "title": "fix: redact credential query names that are percent-encoded",
+      "url": "https://github.com/butlerx/tower-telemetry/pull/17",
+      "state": "MERGED",
+      "bodyHTML": "## Problem\n\nQuery parameter names were matched as sent, so a credential whose name is percent-encoded got past redaction. `?access%5Ftoken=secret\u0026page=2` recorded `secret` in the server span's `url.query`, and the client's `url.full` had the same gap. `+` as a space and mixed-case escapes such as `ACCESS%5fTOKEN` had the same problem.\n\n## Change\n\n- Each parameter name is decoded before matching: `%XX` is that byte and `+` is a space. The built-in names and the names added through `SpanDecorator::SENSITIVE_QUERY_KEYS` or `OtelClientTraceLayer::with_redacted_query_keys` are all matched this way, still without regard to case.\n- The output keeps each name as it was sent, and only the value becomes `REDACTED`.\n- A name is decoded only when it contains `%` or `+`, so the common case still borrows and doesn't allocate.\n- An escape that isn't two hex digits, or a decoded result that isn't UTF-8, doesn't match. Such a name can't be one of the credential names, so nothing panics.\n\n## Behaviour changes\n\n- Credential names are redacted in encoded form too, on the server span and in the client's `url.full`.\n- No public API changes.\n\n## Tests\n\n- Unit (`src/request.rs`): `access%5Ftoken`, `ACCESS%5fTOKEN`, `%61ccess_token`, a user-added name written encoded, `+` as a space, a decoded name that isn't a credential left alone, and invalid escapes (`%zz`, `%5`, `%`, `%FF`, `%2`) that don't match and don't panic.\n- Server span (`tests/trace.rs`): an encoded built-in name and an encoded user-added name are redacted and kept as sent.\n- Client `url.full` (`tests/trace.rs`): an encoded built-in name is redacted.\n- README and rustdoc on the matching rules now say names are matched after percent-decoding.\n"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/tower-telemetry",
+        "name": "tower-telemetry",
+        "owner": "butlerx",
+        "stars": 0
+      },
+      "title": "feat: process metrics, tokio_unstable runtime metrics, metric descriptions",
+      "url": "https://github.com/butlerx/tower-telemetry/pull/18",
+      "state": "MERGED",
+      "bodyHTML": "## What\n\n- **`process-metrics` feature**: `export_process_metrics()` spawns a sampler that records the standard Prometheus process metrics every 5 seconds, via [`metrics-process`](https://crates.io/crates/metrics-process) (Linux, macOS, Windows, BSDs):\n  `process_cpu_seconds_total`, `process_resident_memory_bytes`, `process_virtual_memory_bytes`, `process_virtual_memory_max_bytes`, `process_open_fds`, `process_max_fds`, `process_threads`, `process_start_time_seconds`.\n- **`tokio_unstable` runtime metrics**: built with `RUSTFLAGS=\"--cfg tokio_unstable\"`, `export_runtime_metrics()` also records\n  `tokio_runtime_poll_duration_mean_seconds`, `_poll_duration_mean_max_seconds`, `_polls_total`, `_steals_total`, `_local_queue_depth`, `_local_queue_depth_max`, `_blocking_threads`, `_blocking_threads_idle`, `_blocking_queue_depth`. Without the cfg nothing changes.\n- **Descriptions**: the panic counter and every `tokio_runtime_*` metric are now described with a unit. StatsD has no metadata channel, so this only shows up in Prometheus `# HELP` / OTLP.\n- **CI**: a step runs the lib tests with `--cfg tokio_unstable`.\n\nLater commits pushed here after the merge (OpenTelemetry names, busy time in seconds, one sampler per process) are in the follow-up PR."
     },
     {
       "repo": {
@@ -383,30 +419,6 @@
       "url": "https://github.com/butlerx/tower-telemetry/pull/11",
       "state": "MERGED",
       "bodyHTML": "With `messaging` and `metrics` both on:\n\n- `MessageTraceLayer` records `messaging.process.duration` and `messaging.client.consumed.messages` per message.\n- New `MessagingSpan::run(|span| future)`: runs an operation inside its span, marks failures on it, and records `messaging.client.operation.duration`, plus `messaging.client.sent.messages` for `send`.\n- Labels follow the conventions: system, operation name and type, destination (the template when set), consumer group, server address and port, and `error.type` on failure.\n- A `receive` through `run` records its duration but not consumed messages, so messages aren't counted twice.\n\nWithout `metrics`, `run` still traces and marks errors."
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/tower-telemetry",
-        "name": "tower-telemetry",
-        "owner": "butlerx",
-        "stars": 0
-      },
-      "title": "feat: HTTP client spans and metrics, server.port",
-      "url": "https://github.com/butlerx/tower-telemetry/pull/10",
-      "state": "MERGED",
-      "bodyHTML": "- `OtelClientTraceLayer`: one OpenTelemetry client span per outgoing request, child of the current span. Injects `traceparent` through the global propagator. Records `url.full` without credentials and with signed-URL parameters redacted. Marks `4xx` and `5xx` as errors, as the conventions ask for clients.\n- `HttpClientMetricsLayer`: the `http.client.*` metrics (`MetricNames::CLIENT`), labelled with method, `server.address`, `server.port`, protocol version, status and `error.type`.\n- Server spans and metrics: `server.address` is now the host without the port, with `server.port` next to it (metrics: still opt-in through `with_host_label(true)`).\n- The recording code the server and client metrics share moved to `metrics/recording.rs`.\n\nBEGIN_COMMIT_OVERRIDE\nfeat: OtelClientTraceLayer, one client span per outgoing request with the trace context sent along\nfeat: HttpClientMetricsLayer, the OpenTelemetry http.client.* metrics\nfix: server.address is the host without the port; server.port is recorded beside it\nEND_COMMIT_OVERRIDE"
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/tower-telemetry",
-        "name": "tower-telemetry",
-        "owner": "butlerx",
-        "stars": 0
-      },
-      "title": "feat: HttpMetricsLayer::with_request_counter to leave out the requests counter",
-      "url": "https://github.com/butlerx/tower-telemetry/pull/9",
-      "state": "CLOSED",
-      "bodyHTML": "### What\n\n`HttpMetricsLayer::with_request_counter(false)` leaves out the `requests` counter. It stays on by default, so nothing changes for existing users.\n\n### Why\n\nThe counter isn't in the OpenTelemetry HTTP conventions, which count requests from the duration histogram's `_count`. A service that already reads that count exports the same number twice.\n\n### Tests\n\nNew unit test `the_request_counter_can_be_left_out`: with the counter off, `requests` isn't recorded and `duration` still is. Test suite, doctests and clippy all pass."
     }
   ]
 }
