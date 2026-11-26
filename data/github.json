@@ -37,7 +37,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10165,
-      "forks": 1122,
+      "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -54,7 +54,7 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96330,
+      "stars": 96333,
       "forks": 10720,
       "language": { "name": "Shell", "color": "#89e051" }
     },
@@ -62,8 +62,8 @@
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37461,
-      "forks": 3188,
+      "stars": 37462,
+      "forks": 3190,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -87,7 +87,7 @@
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
       "stars": 10165,
-      "forks": 1122,
+      "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
