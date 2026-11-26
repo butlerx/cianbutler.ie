@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10163,
+      "stars": 10165,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -45,7 +45,7 @@
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4384,
-      "forks": 911,
+      "forks": 910,
       "language": { "name": "Python", "color": "#3572A5" }
     }
   ],
@@ -54,15 +54,15 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96303,
-      "forks": 10719,
+      "stars": 96330,
+      "forks": 10720,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37459,
+      "stars": 37461,
       "forks": 3188,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12728,
+      "stars": 12732,
       "forks": 573,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10163,
+      "stars": 10165,
       "forks": 1122,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -102,15 +102,15 @@
       "repo": "prometheus",
       "user": "vegasbrianc",
       "description": "A docker-compose stack for Prometheus monitoring",
-      "stars": 4552,
-      "forks": 1515
+      "stars": 4551,
+      "forks": 1514
     },
     {
       "repo": "client_python",
       "user": "prometheus",
       "description": "Prometheus instrumentation library for Python applications",
       "stars": 4384,
-      "forks": 911,
+      "forks": 910,
       "language": { "name": "Python", "color": "#3572A5" }
     },
     {
@@ -220,6 +220,20 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/jetlag",
+      "sha": "c15c963bacfc3be3b7e356b386d626b43633cc94",
+      "message": "ci: bump jdx/mise-action from 5.2.8 to 5.2.10 (#13)",
+      "url": "https://github.com/butlerx/jetlag/commit/c15c963bacfc3be3b7e356b386d626b43633cc94",
+      "date": "2026-11-26T06:13:54Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "f2ef6f8d3d159d7ef5877553533f24822ce4f268",
+      "message": ":negative_squared_cross_mark: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/f2ef6f8d3d159d7ef5877553533f24822ce4f268",
+      "date": "2026-11-24T14:24:21Z"
+    },
+    {
       "repo": "butlerx/pets-configurator",
       "sha": "fa2bb888e36b24ea96531ab1394f28eeead0142f",
       "message": "build(deps): bump j178/prek-action from 3.1.0 to 3.1.1 (#64)",
@@ -288,20 +302,6 @@
       "message": ":cold_sweat: Rebuild data/github.json",
       "url": "https://github.com/butlerx/cianbutler.ie/commit/627c8a7b058c43c88701dd64e3ab9d6beaca58a9",
       "date": "2026-11-21T11:54:22Z"
-    },
-    {
-      "repo": "butlerx/invbeertory",
-      "sha": "bf8a026f86fac68172992da74e1b800c84f032e2",
-      "message": "Bump jdx/mise-action from 5.2.7 to 5.2.8 (#70)",
-      "url": "https://github.com/butlerx/invbeertory/commit/bf8a026f86fac68172992da74e1b800c84f032e2",
-      "date": "2026-11-21T08:59:03Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "3c97b2d30b9ee2595ab80c6b5ffb6f491ee73aee",
-      "message": "feat!: OpenTelemetry metric names, busy time in seconds, one runtime sampler per process (#20)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/3c97b2d30b9ee2595ab80c6b5ffb6f491ee73aee",
-      "date": "2026-11-23T11:26:07Z"
     }
   ],
   "contributions": [
@@ -310,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5799
+        "stars": 5802
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
