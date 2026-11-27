@@ -4,8 +4,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5487,
-      "forks": 769,
+      "stars": 5488,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -36,7 +36,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10165,
+      "stars": 10166,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96333,
-      "forks": 10720,
+      "stars": 96349,
+      "forks": 10712,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37462,
-      "forks": 3190,
+      "stars": 37467,
+      "forks": 3205,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -78,7 +78,7 @@
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12732,
+      "stars": 12738,
       "forks": 573,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -86,7 +86,7 @@
       "repo": "codimd",
       "user": "hackmdio",
       "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
-      "stars": 10165,
+      "stars": 10166,
       "forks": 1123,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
@@ -94,8 +94,8 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5487,
-      "forks": 769,
+      "stars": 5488,
+      "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -125,7 +125,7 @@
       "repo": "helm-charts",
       "user": "grafana",
       "description": "",
-      "stars": 2011,
+      "stars": 2012,
       "forks": 2493,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
@@ -220,6 +220,13 @@
   ],
   "commits": [
     {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "ec0db1c0ae4cd0c97708e9b00236576fd083f1cc",
+      "message": ":clock5: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/ec0db1c0ae4cd0c97708e9b00236576fd083f1cc",
+      "date": "2026-11-25T13:43:15Z"
+    },
+    {
       "repo": "butlerx/jetlag",
       "sha": "c15c963bacfc3be3b7e356b386d626b43633cc94",
       "message": "ci: bump jdx/mise-action from 5.2.8 to 5.2.10 (#13)",
@@ -288,20 +295,6 @@
       "message": "deps(deps): bump the yew-stack group with 2 updates (#23)",
       "url": "https://github.com/butlerx/wrk-graphs/commit/8027c412d731ecd836b58d88716bd2a61b76eec0",
       "date": "2026-11-23T21:03:03Z"
-    },
-    {
-      "repo": "butlerx/wrk-graphs",
-      "sha": "889326bb9633e38c1cc98a4022ccb58758f97ff3",
-      "message": "build(deps): bump j178/prek-action from 3.1.0 to 3.1.1 (#21)",
-      "url": "https://github.com/butlerx/wrk-graphs/commit/889326bb9633e38c1cc98a4022ccb58758f97ff3",
-      "date": "2026-11-23T21:02:52Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "627c8a7b058c43c88701dd64e3ab9d6beaca58a9",
-      "message": ":cold_sweat: Rebuild data/github.json",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/627c8a7b058c43c88701dd64e3ab9d6beaca58a9",
-      "date": "2026-11-21T11:54:22Z"
     }
   ],
   "contributions": [
@@ -318,7 +311,7 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5487 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5488 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
