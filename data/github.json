@@ -4,7 +4,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5488,
+      "stars": 5489,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -21,7 +21,7 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14029,
-      "forks": 1488,
+      "forks": 1489,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
@@ -54,16 +54,16 @@
       "repo": "nvm",
       "user": "nvm-sh",
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "stars": 96349,
-      "forks": 10712,
+      "stars": 96239,
+      "forks": 10702,
       "language": { "name": "Shell", "color": "#89e051" }
     },
     {
       "repo": "fastify",
       "user": "fastify",
       "description": "Fast and low overhead web framework, for Node.js",
-      "stars": 37467,
-      "forks": 3205,
+      "stars": 37474,
+      "forks": 3215,
       "language": { "name": "JavaScript", "color": "#f1e05a" }
     },
     {
@@ -71,15 +71,15 @@
       "user": "dense-analysis",
       "description": "Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support",
       "stars": 14029,
-      "forks": 1488,
+      "forks": 1489,
       "language": { "name": "Vim Script", "color": "#199f4b" }
     },
     {
       "repo": "knip",
       "user": "webpro-nl",
       "description": "✂️  Find unused files, dependencies and exports in your JavaScript and TypeScript projects. Knip it before you ship it!",
-      "stars": 12738,
-      "forks": 573,
+      "stars": 12745,
+      "forks": 575,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
     {
@@ -94,7 +94,7 @@
       "repo": "wetty",
       "user": "butlerx",
       "description": "Terminal in browser over http/https. (Ajaxterm/Anyterm alternative, but much better)",
-      "stars": 5488,
+      "stars": 5489,
       "forks": 770,
       "language": { "name": "TypeScript", "color": "#3178c6" }
     },
@@ -125,8 +125,8 @@
       "repo": "helm-charts",
       "user": "grafana",
       "description": "",
-      "stars": 2012,
-      "forks": 2493,
+      "stars": 2013,
+      "forks": 2494,
       "language": { "name": "Go Template", "color": "#00ADD8" }
     },
     {
@@ -221,6 +221,76 @@
   "commits": [
     {
       "repo": "butlerx/cianbutler.ie",
+      "sha": "41e6494f5ee9c2299ef06fd93e4d50963a20195a",
+      "message": ":gb: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/41e6494f5ee9c2299ef06fd93e4d50963a20195a",
+      "date": "2026-11-26T13:21:33Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "af44799e523802aeda5ad1c1e31240e73fbfeb98",
+      "message": "Bump j178/prek-action from 3.1.0 to 3.1.1 (#33)",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/af44799e523802aeda5ad1c1e31240e73fbfeb98",
+      "date": "2026-11-26T14:49:57Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
+      "sha": "080f0637f932429cfd32e87ffa3e779681197d41",
+      "message": ":smiley: Rebuild data/github.json",
+      "url": "https://github.com/butlerx/cianbutler.ie/commit/080f0637f932429cfd32e87ffa3e779681197d41",
+      "date": "2026-11-26T14:51:29Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "decc6b8df73db1160d2a1fa8b0d4592edd73b274",
+      "message": "deps(deps): bump gtfs-structures from 0.42.0 to 0.48.0 (#55)",
+      "url": "https://github.com/butlerx/travel-mapper/commit/decc6b8df73db1160d2a1fa8b0d4592edd73b274",
+      "date": "2026-11-27T11:16:10Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "275f3113ac716622748a9ecc57f255e213e4cc44",
+      "message": "ci: bump prek versions",
+      "url": "https://github.com/butlerx/travel-mapper/commit/275f3113ac716622748a9ecc57f255e213e4cc44",
+      "date": "2026-11-27T11:00:43Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "17bc0dad1e93aca560bc3cedfceb2e0929efcbe5",
+      "message": "chore: add sqlx style guide",
+      "url": "https://github.com/butlerx/travel-mapper/commit/17bc0dad1e93aca560bc3cedfceb2e0929efcbe5",
+      "date": "2026-11-27T10:59:17Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "fdc6a360c5974d5144a93e67b2b87c1e7338309d",
+      "message": "feat(observability): add OpenTelemetry server telemetry",
+      "url": "https://github.com/butlerx/travel-mapper/commit/fdc6a360c5974d5144a93e67b2b87c1e7338309d",
+      "date": "2026-11-27T10:58:41Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "914c5ed5b9c89335c045442c57f97a8bf3cc5e84",
+      "message": "chore: align server with style guide",
+      "url": "https://github.com/butlerx/travel-mapper/commit/914c5ed5b9c89335c045442c57f97a8bf3cc5e84",
+      "date": "2026-11-27T11:16:05Z"
+    },
+    {
+      "repo": "butlerx/travel-mapper",
+      "sha": "8b4e7e4f1b80aff983ed06966b89d154d319324d",
+      "message": "deps(deps): bump quick-xml from 0.37.5 to 0.42.0 (#44)",
+      "url": "https://github.com/butlerx/travel-mapper/commit/8b4e7e4f1b80aff983ed06966b89d154d319324d",
+      "date": "2026-11-27T18:03:01Z"
+    },
+    {
+      "repo": "butlerx/jetlag",
+      "sha": "cbc19c7f70ab6140c2095a012d7d936b45192cc7",
+      "message": "build(deps): bump gloo-utils from 0.3.0 to 0.3.1 in the yew-stack group (#12)",
+      "url": "https://github.com/butlerx/jetlag/commit/cbc19c7f70ab6140c2095a012d7d936b45192cc7",
+      "date": "2026-11-26T06:14:07Z"
+    },
+    {
+      "repo": "butlerx/cianbutler.ie",
       "sha": "ec0db1c0ae4cd0c97708e9b00236576fd083f1cc",
       "message": ":clock5: Rebuild data/github.json",
       "url": "https://github.com/butlerx/cianbutler.ie/commit/ec0db1c0ae4cd0c97708e9b00236576fd083f1cc",
@@ -232,69 +302,6 @@
       "message": "ci: bump jdx/mise-action from 5.2.8 to 5.2.10 (#13)",
       "url": "https://github.com/butlerx/jetlag/commit/c15c963bacfc3be3b7e356b386d626b43633cc94",
       "date": "2026-11-26T06:13:54Z"
-    },
-    {
-      "repo": "butlerx/cianbutler.ie",
-      "sha": "f2ef6f8d3d159d7ef5877553533f24822ce4f268",
-      "message": ":negative_squared_cross_mark: Rebuild data/github.json",
-      "url": "https://github.com/butlerx/cianbutler.ie/commit/f2ef6f8d3d159d7ef5877553533f24822ce4f268",
-      "date": "2026-11-24T14:24:21Z"
-    },
-    {
-      "repo": "butlerx/pets-configurator",
-      "sha": "fa2bb888e36b24ea96531ab1394f28eeead0142f",
-      "message": "build(deps): bump j178/prek-action from 3.1.0 to 3.1.1 (#64)",
-      "url": "https://github.com/butlerx/pets-configurator/commit/fa2bb888e36b24ea96531ab1394f28eeead0142f",
-      "date": "2026-11-23T10:36:07Z"
-    },
-    {
-      "repo": "butlerx/recipes",
-      "sha": "764da541d0f44c013b556336c60c022c79d624c4",
-      "message": "Bump jdx/mise-action from 5.2.7 to 5.2.9",
-      "url": "https://github.com/butlerx/recipes/commit/764da541d0f44c013b556336c60c022c79d624c4",
-      "date": "2026-11-22T17:33:20Z"
-    },
-    {
-      "repo": "butlerx/fosdem-video-downloader",
-      "sha": "a031ec946d55004afef043e4c031ec9c5fe9c2ef",
-      "message": "build(deps): bump j178/prek-action from 3.1.0 to 3.1.1 (#15)",
-      "url": "https://github.com/butlerx/fosdem-video-downloader/commit/a031ec946d55004afef043e4c031ec9c5fe9c2ef",
-      "date": "2026-11-24T07:27:55Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "13252b865a1945f9bdbf2d53801a4e6beac00e16",
-      "message": "chore(main): release 0.3.0 (#21)",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/13252b865a1945f9bdbf2d53801a4e6beac00e16",
-      "date": "2026-11-23T11:31:42Z"
-    },
-    {
-      "repo": "butlerx/tower-telemetry",
-      "sha": "02172386f7aff1c17f588af4e914a62365c0678a",
-      "message": "fix: runtime sampler guard and busy time across restarts",
-      "url": "https://github.com/butlerx/tower-telemetry/commit/02172386f7aff1c17f588af4e914a62365c0678a",
-      "date": "2026-11-23T11:21:48Z"
-    },
-    {
-      "repo": "butlerx/wrk-graphs",
-      "sha": "d080da8735e29dddb61fcd5841f48643bebbddfd",
-      "message": "deps(deps): bump brotli from 9.1.1 to 9.1.3 (#24)",
-      "url": "https://github.com/butlerx/wrk-graphs/commit/d080da8735e29dddb61fcd5841f48643bebbddfd",
-      "date": "2026-11-23T21:03:39Z"
-    },
-    {
-      "repo": "butlerx/wrk-graphs",
-      "sha": "f1102518a356f1be09de036b73d24e355e3cc9be",
-      "message": "build(deps): bump jdx/mise-action from 5.2.7 to 5.2.9 (#22)",
-      "url": "https://github.com/butlerx/wrk-graphs/commit/f1102518a356f1be09de036b73d24e355e3cc9be",
-      "date": "2026-11-23T21:02:25Z"
-    },
-    {
-      "repo": "butlerx/wrk-graphs",
-      "sha": "8027c412d731ecd836b58d88716bd2a61b76eec0",
-      "message": "deps(deps): bump the yew-stack group with 2 updates (#23)",
-      "url": "https://github.com/butlerx/wrk-graphs/commit/8027c412d731ecd836b58d88716bd2a61b76eec0",
-      "date": "2026-11-23T21:03:03Z"
     }
   ],
   "contributions": [
@@ -303,7 +310,7 @@
         "url": "https://github.com/emmett-framework/granian",
         "name": "granian",
         "owner": "emmett-framework",
-        "stars": 5802
+        "stars": 5803
       },
       "title": "Fix metrics collection inaccuracies and add metrics tests",
       "url": "https://github.com/emmett-framework/granian/pull/929",
@@ -311,11 +318,23 @@
       "bodyHTML": "## Summary\n\nFixes several inaccuracies in the Prometheus metrics and adds a metrics test suite.\n\n- **Respawn overlap:** during a graceful respawn (lifetime/RSS) the old and new worker both report to the same slot, so `worker=\"N\"` series flip between old and new values and Prometheus sees repeated counter resets. Reports now carry the worker's birth timestamp and the aggregator ignores reports from an older worker.\n- **Stale data after crash:** a crashed worker's last snapshot stayed exported until its replacement's first report. The slot is now cleared (`MetricsAggregator.clear`) before respawn.\n- **`workers_respawns_for_err`:** was incremented by 1 per crash cycle regardless of how many workers crashed; now counts each worker.\n- **`blocking_busy_cumulative`:** in GIL builds it included GIL re-acquire wait (already reported in `py_wait_cumulative`); now matches the free-threaded build semantics.\n- **`blocking_queue`:** was incremented after `send`, so a consumer could decrement first and scrapes could observe `-1`.\n- **Exposition format:** output now ends with a newline and uses `text/plain; version=0.0.4; charset=utf-8`.\n\nNote: `ipc::Message::Metrics` now carries the birth timestamp; parent and workers always run the same binary, so there's no compatibility concern.\n\n## Tests\n\nNew `tests/test_metrics.py` (10 tests, ~35s) running real servers with metrics enabled:\n\n- exposition format + all metrics present per worker (asgi/rsgi/wsgi)\n- request/connection counting (asgi/rsgi/wsgi)\n- `blocking_queue` never negative under concurrent WSGI load\n- respawn overlap never re-exposes the old worker's values (RSS-forced respawn)\n- crashed worker series is cleared then restored\n- simultaneous crashes counted per worker (in-process `_serve_loop` test)\n\nVerified the format, respawn, crash and respawn-count tests fail against the pre-fix code. Windows is skipped (metrics unavailable); respawn/crash tests are skipped on free-threaded builds.\n\n`make lint` clean; full suite: 185 passed, 4 skipped locally (macOS, CPython 3.12).\n"
     },
     {
-      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5488 },
+      "repo": { "url": "https://github.com/butlerx/wetty", "name": "wetty", "owner": "butlerx", "stars": 5489 },
       "title": "feat: migrate WeTTY server to Rust (axum + tower + socketioxide) with napi-rs Node.js bridge",
       "url": "https://github.com/butlerx/wetty/pull/636",
       "state": "OPEN",
       "bodyHTML": "Replaces the Express/Socket.IO server with a Rust crate while keeping the TypeScript browser client and CLI entry point untouched. A napi-rs native addon maintains a backward-compatible `start()` / `decorateServerWithSsh()` API. `mise` manages the mixed Rust + Node.js toolchain.\n\n## Rust crate (`crates/wetty-server/`)\n\n- **`app.rs`** — axum `Router` with tower middleware: `SecurityLayer` (CSP/X-Frame-Options), `CompressionLayer`, `ServeDir`, `TraceLayer`, prometheus `/metrics` route\n- **`socket.rs`** — socketioxide connection handler wiring PTY lifecycle to Socket.IO events\n- **`pty.rs`** — portable-pty spawner bridged to tokio channels; uses `rt.enter()` so `tokio::spawn` works correctly from OS threads\n- **`flowcontrol.rs`** — port of `TinyBuffer` (2 ms / 512 KiB flush) + `FlowControlServer` low/high watermark\n- **`command.rs`** — SSH command builder mirroring `src/server/command/`\n- **`ssl.rs`** — rustls TLS config (ring backend); supports cert/key path and Unix socket binding\n- **`lib.rs`** — napi bindings behind optional `node-binding` feature so `cargo test` links without Node.js\n\n## TypeScript shim\n\n`src/server.ts` becomes a thin wrapper — same exported signatures, delegates to the `.node` addon:\n\n```ts\nimport addon from '../build/wetty_server.node';\nexport const start: typeof addon.start = addon.start;\nexport const decorateServerWithSsh: typeof addon.decorateServerWithSsh = addon.decorateServerWithSsh;\n```\n\n**Breaking:** return type changes from `Promise\u003cSocketIO.Server\u003e` to `Promise\u003cServerHandle\u003e`. Callers that interact with the returned server instance will need to adapt.\n\n## Toolchain \u0026 build\n\n- **`.mise.toml`** — pins Node 22, Rust 1.96.0, pnpm 9.4.0; defines `build`, `test`, `lint`, `check:rust` tasks\n- **`scripts/copy-addon.sh`** — single source of truth for copying `.so`/`.dylib`/`.dll` → `build/wetty_server.node`; referenced by mise, `build.js`, and the `build:rust` npm script\n- **CI** — replaced `actions/setup-node` + `pnpm/action-setup` with `jdx/mise-action@v2`; added `cargo test` step\n\n## Tests\n\n- 48 Rust unit tests across all modules\n- 10 HTTP integration tests (`tests/app_test.rs`) — routes, security headers, redirect behaviour\n- 3 TLS integration tests (`tests/ssl_test.rs`)\n- `src/server.spec.ts` — TypeScript smoke tests for the shim"
+    },
+    {
+      "repo": {
+        "url": "https://github.com/butlerx/travel-mapper",
+        "name": "travel-mapper",
+        "owner": "butlerx",
+        "stars": 2
+      },
+      "title": "fix(ci): correct zigbuild action version comment",
+      "url": "https://github.com/butlerx/travel-mapper/pull/61",
+      "state": "MERGED",
+      "bodyHTML": "## Summary\n- Correct the taiki-e/install-action version comment to match the pinned v2.90.5 commit.\n\n## Validation\n- Pre-commit hooks pass, including zizmor."
     },
     {
       "repo": {
@@ -400,18 +419,6 @@
       "url": "https://github.com/butlerx/tower-telemetry/pull/13",
       "state": "MERGED",
       "bodyHTML": "The layers' generic code (`Service::call`, the futures, the bodies) is compiled in the user's crate. Calls from it into this crate's non-generic helpers cross a crate boundary, and can't be inlined without `#[inline]` or LTO.\n\n- `#[inline]` on the small per-request helpers: header, host and port parsing, method and version names, health-check matching, label building, and `Side::is_error`.\n- `#[inline]` on the tiny public builders and accessors: the `MessagingSpan` setters, `MessagingOperation::as_str`/`span_kind`, `with_names`, `with_host_label`, and `MetricNames::durations`/`body_sizes`.\n- `server.port` labels for 80 and 443 are static strings, not a fresh allocation per request.\n\nNo behaviour change."
-    },
-    {
-      "repo": {
-        "url": "https://github.com/butlerx/tower-telemetry",
-        "name": "tower-telemetry",
-        "owner": "butlerx",
-        "stars": 0
-      },
-      "title": "feat: OpenTelemetry messaging metrics and MessagingSpan::run",
-      "url": "https://github.com/butlerx/tower-telemetry/pull/11",
-      "state": "MERGED",
-      "bodyHTML": "With `messaging` and `metrics` both on:\n\n- `MessageTraceLayer` records `messaging.process.duration` and `messaging.client.consumed.messages` per message.\n- New `MessagingSpan::run(|span| future)`: runs an operation inside its span, marks failures on it, and records `messaging.client.operation.duration`, plus `messaging.client.sent.messages` for `send`.\n- Labels follow the conventions: system, operation name and type, destination (the template when set), consumer group, server address and port, and `error.type` on failure.\n- A `receive` through `run` records its duration but not consumed messages, so messages aren't counted twice.\n\nWithout `metrics`, `run` still traces and marks errors."
     }
   ]
 }
